@@ -1,4 +1,4 @@
-const CACHE='desk-v1-5';
+const CACHE='desk-v1-6';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./js/app.js','./icons/icon-192.png','./icons/icon-512.png','./data/today.json'];
 self.addEventListener('install', e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));

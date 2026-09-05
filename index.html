@@ -49,6 +49,14 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 .bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(7,7,7,.92);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
 .bar button{flex:0 0 auto;background:var(--cream);color:#111;border:0;border-radius:10px;padding:10px 14px;font-weight:700}
 .bar #status{color:var(--muted);font-size:12px;align-self:center}
+
+.modes{display:flex;gap:8px;margin:0 0 12px}
+.modes button{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 8px;background:var(--panel);color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.modes button.on{background:var(--cream);color:#111;font-weight:700;border-color:var(--cream)}
+.play.clear-play{border-color:#5a5540;box-shadow:inset 0 0 0 1px rgba(230,227,211,.12)}
+.play .pill.star{color:#111;background:var(--cream);padding:3px 8px;border-radius:6px}
+.section-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:4px 0 10px}
+
 </style>
 </head>
 <body>
@@ -67,15 +75,20 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 
 <section class="panel on" id="p-card">
   <div class="hero">
-    <h2 class="serif">One call.</h2>
-    <p>CLEAR only counts. FILL is board, not bankroll.</p>
+    <h2 class="serif">Your plays.</h2>
+    <p>Recommended tickets first. Board and props stay one tap away.</p>
   </div>
   <div class="summary">
     <div class="row">
-      <div><div class="k">Published clear</div><div class="v serif" id="clearCount">—</div></div>
-      <div><div class="k">Lean</div><div class="v serif" id="leanVal">—</div></div>
+      <div><div class="k">Plays to take</div><div class="v serif" id="clearCount">—</div></div>
+      <div><div class="k">Props</div><div class="v serif" id="propCount">0</div></div>
     </div>
     <div class="foot" id="asOfFoot"></div>
+  </div>
+  <div class="modes" id="modes">
+    <button class="on" data-mode="plays">Plays</button>
+    <button data-mode="board">Board</button>
+    <button data-mode="props">Props</button>
   </div>
   <div class="chips" id="chips">
     <button class="on" data-s="ALL">All</button>
@@ -84,7 +97,7 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
     <button data-s="CFB">CFB</button>
     <button data-s="SOC">SOC</button>
   </div>
-  <p class="why" id="sportHint" style="margin:0 0 10px">Plays (CLEAR) stay on top of each sport.</p>
+  <p class="section-label" id="sportHint">Recommended · CLEAR only</p>
   <div id="slate"></div>
   <div id="clears" hidden></div>
   <div id="fills" hidden></div>

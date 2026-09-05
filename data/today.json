@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-05",
-  "generated_at_ct": "2026-09-05T12:50:50.959535-05:00",
+  "generated_at_ct": "2026-09-05T14:52:50.271934-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -10,7 +10,9 @@
     "hold": "HOLD/BOARD = full slate game with no Main side (pinned under CLEAR/FILL per sport)",
     "owner": "Bet Bot Main owns the card; Sports Betting shops + exports",
     "ops": "ops paper = research-only not-bankroll",
-    "probs": "model%/market% from feed when present; else fair vs mkt lines in Main notes via 16\u03c3 CFB / 13.86\u03c3 NFL normal CDF; market% falls back to assume -110 when no price. Never invent fair lines."
+    "probs": "model%/market% from feed when present; else fair vs mkt lines in Main notes via 16\u03c3 CFB / 13.86\u03c3 NFL normal CDF; market% falls back to assume -110 when no price. Never invent fair lines.",
+    "card_modes": "Plays = CLEAR recommended only \u00b7 Board = FILL/HOLD \u00b7 Props = player props",
+    "props": "Football props CSV: data/exports/props_feed_bet_bot_main_YYYYMMDD.csv"
   },
   "summary": {
     "published_clear": 11,
@@ -26,7 +28,9 @@
     "with_model_win_pct": 66,
     "with_market_win_pct": 84,
     "feed": "picks_feed_bet_bot_main_20260905.csv",
-    "board_file": "desk_board_20260905.csv"
+    "board_file": "desk_board_20260905.csv",
+    "props_total": 0,
+    "props_clear": 0
   },
   "card": {
     "clears": [
@@ -2554,7 +2558,8 @@
         "notes": "Full slate HOLD \u00b7 no Main side \u00b7 sqlite 7d75e6ac-ca64-4c24-b27e-c10001746f4c",
         "slate_date_ct": "2026-09-05"
       }
-    ]
+    ],
+    "props": []
   },
   "parlays": [
     {

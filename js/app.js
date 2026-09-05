@@ -1,16 +1,34 @@
+let deskMode = 'plays';
+let deskSport = 'ALL';
+let deskData = null;
+
 function normalize(data){
-  // Accept desk-pwa/v1 (Sports Betting) and flat Strawhat draft
   const card = data.card || {};
   const clears = (card.clears || data.clears || []).map(p=>({
     ...p,
     edge: p.edge ?? p.edge_pct ?? '—',
-    clears: p.tag==='CLEAR' || p.status==='WRITTEN' || p.clears===true,
+    tag: p.tag || 'CLEAR',
+    clears: true,
     units: p.units ?? 0,
   }));
   const fills = (card.fills || data.fills || []).map(p=>({
     ...p,
     edge: p.edge ?? p.edge_pct ?? '—',
+    tag: p.tag || 'FILL',
     clears: false,
+    units: p.units ?? 0,
+  }));
+  const holds = (card.holds || data.holds || []).map(p=>({
+    ...p,
+    edge: p.edge ?? p.edge_pct ?? '—',
+    tag: p.tag || 'HOLD',
+    clears: false,
+    units: p.units ?? 0,
+  }));
+  const props = (card.props || data.props || []).map(p=>({
+    ...p,
+    tag: p.tag || ((p.clears===true || String(p.clears).toUpperCase()==='Y') ? 'CLEAR' : 'FILL'),
+    sport: p.sport || 'NFL',
     units: p.units ?? 0,
   }));
   const parlays = data.parlays || data.tickets?.parlays || [];
@@ -18,9 +36,7 @@ function normalize(data){
   const rulesObj = data.rules;
   let rules=[];
   if(Array.isArray(rulesObj)) rules=rulesObj;
-  else if(rulesObj && typeof rulesObj==='object'){
-    rules=Object.values(rulesObj);
-  }
+  else if(rulesObj && typeof rulesObj==='object') rules=Object.values(rulesObj);
   return {
     slate_date: data.slate_date || data.slate_date_ct || '',
     timezone: data.timezone || 'America/Chicago',
@@ -28,9 +44,11 @@ function normalize(data){
     summary: {
       published_clear: data.summary?.published_clear ?? clears.length,
       lean: data.summary?.lean || 'none',
-      sports: data.summary?.sports || ['MLB','NFL','CFB','SOC'],
+      sports: data.summary?.sports || data.summary?.by_sport && Object.keys(data.summary.by_sport) || ['MLB','NFL','CFB','SOC'],
+      props_total: data.summary?.props_total ?? props.length,
+      props_clear: data.summary?.props_clear ?? props.filter(p=>p.tag==='CLEAR').length,
     },
-    clears, fills, holds: (card.holds || data.holds || []), parlays, teasers, rules,
+    clears, fills, holds, props, parlays, teasers, rules,
     ledger: data.ledger || null,
   };
 }
@@ -45,38 +63,69 @@ function el(tag, cls, text){
   if(text!=null) n.textContent=text;
   return n;
 }
-function playCard(p){
-  const a=el('article','play');
+function playCard(p, {star}={}){
+  const a=el('article','play'+(star||p.tag==='CLEAR'?' clear-play':''));
   a.dataset.sport=p.sport||'OTHER';
+  a.dataset.kind=p.kind||'side';
   const hd=el('div','play-hd');
-  hd.append(el('span','pill',p.tag||'CLEAR'), el('span','when',`${p.sport||''} · ${p.units||0}u`));
+  const pill=el('span','pill'+(star?' star':''), star?'PLAY':(p.tag||'CLEAR'));
+  hd.append(pill, el('span','when',`${p.sport||''} · ${p.units||0}u`));
   a.append(hd);
-  a.append(el('h3','serif',p.matchup||`${p.away} at ${p.home}`));
+  a.append(el('h3','serif',p.matchup||`${p.away||''} at ${p.home||''}`));
   a.append(el('div','side',p.selection|| (p.tag==='HOLD'?'Hold — no number':'')));
   const m=el('div','metrics');
   const model = p.model_win_pct!=null ? `${p.model_win_pct}%` : '—';
   const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : '—';
   const edge = (p.edge ?? p.edge_pct);
   const edgeStr = edge!=null && edge!=='' ? String(edge) : '—';
-  const cells=[['MODEL', model],['MARKET', market],['EDGE', edgeStr]];
-  for(const [k,v] of cells){
+  for(const [k,v] of [['MODEL', model],['MARKET', market],['EDGE', edgeStr]]){
     const d=el('div');
     d.append(el('div','k',k), el('div','v serif',String(v)));
     m.append(d);
   }
   a.append(m);
   let why=p.notes||'';
-  if(p.colab_win_pct!=null) why = `Colab ${p.colab_win_pct}%` + (p.colab_model_line!=null?` · FPI ${p.colab_model_line}`:'') + (why?` · ${why}`:'');
+  if(p.book || p.price_american){
+    const shop=[p.book, p.price_american!=null?String(p.price_american):''].filter(Boolean).join(' ');
+    why = why ? `${shop} · ${why}` : shop;
+  }
   if(why) a.append(el('p','why',why));
+  return a;
+}
+function propCard(p){
+  const a=el('article','play'+(p.tag==='CLEAR'?' clear-play':''));
+  a.dataset.sport=p.sport||'NFL';
+  a.dataset.kind='prop';
+  const hd=el('div','play-hd');
+  const pill=el('span','pill'+(p.tag==='CLEAR'?' star':''), p.tag==='CLEAR'?'PROP PLAY':(p.tag||'PROP'));
+  hd.append(pill, el('span','when',`${p.sport||''} · ${p.units||0}u`));
+  a.append(hd);
+  const title=p.player || p.selection || 'Player prop';
+  a.append(el('h3','serif',title));
+  const lineBits=[p.market, p.side, p.line!=null && p.line!==''?String(p.line):''].filter(Boolean).join(' · ');
+  const game=p.game || p.matchup || [p.team,p.opponent].filter(Boolean).join(' vs ');
+  a.append(el('div','side', [lineBits, game].filter(Boolean).join('\n')));
+  a.querySelector('.side').style.whiteSpace='pre-line';
+  const m=el('div','metrics');
+  const model = p.model_win_pct!=null ? `${p.model_win_pct}%` : '—';
+  const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : (p.price_american!=null?String(p.price_american):'—');
+  const edge = p.edge_pct ?? p.edge;
+  for(const [k,v] of [['MODEL', model],['PRICE', market],['EDGE', edge!=null && edge!==''?String(edge):'—']]){
+    const d=el('div');
+    d.append(el('div','k',k), el('div','v serif',String(v)));
+    m.append(d);
+  }
+  a.append(m);
+  if(p.notes || p.book) a.append(el('p','why', [p.book, p.notes].filter(Boolean).join(' · ')));
   return a;
 }
 function ticketCard(t, kind){
   const a=el('article','play');
   const hd=el('div','play-hd');
-  const price=t.price || t.combined || '';
+  const price=t.price || t.combined || t.combined_american_assume_110 || '';
   hd.append(el('span','pill',t.tag||kind), el('span','when', kind+(price?` · ${price}`:'')));
   a.append(hd);
-  a.append(el('h3','serif',t.id||t.name||kind));
+  a.append(el('h3','serif',t.id||t.name||t.title||kind));
   let legs=t.legs||[];
   if(legs.length && typeof legs[0]==='object'){
     legs=legs.map(l=>l.selection||l.side||l.label||JSON.stringify(l));
@@ -90,43 +139,46 @@ function showPanel(id){
   document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+id));
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===id));
 }
-function filterSport(s){
-  document.querySelectorAll('#slate .play').forEach(c=>{
-    c.style.display=(s==='ALL'||c.dataset.sport===s)?'':'none';
-  });
-  const hint=document.getElementById('sportHint');
-  if(hint) hint.textContent = s==='ALL'
-    ? 'All sports · CLEAR plays on top, then board.'
-    : `${s} · CLEAR plays on top, then every game.`;
+function sportMatch(p, s){
+  return s==='ALL' || (p.sport||'')===s;
 }
-function sortPlays(plays){
-  const rank=t=>({CLEAR:0,HOLD:1,FILL:2}[t]??3);
-  return [...plays].sort((a,b)=>{
-    const ra=rank(a.tag|| (a.clears?'CLEAR':'FILL'));
-    const rb=rank(b.tag|| (b.clears?'CLEAR':'FILL'));
-    if(ra!==rb) return ra-rb;
-    return Math.abs(b.edge_pct||b.edge||0) - Math.abs(a.edge_pct||a.edge||0);
-  });
+function renderSlate(){
+  if(!deskData) return;
+  const slate=document.getElementById('slate');
+  const hint=document.getElementById('sportHint');
+  slate.innerHTML='';
+  let rows=[];
+  if(deskMode==='plays'){
+    rows=deskData.clears.filter(p=>sportMatch(p, deskSport));
+    if(hint) hint.textContent = deskSport==='ALL' ? 'Recommended · CLEAR only' : `${deskSport} plays · CLEAR only`;
+    if(!rows.length) slate.append(el('p','why','No recommended plays for this filter.'));
+    else rows.forEach(p=>slate.append(playCard(p,{star:true})));
+  } else if(deskMode==='board'){
+    rows=[...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport));
+    if(hint) hint.textContent = deskSport==='ALL' ? 'Full board · FILL + HOLD' : `${deskSport} board · FILL + HOLD`;
+    if(!rows.length) slate.append(el('p','why','No board games for this filter.'));
+    else rows.forEach(p=>slate.append(playCard(p)));
+  } else {
+    rows=deskData.props.filter(p=>sportMatch(p, deskSport) || (deskSport==='ALL'));
+    // props often NFL/CFB — if sport chip NFL/CFB filter those; ALL shows all
+    if(deskSport!=='ALL') rows=deskData.props.filter(p=>sportMatch(p, deskSport));
+    if(hint) hint.textContent = 'Player props · CLEAR props first';
+    rows=[...rows].sort((a,b)=>(a.tag==='CLEAR'?0:1)-(b.tag==='CLEAR'?0:1));
+    if(!rows.length){
+      slate.append(el('p','why','No football props filed yet. Main drops rows into props_feed_bet_bot_main_YYYYMMDD.csv (player, market, line, side, units, clears).'));
+    } else rows.forEach(p=>slate.append(propCard(p)));
+  }
 }
 async function main(){
-  const data=await loadDesk();
+  deskData=await loadDesk();
+  const data=deskData;
   document.getElementById('asof').textContent=`${data.slate_date}\n${data.timezone}\n${data.as_of_label||''}`;
   document.getElementById('clearCount').textContent=String(data.summary?.published_clear ?? data.clears?.length ?? 0);
-  document.getElementById('leanVal').textContent=data.summary?.lean || 'none';
-  document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · sports ${(data.summary?.sports||[]).join(' · ')}`;
+  const pc=document.getElementById('propCount');
+  if(pc) pc.textContent=String(data.summary?.props_clear ?? data.props.filter(p=>p.tag==='CLEAR').length);
+  document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · ${data.clears.length} plays · ${data.props.length} props on file`;
 
-  const slate=document.getElementById('slate');
-  slate.innerHTML='';
-  const plays=sortPlays([...(data.clears||[]), ...(data.fills||[]), ...(data.holds||[])]);
-  if(!plays.length) slate.append(el('p','why','No games on the slate.'));
-  else plays.forEach(p=>slate.append(playCard(p)));
-  // keep hidden buckets for any legacy callers
-  const clears=document.getElementById('clears');
-  const fills=document.getElementById('fills');
-  if(clears){ clears.innerHTML=''; (data.clears||[]).forEach(p=>clears.append(playCard(p))); }
-  if(fills){ fills.innerHTML=''; (data.fills||[]).forEach(p=>fills.append(playCard(p))); }
-  const onChip=[...document.querySelectorAll('#chips button.on')][0];
-  filterSport(onChip?.dataset?.s || 'ALL');
+  renderSlate();
 
   const parlays=document.getElementById('parlays');
   parlays.innerHTML='';
@@ -142,8 +194,7 @@ async function main(){
   rules.innerHTML='';
   (data.rules||[]).forEach((r,i)=>{
     const d=el('div','rule');
-    const b=el('b',null,`G${i+1}`);
-    d.append(b, document.createTextNode(' '+r));
+    d.append(el('b',null,`G${i+1}`), document.createTextNode(' '+r));
     rules.append(d);
   });
 
@@ -152,7 +203,6 @@ async function main(){
     document.getElementById('friExam').textContent=data.ledger.fri_exam||'—';
     document.getElementById('friWritten').textContent=data.ledger.fri_written||'CLEAR results only.';
   }
-
   document.getElementById('status').textContent='Live · pull to refresh';
 }
 document.getElementById('tabs').addEventListener('click',e=>{
@@ -161,7 +211,12 @@ document.getElementById('tabs').addEventListener('click',e=>{
 document.getElementById('chips').addEventListener('click',e=>{
   const b=e.target.closest('button'); if(!b) return;
   document.querySelectorAll('#chips button').forEach(x=>x.classList.remove('on'));
-  b.classList.add('on'); filterSport(b.dataset.s);
+  b.classList.add('on'); deskSport=b.dataset.s; renderSlate();
+});
+document.getElementById('modes').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  document.querySelectorAll('#modes button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); deskMode=b.dataset.mode; renderSlate();
 });
 document.getElementById('refresh').onclick=()=>main().catch(err=>{
   document.getElementById('status').textContent='Offline / no slate';
