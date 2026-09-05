@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-05",
-  "generated_at_ct": "2026-09-05T17:30:04.582818-05:00",
+  "generated_at_ct": "2026-09-05T17:31:48.902519-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -30,7 +30,10 @@
     "board_file": "desk_board_20260905.csv",
     "props_total": 0,
     "props_clear": 0,
-    "props_file": null
+    "props_file": null,
+    "props_open": 0,
+    "props_hold": 0,
+    "props_gone": 0
   },
   "card": {
     "clears": [

@@ -153,20 +153,13 @@ function renderSlate(){
     if(hint) hint.textContent = deskSport==='ALL' ? 'Recommended · CLEAR only' : `${deskSport} plays · CLEAR only`;
     if(!rows.length) slate.append(el('p','why','No recommended plays for this filter.'));
     else rows.forEach(p=>slate.append(playCard(p,{star:true})));
-  } else if(deskMode==='board'){
+  } else {
+    // board (default fallback)
+    deskMode='board';
     rows=[...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport));
     if(hint) hint.textContent = deskSport==='ALL' ? 'Full board · FILL + HOLD' : `${deskSport} board · FILL + HOLD`;
     if(!rows.length) slate.append(el('p','why','No board games for this filter.'));
     else rows.forEach(p=>slate.append(playCard(p)));
-  } else {
-    rows=deskData.props.filter(p=>sportMatch(p, deskSport) || (deskSport==='ALL'));
-    // props often NFL/CFB — if sport chip NFL/CFB filter those; ALL shows all
-    if(deskSport!=='ALL') rows=deskData.props.filter(p=>sportMatch(p, deskSport));
-    if(hint) hint.textContent = 'Player props · CLEAR props first';
-    rows=[...rows].sort((a,b)=>(a.tag==='CLEAR'?0:1)-(b.tag==='CLEAR'?0:1));
-    if(!rows.length){
-      slate.append(el('p','why','No football props filed yet. Main drops rows into props_feed_bet_bot_main_YYYYMMDD.csv (player, market, line, side, units, clears).'));
-    } else rows.forEach(p=>slate.append(propCard(p)));
   }
 }
 async function main(){
@@ -174,9 +167,9 @@ async function main(){
   const data=deskData;
   document.getElementById('asof').textContent=`${data.slate_date}\n${data.timezone}\n${data.as_of_label||''}`;
   document.getElementById('clearCount').textContent=String(data.summary?.published_clear ?? data.clears?.length ?? 0);
-  const pc=document.getElementById('propCount');
-  if(pc) pc.textContent=String(data.summary?.props_clear ?? data.props.filter(p=>p.tag==='CLEAR').length);
-  document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · ${data.clears.length} plays · ${data.props.length} props on file`;
+  const bc=document.getElementById('boardCount');
+  if(bc) bc.textContent=String((data.fills?.length||0)+(data.holds?.length||0));
+  document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · ${data.clears.length} plays`;
 
   renderSlate();
 
