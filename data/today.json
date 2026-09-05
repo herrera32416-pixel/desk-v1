@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-05",
-  "generated_at_ct": "2026-09-05T12:44:08.054793-05:00",
+  "generated_at_ct": "2026-09-05T12:50:50.959535-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -13,9 +13,9 @@
     "probs": "model%/market% from feed when present; else fair vs mkt lines in Main notes via 16\u03c3 CFB / 13.86\u03c3 NFL normal CDF; market% falls back to assume -110 when no price. Never invent fair lines."
   },
   "summary": {
-    "published_clear": 8,
-    "fill_total": 76,
-    "fill_shown": 76,
+    "published_clear": 11,
+    "fill_total": 73,
+    "fill_shown": 73,
     "hold_total": 21,
     "board_total": 105,
     "by_sport": {
@@ -107,6 +107,30 @@
         "status": "WRITTEN",
         "sport": "MLB",
         "sport_raw": "mlb",
+        "away": "Braves",
+        "home": "Phillies",
+        "matchup": "Braves at Phillies",
+        "selection": "PHI F5",
+        "market": "f5_ml",
+        "line": null,
+        "price_american": -175,
+        "book": "BetMGM",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 63.64,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price -175; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "atl-phi",
+        "notes": "Main written 1u. Sim PHI F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetMGM PHI \u2212175. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
         "away": "Tigers",
         "home": "Guardians",
         "matchup": "Tigers at Guardians",
@@ -179,6 +203,30 @@
         "status": "WRITTEN",
         "sport": "MLB",
         "sport_raw": "mlb",
+        "away": "Rays",
+        "home": "Rangers",
+        "matchup": "Rays at Rangers",
+        "selection": "TB F5",
+        "market": "f5_ml",
+        "line": null,
+        "price_american": 108,
+        "book": "BetRivers",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 48.08,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price +108; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "tb-tex",
+        "notes": "Main written 1u. Sim TB F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetRivers TB +108. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
         "away": "Diamondbacks",
         "home": "Astros",
         "matchup": "Diamondbacks at Astros",
@@ -220,6 +268,30 @@
         "prob_method": "none",
         "event_id": "wsh-lad",
         "notes": "Main written 1u. Sim U7.5 Y + WX marine + Lines FD U \u2212124. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Athletics",
+        "home": "Mariners",
+        "matchup": "Athletics at Mariners",
+        "selection": "SEA F5",
+        "market": "f5_ml",
+        "line": null,
+        "price_american": -225,
+        "book": "BetMGM",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 69.23,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price -225; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "ath-sea",
+        "notes": "Main written 1u. Sim SEA F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetMGM SEA \u2212225. 1u",
         "slate_date_ct": "2026-09-05"
       }
     ],
@@ -1789,30 +1861,6 @@
         "status": "NOT_WRITTEN",
         "sport": "MLB",
         "sport_raw": "mlb",
-        "away": "Braves",
-        "home": "Phillies",
-        "matchup": "Braves at Phillies",
-        "selection": "PHI F5",
-        "market": "f5_ml",
-        "line": null,
-        "price_american": -158,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 61.24,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -158; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "atl-phi",
-        "notes": "Sim PHI F5 Y but F5 not on FD \u2014 0u until F5 shop",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
         "away": "Brewers",
         "home": "Reds",
         "matchup": "Brewers at Reds",
@@ -1830,30 +1878,6 @@
         "prob_method": "none",
         "event_id": "mil-cin",
         "notes": "Bot1 FILL 0u; pending Sim+Lines. May 4.69 vs Abbott 4.49 GABP; USA MIL \u2212160 | Lines: MIL \u2212162",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Rays",
-        "home": "Rangers",
-        "matchup": "Rays at Rangers",
-        "selection": "TB F5",
-        "market": "f5_ml",
-        "line": null,
-        "price_american": -108,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 51.92,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -108; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "tb-tex",
-        "notes": "Sim TB F5 Y but Lines: F5 not on FD Research \u2014 0u until F5 shop",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -1950,30 +1974,6 @@
         "prob_method": "none",
         "event_id": "stl-col",
         "notes": "Sim U11 Y ignored \u2014 WX flip + Bot1 HOLD Coors",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Athletics",
-        "home": "Mariners",
-        "matchup": "Athletics at Mariners",
-        "selection": "SEA F5",
-        "market": "f5_ml",
-        "line": null,
-        "price_american": -245,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 71.01,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -245; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "ath-sea",
-        "notes": "Sim SEA F5 Y but F5 not on FD + Springs thin \u2014 0u until F5 shop",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -2559,7 +2559,7 @@
   "parlays": [
     {
       "id": "P3-1",
-      "title": "All 3 CFB written clears",
+      "title": "All 3 CFB written",
       "kind": "3leg_parlay",
       "tag": "CLEAR",
       "n_legs": 3,
@@ -2597,7 +2597,7 @@
     },
     {
       "id": "P3-2",
-      "title": "MLB written MLs BOS/AZ/CLE",
+      "title": "MLB MLs BOS/AZ/CLE",
       "kind": "3leg_parlay",
       "tag": "CLEAR",
       "n_legs": 3,
@@ -2635,6 +2635,44 @@
     },
     {
       "id": "P3-3",
+      "title": "MLB F5 TB/PHI/SEA",
+      "kind": "3leg_parlay",
+      "tag": "CLEAR",
+      "n_legs": 3,
+      "combined_american_assume_110": 596,
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
+      "legs": [
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Rays",
+          "home": "Rangers",
+          "selection": "TB F5",
+          "event_id": "tb-tex",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Braves",
+          "home": "Phillies",
+          "selection": "PHI F5",
+          "event_id": "atl-phi",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Athletics",
+          "home": "Mariners",
+          "selection": "SEA F5",
+          "event_id": "ath-sea",
+          "edge_pct": null
+        }
+      ]
+    },
+    {
+      "id": "P3-4",
       "title": "CFB dogs + BOS ML",
       "kind": "3leg_parlay",
       "tag": "CLEAR",
@@ -2672,7 +2710,7 @@
       ]
     },
     {
-      "id": "P3-4",
+      "id": "P3-5",
       "title": "MSST + CLE/PIT ML",
       "kind": "3leg_parlay",
       "tag": "CLEAR",
@@ -2710,46 +2748,8 @@
       ]
     },
     {
-      "id": "P3-5",
-      "title": "ORST + AZ + Main fill",
-      "kind": "3leg_parlay",
-      "tag": "MIX",
-      "n_legs": 3,
-      "combined_american_assume_110": 596,
-      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
-      "legs": [
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "Oregon State",
-          "home": "Houston",
-          "selection": "Oregon State +20.5",
-          "event_id": "oresta-hou",
-          "edge_pct": 9.2
-        },
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "Diamondbacks",
-          "home": "Astros",
-          "selection": "AZ ML",
-          "event_id": "az-hou",
-          "edge_pct": null
-        },
-        {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Ball State",
-          "home": "Ohio State",
-          "selection": "Ohio State -50.5",
-          "event_id": "osu-ball",
-          "edge_pct": 21.2
-        }
-      ]
-    },
-    {
       "id": "P5-1",
-      "title": "5 written clears stack",
+      "title": "5 written stack",
       "kind": "5leg_parlay",
       "tag": "CLEAR",
       "n_legs": 5,
@@ -2786,28 +2786,28 @@
         {
           "tag": "CLEAR",
           "role": "written",
-          "away": "Tigers",
-          "home": "Guardians",
-          "selection": "CLE ML",
-          "event_id": "det-cle",
+          "away": "Braves",
+          "home": "Phillies",
+          "selection": "PHI F5",
+          "event_id": "atl-phi",
           "edge_pct": null
         },
         {
           "tag": "CLEAR",
           "role": "written",
-          "away": "Angels",
-          "home": "Pirates",
-          "selection": "PIT ML",
-          "event_id": "laa-pit",
+          "away": "Tigers",
+          "home": "Guardians",
+          "selection": "CLE ML",
+          "event_id": "det-cle",
           "edge_pct": null
         }
       ]
     },
     {
       "id": "P5-2",
-      "title": "4 written + fill",
+      "title": "3 F5 + BOS + AZ",
       "kind": "5leg_parlay",
-      "tag": "MIX",
+      "tag": "CLEAR",
       "n_legs": 5,
       "combined_american_assume_110": 2436,
       "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
@@ -2815,47 +2815,47 @@
         {
           "tag": "CLEAR",
           "role": "written",
-          "away": "Oregon State",
-          "home": "Houston",
-          "selection": "Oregon State +20.5",
-          "event_id": "oresta-hou",
-          "edge_pct": 9.2
-        },
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "Coastal Carolina",
-          "home": "West Virginia",
-          "selection": "Coastal Carolina +21.5",
-          "event_id": "coacar-wesvir",
-          "edge_pct": 10.9
-        },
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "UL Monroe",
-          "home": "Mississippi State",
-          "selection": "Mississippi State -28.5",
-          "event_id": "ulmon-missta",
-          "edge_pct": 16.8
-        },
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "Tigers",
-          "home": "Guardians",
-          "selection": "CLE ML",
-          "event_id": "det-cle",
+          "away": "Rays",
+          "home": "Rangers",
+          "selection": "TB F5",
+          "event_id": "tb-tex",
           "edge_pct": null
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Ball State",
-          "home": "Ohio State",
-          "selection": "Ohio State -50.5",
-          "event_id": "osu-ball",
-          "edge_pct": 21.2
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Braves",
+          "home": "Phillies",
+          "selection": "PHI F5",
+          "event_id": "atl-phi",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Athletics",
+          "home": "Mariners",
+          "selection": "SEA F5",
+          "event_id": "ath-sea",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Red Sox",
+          "home": "Orioles",
+          "selection": "BOS ML",
+          "event_id": "bos-bal",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Diamondbacks",
+          "home": "Astros",
+          "selection": "AZ ML",
+          "event_id": "az-hou",
+          "edge_pct": null
         }
       ]
     },
@@ -2950,7 +2950,7 @@
     },
     {
       "id": "T2-2",
-      "title": "ORST dog + MSST teased",
+      "title": "ORST + MSST teased",
       "kind": "2leg_teaser_plus5.5",
       "tag": "CLEAR",
       "n_legs": 2,
@@ -2981,7 +2981,7 @@
     },
     {
       "id": "T3-1",
-      "title": "CCU + 2 CFB fill spreads",
+      "title": "CCU + 2 CFB fills",
       "kind": "3leg_teaser_plus5.5",
       "tag": "MIX",
       "n_legs": 3,
@@ -3022,7 +3022,7 @@
     },
     {
       "id": "T3-2",
-      "title": "MSST + 2 CFB fill spreads",
+      "title": "MSST + 2 CFB fills",
       "kind": "3leg_teaser_plus5.5",
       "tag": "MIX",
       "n_legs": 3,
@@ -3118,6 +3118,23 @@
       {
         "role": "written",
         "source": "bet_bot_main",
+        "event_id": "atl-phi",
+        "sport": "mlb",
+        "away": "Braves",
+        "home": "Phillies",
+        "market": "f5_ml",
+        "selection": "PHI F5",
+        "line": null,
+        "price_american": -175,
+        "book": "BetMGM",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim PHI F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetMGM PHI \u2212175. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
         "event_id": "det-cle",
         "sport": "mlb",
         "away": "Tigers",
@@ -3169,6 +3186,23 @@
       {
         "role": "written",
         "source": "bet_bot_main",
+        "event_id": "tb-tex",
+        "sport": "mlb",
+        "away": "Rays",
+        "home": "Rangers",
+        "market": "f5_ml",
+        "selection": "TB F5",
+        "line": null,
+        "price_american": 108,
+        "book": "BetRivers",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim TB F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetRivers TB +108. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
         "event_id": "az-hou",
         "sport": "mlb",
         "away": "Diamondbacks",
@@ -3199,6 +3233,23 @@
         "edge_pct": null,
         "clears": "Y",
         "notes": "Main written 1u. Sim U7.5 Y + WX marine + Lines FD U \u2212124. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
+        "event_id": "ath-sea",
+        "sport": "mlb",
+        "away": "Athletics",
+        "home": "Mariners",
+        "market": "f5_ml",
+        "selection": "SEA F5",
+        "line": null,
+        "price_american": -225,
+        "book": "BetMGM",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim SEA F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetMGM SEA \u2212225. 1u"
       }
     ],
     "written_shop_notes": {
@@ -3217,6 +3268,11 @@
         "book": "FOX/Covers",
         "sqlite_shop": {}
       },
+      "atl-phi": {
+        "instruction": "Main written 1u. Sim PHI F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetMGM PHI \u2212175. 1u",
+        "book": "BetMGM",
+        "sqlite_shop": {}
+      },
       "det-cle": {
         "instruction": "Main written 1u. Sim fair \u2212311 vs CLE \u2212156; Messick/Valdez. 1u",
         "book": "FanDuel",
@@ -3232,6 +3288,11 @@
         "book": "FanDuel",
         "sqlite_shop": {}
       },
+      "tb-tex": {
+        "instruction": "Main written 1u. Sim TB F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetRivers TB +108. 1u",
+        "book": "BetRivers",
+        "sqlite_shop": {}
+      },
       "az-hou": {
         "instruction": "Main written 1u. Sim ARI fair huge vs \u2212108/+110; Pfaadt/Pecko xERA. Lines AZ +110. 1u",
         "book": "FanDuel",
@@ -3240,6 +3301,11 @@
       "wsh-lad": {
         "instruction": "Main written 1u. Sim U7.5 Y + WX marine + Lines FD U \u2212124. 1u",
         "book": "FanDuel",
+        "sqlite_shop": {}
+      },
+      "ath-sea": {
+        "instruction": "Main written 1u. Sim SEA F5 Y. Lines Covers F5 12:46pm CT \u2014 BEST BetMGM SEA \u2212225. 1u",
+        "book": "BetMGM",
         "sqlite_shop": {}
       }
     }
