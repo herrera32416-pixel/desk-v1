@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-05",
-  "generated_at_ct": "2026-09-05T17:04:22.781173-05:00",
+  "generated_at_ct": "2026-09-05T17:04:44.954961-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -2643,7 +2643,7 @@
       },
       {
         "tag": "FILL",
-        "status": "BOARD",
+        "status": "GONE_LIVE",
         "sport": "CFB",
         "player": "Byrum Brown",
         "team": "Auburn",
@@ -2670,7 +2670,7 @@
       },
       {
         "tag": "FILL",
-        "status": "BOARD",
+        "status": "GONE_LIVE",
         "sport": "CFB",
         "player": "Maddux Madsen",
         "team": "Boise State",
@@ -2697,7 +2697,7 @@
       },
       {
         "tag": "FILL",
-        "status": "BOARD",
+        "status": "GONE_LIVE",
         "sport": "CFB",
         "player": "Mason McKenzie",
         "team": "Boston College",
