@@ -97,7 +97,7 @@ function propCard(p){
   a.dataset.sport=p.sport||'NFL';
   a.dataset.kind='prop';
   const hd=el('div','play-hd');
-  const pill=el('span','pill'+(p.tag==='CLEAR'?' star':''), p.tag==='CLEAR'?'PROP PLAY':(p.tag||'PROP'));
+  const st=p.prop_status||p.tag||'PROP'; const pill=el('span','pill'+(st==='CLEAR'||st==='OPEN'?' star':''), st==='CLEAR'?'PROP PLAY':st);
   hd.append(pill, el('span','when',`${p.sport||''} · ${p.units||0}u`));
   a.append(hd);
   const title=p.player || p.selection || 'Player prop';
