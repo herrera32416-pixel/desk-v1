@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#0a0a0a"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="DESK"/>
+<title>DESK v1</title>
+<link rel="manifest" href="./manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="./icons/icon-192.png"/>
+<style>
+:root{--bg:#070707;--panel:#121212;--line:#2c2c2c;--muted:#8b8b8b;--text:#f4f3ef;--cream:#e6e3d3}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);font:15px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+background:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px),var(--bg);
+background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh}
+.serif{font-family:Georgia,"Iowan Old Style",Palatino,"Times New Roman",serif;font-weight:500}
+.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.logo{font-size:42px;margin:0}.logo span{font-size:14px;vertical-align:super;color:var(--muted);margin-left:4px}
+.asof{color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:right;white-space:pre-line}
+.sub{color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:8px 0 14px}
+.tabs{display:flex;gap:18px;border-bottom:1px solid var(--line);margin-bottom:18px;overflow-x:auto}
+.tabs button{background:0;border:0;color:var(--muted);padding:0 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.tabs button.on{color:var(--text);box-shadow:inset 0 -2px 0 var(--cream)}
+.panel{display:none}.panel.on{display:block}
+.hero h2{font-size:44px;margin:0 0 6px}.hero p{color:var(--muted);margin:0 0 14px}
+.summary{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:16px}
+.summary .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.summary .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.summary .v{font-size:28px;margin-top:2px}
+.summary .foot{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 0 14px}
+.chips button{border:0;border-radius:8px;padding:8px 12px;background:transparent;color:var(--text);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.chips button.on{background:var(--cream);color:#111;font-weight:700}
+.play{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.play-hd{display:flex;justify-content:space-between;margin-bottom:8px}
+.pill{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream)}
+.when{color:var(--muted);font-size:12px}
+.play h3{margin:0 0 4px;font-size:26px;line-height:1.15}
+.side{font-weight:700;margin:0 0 12px;font-size:16px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.metrics .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.metrics .v{font-size:20px}
+.why{margin:0;color:var(--muted);font-size:13px}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.rule b{color:var(--cream)}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(7,7,7,.92);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.bar button{flex:0 0 auto;background:var(--cream);color:#111;border:0;border-radius:10px;padding:10px 14px;font-weight:700}
+.bar #status{color:var(--muted);font-size:12px;align-self:center}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <h1 class="logo serif">DESK<span>v1</span></h1>
+  <div class="asof" id="asof">loading…</div>
+</header>
+<p class="sub">Skip-first clerk · Main owns the card</p>
+<nav class="tabs" id="tabs">
+  <button class="on" data-p="card">Card</button>
+  <button data-p="ledger">Ledger</button>
+  <button data-p="rules">Rules</button>
+  <button data-p="parlays">Parlays</button>
+  <button data-p="teasers">Teasers</button>
+</nav>
+
+<section class="panel on" id="p-card">
+  <div class="hero">
+    <h2 class="serif">One call.</h2>
+    <p>CLEAR only counts. FILL is board, not bankroll.</p>
+  </div>
+  <div class="summary">
+    <div class="row">
+      <div><div class="k">Published clear</div><div class="v serif" id="clearCount">—</div></div>
+      <div><div class="k">Lean</div><div class="v serif" id="leanVal">—</div></div>
+    </div>
+    <div class="foot" id="asOfFoot"></div>
+  </div>
+  <div class="chips" id="chips">
+    <button class="on" data-s="ALL">All</button>
+    <button data-s="MLB">MLB</button>
+    <button data-s="NFL">NFL</button>
+    <button data-s="CFB">CFB</button>
+    <button data-s="SOC">SOC</button>
+  </div>
+  <h3 class="serif" style="font-size:22px;margin:8px 0 10px">Clears</h3>
+  <div id="clears"></div>
+  <h3 class="serif" style="font-size:22px;margin:18px 0 10px">Fill / board</h3>
+  <div id="fills"></div>
+</section>
+
+<section class="panel" id="p-ledger">
+  <div class="hero"><h2 class="serif">Ledger.</h2><p id="friWritten">CLEAR results only.</p></div>
+  <div class="summary"><div class="row">
+    <div><div class="k">Written book</div><div class="v serif" style="font-size:22px" id="writtenBook">—</div></div>
+    <div><div class="k">Fri sides exam</div><div class="v serif" style="font-size:22px" id="friExam">—</div></div>
+  </div></div>
+  <div id="ledgerBits"></div>
+</section>
+
+<section class="panel" id="p-rules">
+  <div class="hero"><h2 class="serif">Rules.</h2><p>Hard gates for the written card.</p></div>
+  <div id="rules"></div>
+</section>
+
+<section class="panel" id="p-parlays">
+  <div class="hero"><h2 class="serif">Parlays.</h2><p>Entertainment / SGP. Straights stay CLEAR.</p></div>
+  <div id="parlays"></div>
+</section>
+
+<section class="panel" id="p-teasers">
+  <div class="hero"><h2 class="serif">Teasers.</h2><p>+5.5 spreads. Shop live.</p></div>
+  <div id="teasers"></div>
+</section>
+
+<div class="bar">
+  <span id="status">Loading…</span>
+  <button id="refresh" type="button">Refresh</button>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>
