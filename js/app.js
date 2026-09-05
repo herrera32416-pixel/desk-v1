@@ -52,7 +52,7 @@ function playCard(p){
   hd.append(el('span','pill',p.tag||'CLEAR'), el('span','when',`${p.sport||''} · ${p.units||0}u`));
   a.append(hd);
   a.append(el('h3','serif',p.matchup||`${p.away} at ${p.home}`));
-  a.append(el('div','side',p.selection||''));
+  a.append(el('div','side',p.selection|| (p.tag==='HOLD'?'Hold — no number':'')));
   const m=el('div','metrics');
   const model = p.model_win_pct!=null ? `${p.model_win_pct}%` : '—';
   const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : '—';
@@ -91,8 +91,21 @@ function showPanel(id){
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===id));
 }
 function filterSport(s){
-  document.querySelectorAll('#clears .play, #fills .play').forEach(c=>{
+  document.querySelectorAll('#slate .play').forEach(c=>{
     c.style.display=(s==='ALL'||c.dataset.sport===s)?'':'none';
+  });
+  const hint=document.getElementById('sportHint');
+  if(hint) hint.textContent = s==='ALL'
+    ? 'All sports · CLEAR plays on top, then board.'
+    : `${s} · CLEAR plays on top, then every game.`;
+}
+function sortPlays(plays){
+  const rank=t=>({CLEAR:0,HOLD:1,FILL:2}[t]??3);
+  return [...plays].sort((a,b)=>{
+    const ra=rank(a.tag|| (a.clears?'CLEAR':'FILL'));
+    const rb=rank(b.tag|| (b.clears?'CLEAR':'FILL'));
+    if(ra!==rb) return ra-rb;
+    return Math.abs(b.edge_pct||b.edge||0) - Math.abs(a.edge_pct||a.edge||0);
   });
 }
 async function main(){
@@ -102,14 +115,18 @@ async function main(){
   document.getElementById('leanVal').textContent=data.summary?.lean || 'none';
   document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · sports ${(data.summary?.sports||[]).join(' · ')}`;
 
+  const slate=document.getElementById('slate');
+  slate.innerHTML='';
+  const plays=sortPlays([...(data.clears||[]), ...(data.fills||[])]);
+  if(!plays.length) slate.append(el('p','why','No games on the slate.'));
+  else plays.forEach(p=>slate.append(playCard(p)));
+  // keep hidden buckets for any legacy callers
   const clears=document.getElementById('clears');
-  clears.innerHTML='';
-  (data.clears||[]).forEach(p=>clears.append(playCard(p)));
-  if(!(data.clears||[]).length) clears.append(el('p','why','No CLEAR tickets today.'));
-
   const fills=document.getElementById('fills');
-  fills.innerHTML='';
-  (data.fills||[]).forEach(p=>fills.append(playCard(p)));
+  if(clears){ clears.innerHTML=''; (data.clears||[]).forEach(p=>clears.append(playCard(p))); }
+  if(fills){ fills.innerHTML=''; (data.fills||[]).forEach(p=>fills.append(playCard(p))); }
+  const onChip=[...document.querySelectorAll('#chips button.on')][0];
+  filterSport(onChip?.dataset?.s || 'ALL');
 
   const parlays=document.getElementById('parlays');
   parlays.innerHTML='';
