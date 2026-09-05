@@ -30,7 +30,7 @@ function normalize(data){
       lean: data.summary?.lean || 'none',
       sports: data.summary?.sports || ['MLB','NFL','CFB','SOC'],
     },
-    clears, fills, parlays, teasers, rules,
+    clears, fills, holds: (card.holds || data.holds || []), parlays, teasers, rules,
     ledger: data.ledger || null,
   };
 }
@@ -117,7 +117,7 @@ async function main(){
 
   const slate=document.getElementById('slate');
   slate.innerHTML='';
-  const plays=sortPlays([...(data.clears||[]), ...(data.fills||[])]);
+  const plays=sortPlays([...(data.clears||[]), ...(data.fills||[]), ...(data.holds||[])]);
   if(!plays.length) slate.append(el('p','why','No games on the slate.'));
   else plays.forEach(p=>slate.append(playCard(p)));
   // keep hidden buckets for any legacy callers
