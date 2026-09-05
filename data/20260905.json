@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-05",
-  "generated_at_ct": "2026-09-05T12:42:03.049046-05:00",
+  "generated_at_ct": "2026-09-05T12:43:36.225057-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -13,9 +13,9 @@
     "probs": "model%/market% from feed when present; else fair vs mkt lines in Main notes via 16\u03c3 CFB / 13.86\u03c3 NFL normal CDF; market% falls back to assume -110 when no price. Never invent fair lines."
   },
   "summary": {
-    "published_clear": 3,
-    "fill_total": 81,
-    "fill_shown": 81,
+    "published_clear": 8,
+    "fill_total": 76,
+    "fill_shown": 76,
     "hold_total": 21,
     "board_total": 105,
     "by_sport": {
@@ -100,6 +100,126 @@
         "prob_method": "feed",
         "event_id": "oresta-hou",
         "notes": "Main written 1u. WRITE 1u take +20.5 only (Lines shop FLAG; USA Today +21). Sim fair HOU \u221216.82 vs \u221220.5 edge 3.68 Y. FPI blend 3.09 Y. | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs \u03c3=16 official sat-sep5-cover-probs",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Tigers",
+        "home": "Guardians",
+        "matchup": "Tigers at Guardians",
+        "selection": "CLE ML",
+        "market": "ml",
+        "line": null,
+        "price_american": -156,
+        "book": "FanDuel",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 60.94,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price -156; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "det-cle",
+        "notes": "Main written 1u. Sim fair \u2212311 vs CLE \u2212156; Messick/Valdez. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Angels",
+        "home": "Pirates",
+        "matchup": "Angels at Pirates",
+        "selection": "PIT ML",
+        "market": "ml",
+        "line": null,
+        "price_american": -184,
+        "book": "FanDuel",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 64.79,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price -184; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "laa-pit",
+        "notes": "Main written 1u. Sim clears Y; Lines PIT \u2212184. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Red Sox",
+        "home": "Orioles",
+        "matchup": "Red Sox at Orioles",
+        "selection": "BOS ML",
+        "market": "ml",
+        "line": null,
+        "price_american": -132,
+        "book": "FanDuel",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 56.9,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price -132; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "bos-bal",
+        "notes": "Main written 1u. Sim fair \u2212240 vs FD \u2212132; edge clears 2.5%. Gray/Bassitt xERA. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Diamondbacks",
+        "home": "Astros",
+        "matchup": "Diamondbacks at Astros",
+        "selection": "AZ ML",
+        "market": "ml",
+        "line": null,
+        "price_american": 110,
+        "book": "FanDuel",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 47.62,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price +110; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "az-hou",
+        "notes": "Main written 1u. Sim ARI fair huge vs \u2212108/+110; Pfaadt/Pecko xERA. Lines AZ +110. 1u",
+        "slate_date_ct": "2026-09-05"
+      },
+      {
+        "tag": "CLEAR",
+        "status": "WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Nationals",
+        "home": "Dodgers",
+        "matchup": "Nationals at Dodgers",
+        "selection": "Under 7.5",
+        "market": "total",
+        "line": 7.5,
+        "price_american": -124,
+        "book": "FanDuel",
+        "units": 1.0,
+        "model_win_pct": null,
+        "market_win_pct": 55.36,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "implied from price -124; model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "wsh-lad",
+        "notes": "Main written 1u. Sim U7.5 Y + WX marine + Lines FD U \u2212124. 1u",
         "slate_date_ct": "2026-09-05"
       }
     ],
@@ -1685,31 +1805,7 @@
         "prob_source": "implied from price -158; model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "atl-phi",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. P\u00e9rez 3.05 vs Wheeler 3.31; USA PHI \u2212160; F5 not FG | Lines: PHI \u2212158 FG; F5 N/A on FD",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Tigers",
-        "home": "Guardians",
-        "matchup": "Tigers at Guardians",
-        "selection": "CLE ML",
-        "market": "ml",
-        "line": null,
-        "price_american": -156,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 60.94,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -156; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "det-cle",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Valdez 4.36 vs Messick 2.46; USA CLE \u2212160 | Lines: CLE \u2212156 / DET +132; tot 7.5",
+        "notes": "Sim PHI F5 Y but F5 not on FD \u2014 0u until F5 shop",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -1741,54 +1837,6 @@
         "status": "NOT_WRITTEN",
         "sport": "MLB",
         "sport_raw": "mlb",
-        "away": "Angels",
-        "home": "Pirates",
-        "matchup": "Angels at Pirates",
-        "selection": "PIT ML",
-        "market": "ml",
-        "line": null,
-        "price_american": -184,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 64.79,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -184; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "laa-pit",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Kikuchi 5.65 vs Ashcraft 3.59; USA PIT \u2212185 | Lines: PIT \u2212184",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Red Sox",
-        "home": "Orioles",
-        "matchup": "Red Sox at Orioles",
-        "selection": "BOS ML",
-        "market": "ml",
-        "line": null,
-        "price_american": -132,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 56.9,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -132; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "bos-bal",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Gray 2.82 vs Bassitt 4.97; USA BOS \u2212130; Sim first | Lines: BOS \u2212132 / BAL +112; tot 8; juice off \u2212138",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
         "away": "Rays",
         "home": "Rangers",
         "matchup": "Rays at Rangers",
@@ -1805,7 +1853,7 @@
         "prob_source": "implied from price -108; model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "tb-tex",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Rasmussen 2.95 vs deGrom 4.00; USA \u2212110/\u2212110 | Lines: TB \u2212108 / TEX \u2212108; tot 7; F5 not on FD Research",
+        "notes": "Sim TB F5 Y but Lines: F5 not on FD Research \u2014 0u until F5 shop",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -1829,7 +1877,7 @@
         "prob_source": "implied from price -110; model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "tor-kc",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Scherzer 6.16 vs Lugo 5.03; USA pick\u2019em | Lines: KC \u2212110 / TOR \u2212106",
+        "notes": "Sim: treat N/HOLD (Scherzer thin sample)",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -1854,30 +1902,6 @@
         "prob_method": "none",
         "event_id": "min-cws",
         "notes": "Bot1 FILL 0u; pending Sim+Lines. Bradley 3.85 vs Kay 4.28; USA CWS \u2212120 | Lines: CWS \u2212124 / MIN +106",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Diamondbacks",
-        "home": "Astros",
-        "matchup": "Diamondbacks at Astros",
-        "selection": "AZ ML",
-        "market": "ml",
-        "line": null,
-        "price_american": 110,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 47.62,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price +110; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "az-hou",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Pfaadt 3.49 vs Pecko 6.23; USA \u2212110/\u2212110 | Lines: HOU \u2212130 / AZ +110; also pick\u2019em \u2212108 shop; FLAG juice split",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -1925,31 +1949,7 @@
         "prob_source": "implied from price -125; model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "stl-col",
-        "notes": "Bot1: stl-col HOLD void \u2014 ignore STL ML FILL. Coors stays WX until clean number. Under 11 WX-killed.",
-        "slate_date_ct": "2026-09-05"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Nationals",
-        "home": "Dodgers",
-        "matchup": "Nationals at Dodgers",
-        "selection": "Under 7.5",
-        "market": "total",
-        "line": 7.5,
-        "price_american": -124,
-        "book": "FanDuel",
-        "units": 0,
-        "model_win_pct": null,
-        "market_win_pct": 55.36,
-        "edge_pct": null,
-        "edge_pts": null,
-        "prob_source": "implied from price -124; model% unavailable (no fair line / no feed prob)",
-        "prob_method": "none",
-        "event_id": "wsh-lad",
-        "notes": "WX Under 7.5 Y (marine): NWS LOX SSW 10 then cool. Bot1 had Under 7; Lines 7.5. Clears WX Y; units 0 until Sim+Lines. Pending Sim. | Lines CONFIRM FD Under 7.5 \u2212124 / Over +102 (1:12pm). Not back to 7. DK had Under 8 earlier \u2014 shop 7.5.",
+        "notes": "Sim U11 Y ignored \u2014 WX flip + Bot1 HOLD Coors",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -1973,7 +1973,7 @@
         "prob_source": "implied from price -245; model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "ath-sea",
-        "notes": "Bot1 FILL 0u; pending Sim+Lines. Springs 6.37 vs Kirby 4.19; USA SEA \u2212255; F5 only | Lines: SEA \u2212245; F5 not on FD Research",
+        "notes": "Sim SEA F5 Y but F5 not on FD + Springs thin \u2014 0u until F5 shop",
         "slate_date_ct": "2026-09-05"
       },
       {
@@ -2559,12 +2559,12 @@
   "parlays": [
     {
       "id": "P3-1",
-      "title": "All three written clears",
+      "title": "All 3 CFB written clears",
       "kind": "3leg_parlay",
       "tag": "CLEAR",
       "n_legs": 3,
       "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2573,7 +2573,7 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675
+          "edge_pct": 9.2
         },
         {
           "tag": "CLEAR",
@@ -2582,7 +2582,7 @@
           "home": "West Virginia",
           "selection": "Coastal Carolina +21.5",
           "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002
+          "edge_pct": 10.9
         },
         {
           "tag": "CLEAR",
@@ -2591,56 +2591,56 @@
           "home": "Mississippi State",
           "selection": "Mississippi State -28.5",
           "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998
+          "edge_pct": 16.8
         }
       ]
     },
     {
       "id": "P3-2",
-      "title": "OSU dog + Coastal dog + Troy fill",
+      "title": "MLB written MLs BOS/AZ/CLE",
       "kind": "3leg_parlay",
-      "tag": "MIX",
+      "tag": "CLEAR",
       "n_legs": 3,
       "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
         {
           "tag": "CLEAR",
           "role": "written",
-          "away": "Oregon State",
-          "home": "Houston",
-          "selection": "Oregon State +20.5",
-          "event_id": "oresta-hou",
-          "edge_pct": 3.675
+          "away": "Red Sox",
+          "home": "Orioles",
+          "selection": "BOS ML",
+          "event_id": "bos-bal",
+          "edge_pct": null
         },
         {
           "tag": "CLEAR",
           "role": "written",
-          "away": "Coastal Carolina",
-          "home": "West Virginia",
-          "selection": "Coastal Carolina +21.5",
-          "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002
+          "away": "Diamondbacks",
+          "home": "Astros",
+          "selection": "AZ ML",
+          "event_id": "az-hou",
+          "edge_pct": null
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Sam Houston",
-          "home": "Troy",
-          "selection": "Troy -16.5",
-          "event_id": "samhou-tro",
-          "edge_pct": 3.075000000000001
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Tigers",
+          "home": "Guardians",
+          "selection": "CLE ML",
+          "event_id": "det-cle",
+          "edge_pct": null
         }
       ]
     },
     {
       "id": "P3-3",
-      "title": "OSU dog + MSST + Memphis fill",
+      "title": "CFB dogs + BOS ML",
       "kind": "3leg_parlay",
-      "tag": "MIX",
+      "tag": "CLEAR",
       "n_legs": 3,
       "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2649,46 +2649,37 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675
+          "edge_pct": 9.2
         },
         {
           "tag": "CLEAR",
           "role": "written",
-          "away": "UL Monroe",
-          "home": "Mississippi State",
-          "selection": "Mississippi State -28.5",
-          "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998
+          "away": "Coastal Carolina",
+          "home": "West Virginia",
+          "selection": "Coastal Carolina +21.5",
+          "event_id": "coacar-wesvir",
+          "edge_pct": 10.9
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Arkansas State",
-          "home": "Memphis",
-          "selection": "Memphis -10.5",
-          "event_id": "arksta-mem",
-          "edge_pct": 3.0
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Red Sox",
+          "home": "Orioles",
+          "selection": "BOS ML",
+          "event_id": "bos-bal",
+          "edge_pct": null
         }
       ]
     },
     {
       "id": "P3-4",
-      "title": "Coastal dog + MSST + Miami(OH) fill",
+      "title": "MSST + CLE/PIT ML",
       "kind": "3leg_parlay",
-      "tag": "MIX",
+      "tag": "CLEAR",
       "n_legs": 3,
       "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "Coastal Carolina",
-          "home": "West Virginia",
-          "selection": "Coastal Carolina +21.5",
-          "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002
-        },
         {
           "tag": "CLEAR",
           "role": "written",
@@ -2696,27 +2687,36 @@
           "home": "Mississippi State",
           "selection": "Mississippi State -28.5",
           "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998
+          "edge_pct": 16.8
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Miami (OH)",
-          "home": "Pittsburgh",
-          "selection": "Miami (OH) +16.5",
-          "event_id": "miaoh-pit",
-          "edge_pct": 2.775000000000001
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Tigers",
+          "home": "Guardians",
+          "selection": "CLE ML",
+          "event_id": "det-cle",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Angels",
+          "home": "Pirates",
+          "selection": "PIT ML",
+          "event_id": "laa-pit",
+          "edge_pct": null
         }
       ]
     },
     {
       "id": "P3-5",
-      "title": "OSU dog + Tulsa fill + Wyoming fill",
+      "title": "ORST + AZ + Main fill",
       "kind": "3leg_parlay",
       "tag": "MIX",
       "n_legs": 3,
       "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2725,36 +2725,36 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675
+          "edge_pct": 9.2
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Diamondbacks",
+          "home": "Astros",
+          "selection": "AZ ML",
+          "event_id": "az-hou",
+          "edge_pct": null
         },
         {
           "tag": "FILL",
           "role": "fill",
-          "away": "Oklahoma State",
-          "home": "Tulsa",
-          "selection": "Tulsa +14.0",
-          "event_id": "okst-tlsa",
-          "edge_pct": 2.7
-        },
-        {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Wyoming",
-          "home": "Colorado State",
-          "selection": "Wyoming +3.5",
-          "event_id": "wyo-colsta",
-          "edge_pct": 1.274999999999999
+          "away": "Ball State",
+          "home": "Ohio State",
+          "selection": "Ohio State -50.5",
+          "event_id": "osu-ball",
+          "edge_pct": 21.2
         }
       ]
     },
     {
       "id": "P5-1",
-      "title": "3 written + Troy + Memphis",
+      "title": "5 written clears stack",
       "kind": "5leg_parlay",
-      "tag": "MIX",
+      "tag": "CLEAR",
       "n_legs": 5,
       "combined_american_assume_110": 2436,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2763,7 +2763,7 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675
+          "edge_pct": 9.2
         },
         {
           "tag": "CLEAR",
@@ -2772,7 +2772,7 @@
           "home": "West Virginia",
           "selection": "Coastal Carolina +21.5",
           "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002
+          "edge_pct": 10.9
         },
         {
           "tag": "CLEAR",
@@ -2781,36 +2781,36 @@
           "home": "Mississippi State",
           "selection": "Mississippi State -28.5",
           "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998
+          "edge_pct": 16.8
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Sam Houston",
-          "home": "Troy",
-          "selection": "Troy -16.5",
-          "event_id": "samhou-tro",
-          "edge_pct": 3.075000000000001
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Tigers",
+          "home": "Guardians",
+          "selection": "CLE ML",
+          "event_id": "det-cle",
+          "edge_pct": null
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Arkansas State",
-          "home": "Memphis",
-          "selection": "Memphis -10.5",
-          "event_id": "arksta-mem",
-          "edge_pct": 3.0
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Angels",
+          "home": "Pirates",
+          "selection": "PIT ML",
+          "event_id": "laa-pit",
+          "edge_pct": null
         }
       ]
     },
     {
       "id": "P5-2",
-      "title": "OSU+Coastal + Miami(OH)+Tulsa+Penn State",
+      "title": "4 written + fill",
       "kind": "5leg_parlay",
       "tag": "MIX",
       "n_legs": 5,
       "combined_american_assume_110": 2436,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2819,7 +2819,7 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675
+          "edge_pct": 9.2
         },
         {
           "tag": "CLEAR",
@@ -2828,54 +2828,7 @@
           "home": "West Virginia",
           "selection": "Coastal Carolina +21.5",
           "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002
-        },
-        {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Miami (OH)",
-          "home": "Pittsburgh",
-          "selection": "Miami (OH) +16.5",
-          "event_id": "miaoh-pit",
-          "edge_pct": 2.775000000000001
-        },
-        {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Oklahoma State",
-          "home": "Tulsa",
-          "selection": "Tulsa +14.0",
-          "event_id": "okst-tlsa",
-          "edge_pct": 2.7
-        },
-        {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Marshall",
-          "home": "Penn State",
-          "selection": "Penn State -24.5",
-          "event_id": "mar-pensta",
-          "edge_pct": 1.875
-        }
-      ]
-    },
-    {
-      "id": "P5-3",
-      "title": "Coastal+MSST + Duke+Cal+Oregon",
-      "kind": "5leg_parlay",
-      "tag": "MIX",
-      "n_legs": 5,
-      "combined_american_assume_110": 2436,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
-      "legs": [
-        {
-          "tag": "CLEAR",
-          "role": "written",
-          "away": "Coastal Carolina",
-          "home": "West Virginia",
-          "selection": "Coastal Carolina +21.5",
-          "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002
+          "edge_pct": 10.9
         },
         {
           "tag": "CLEAR",
@@ -2884,34 +2837,81 @@
           "home": "Mississippi State",
           "selection": "Mississippi State -28.5",
           "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998
+          "edge_pct": 16.8
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Tigers",
+          "home": "Guardians",
+          "selection": "CLE ML",
+          "event_id": "det-cle",
+          "edge_pct": null
         },
         {
           "tag": "FILL",
           "role": "fill",
-          "away": "Tulane",
-          "home": "Duke",
-          "selection": "Duke -9.5",
-          "event_id": "tul-duk",
-          "edge_pct": 2.2499999999999987
+          "away": "Ball State",
+          "home": "Ohio State",
+          "selection": "Ohio State -50.5",
+          "event_id": "osu-ball",
+          "edge_pct": 21.2
+        }
+      ]
+    },
+    {
+      "id": "P5-3",
+      "title": "3 CFB + BOS + AZ",
+      "kind": "5leg_parlay",
+      "tag": "CLEAR",
+      "n_legs": 5,
+      "combined_american_assume_110": 2436,
+      "risk_label": "Entertainment / SGP risk \u2014 Main owns straights",
+      "legs": [
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Oregon State",
+          "home": "Houston",
+          "selection": "Oregon State +20.5",
+          "event_id": "oresta-hou",
+          "edge_pct": 9.2
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "UCLA",
-          "home": "Cal",
-          "selection": "Cal +1.5",
-          "event_id": "ucla-cal",
-          "edge_pct": 1.275
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Coastal Carolina",
+          "home": "West Virginia",
+          "selection": "Coastal Carolina +21.5",
+          "event_id": "coacar-wesvir",
+          "edge_pct": 10.9
         },
         {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Boise State",
-          "home": "Oregon",
-          "selection": "Oregon -24.5",
-          "event_id": "bois-ore",
-          "edge_pct": 1.650000000000002
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "UL Monroe",
+          "home": "Mississippi State",
+          "selection": "Mississippi State -28.5",
+          "event_id": "ulmon-missta",
+          "edge_pct": 16.8
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Red Sox",
+          "home": "Orioles",
+          "selection": "BOS ML",
+          "event_id": "bos-bal",
+          "edge_pct": null
+        },
+        {
+          "tag": "CLEAR",
+          "role": "written",
+          "away": "Diamondbacks",
+          "home": "Astros",
+          "selection": "AZ ML",
+          "event_id": "az-hou",
+          "edge_pct": null
         }
       ]
     }
@@ -2919,12 +2919,12 @@
   "teasers": [
     {
       "id": "T2-1",
-      "title": "Dogs through big numbers",
+      "title": "CFB dogs teased",
       "kind": "2leg_teaser_plus5.5",
       "tag": "CLEAR",
       "n_legs": 2,
-      "combined_american_assume_110": 264,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "combined_american_assume_110": null,
+      "risk_label": "Entertainment \u2014 shop teaser price live",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2933,7 +2933,7 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675,
+          "edge_pct": 9.2,
           "post_tease_line": 26.0
         },
         {
@@ -2943,19 +2943,19 @@
           "home": "West Virginia",
           "selection": "Coastal Carolina +21.5",
           "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002,
+          "edge_pct": 10.9,
           "post_tease_line": 27.0
         }
       ]
     },
     {
       "id": "T2-2",
-      "title": "OSU dog + MSST teased down",
+      "title": "ORST dog + MSST teased",
       "kind": "2leg_teaser_plus5.5",
       "tag": "CLEAR",
       "n_legs": 2,
-      "combined_american_assume_110": 264,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "combined_american_assume_110": null,
+      "risk_label": "Entertainment \u2014 shop teaser price live",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2964,7 +2964,7 @@
           "home": "Houston",
           "selection": "Oregon State +20.5",
           "event_id": "oresta-hou",
-          "edge_pct": 3.675,
+          "edge_pct": 9.2,
           "post_tease_line": 26.0
         },
         {
@@ -2974,19 +2974,19 @@
           "home": "Mississippi State",
           "selection": "Mississippi State -28.5",
           "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998,
+          "edge_pct": 16.8,
           "post_tease_line": -23.0
         }
       ]
     },
     {
       "id": "T3-1",
-      "title": "Coastal + Miami(OH) + Tulsa dogs/mids",
+      "title": "CCU + 2 CFB fill spreads",
       "kind": "3leg_teaser_plus5.5",
       "tag": "MIX",
       "n_legs": 3,
-      "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "combined_american_assume_110": null,
+      "risk_label": "Entertainment \u2014 shop teaser price live",
       "legs": [
         {
           "tag": "CLEAR",
@@ -2995,39 +2995,39 @@
           "home": "West Virginia",
           "selection": "Coastal Carolina +21.5",
           "event_id": "coacar-wesvir",
-          "edge_pct": 4.125000000000002,
+          "edge_pct": 10.9,
           "post_tease_line": 27.0
         },
         {
           "tag": "FILL",
           "role": "fill",
-          "away": "Miami (OH)",
-          "home": "Pittsburgh",
-          "selection": "Miami (OH) +16.5",
-          "event_id": "miaoh-pit",
-          "edge_pct": 2.775000000000001,
-          "post_tease_line": 22.0
+          "away": "Ball State",
+          "home": "Ohio State",
+          "selection": "Ohio State -50.5",
+          "event_id": "osu-ball",
+          "edge_pct": 21.2,
+          "post_tease_line": -45.0
         },
         {
           "tag": "FILL",
           "role": "fill",
-          "away": "Oklahoma State",
-          "home": "Tulsa",
-          "selection": "Tulsa +14.0",
-          "event_id": "okst-tlsa",
-          "edge_pct": 2.7,
-          "post_tease_line": 19.5
+          "away": "Central Michigan",
+          "home": "New Mexico",
+          "selection": "New Mexico -10.5",
+          "event_id": "cmu-unm",
+          "edge_pct": 19.4,
+          "post_tease_line": -5.0
         }
       ]
     },
     {
       "id": "T3-2",
-      "title": "MSST + Memphis + Wyoming",
+      "title": "MSST + 2 CFB fill spreads",
       "kind": "3leg_teaser_plus5.5",
       "tag": "MIX",
       "n_legs": 3,
-      "combined_american_assume_110": 596,
-      "risk_label": "entertainment / SGP risk \u2014 Main owns straights",
+      "combined_american_assume_110": null,
+      "risk_label": "Entertainment \u2014 shop teaser price live",
       "legs": [
         {
           "tag": "CLEAR",
@@ -3036,8 +3036,18 @@
           "home": "Mississippi State",
           "selection": "Mississippi State -28.5",
           "event_id": "ulmon-missta",
-          "edge_pct": 5.849999999999998,
+          "edge_pct": 16.8,
           "post_tease_line": -23.0
+        },
+        {
+          "tag": "FILL",
+          "role": "fill",
+          "away": "Sam Houston",
+          "home": "Troy",
+          "selection": "Troy -16.5",
+          "event_id": "samhou-tro",
+          "edge_pct": 8.1,
+          "post_tease_line": -11.0
         },
         {
           "tag": "FILL",
@@ -3046,18 +3056,8 @@
           "home": "Memphis",
           "selection": "Memphis -10.5",
           "event_id": "arksta-mem",
-          "edge_pct": 3.0,
+          "edge_pct": 7.9,
           "post_tease_line": -5.0
-        },
-        {
-          "tag": "FILL",
-          "role": "fill",
-          "away": "Wyoming",
-          "home": "Colorado State",
-          "selection": "Wyoming +3.5",
-          "event_id": "wyo-colsta",
-          "edge_pct": 1.274999999999999,
-          "post_tease_line": 9.0
         }
       ]
     }
@@ -3077,9 +3077,9 @@
         "price_american": null,
         "book": "FanDuel/DK/Caesars",
         "units_straight": 1.0,
-        "edge_pct": 3.675,
+        "edge_pct": 9.2,
         "clears": "Y",
-        "notes": "Main written 1u. WRITE 1u take +20.5 only (Lines shop FLAG; USA Today +21). Sim fair HOU \u221216.82 vs \u221220.5 edge 3.68 Y. FPI blend 3.09 Y. | Lines confirm number live."
+        "notes": "Main written 1u. WRITE 1u take +20.5 only (Lines shop FLAG; USA Today +21). Sim fair HOU \u221216.82 vs \u221220.5 edge 3.68 Y. FPI blend 3.09 Y. | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs \u03c3=16 official sat-sep5-cover-probs"
       },
       {
         "role": "written",
@@ -3094,9 +3094,9 @@
         "price_american": null,
         "book": "Action",
         "units_straight": 1.0,
-        "edge_pct": 4.125000000000002,
+        "edge_pct": 10.9,
         "clears": "Y",
-        "notes": "Main written 1u. WRITE 1u take +21.5 only (Action/BetMGM; USA Today +21). Sim fair WVU \u221217.38 vs \u221221.5 edge 4.12 Y. FPI blend 4.42 Y. | Lines confirm number live."
+        "notes": "Main written 1u. WRITE 1u take +21.5 only (Action/BetMGM; USA Today +21). Sim fair WVU \u221217.38 vs \u221221.5 edge 4.12 Y. FPI blend 4.42 Y. | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs \u03c3=16 official sat-sep5-cover-probs"
       },
       {
         "role": "written",
@@ -3111,203 +3111,136 @@
         "price_american": null,
         "book": "FOX/Covers",
         "units_straight": 1.0,
-        "edge_pct": 5.849999999999998,
+        "edge_pct": 16.8,
         "clears": "Y",
-        "notes": "Main written 1u. WRITE 1u MSST \u221228.5 (Lines HOLD FOX/Covers). Sim fair \u221234.35 edge 5.85 Y. FPI blend 3.09 Y. Laying home fav (not a system fade). | Lines confirm number live."
+        "notes": "Main written 1u. WRITE 1u MSST \u221228.5 (Lines HOLD FOX/Covers). Sim fair \u221234.35 edge 5.85 Y. FPI blend 3.09 Y. Laying home fav (not a system fade). | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs \u03c3=16 official sat-sep5-cover-probs"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
+        "event_id": "det-cle",
+        "sport": "mlb",
+        "away": "Tigers",
+        "home": "Guardians",
+        "market": "ml",
+        "selection": "CLE ML",
+        "line": null,
+        "price_american": -156,
+        "book": "FanDuel",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim fair \u2212311 vs CLE \u2212156; Messick/Valdez. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
+        "event_id": "laa-pit",
+        "sport": "mlb",
+        "away": "Angels",
+        "home": "Pirates",
+        "market": "ml",
+        "selection": "PIT ML",
+        "line": null,
+        "price_american": -184,
+        "book": "FanDuel",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim clears Y; Lines PIT \u2212184. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
+        "event_id": "bos-bal",
+        "sport": "mlb",
+        "away": "Red Sox",
+        "home": "Orioles",
+        "market": "ml",
+        "selection": "BOS ML",
+        "line": null,
+        "price_american": -132,
+        "book": "FanDuel",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim fair \u2212240 vs FD \u2212132; edge clears 2.5%. Gray/Bassitt xERA. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
+        "event_id": "az-hou",
+        "sport": "mlb",
+        "away": "Diamondbacks",
+        "home": "Astros",
+        "market": "ml",
+        "selection": "AZ ML",
+        "line": null,
+        "price_american": 110,
+        "book": "FanDuel",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim ARI fair huge vs \u2212108/+110; Pfaadt/Pecko xERA. Lines AZ +110. 1u"
+      },
+      {
+        "role": "written",
+        "source": "bet_bot_main",
+        "event_id": "wsh-lad",
+        "sport": "mlb",
+        "away": "Nationals",
+        "home": "Dodgers",
+        "market": "total",
+        "selection": "Under 7.5",
+        "line": 7.5,
+        "price_american": -124,
+        "book": "FanDuel",
+        "units_straight": 1.0,
+        "edge_pct": null,
+        "clears": "Y",
+        "notes": "Main written 1u. Sim U7.5 Y + WX marine + Lines FD U \u2212124. 1u"
       }
     ],
     "written_shop_notes": {
       "oresta-hou": {
-        "instruction": "shop FD/DK/Caesars \u2014 take +20.5 only",
-        "selection": "Oregon State +20.5",
-        "line": 20.5,
-        "units": 1,
-        "book_hint": "FanDuel/DK/Caesars",
-        "sqlite_shop": {
-          "sqlite_event_id": "b9f8d58d-dafe-4270-9cf8-2146e2c9b76c",
-          "sqlite_matchup": "Oregon State Beavers @ Houston Cougars",
-          "quotes_at_feed_line": [
-            {
-              "book": "fanduel",
-              "selection": "Oregon State Beavers",
-              "line": 20.5,
-              "price_american": -104,
-              "captured_at": "2026-09-04 13:52:50.000000"
-            }
-          ],
-          "other_latest": [
-            {
-              "book": "betrivers",
-              "selection": "Oregon State Beavers",
-              "line": 21.0,
-              "price_american": -114,
-              "captured_at": "2026-09-04 13:52:37.000000"
-            },
-            {
-              "book": "pinnacle",
-              "selection": "Oregon State Beavers",
-              "line": 21.0,
-              "price_american": -109,
-              "captured_at": "2026-09-04 13:52:31.000000"
-            },
-            {
-              "book": "bovada",
-              "selection": "Oregon State Beavers",
-              "line": 21.0,
-              "price_american": -110,
-              "captured_at": "2026-09-04 13:52:11.000000"
-            },
-            {
-              "book": "draftkings",
-              "selection": "Oregon State Beavers",
-              "line": 21.0,
-              "price_american": -115,
-              "captured_at": "2026-09-04 13:52:07.000000"
-            },
-            {
-              "book": "betmgm",
-              "selection": "Oregon State Beavers",
-              "line": 21.0,
-              "price_american": -115,
-              "captured_at": "2026-09-04 13:52:07.000000"
-            }
-          ],
-          "best_at_feed_line": {
-            "book": "fanduel",
-            "selection": "Oregon State Beavers",
-            "line": 20.5,
-            "price_american": -104,
-            "captured_at": "2026-09-04 13:52:50.000000"
-          }
-        }
+        "instruction": "Main written 1u. WRITE 1u take +20.5 only (Lines shop FLAG; USA Today +21). Sim fair HOU \u221216.82 vs \u221220.5 edge 3.68 Y. FPI blend 3.09 Y. | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs \u03c3=16 offic",
+        "book": "FanDuel/DK/Caesars",
+        "sqlite_shop": {}
       },
       "coacar-wesvir": {
-        "instruction": "shop Action -110 \u2014 take +21.5 only",
-        "selection": "Coastal Carolina +21.5",
-        "line": 21.5,
-        "units": 1,
-        "book_hint": "Action",
-        "sqlite_shop": {
-          "sqlite_event_id": "dde22266-df80-473a-a709-48df9140213e",
-          "sqlite_matchup": "Coastal Carolina Chanticleers @ West Virginia Mountaineers",
-          "quotes_at_feed_line": [
-            {
-              "book": "fanduel",
-              "selection": "Coastal Carolina Chanticleers",
-              "line": 21.5,
-              "price_american": -115,
-              "captured_at": "2026-09-04 13:52:50.000000"
-            },
-            {
-              "book": "pinnacle",
-              "selection": "Coastal Carolina Chanticleers",
-              "line": 21.5,
-              "price_american": -116,
-              "captured_at": "2026-09-04 13:52:31.000000"
-            }
-          ],
-          "other_latest": [
-            {
-              "book": "betrivers",
-              "selection": "Coastal Carolina Chanticleers",
-              "line": 21.0,
-              "price_american": -108,
-              "captured_at": "2026-09-04 13:52:37.000000"
-            },
-            {
-              "book": "bovada",
-              "selection": "Coastal Carolina Chanticleers",
-              "line": 21.0,
-              "price_american": -110,
-              "captured_at": "2026-09-04 13:52:11.000000"
-            },
-            {
-              "book": "draftkings",
-              "selection": "Coastal Carolina Chanticleers",
-              "line": 21.0,
-              "price_american": -110,
-              "captured_at": "2026-09-04 13:52:07.000000"
-            },
-            {
-              "book": "betmgm",
-              "selection": "Coastal Carolina Chanticleers",
-              "line": 21.0,
-              "price_american": -105,
-              "captured_at": "2026-09-04 13:52:07.000000"
-            }
-          ],
-          "best_at_feed_line": {
-            "book": "fanduel",
-            "selection": "Coastal Carolina Chanticleers",
-            "line": 21.5,
-            "price_american": -115,
-            "captured_at": "2026-09-04 13:52:50.000000"
-          }
-        }
+        "instruction": "Main written 1u. WRITE 1u take +21.5 only (Action/BetMGM; USA Today +21). Sim fair WVU \u221217.38 vs \u221221.5 edge 4.12 Y. FPI blend 4.42 Y. | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs \u03c3=16 officia",
+        "book": "Action",
+        "sqlite_shop": {}
       },
       "ulmon-missta": {
-        "instruction": "HOLD \u2014 MSST -28.5 (FOX/Covers); do not chase",
-        "selection": "Mississippi State -28.5",
-        "line": -28.5,
-        "units": 1,
-        "book_hint": "FOX/Covers",
-        "sqlite_shop": {
-          "sqlite_event_id": "5d943fe9-ccc9-411a-8442-6fcddab583bf",
-          "sqlite_matchup": "UL Monroe Warhawks @ Mississippi State Bulldogs",
-          "quotes_at_feed_line": [
-            {
-              "book": "pinnacle",
-              "selection": "Mississippi State Bulldogs",
-              "line": -28.5,
-              "price_american": -104,
-              "captured_at": "2026-09-04 13:52:30.000000"
-            },
-            {
-              "book": "bovada",
-              "selection": "Mississippi State Bulldogs",
-              "line": -28.5,
-              "price_american": -105,
-              "captured_at": "2026-09-04 13:52:11.000000"
-            },
-            {
-              "book": "draftkings",
-              "selection": "Mississippi State Bulldogs",
-              "line": -28.5,
-              "price_american": -105,
-              "captured_at": "2026-09-04 13:52:07.000000"
-            },
-            {
-              "book": "betmgm",
-              "selection": "Mississippi State Bulldogs",
-              "line": -28.5,
-              "price_american": -105,
-              "captured_at": "2026-09-04 13:52:07.000000"
-            },
-            {
-              "book": "fanduel",
-              "selection": "Mississippi State Bulldogs",
-              "line": -28.5,
-              "price_american": -110,
-              "captured_at": "2026-09-04 13:52:50.000000"
-            }
-          ],
-          "other_latest": [
-            {
-              "book": "betrivers",
-              "selection": "Mississippi State Bulldogs",
-              "line": -29.0,
-              "price_american": -110,
-              "captured_at": "2026-09-04 13:52:37.000000"
-            }
-          ],
-          "best_at_feed_line": {
-            "book": "pinnacle",
-            "selection": "Mississippi State Bulldogs",
-            "line": -28.5,
-            "price_american": -104,
-            "captured_at": "2026-09-04 13:52:30.000000"
-          }
-        }
+        "instruction": "Main written 1u. WRITE 1u MSST \u221228.5 (Lines HOLD FOX/Covers). Sim fair \u221234.35 edge 5.85 Y. FPI blend 3.09 Y. Laying home fav (not a system fade). | Lines confirm number live. | Sim \u03c3=16 on CFB Sat SP+ fair; mkt\u224852.4 @\u2212110 | Sim cover-probs ",
+        "book": "FOX/Covers",
+        "sqlite_shop": {}
+      },
+      "det-cle": {
+        "instruction": "Main written 1u. Sim fair \u2212311 vs CLE \u2212156; Messick/Valdez. 1u",
+        "book": "FanDuel",
+        "sqlite_shop": {}
+      },
+      "laa-pit": {
+        "instruction": "Main written 1u. Sim clears Y; Lines PIT \u2212184. 1u",
+        "book": "FanDuel",
+        "sqlite_shop": {}
+      },
+      "bos-bal": {
+        "instruction": "Main written 1u. Sim fair \u2212240 vs FD \u2212132; edge clears 2.5%. Gray/Bassitt xERA. 1u",
+        "book": "FanDuel",
+        "sqlite_shop": {}
+      },
+      "az-hou": {
+        "instruction": "Main written 1u. Sim ARI fair huge vs \u2212108/+110; Pfaadt/Pecko xERA. Lines AZ +110. 1u",
+        "book": "FanDuel",
+        "sqlite_shop": {}
+      },
+      "wsh-lad": {
+        "instruction": "Main written 1u. Sim U7.5 Y + WX marine + Lines FD U \u2212124. 1u",
+        "book": "FanDuel",
+        "sqlite_shop": {}
       }
     }
   }
