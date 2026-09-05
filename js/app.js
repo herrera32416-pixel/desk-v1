@@ -54,14 +54,20 @@ function playCard(p){
   a.append(el('h3','serif',p.matchup||`${p.away} at ${p.home}`));
   a.append(el('div','side',p.selection||''));
   const m=el('div','metrics');
-  const cells=[['STATUS', p.clears||p.status==='WRITTEN'?'WRITTEN':(p.status||'BOARD')],['EDGE', p.edge??'—'],['UNITS', String(p.units??0)]];
+  const model = p.model_win_pct!=null ? `${p.model_win_pct}%` : '—';
+  const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : '—';
+  const edge = (p.edge ?? p.edge_pct);
+  const edgeStr = edge!=null && edge!=='' ? String(edge) : '—';
+  const cells=[['MODEL', model],['MARKET', market],['EDGE', edgeStr]];
   for(const [k,v] of cells){
     const d=el('div');
     d.append(el('div','k',k), el('div','v serif',String(v)));
     m.append(d);
   }
   a.append(m);
-  if(p.notes) a.append(el('p','why',p.notes));
+  let why=p.notes||'';
+  if(p.colab_win_pct!=null) why = `Colab ${p.colab_win_pct}%` + (p.colab_model_line!=null?` · FPI ${p.colab_model_line}`:'') + (why?` · ${why}`:'');
+  if(why) a.append(el('p','why',why));
   return a;
 }
 function ticketCard(t, kind){
@@ -103,7 +109,7 @@ async function main(){
 
   const fills=document.getElementById('fills');
   fills.innerHTML='';
-  (data.fills||[]).slice(0,20).forEach(p=>fills.append(playCard(p)));
+  (data.fills||[]).forEach(p=>fills.append(playCard(p)));
 
   const parlays=document.getElementById('parlays');
   parlays.innerHTML='';
