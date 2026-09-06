@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-06",
-  "generated_at_ct": "2026-09-06T17:55:06.094922-05:00",
+  "generated_at_ct": "2026-09-06T18:01:20.725545-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -10,7 +10,8 @@
     "hold": "HOLD/BOARD = full slate game with no Main side (pinned under CLEAR/FILL per sport)",
     "owner": "Bet Bot Main owns the card; Sports Betting shops + exports",
     "ops": "ops paper = research-only not-bankroll",
-    "props": "Player props off DESK \u2014 Card is Plays + Board only. card.props always [].",
+    "props": "Global Props tab off. NFL: up to 4 game_props per card from nfl_game_props_*.json when present. CFB props off unless Luis reopens.",
+    "board_probs": "MODEL% (+ MARKET% when available) on every MLB/CFB/NFL board game from Main/Sim feeds \u2014 never invent.",
     "ledger": "Ledger = Main written CLEAR grades only (settled + open from ledger_feed). Not full Fri exam sides.",
     "probs": "model%/market% from feed when present; else fair vs mkt lines in Main notes via 16\u03c3 CFB / 13.86\u03c3 NFL normal CDF; market% falls back to assume -110 when no price. Never invent fair lines."
   },
@@ -32,6 +33,8 @@
     "props_total": 0,
     "props_clear": 0,
     "props_file": null,
+    "nfl_game_props_events": 0,
+    "nfl_game_props_total": 0,
     "ledger_rows": 21,
     "ledger_open": 12,
     "ledger_graded": 9
@@ -61,7 +64,8 @@
         "prob_method": "feed",
         "event_id": "bos-bal",
         "notes": "FILL 0u probs-only. Sim Y fair -306. model 75.37 / FD mkt 57.26 edge 18.11 (Sim USA mkt was 57.26). SPs payton-tolle/kyle-bradish. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -85,7 +89,8 @@
         "prob_method": "feed",
         "event_id": "min-cws",
         "notes": "FILL 0u probs-only. Sim Y fair -315. model 75.89 / FD mkt 59.35 edge 16.54 (Sim USA mkt was 59.35). THIN bryan-hudson:937pit-THIN SPs bailey-ober/bryan-hudson. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -109,7 +114,8 @@
         "prob_method": "feed",
         "event_id": "det-cle",
         "notes": "FILL 0u probs-only. Sim Y fair -296. model 74.73 / FD mkt 62.69 edge 12.04 (Sim USA mkt was 62.69). THIN jackson-jobe:409pit SPs jackson-jobe/gavin-williams. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -133,7 +139,8 @@
         "prob_method": "feed",
         "event_id": "mil-cin",
         "notes": "FILL 0u probs-only. Sim Y fair -259. model 72.12 / FD mkt 61.83 edge 10.29 (Sim USA mkt was 61.83). SPs kyle-harrison/brady-singer. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -157,7 +164,8 @@
         "prob_method": "feed",
         "event_id": "laa-pit",
         "notes": "FILL 0u probs-only. Sim Y fair 113. model 46.94 / FD mkt 37.88 edge 9.06 (Sim USA mkt was 37.88). SPs walbert-urena/paul-skenes. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -181,7 +189,8 @@
         "prob_method": "feed",
         "event_id": "tor-kc",
         "notes": "FILL 0u probs-only. Sim Y fair -124. model 55.28 / FD mkt 49.02 edge 6.26 (Sim USA mkt was 49.02). THIN randy-dobnak:984pit-THIN SPs spencer-arrighetti/randy-dobnak. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -205,7 +214,8 @@
         "prob_method": "feed",
         "event_id": "tb-tex",
         "notes": "FILL 0u probs-only. Sim Y fair -131. model 56.63 / FD mkt 50.98 edge 5.65 (Sim USA mkt was 50.98). SPs ian-seymour/mackenzie-gore. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -229,7 +239,8 @@
         "prob_method": "feed",
         "event_id": "chc-mia",
         "notes": "FILL 0u probs-only. Sim N fair -158. model 61.25 / FD mkt 59.02 edge 2.23 (Sim USA mkt was 59.02). SPs clay-holmes/tyler-phillips. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -253,7 +264,8 @@
         "prob_method": "feed",
         "event_id": "atl-phi",
         "notes": "FILL 0u probs-only. Sim N fair 106. model 48.57 / FD mkt 51.46 edge -2.89 (Sim USA mkt was 51.46). SPs tyler-mahle/aaron-nola. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -277,7 +289,8 @@
         "prob_method": "feed",
         "event_id": "ath-sea",
         "notes": "FILL 0u probs-only. SEA F5 \u2014 Lines CLEARED ~1:30pm CT Covers F5 board. Best SEA F5 \u2212215 DK (MGM/Fanatics \u2212220, FD \u2212225). ATH F5 +176 FD. Replaced FG \u2212245 proxy. model 61.02 / mkt 68.25 edge -7.23. Sim N. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -301,7 +314,8 @@
         "prob_method": "feed",
         "event_id": "sf-nym",
         "notes": "FILL 0u probs-only. Sim N fair -120. model 54.57 / FD mkt 61.83 edge -7.26 (Sim USA mkt was 61.83). THIN cesar-perdomo:58pit SPs cesar-perdomo/christian-scott. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -325,7 +339,8 @@
         "prob_method": "feed",
         "event_id": "wsh-lad",
         "notes": "FILL 0u probs-only. Sim N fair 9.02. model 45.3 / FD mkt 53.27 edge -7.97 (Sim USA mkt was 53.27). SPs andrew-alvarez/justin-wrobleski. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -349,7 +364,8 @@
         "prob_method": "feed",
         "event_id": "stl-col",
         "notes": "FILL 0u probs-only. Sim N fair 125. model 44.48 / FD mkt 54.55 edge -10.07 (Sim USA mkt was 54.55). SPs kyle-leahy/tanner-gordon. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -373,7 +389,8 @@
         "prob_method": "feed",
         "event_id": "az-hou",
         "notes": "FILL 0u probs-only. Sim N fair 174. model 36.55 / FD mkt 51.46 edge -14.91 (Sim USA mkt was 51.46). SPs eduardo-rodriguez/peter-lambert. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -397,7 +414,8 @@
         "prob_method": "feed",
         "event_id": "nyy-sd",
         "notes": "FILL 0u probs-only. Sim N fair 189. model 34.59 / FD mkt 50.5 edge -15.91 (Sim USA mkt was 50.5). SPs gerrit-cole/michael-king. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -421,7 +439,8 @@
         "prob_method": "none",
         "event_id": "manchester-everton",
         "notes": "Full slate HOLD \u00b7 no Main side \u00b7 sqlite 703e3656-75b1-49d0-9e0a-eb002114c97d",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -445,7 +464,8 @@
         "prob_method": "none",
         "event_id": "chelsea-arsenal",
         "notes": "Full slate HOLD \u00b7 no Main side \u00b7 sqlite b74545c5-e68a-4269-b3cd-5de201944630",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -469,7 +489,8 @@
         "prob_method": "none",
         "event_id": "wsu-uw",
         "notes": "HOLD/market 0u. Board placeholder. No Main CLEAR. Kick ~3:00pm CT. Luis DESK full-slate rule.",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -493,7 +514,8 @@
         "prob_method": "none",
         "event_id": "wis-notdam",
         "notes": "HOLD/market 0u. Board placeholder. No Main CLEAR. Kick ~6:30pm CT. Luis DESK full-slate rule.",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       },
       {
         "tag": "FILL",
@@ -517,7 +539,8 @@
         "prob_method": "none",
         "event_id": "ul-om",
         "notes": "HOLD/market 0u. Board placeholder. No Main CLEAR. Kick ~6:30pm CT. Luis DESK full-slate rule.",
-        "slate_date_ct": "2026-09-06"
+        "slate_date_ct": "2026-09-06",
+        "game_props": []
       }
     ],
     "holds": [],
@@ -912,5 +935,12 @@
     "open_count": 12,
     "row_count": 21,
     "feed": "ledger_feed_bet_bot_main.csv"
+  },
+  "nfl_props_meta": {
+    "enabled": true,
+    "max_per_game": 4,
+    "cfb_props": false,
+    "events_with_props": 0,
+    "feed": null
   }
 }
