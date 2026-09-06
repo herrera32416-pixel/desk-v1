@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-06",
-  "generated_at_ct": "2026-09-06T13:27:30.582041-05:00",
+  "generated_at_ct": "2026-09-06T13:27:58.241939-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -323,7 +323,7 @@
         "prob_source": "model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "ath-sea",
-        "notes": "Bot1 FILL 0u. Jump 5.15 vs Woo 4.25. USA SEA \u2212195 FG \u2014 don\u2019t lay FG \u2212195; F5 pending Lines. Clears N. | MODEL pending Sim Sun SPs (Sat probs NOT used). | Lines FD ML stamp ~1:24pm CT (home_ml=-245). F5 market% proxy from FG ML until F5 shop.",
+        "notes": "Bot1 FILL 0u. Jump 5.15 vs Woo 4.25. USA SEA \u2212195 FG \u2014 don\u2019t lay FG \u2212195; F5 pending Lines. Clears N. | MODEL pending Sim Sun SPs (Sat probs NOT used). | Lines FD ML stamp ~1:24pm CT (home_ml=-245). F5 market% proxy from FG ML until F5 shop. | Lines: SEA F5 UNAVAILABLE ~1:27pm CT \u2014 market% still FG SEA \u2212245 proxy. Hunting F5.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -385,17 +385,17 @@
         "selection": "Under 8.5",
         "market": "total",
         "line": 8.5,
-        "price_american": -110,
-        "book": "USA Today",
+        "price_american": -114,
+        "book": "FanDuel Research",
         "units": 0,
         "model_win_pct": null,
-        "market_win_pct": 52.38,
+        "market_win_pct": 53.27,
         "edge_pct": null,
         "edge_pts": null,
         "prob_source": "model% unavailable (no fair line / no feed prob)",
         "prob_method": "none",
         "event_id": "wsh-lad",
-        "notes": "Bot1 FILL 0u. Alvarez 3.47 vs Wrobleski 3.65. USA LAD \u2212195 / 8.5 \u2014 don\u2019t lay \u2212195. Under 8.5 pending Sim+WX. Clears N. | MODEL pending Sim Sun SPs (Sat probs NOT used). | Lines ML-only stamp; total market% \u2212110 prior pending total shop.",
+        "notes": "Bot1 FILL 0u. Alvarez 3.47 vs Wrobleski 3.65. USA LAD \u2212195 / 8.5 \u2014 don\u2019t lay \u2212195. Under 8.5 pending Sim+WX. Clears N. | MODEL pending Sim Sun SPs (Sat probs NOT used). | Lines ML-only stamp; total market% \u2212110 prior pending total shop. | Lines total stamp ~1:27pm CT Under 8.5 \u2212114 FD Research (O \u2212106). MODEL pending Sim.",
         "slate_date_ct": "2026-09-06"
       },
       {
