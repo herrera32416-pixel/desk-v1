@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-06",
-  "generated_at_ct": "2026-09-06T13:29:47.576406-05:00",
+  "generated_at_ct": "2026-09-06T13:31:35.294157-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -59,7 +59,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "bos-bal",
-        "notes": "FILL 0u probs-only. Sim Y fair -306 vs mkt -134. edge 18.1%. CLEAR empty per Luis. SPs payton-tolle/kyle-bradish.",
+        "notes": "FILL 0u probs-only. Sim Y fair -306. model 75.37 / FD mkt 57.26 edge 18.11 (Sim USA mkt was 57.26). SPs payton-tolle/kyle-bradish. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -83,7 +83,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "min-cws",
-        "notes": "FILL 0u probs-only. Sim Y fair -315 vs mkt -146. edge 16.54% THIN bryan-hudson:937pit-THIN. CLEAR empty per Luis. SPs bailey-ober/bryan-hudson.",
+        "notes": "FILL 0u probs-only. Sim Y fair -315. model 75.89 / FD mkt 59.35 edge 16.54 (Sim USA mkt was 59.35). THIN bryan-hudson:937pit-THIN SPs bailey-ober/bryan-hudson. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -107,7 +107,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "det-cle",
-        "notes": "FILL 0u probs-only. Sim Y fair -296 vs mkt -168. edge 12.05% THIN jackson-jobe:409pit. CLEAR empty per Luis. SPs jackson-jobe/gavin-williams.",
+        "notes": "FILL 0u probs-only. Sim Y fair -296. model 74.73 / FD mkt 62.69 edge 12.04 (Sim USA mkt was 62.69). THIN jackson-jobe:409pit SPs jackson-jobe/gavin-williams. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -131,7 +131,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "mil-cin",
-        "notes": "FILL 0u probs-only. Sim Y fair -259 vs mkt -162. edge 10.28%. CLEAR empty per Luis. SPs kyle-harrison/brady-singer.",
+        "notes": "FILL 0u probs-only. Sim Y fair -259. model 72.12 / FD mkt 61.83 edge 10.29 (Sim USA mkt was 61.83). SPs kyle-harrison/brady-singer. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -155,7 +155,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "laa-pit",
-        "notes": "FILL 0u probs-only. Sim Y fair 113 vs mkt 164. edge 9.06%. CLEAR empty per Luis. SPs walbert-urena/paul-skenes.",
+        "notes": "FILL 0u probs-only. Sim Y fair 113. model 46.94 / FD mkt 37.88 edge 9.06 (Sim USA mkt was 37.88). SPs walbert-urena/paul-skenes. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -179,7 +179,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "tor-kc",
-        "notes": "FILL 0u probs-only. Sim Y fair -124 vs mkt 104. edge 6.26% THIN randy-dobnak:984pit-THIN. CLEAR empty per Luis. SPs spencer-arrighetti/randy-dobnak.",
+        "notes": "FILL 0u probs-only. Sim Y fair -124. model 55.28 / FD mkt 49.02 edge 6.26 (Sim USA mkt was 49.02). THIN randy-dobnak:984pit-THIN SPs spencer-arrighetti/randy-dobnak. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -203,7 +203,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "tb-tex",
-        "notes": "FILL 0u probs-only. Sim Y fair -131 vs mkt -104. edge 5.65%. CLEAR empty per Luis. SPs ian-seymour/mackenzie-gore.",
+        "notes": "FILL 0u probs-only. Sim Y fair -131. model 56.63 / FD mkt 50.98 edge 5.65 (Sim USA mkt was 50.98). SPs ian-seymour/mackenzie-gore. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -227,7 +227,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "chc-mia",
-        "notes": "FILL 0u probs-only. Sim N fair -158 vs mkt -144. edge 2.23%. CLEAR empty per Luis. SPs clay-holmes/tyler-phillips.",
+        "notes": "FILL 0u probs-only. Sim N fair -158. model 61.25 / FD mkt 59.02 edge 2.23 (Sim USA mkt was 59.02). SPs clay-holmes/tyler-phillips. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -251,7 +251,31 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "atl-phi",
-        "notes": "FILL 0u probs-only. Sim N fair 106 vs mkt -106. edge -2.89%. CLEAR empty per Luis. SPs tyler-mahle/aaron-nola.",
+        "notes": "FILL 0u probs-only. Sim N fair 106. model 48.57 / FD mkt 51.46 edge -2.89 (Sim USA mkt was 51.46). SPs tyler-mahle/aaron-nola. CLEAR empty.",
+        "slate_date_ct": "2026-09-06"
+      },
+      {
+        "tag": "FILL",
+        "status": "NOT_WRITTEN",
+        "sport": "MLB",
+        "sport_raw": "mlb",
+        "away": "Athletics",
+        "home": "Mariners",
+        "matchup": "Athletics at Mariners",
+        "selection": "SEA F5",
+        "market": "f5",
+        "line": null,
+        "price_american": -215,
+        "book": "DraftKings",
+        "units": 0,
+        "model_win_pct": 61.02,
+        "market_win_pct": 68.25,
+        "edge_pct": -7.23,
+        "edge_pts": null,
+        "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
+        "prob_method": "feed",
+        "event_id": "ath-sea",
+        "notes": "FILL 0u probs-only. SEA F5 \u2014 Lines CLEARED ~1:30pm CT Covers F5 board. Best SEA F5 \u2212215 DK (MGM/Fanatics \u2212220, FD \u2212225). ATH F5 +176 FD. Replaced FG \u2212245 proxy. model 61.02 / mkt 68.25 edge -7.23. Sim N. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -275,7 +299,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "sf-nym",
-        "notes": "FILL 0u probs-only. Sim N fair -120 vs mkt -162. edge -7.26% THIN cesar-perdomo:58pit. CLEAR empty per Luis. SPs cesar-perdomo/christian-scott.",
+        "notes": "FILL 0u probs-only. Sim N fair -120. model 54.57 / FD mkt 61.83 edge -7.26 (Sim USA mkt was 61.83). THIN cesar-perdomo:58pit SPs cesar-perdomo/christian-scott. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -295,35 +319,11 @@
         "model_win_pct": 45.3,
         "market_win_pct": 53.27,
         "edge_pct": -7.97,
-        "edge_pts": -0.52,
-        "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
-        "prob_method": "feed",
-        "event_id": "wsh-lad",
-        "notes": "FILL 0u probs-only. Sim N fair 9.02 vs mkt -114. edge -0.52%. CLEAR empty per Luis. SPs andrew-alvarez/justin-wrobleski.",
-        "slate_date_ct": "2026-09-06"
-      },
-      {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
-        "sport": "MLB",
-        "sport_raw": "mlb",
-        "away": "Athletics",
-        "home": "Mariners",
-        "matchup": "Athletics at Mariners",
-        "selection": "SEA F5",
-        "market": "f5",
-        "line": null,
-        "price_american": -245,
-        "book": "FanDuel Research",
-        "units": 0,
-        "model_win_pct": 61.02,
-        "market_win_pct": 71.01,
-        "edge_pct": -9.99,
         "edge_pts": null,
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
-        "event_id": "ath-sea",
-        "notes": "FILL 0u probs-only. Sim N fair -157 vs mkt -245. edge -9.99%. CLEAR empty per Luis. SPs gage-jump/bryan-woo.",
+        "event_id": "wsh-lad",
+        "notes": "FILL 0u probs-only. Sim N fair 9.02. model 45.3 / FD mkt 53.27 edge -7.97 (Sim USA mkt was 53.27). SPs andrew-alvarez/justin-wrobleski. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -347,7 +347,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "stl-col",
-        "notes": "FILL 0u probs-only. Sim N fair 125 vs mkt -120. edge -10.06%. CLEAR empty per Luis. SPs kyle-leahy/tanner-gordon.",
+        "notes": "FILL 0u probs-only. Sim N fair 125. model 44.48 / FD mkt 54.55 edge -10.07 (Sim USA mkt was 54.55). SPs kyle-leahy/tanner-gordon. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -371,7 +371,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "az-hou",
-        "notes": "FILL 0u probs-only. Sim N fair 174 vs mkt -106. edge -14.91%. CLEAR empty per Luis. SPs eduardo-rodriguez/peter-lambert.",
+        "notes": "FILL 0u probs-only. Sim N fair 174. model 36.55 / FD mkt 51.46 edge -14.91 (Sim USA mkt was 51.46). SPs eduardo-rodriguez/peter-lambert. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
@@ -395,7 +395,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "nyy-sd",
-        "notes": "FILL 0u probs-only. Sim N fair 189 vs mkt -102. edge -15.91%. CLEAR empty per Luis. SPs gerrit-cole/michael-king.",
+        "notes": "FILL 0u probs-only. Sim N fair 189. model 34.59 / FD mkt 50.5 edge -15.91 (Sim USA mkt was 50.5). SPs gerrit-cole/michael-king. CLEAR empty.",
         "slate_date_ct": "2026-09-06"
       },
       {
