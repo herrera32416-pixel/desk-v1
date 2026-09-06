@@ -119,6 +119,35 @@ function propCard(p){
   if(p.notes || p.book) a.append(el('p','why', [p.book, p.notes].filter(Boolean).join(' · ')));
   return a;
 }
+
+function ledgerCard(r){
+  const a=el('article','play'+(r.result==='W'?' clear-play':''));
+  a.dataset.sport=r.sport||'';
+  const hd=el('div','play-hd');
+  const res=(r.result||'OPEN').toUpperCase();
+  const pill=el('span','pill'+(res==='W'?' star':''), res);
+  const when=[r.sport||'', r.slate_date_ct||'', r.units!=null?`${r.units}u`:''].filter(Boolean).join(' · ');
+  hd.append(pill, el('span','when',when));
+  a.append(hd);
+  a.append(el('h3','serif',r.selection||r.event_id||'—'));
+  const m=el('div','metrics');
+  const pnl=r.pnl_units;
+  let pnlStr='—';
+  if(pnl!=null && pnl!==''){
+    const n=Number(pnl);
+    pnlStr=(n>=0?'+':'')+n.toFixed(2).replace(/\.?0+$/,'')+'u';
+  }
+  const price=r.price_american!=null?String(r.price_american):'—';
+  for(const [k,v] of [['PnL', pnlStr],['PRICE', price],['BOOK', r.book||'—']]){
+    const d=el('div');
+    d.append(el('div','k',k), el('div','v serif',String(v)));
+    m.append(d);
+  }
+  a.append(m);
+  let why=[r.score, r.notes].filter(Boolean).join(' · ');
+  if(why) a.append(el('p','why',why));
+  return a;
+}
 function ticketCard(t, kind){
   const a=el('article','play');
   const hd=el('div','play-hd');
@@ -195,6 +224,13 @@ async function main(){
     document.getElementById('writtenBook').textContent=data.ledger.written_book||'—';
     document.getElementById('friExam').textContent=data.ledger.fri_exam||'—';
     document.getElementById('friWritten').textContent=data.ledger.fri_written||'CLEAR results only.';
+    const bits=document.getElementById('ledgerBits');
+    if(bits){
+      bits.innerHTML='';
+      const rows=data.ledger.rows||[];
+      if(!rows.length) bits.append(el('p','why','No ledger rows yet.'));
+      else rows.forEach(r=>bits.append(ledgerCard(r)));
+    }
   }
   document.getElementById('status').textContent='Live · pull to refresh';
 }
