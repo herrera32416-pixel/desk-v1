@@ -50,6 +50,8 @@ function normalize(data){
     },
     clears, fills, holds, props, parlays, teasers, rules,
     ledger: data.ledger || null,
+    nfl_props: data.nfl_props || { games: [] },
+    nfl_props_meta: data.nfl_props_meta || null,
   };
 }
 async function loadDesk(){
@@ -179,6 +181,48 @@ function ticketCard(t, kind){
   a.append(side);
   return a;
 }
+
+function nflPropCard(p, rank){
+  const a=el('article','play');
+  const hd=el('div','play-hd');
+  hd.append(el('span','pill',`#${rank}`), el('span','when',[p.market||'PROP', p.book||''].filter(Boolean).join(' · ')));
+  a.append(hd);
+  a.append(el('h3','serif',p.player||p.selection||'Prop'));
+  a.append(el('div','side',p.selection||`${p.side||''} ${p.line!=null?p.line:''}`.trim()));
+  const m=el('div','metrics');
+  const price=p.price_american!=null?String(p.price_american):'—';
+  const line=p.line!=null?String(p.line):'—';
+  const edge=(p.edge_pct!=null)?String(p.edge_pct):'—';
+  for(const [k,v] of [['LINE', line],['PRICE', price],['EDGE', edge]]){
+    const d=el('div');
+    d.append(el('div','k',k), el('div','v serif',v));
+    m.append(d);
+  }
+  a.append(m);
+  if(p.notes) a.append(el('p','why',p.notes));
+  return a;
+}
+function renderNflProps(data){
+  const bits=document.getElementById('nflPropsBits');
+  if(!bits) return;
+  bits.innerHTML='';
+  const games=(data.nfl_props&&data.nfl_props.games)||[];
+  const gEl=document.getElementById('propsGameCount');
+  const tEl=document.getElementById('propsTotalCount');
+  const total=games.reduce((n,g)=>n+((g.props||[]).length),0);
+  if(gEl) gEl.textContent=String(games.length);
+  if(tEl) tEl.textContent=String(total);
+  if(!games.length){
+    bits.append(el('p','why','No NFL props yet — waiting on Week 1 nfl_game_props feed. CFB props stay off DESK.'));
+    return;
+  }
+  games.forEach(g=>{
+    bits.append(el('p','section-label', g.matchup || g.event_id || 'NFL'));
+    const props=(g.props||[]).slice(0,4);
+    if(!props.length) bits.append(el('p','why','No props ranked for this game.'));
+    else props.forEach((p,i)=>bits.append(nflPropCard(p, p.rank||i+1)));
+  });
+}
 function showPanel(id){
   document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+id));
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===id));
@@ -237,7 +281,7 @@ async function main(){
 
   if(data.ledger){
     document.getElementById('writtenBook').textContent=data.ledger.written_book||'—';
-    const openEl=document.getElementById('ledgerOpen');
+    const openEl=document.getElementById('openClearCount');
     if(openEl) openEl.textContent=String((data.ledger.open||[]).length);
     const bits=document.getElementById('ledgerBits');
     if(bits){

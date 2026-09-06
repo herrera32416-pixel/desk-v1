@@ -68,6 +68,7 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 <nav class="tabs" id="tabs">
   <button class="on" data-p="card">Card</button>
   <button data-p="ledger">Ledger</button>
+  <button data-p="props">Props</button>
   <button data-p="rules">Rules</button>
   <button data-p="parlays">Parlays</button>
   <button data-p="teasers">Teasers</button>
@@ -103,12 +104,22 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 </section>
 
 <section class="panel" id="p-ledger">
-  <div class="hero"><h2 class="serif">Ledger.</h2><p>Main written CLEARs · graded + open</p></div>
+  <div class="hero"><h2 class="serif">Ledger.</h2><p id="friWritten">Main written CLEARs · graded + open.</p></div>
   <div class="summary"><div class="row">
     <div><div class="k">Written book</div><div class="v serif" style="font-size:22px" id="writtenBook">—</div></div>
-    <div><div class="k">Open CLEARs</div><div class="v serif" style="font-size:22px" id="ledgerOpen">—</div></div>
+    <div><div class="k">Open CLEARs</div><div class="v serif" style="font-size:22px" id="openClearCount">—</div></div>
   </div></div>
   <div id="ledgerBits"></div>
+</section>
+
+
+<section class="panel" id="p-props">
+  <div class="hero"><h2 class="serif">NFL Props.</h2><p>Best 4 per game · ranked 1–4 · Lines prices. CFB props off.</p></div>
+  <div class="summary"><div class="row">
+    <div><div class="k">NFL games</div><div class="v serif" style="font-size:22px" id="propsGameCount">—</div></div>
+    <div><div class="k">Props listed</div><div class="v serif" style="font-size:22px" id="propsTotalCount">—</div></div>
+  </div></div>
+  <div id="nflPropsBits"></div>
 </section>
 
 <section class="panel" id="p-rules">
