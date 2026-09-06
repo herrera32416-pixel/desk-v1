@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-06",
-  "generated_at_ct": "2026-09-06T13:31:35.294157-05:00",
+  "generated_at_ct": "2026-09-06T13:38:05.206816-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
