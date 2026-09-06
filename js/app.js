@@ -120,32 +120,47 @@ function propCard(p){
   return a;
 }
 
-function ledgerCard(r){
-  const a=el('article','play'+(r.result==='W'?' clear-play':''));
+function ledgerSettledCard(r){
+  const res=(r.result||'').toUpperCase() || '—';
+  const a=el('article','play'+(res==='W'?' clear-play':''));
   a.dataset.sport=r.sport||'';
   const hd=el('div','play-hd');
-  const res=(r.result||'OPEN').toUpperCase();
   const pill=el('span','pill'+(res==='W'?' star':''), res);
-  const when=[r.sport||'', r.slate_date_ct||'', r.units!=null?`${r.units}u`:''].filter(Boolean).join(' · ');
+  const when=[r.sport||'', r.units!=null?`${r.units}u`:''].filter(Boolean).join(' · ');
   hd.append(pill, el('span','when',when));
   a.append(hd);
-  a.append(el('h3','serif',r.selection||r.event_id||'—'));
+  a.append(el('h3','serif',r.selection||r.lean||r.id||'—'));
   const m=el('div','metrics');
   const pnl=r.pnl_units;
   let pnlStr='—';
   if(pnl!=null && pnl!==''){
     const n=Number(pnl);
-    pnlStr=(n>=0?'+':'')+n.toFixed(2).replace(/\.?0+$/,'')+'u';
+    pnlStr=(n>=0?'+':'')+String(Math.round(n*100)/100)+'u';
   }
-  const price=r.price_american!=null?String(r.price_american):'—';
-  for(const [k,v] of [['PnL', pnlStr],['PRICE', price],['BOOK', r.book||'—']]){
+  for(const [k,v] of [['SCORE', r.score||'—'],['PnL', pnlStr],['SLATE', r.slate||r.slate_date_ct||'—']]){
     const d=el('div');
     d.append(el('div','k',k), el('div','v serif',String(v)));
     m.append(d);
   }
   a.append(m);
-  let why=[r.score, r.notes].filter(Boolean).join(' · ');
-  if(why) a.append(el('p','why',why));
+  if(r.notes || r.source) a.append(el('p','why',[r.source, r.notes].filter(Boolean).join(' · ')));
+  return a;
+}
+function ledgerOpenCard(r){
+  const a=el('article','play');
+  a.dataset.sport=r.sport||'';
+  const hd=el('div','play-hd');
+  hd.append(el('span','pill','OPEN'), el('span','when',[r.sport||'', r.units!=null?`${r.units}u`:''].filter(Boolean).join(' · ')));
+  a.append(hd);
+  a.append(el('h3','serif',r.lean||r.selection||r.id||'—'));
+  const m=el('div','metrics');
+  for(const [k,v] of [['SLATE', r.slate||'—'],['BOOK', r.book||'—'],['PRICE', r.price||(r.price_american!=null?String(r.price_american):'—')]]){
+    const d=el('div');
+    d.append(el('div','k',k), el('div','v serif',String(v)));
+    m.append(d);
+  }
+  a.append(m);
+  if(r.notes) a.append(el('p','why',r.notes));
   return a;
 }
 function ticketCard(t, kind){
@@ -223,13 +238,24 @@ async function main(){
   if(data.ledger){
     document.getElementById('writtenBook').textContent=data.ledger.written_book||'—';
     document.getElementById('friExam').textContent=data.ledger.fri_exam||'—';
-    document.getElementById('friWritten').textContent=data.ledger.fri_written||'CLEAR results only.';
+    document.getElementById('friWritten').textContent=data.ledger.fri_written||'Main written CLEARs · graded + open';
     const bits=document.getElementById('ledgerBits');
     if(bits){
       bits.innerHTML='';
-      const rows=data.ledger.rows||[];
-      if(!rows.length) bits.append(el('p','why','No ledger rows yet.'));
-      else rows.forEach(r=>bits.append(ledgerCard(r)));
+      const settled=data.ledger.settled||[];
+      const open=data.ledger.open||[];
+      if(!settled.length && !open.length){
+        bits.append(el('p','why','No graded CLEARs yet.'));
+      } else {
+        if(settled.length){
+          bits.append(el('p','section-label','Settled'));
+          settled.forEach(r=>bits.append(ledgerSettledCard(r)));
+        }
+        if(open.length){
+          bits.append(el('p','section-label','Open'));
+          open.forEach(r=>bits.append(ledgerOpenCard(r)));
+        }
+      }
     }
   }
   document.getElementById('status').textContent='Live · pull to refresh';
