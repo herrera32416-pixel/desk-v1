@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-06",
-  "generated_at_ct": "2026-09-06T07:11:43.223362-05:00",
+  "generated_at_ct": "2026-09-06T07:12:17.550232-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -26,7 +26,7 @@
     },
     "with_model_win_pct": 0,
     "with_market_win_pct": 0,
-    "feed": "none",
+    "feed": "picks_feed_bet_bot_main_20260906.csv",
     "board_file": "desk_board_20260906.csv",
     "props_total": 0,
     "props_clear": 0,
