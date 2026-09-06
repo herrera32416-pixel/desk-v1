@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-05",
-  "generated_at_ct": "2026-09-05T19:44:40.266120-05:00",
+  "generated_at_ct": "2026-09-05T19:45:07.419196-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -3321,10 +3321,8 @@
   },
   "ledger": {
     "written_book": "6-3 \u00b7 +3.62u",
-    "fri_exam": "17/26 \u00b7 C",
-    "fri_written": "After Fri: MIL ML \u2212162 1u W (+0.",
     "as_of": "2026-09-06T00:41:43Z",
-    "note": "After Fri: MIL ML \u2212162 1u W (+0.62u), Stanford +24.5 1u L (\u22121u). Prior was 5-2 +4u. TB@CIN Under 50.5 still open/watch. Sat writes: ORST +20.5, CCU +21.5, MSST \u221228.5 (1u each; shop dogs). Sat MLB writes: BOS ML, AZ ML, CLE ML, PIT ML, U7.5. F5 writes: TB +108 BR, PHI \u2212175 MGM, SEA \u2212225 MGM.",
+    "note": "",
     "settled": [
       {
         "id": "mil-cin",
@@ -3584,6 +3582,7 @@
     "graded_count": 2,
     "open_count": 12,
     "row_count": 14,
-    "feed": "ledger_feed_bet_bot_main.csv"
+    "feed": "ledger_feed_bet_bot_main.csv",
+    "fri_written": "Main written CLEARs \u00b7 graded + open"
   }
 }

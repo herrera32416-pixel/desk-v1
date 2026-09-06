@@ -237,8 +237,8 @@ async function main(){
 
   if(data.ledger){
     document.getElementById('writtenBook').textContent=data.ledger.written_book||'—';
-    document.getElementById('friExam').textContent=data.ledger.fri_exam||'—';
-    document.getElementById('friWritten').textContent=data.ledger.fri_written||'Main written CLEARs · graded + open';
+    const openEl=document.getElementById('ledgerOpen');
+    if(openEl) openEl.textContent=String((data.ledger.open||[]).length);
     const bits=document.getElementById('ledgerBits');
     if(bits){
       bits.innerHTML='';
