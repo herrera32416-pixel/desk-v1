@@ -283,6 +283,11 @@ async function main(){
     document.getElementById('writtenBook').textContent=data.ledger.written_book||'—';
     const openEl=document.getElementById('openClearCount');
     if(openEl) openEl.textContent=String((data.ledger.open||[]).length);
+    const sh=data.ledger.shadow;
+    const sb=document.getElementById('shadowBook');
+    const shEl=document.getElementById('shadowHigh');
+    if(sb) sb.textContent=(sh&&sh.written_book)||'—';
+    if(shEl) shEl.textContent=(sh&&sh.high_model_book)||'—';
     const bits=document.getElementById('ledgerBits');
     if(bits){
       bits.innerHTML='';
@@ -298,6 +303,26 @@ async function main(){
         if(open.length){
           bits.append(el('p','section-label','Open'));
           open.forEach(r=>bits.append(ledgerOpenCard(r)));
+        }
+      }
+      // Separate paper section — never mixed into Written CLEAR bankroll.
+      if(sh){
+        bits.append(el('p','section-label', sh.label||'Shadow (paper)'));
+        const note=el('p','why', sh.note||'Paper 1u FILLs — NOT bankroll / NOT CLEARs');
+        bits.append(note);
+        const sSettled=sh.settled||[];
+        const sOpen=sh.open||[];
+        if(!sSettled.length && !sOpen.length){
+          bits.append(el('p','why','No shadow tickets yet.'));
+        } else {
+          if(sSettled.length){
+            bits.append(el('p','section-label','Shadow settled'));
+            sSettled.forEach(r=>bits.append(ledgerSettledCard(r)));
+          }
+          if(sOpen.length){
+            bits.append(el('p','section-label','Shadow open'));
+            sOpen.forEach(r=>bits.append(ledgerOpenCard(r)));
+          }
         }
       }
     }
