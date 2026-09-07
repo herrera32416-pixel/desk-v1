@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-07",
-  "generated_at_ct": "2026-09-07T07:14:43.683655-05:00",
+  "generated_at_ct": "2026-09-07T07:16:24.283274-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -17,14 +17,16 @@
   },
   "summary": {
     "published_clear": 0,
-    "fill_total": 0,
-    "fill_shown": 0,
+    "fill_total": 1,
+    "fill_shown": 1,
     "hold_total": 0,
-    "board_total": 0,
-    "by_sport": {},
+    "board_total": 1,
+    "by_sport": {
+      "CFB": 1
+    },
     "with_model_win_pct": 0,
-    "with_market_win_pct": 0,
-    "feed": "none",
+    "with_market_win_pct": 1,
+    "feed": "picks_feed_bet_bot_main_20260907.csv",
     "board_file": "desk_board_20260907.csv",
     "props_total": 0,
     "props_clear": 0,
@@ -37,7 +39,33 @@
   },
   "card": {
     "clears": [],
-    "fills": [],
+    "fills": [
+      {
+        "tag": "FILL",
+        "status": "NOT_WRITTEN",
+        "sport": "CFB",
+        "sport_raw": "ncaaf",
+        "away": "SMU",
+        "home": "Florida State",
+        "matchup": "SMU at Florida State",
+        "selection": "SMU -3",
+        "market": "spread",
+        "line": -3.0,
+        "price_american": -110,
+        "book": "",
+        "units": 0,
+        "model_win_pct": null,
+        "market_win_pct": 52.38,
+        "edge_pct": null,
+        "edge_pts": null,
+        "prob_source": "model% unavailable (no fair line / no feed prob)",
+        "prob_method": "none",
+        "event_id": "smu-fsu",
+        "notes": "HOLD/market 0u. Board PASS \u2014 week0 overreaction shrink. No Main CLEAR. MODEL pending Sim. Full-slate DESK rule.",
+        "slate_date_ct": "2026-09-07",
+        "game_props": []
+      }
+    ],
     "holds": [],
     "props": []
   },
