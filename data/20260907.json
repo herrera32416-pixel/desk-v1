@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-07",
-  "generated_at_ct": "2026-09-07T15:07:47.007077-05:00",
+  "generated_at_ct": "2026-09-07T15:10:24.130659-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -87,7 +87,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "cin-lad",
-        "notes": "FILL 0u. Sim Under 8.5 model 70.13 / E 7.21 \u03941.29 vs 8.5. Burns 3.23 / Sheehan 3.98. | REJECT: total \u2014 fair total 7.21 vs board 8.5 but CLEAR empty probs-only (no write). CLEAR N. | STEAM re-check ~3:05 CT: LAD ML \u2212158\u2192\u2212180 (Lines). Under 8.5 still FILL 0u \u2014 no auto-CLEAR. REJECT: total stands.",
+        "notes": "FILL 0u. Sim Under 8.5 model 70.13 / E 7.21 \u03941.29 vs 8.5. Burns 3.23 / Sheehan 3.98. | REJECT: total \u2014 fair total 7.21 vs board 8.5 but CLEAR empty probs-only (no write). CLEAR N. | STEAM re-check ~3:05 CT: LAD ML \u2212158\u2192\u2212180 (Lines). Under 8.5 still FILL 0u \u2014 no auto-CLEAR. REJECT: total stands. | WX: mild marine evening NWS LOX \u2014 Under 8.5 context; still CLEAR N.",
         "slate_date_ct": "2026-09-07",
         "game_props": []
       },
@@ -137,7 +137,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "stl-sf",
-        "notes": "FILL 0u probs-only. Bot1 had STL ML. Sim SF ML model 68.47. CLEAR N.",
+        "notes": "FILL 0u probs-only. Bot1 had STL ML. Sim SF ML model 68.47. CLEAR N. | WX: MLB live Out To CF 15 mph (stronger than NWS) \u2014 totals flag.",
         "slate_date_ct": "2026-09-07",
         "game_props": []
       },
@@ -187,7 +187,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "chc-mil",
-        "notes": "FILL 0u probs-only. Bot1 had MIL ML. Sim MIL ML model 60.62. CLEAR N.",
+        "notes": "FILL 0u probs-only. Bot1 had MIL ML. Sim MIL ML model 60.62. CLEAR N. | WX: AmFam roof OPEN \u2014 75\u201378F SE~10 wind in from CF.",
         "slate_date_ct": "2026-09-07",
         "game_props": []
       },
@@ -262,7 +262,7 @@
         "prob_source": "feed model_win_pct/market_win_pct (Bet Bot Main)",
         "prob_method": "feed",
         "event_id": "nym-mia",
-        "notes": "FILL 0u probs-only. Bot1 had MIA ML. Sim NYM ML model 50.48. CLEAR N.",
+        "notes": "FILL 0u probs-only. Bot1 had MIA ML. Sim NYM ML model 50.48. CLEAR N. | WX: loanDepot roof CLOSED (MLB live) \u2014 storms neutralized indoor 72F.",
         "slate_date_ct": "2026-09-07",
         "game_props": []
       },
@@ -784,6 +784,27 @@
           "result": "OPEN"
         },
         {
+          "id": "cin-lad",
+          "sport": "MLB",
+          "selection": "Under 8.5",
+          "units": 1.0,
+          "score": "",
+          "source": "",
+          "slate": "2026-09-07",
+          "book": "FanDuel Research",
+          "notes": "FILL 0u. Sim Under 8.5 model 70.13 / E 7.21 \u03941.29 vs 8.5. Burns 3.23 / Sheehan 3.98. | REJECT: total \u2014 fair total 7.21 vs board 8.5 but CLEAR empty probs-only (no write). CLEAR N. | STEAM re-check ~3:05 CT: LAD ML \u2212158\u2192\u2212180 (Lines). Under 8",
+          "price": "-110",
+          "price_american": -110.0,
+          "pnl_units": null,
+          "as_of": "2026-09-07T20:07:23Z",
+          "status": "open",
+          "high_model": true,
+          "model_win_pct": 70.13,
+          "paper": true,
+          "lean": "Under 8.5",
+          "result": "OPEN"
+        },
+        {
           "id": "stl-sf",
           "sport": "MLB",
           "selection": "SF ML",
@@ -889,6 +910,27 @@
           "result": "OPEN"
         },
         {
+          "id": "min-det",
+          "sport": "MLB",
+          "selection": "MIN ML",
+          "units": 1.0,
+          "score": "",
+          "source": "",
+          "slate": "2026-09-07",
+          "book": "FanDuel Research",
+          "notes": "FILL 0u. Sim MIN ML 51.39 / mkt +110 47.62 edge +3.77. Ryan 3.50 / Melton 3.58 ESPN lock. CLEAR N.",
+          "price": "+110",
+          "price_american": 110.0,
+          "pnl_units": null,
+          "as_of": "2026-09-07T20:07:01Z",
+          "status": "open",
+          "high_model": false,
+          "model_win_pct": 51.39,
+          "paper": true,
+          "lean": "MIN ML",
+          "result": "OPEN"
+        },
+        {
           "id": "laa-bos",
           "sport": "MLB",
           "selection": "LAA ML",
@@ -932,15 +974,17 @@
         }
       ],
       "summary": {
-        "total": 9,
-        "high_model_70plus": 2,
-        "open": 9,
-        "graded": 0
+        "total": 11,
+        "high_model_70plus": 3,
+        "open": 11,
+        "graded": 0,
+        "updated_at_utc": "2026-09-07T20:08:22Z",
+        "note": "appended late MODEL stamps"
       },
       "slate_date_ct": "2026-09-07",
       "graded_count": 0,
-      "open_count": 9,
-      "row_count": 9,
+      "open_count": 11,
+      "row_count": 11,
       "feed": "shadow_fills_20260907.json"
     }
   },
