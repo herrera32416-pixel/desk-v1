@@ -230,17 +230,37 @@ function showPanel(id){
 function sportMatch(p, s){
   return s==='ALL' || (p.sport||'')===s;
 }
+function updateSportChips(){
+  if(!deskData) return;
+  const all=[...deskData.clears, ...deskData.fills, ...deskData.holds];
+  document.querySelectorAll('#chips button').forEach(b=>{
+    const s=b.dataset.s;
+    if(!s) return;
+    const n=s==='ALL' ? all.length : all.filter(p=>sportMatch(p, s)).length;
+    const label=s==='ALL' ? 'All' : s;
+    b.title=`${s==='ALL'?'ALL':s} · ${n}`;
+    b.setAttribute('aria-label', `${label}, ${n} games`);
+    b.textContent=n>0 ? `${label} ${n}` : label;
+  });
+}
 function renderSlate(){
   if(!deskData) return;
   const slate=document.getElementById('slate');
   const hint=document.getElementById('sportHint');
   slate.innerHTML='';
   let rows=[];
+  updateSportChips();
   if(deskMode==='plays'){
     rows=deskData.clears.filter(p=>sportMatch(p, deskSport));
     if(hint) hint.textContent = deskSport==='ALL' ? 'Recommended · CLEAR only' : `${deskSport} plays · CLEAR only`;
-    if(!rows.length) slate.append(el('p','why','No recommended plays for this filter.'));
-    else rows.forEach(p=>slate.append(playCard(p,{star:true})));
+    if(!rows.length){
+      const boardN=(deskData.fills.length||0)+(deskData.holds.length||0);
+      let emptyMsg='No CLEARs today — open Board to see the full slate.';
+      if(deskData.clears.length===0 && boardN>0){
+        emptyMsg='No CLEARs today — open Board to see the full slate.';
+      }
+      slate.append(el('p','why',emptyMsg));
+    } else rows.forEach(p=>slate.append(playCard(p,{star:true})));
   } else {
     // board (default fallback)
     deskMode='board';
