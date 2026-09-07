@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-06",
-  "generated_at_ct": "2026-09-06T21:21:36.481752-05:00",
+  "generated_at_ct": "2026-09-06T23:16:31.240417-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -938,7 +938,7 @@
     "shadow": {
       "label": "Shadow (paper)",
       "note": "Paper 1u FILLs \u2014 NOT bankroll / NOT CLEARs",
-      "written_book": "10-4 \u00b7 +3.85u",
+      "written_book": "10-5 \u00b7 +2.85u",
       "high_model_book": "3-1 \u00b7 +1.03u",
       "settled": [
         {
@@ -1162,6 +1162,26 @@
           "result": "L"
         },
         {
+          "id": "wsh-lad",
+          "sport": "MLB",
+          "selection": "Under 8.5",
+          "units": 1.0,
+          "score": "WSH 5 LAD 4",
+          "source": "",
+          "slate": "2026-09-06",
+          "book": "FanDuel Research",
+          "notes": "FILL 0u probs-only. Sim N fair 9.02. model 45.3 / FD mkt 53.27 edge -7.97 (Sim USA mkt was 53.27). SPs andrew-alvarez/justin-wrobleski. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json | GRADED L 2026-09-07T04:13:54Z ESPN Bottom 6th WSH 5 LAD 4 (total 9 > 8.5; Under decided early while live). pnl=-1.0u @ -114.",
+          "price": "-114",
+          "price_american": -114.0,
+          "pnl_units": -1.0,
+          "as_of": "2026-09-06T18:40:55Z",
+          "status": "graded",
+          "high_model": false,
+          "model_win_pct": 45.3,
+          "paper": true,
+          "result": "L"
+        },
+        {
           "id": "stl-col",
           "sport": "MLB",
           "selection": "STL ML",
@@ -1222,42 +1242,20 @@
           "result": "W"
         }
       ],
-      "open": [
-        {
-          "id": "wsh-lad",
-          "sport": "MLB",
-          "selection": "Under 8.5",
-          "units": 1.0,
-          "score": "",
-          "source": "",
-          "slate": "2026-09-06",
-          "book": "FanDuel Research",
-          "notes": "FILL 0u probs-only. Sim N fair 9.02. model 45.3 / FD mkt 53.27 edge -7.97 (Sim USA mkt was 53.27). SPs andrew-alvarez/justin-wrobleski. CLEAR empty. | Re-export confirm 2026-09-06T18:40:55Z from sun-sep6-mlb-poisson.json",
-          "price": "-114",
-          "price_american": -114.0,
-          "pnl_units": null,
-          "as_of": "2026-09-06T18:40:55Z",
-          "status": "open",
-          "high_model": false,
-          "model_win_pct": 45.3,
-          "paper": true,
-          "lean": "Under 8.5",
-          "result": "OPEN"
-        }
-      ],
+      "open": [],
       "summary": {
         "total": 15,
         "high_model_70plus": 4,
-        "open": 1,
-        "graded": 14,
+        "open": 0,
+        "graded": 15,
         "all": {
           "n": 15,
           "W": 10,
-          "L": 4,
+          "L": 5,
           "P": 0,
-          "pnl_units": 3.8493,
-          "open": 1,
-          "graded": 14
+          "pnl_units": 2.8493,
+          "open": 0,
+          "graded": 15
         },
         "high_model": {
           "n": 4,
@@ -1268,11 +1266,11 @@
           "open": 0,
           "graded": 4
         },
-        "updated_at_utc": "2026-09-07T01:34:07Z"
+        "updated_at_utc": "2026-09-07T04:13:54Z"
       },
       "slate_date_ct": "2026-09-06",
-      "graded_count": 14,
-      "open_count": 1,
+      "graded_count": 15,
+      "open_count": 0,
       "row_count": 15,
       "feed": "shadow_fills_20260906.json"
     }
