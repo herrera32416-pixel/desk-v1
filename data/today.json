@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-11",
-  "generated_at_ct": "2026-09-11T08:03:45.677126-05:00",
+  "generated_at_ct": "2026-09-11T08:04:32.611895-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -519,8 +519,8 @@
         "game_props": []
       },
       {
-        "tag": "FILL",
-        "status": "NOT_WRITTEN",
+        "tag": "HOLD",
+        "status": "HOLD",
         "sport": "CFB",
         "sport_raw": "ncaaf",
         "away": "Rutgers",
