@@ -44,7 +44,7 @@ function normalize(data){
     summary: {
       published_clear: data.summary?.published_clear ?? clears.length,
       lean: data.summary?.lean || 'none',
-      sports: data.summary?.sports || data.summary?.by_sport && Object.keys(data.summary.by_sport) || ['MLB','NFL','CFB','SOC'],
+      sports: data.summary?.sports || data.summary?.by_sport && Object.keys(data.summary.by_sport) || ['MLB','NFL','CFB'],
       props_total: data.summary?.props_total ?? props.length,
       props_clear: data.summary?.props_clear ?? props.filter(p=>p.tag==='CLEAR').length,
     },
@@ -71,7 +71,7 @@ function playCard(p, {star}={}){
   a.dataset.kind=p.kind||'side';
   const hd=el('div','play-hd');
   const pill=el('span','pill'+(star?' star':''), star?'PLAY':(p.tag||'CLEAR'));
-  hd.append(pill, el('span','when',`${p.sport||''} · ${p.units||0}u`));
+  hd.append(pill, el('span','when',`${p.sport||''} · ${p.kick_ct||p.kick_et||''} · ${p.units||0}u`.replace(/ ·  · /g,' · ').replace(/ · $/,'')));
   a.append(hd);
   a.append(el('h3','serif',p.matchup||`${p.away||''} at ${p.home||''}`));
   a.append(el('div','side',p.selection|| (p.tag==='HOLD'?'Hold — no number':'')));
@@ -227,6 +227,15 @@ function showPanel(id){
   document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+id));
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===id));
 }
+function byKickTime(a,b){
+  const ak=a.kick_utc||''; const bk=b.kick_utc||'';
+  if(ak!==bk){
+    if(!ak) return 1;
+    if(!bk) return -1;
+    return ak<bk?-1:1;
+  }
+  return String(a.selection||'').localeCompare(String(b.selection||''));
+}
 function sportMatch(p, s){
   return s==='ALL' || (p.sport||'')===s;
 }
@@ -251,7 +260,7 @@ function renderSlate(){
   let rows=[];
   updateSportChips();
   if(deskMode==='plays'){
-    rows=deskData.clears.filter(p=>sportMatch(p, deskSport));
+    rows=deskData.clears.filter(p=>sportMatch(p, deskSport)).sort(byKickTime);
     if(hint) hint.textContent = deskSport==='ALL' ? 'Recommended · CLEAR only' : `${deskSport} plays · CLEAR only`;
     if(!rows.length){
       const boardN=(deskData.fills.length||0)+(deskData.holds.length||0);
@@ -264,7 +273,7 @@ function renderSlate(){
   } else {
     // board (default fallback)
     deskMode='board';
-    rows=[...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport));
+    rows=[...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport)).sort(byKickTime);
     if(hint) hint.textContent = deskSport==='ALL' ? 'Full board · FILL + HOLD' : `${deskSport} board · FILL + HOLD`;
     if(!rows.length) slate.append(el('p','why','No board games for this filter.'));
     else rows.forEach(p=>slate.append(playCard(p)));
