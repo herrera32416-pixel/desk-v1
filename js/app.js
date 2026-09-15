@@ -84,7 +84,7 @@ function playCard(p, {star}={}){
   if(p.total_line!=null && (p.model_over_pct!=null || p.model_under_pct!=null)){
     const ov=p.model_over_pct!=null?`${p.model_over_pct}%`:'—';
     const un=p.model_under_pct!=null?`${p.model_under_pct}%`:'—';
-    pairs.push(['TOT', String(p.total_line)],['O%', ov],['U%', un]);
+    pairs.push(['TOT', String(p.total_line)],['Over%', ov],['Under%', un]);
   }
   for(const [k,v] of pairs){
     const d=el('div');
