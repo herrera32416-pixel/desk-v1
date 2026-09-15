@@ -80,7 +80,13 @@ function playCard(p, {star}={}){
   const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : '—';
   const edge = (p.edge ?? p.edge_pct);
   const edgeStr = edge!=null && edge!=='' ? String(edge) : '—';
-  for(const [k,v] of [['MODEL', model],['MARKET', market],['EDGE', edgeStr]]){
+  const pairs=[['MODEL', model],['MARKET', market],['EDGE', edgeStr]];
+  if(p.total_line!=null && (p.model_over_pct!=null || p.model_under_pct!=null)){
+    const ov=p.model_over_pct!=null?`${p.model_over_pct}%`:'—';
+    const un=p.model_under_pct!=null?`${p.model_under_pct}%`:'—';
+    pairs.push(['TOT', String(p.total_line)],['O%', ov],['U%', un]);
+  }
+  for(const [k,v] of pairs){
     const d=el('div');
     d.append(el('div','k',k), el('div','v serif',String(v)));
     m.append(d);
