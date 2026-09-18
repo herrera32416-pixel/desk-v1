@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-18",
-  "generated_at_ct": "2026-09-18T18:45:52.139152-05:00",
+  "generated_at_ct": "2026-09-18T18:46:13.497477-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -123,8 +123,8 @@
         "selection": "WAKE +20.5",
         "market": "SPREAD",
         "line": 20.5,
-        "price_american": -124,
-        "book": "DraftKings",
+        "price_american": -117,
+        "book": "Caesars",
         "units": 0,
         "model_win_pct": 52.49,
         "market_win_pct": 55.36,
@@ -142,7 +142,7 @@
         "kick_ct": "6:35 PM CT",
         "kick_utc": "2026-09-18T23:35:39Z",
         "event_id": "mia-wak",
-        "notes": "CFB HOLD LIVE. Core HOLD REJECT_CFB_DOG_EDGE. MODEL 52.49 mkt 55.36 edge_pts 1.0 (sim on +21.5). CLEAR N.",
+        "notes": "CFB HOLD LIVE. Core HOLD REJECT_CFB_DOG_EDGE. MODEL 52.49 mkt 55.36 edge_pts 1.0 (sim on +21.5). CLEAR N. | Lines 6:45 CT written best -117 Caesars.",
         "slate_date_ct": "2026-09-18",
         "kick_et": "7:35 PM ET",
         "game_props": []
@@ -212,7 +212,7 @@
         "kick_ct": "7:00 PM CT",
         "kick_utc": "2026-09-19T00:00:00Z",
         "event_id": "hou-ttu",
-        "notes": "CFB FILL fav. Core HOLD REJECT_CFB_FAV_BAR. MODEL 68.04 edge_pts 7.5 sim Y. Dogs-first + fav bar model\u226570 blocks CLEAR (have 68.0). Dog HOU escalate not met. CLEAR N 0u.",
+        "notes": "CFB FILL fav. Core HOLD REJECT_CFB_FAV_BAR. MODEL 68.04 edge_pts 7.5 sim Y. Dogs-first + fav bar model\u226570 blocks CLEAR (have 68.0). Dog HOU escalate not met. CLEAR N 0u. | Lines 6:45 CT written best -104 LowVig.ag.",
         "slate_date_ct": "2026-09-18",
         "kick_et": "8:00 PM ET",
         "game_props": []
@@ -1496,6 +1496,6 @@
     "events_with_props": 0,
     "feed": null
   },
-  "published_at_ct": "2026-09-18T18:45:52.140238-05:00",
-  "publish_note": "CFB MODEL refresh"
+  "published_at_ct": "2026-09-18T18:46:13.498874-05:00",
+  "publish_note": "CFB price+MODEL refresh"
 }
