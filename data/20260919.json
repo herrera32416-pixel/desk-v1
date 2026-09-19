@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-19",
-  "generated_at_ct": "2026-09-19T07:08:48.398472-05:00",
+  "generated_at_ct": "2026-09-19T07:08:50.732535-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -3560,7 +3560,5 @@
     "cfb_props": false,
     "events_with_props": 0,
     "feed": null
-  },
-  "published_at_ct": "2026-09-19T07:08:48.400897-05:00",
-  "publish_note": "Sat CLEAR 0 LT killed Sit QBs"
+  }
 }
