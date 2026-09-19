@@ -81,10 +81,17 @@ function playCard(p, {star}={}){
   const edge = (p.edge ?? p.edge_pct);
   const edgeStr = edge!=null && edge!=='' ? String(edge) : '—';
   const pairs=[['MODEL', model],['MARKET', market],['EDGE', edgeStr]];
+  // Single O/U lean on the same metrics row (stronger of over vs under).
   if(p.total_line!=null && (p.model_over_pct!=null || p.model_under_pct!=null)){
-    const ov=p.model_over_pct!=null?`${p.model_over_pct}%`:'—';
-    const un=p.model_under_pct!=null?`${p.model_under_pct}%`:'—';
-    pairs.push(['TOT', String(p.total_line)],['Over%', ov],['Under%', un]);
+    const ov=p.model_over_pct!=null?Number(p.model_over_pct):null;
+    const un=p.model_under_pct!=null?Number(p.model_under_pct):null;
+    let leanLabel='O/U', leanVal='—';
+    if(ov!=null && un!=null){
+      if(ov>=un){ leanLabel='OVER'; leanVal=`${p.total_line} · ${ov}%`; }
+      else { leanLabel='UNDER'; leanVal=`${p.total_line} · ${un}%`; }
+    } else if(ov!=null){ leanLabel='OVER'; leanVal=`${p.total_line} · ${ov}%`; }
+    else if(un!=null){ leanLabel='UNDER'; leanVal=`${p.total_line} · ${un}%`; }
+    pairs.push([leanLabel, leanVal]);
   }
   for(const [k,v] of pairs){
     const d=el('div');
