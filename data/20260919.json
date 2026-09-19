@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-19",
-  "generated_at_ct": "2026-09-18T18:58:31.134943-05:00",
+  "generated_at_ct": "2026-09-18T21:17:17.980029-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -33,9 +33,9 @@
     "props_file": null,
     "nfl_game_props_events": 0,
     "nfl_game_props_total": 0,
-    "ledger_rows": 43,
-    "ledger_open": 0,
-    "ledger_graded": 43
+    "ledger_rows": 45,
+    "ledger_open": 1,
+    "ledger_graded": 44
   },
   "card": {
     "clears": [
@@ -1942,9 +1942,9 @@
     "written_shop_notes": {}
   },
   "ledger": {
-    "written_book": "21-20 \u00b7 +0.76u",
-    "as_of": "2026-09-06T00:45:11Z",
-    "note": "After Fri: MIL ML \u2212162 1u W (+0.62u), Stanford +24.5 1u L (\u22121u). Prior was 5-2 +4u. TB@CIN Under 50.5 still open/watch. Sat writes: ORST +20.5, CCU +21.5, MSST \u221228.5 (1u each; shop dogs). Sat MLB writes: BOS ML, AZ ML, CLE ML, PIT ML, U7.5. F5 writes: TB +108 BR, PHI \u2212175 MGM, SEA \u2212225 MGM.",
+    "written_book": "21-21 \u00b7 -0.24u",
+    "as_of": "2026-09-19T02:15:53Z",
+    "note": "Same-night settle Fri 2026-09-18 CLEAR (partial): TOR F5 L (\u22121.0u) TAG miss:SP. Prior 21-20 +0.7648u => 21-21 \u22120.2352u. MIN ML remains OPEN (ESPN 401816994 End 2nd).",
     "settled": [
       {
         "id": "wrigley-over-mon",
@@ -2676,14 +2676,50 @@
         "as_of": "2026-09-15T20:54:21Z",
         "status": "graded",
         "result": "L"
+      },
+      {
+        "id": "tor-tex",
+        "sport": "MLB",
+        "selection": "TOR F5",
+        "units": 1.0,
+        "score": "F5 TOR 1 TEX 5",
+        "source": "ESPN 401816990",
+        "slate": "2026-09-18",
+        "book": "FanDuel",
+        "notes": "TAG miss:SP. F5 TOR 1 TEX 5 (5 full); Cease lit 2nd.",
+        "price": "-140",
+        "price_american": -140.0,
+        "pnl_units": -1.0,
+        "as_of": "2026-09-19T02:15:53Z",
+        "status": "graded",
+        "result": "L"
       }
     ],
-    "open": [],
-    "written_record": "21-20",
-    "written_units": 0.7648,
-    "graded_count": 43,
-    "open_count": 0,
-    "row_count": 43,
+    "open": [
+      {
+        "id": "min-laa",
+        "sport": "MLB",
+        "selection": "MIN ML",
+        "units": 1.0,
+        "score": "",
+        "source": "ESPN 401816994",
+        "slate": "2026-09-18",
+        "book": "BetOnline.ag",
+        "notes": "Same-night partial; await final",
+        "price": "-108",
+        "price_american": -108.0,
+        "pnl_units": null,
+        "as_of": "2026-09-19T02:14:32Z",
+        "status": "open",
+        "lean": "MIN ML",
+        "result": "OPEN"
+      }
+    ],
+    "written_record": "21-21",
+    "written_units": -0.2352,
+    "graded_count": 44,
+    "open_count": 1,
+    "row_count": 45,
     "feed": "ledger_feed_bet_bot_main.csv",
     "shadow": {
       "label": "Shadow (paper)",
@@ -3000,6 +3036,6 @@
     "events_with_props": 0,
     "feed": null
   },
-  "published_at_ct": "2026-09-18T18:58:48.919534-05:00",
-  "publish_note": "Sat CFB CLEAR3 MODEL+OU force 2026-09-18T18:58:48.919534-05:00"
+  "published_at_ct": "2026-09-18T21:17:17.984020-05:00",
+  "publish_note": "Ledger Written 21-21 refresh"
 }
