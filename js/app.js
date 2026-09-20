@@ -203,10 +203,13 @@ function nflPropCard(p, rank){
   a.append(el('h3','serif',p.player||p.selection||'Prop'));
   a.append(el('div','side',p.selection||`${p.side||''} ${p.line!=null?p.line:''}`.trim()));
   const m=el('div','metrics');
-  const price=p.price_american!=null?String(p.price_american):'—';
   const line=p.line!=null?String(p.line):'—';
-  const edge=(p.edge_pct!=null)?String(p.edge_pct):'—';
-  for(const [k,v] of [['LINE', line],['PRICE', price],['EDGE', edge]]){
+  const price=p.price_american!=null?String(p.price_american):'—';
+  const pairs=[['LINE', line],['PRICE', price]];
+  if(p.model_win_pct!=null) pairs.push(['MODEL', `${p.model_win_pct}%`]);
+  const edge=p.edge_pct ?? p.edge_ev ?? p.edge;
+  if(edge!=null && edge!=='') pairs.push(['EDGE', String(edge)]);
+  for(const [k,v] of pairs){
     const d=el('div');
     d.append(el('div','k',k), el('div','v serif',v));
     m.append(d);
@@ -369,6 +372,7 @@ async function main(){
       }
     }
   }
+  renderNflProps(data);
   document.getElementById('status').textContent='Live · pull to refresh';
 }
 document.getElementById('tabs').addEventListener('click',e=>{
