@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-19",
-  "generated_at_ct": "2026-09-19T07:14:37.197790-05:00",
+  "generated_at_ct": "2026-09-19T21:10:09.595023-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -34,9 +34,9 @@
     "props_file": null,
     "nfl_game_props_events": 0,
     "nfl_game_props_total": 0,
-    "ledger_rows": 45,
-    "ledger_open": 1,
-    "ledger_graded": 44
+    "ledger_rows": 48,
+    "ledger_open": 2,
+    "ledger_graded": 46
   },
   "card": {
     "clears": [
@@ -2468,9 +2468,9 @@
     "written_shop_notes": {}
   },
   "ledger": {
-    "written_book": "21-21 \u00b7 -0.24u",
-    "as_of": "2026-09-19T02:15:53Z",
-    "note": "Same-night settle Fri 2026-09-18 CLEAR (partial): TOR F5 L (\u22121.0u) TAG miss:SP. Prior 21-20 +0.7648u => 21-21 \u22120.2352u. MIN ML remains OPEN (ESPN 401816994 End 2nd).",
+    "written_book": "22-22 \u00b7 -0.31u",
+    "as_of": "2026-09-20T02:09:12Z",
+    "note": "Same-night settle Sat 2026-09-19 (partial): min-laa MIN ML W (+0.9259u) TAG hit:fav/key; bos-tb Over 7.5 L (\u22121.0u) TAG miss:miscal. Prior 21-21 -0.2352u => 22-22 -0.3093u. OPEN: wsh-stl Over 8.5 (ESPN 401817006 Mid 9th tot 5); nyy-az Under 7.5 (ESPN 401817010 Top 6th tot 3).",
     "settled": [
       {
         "id": "wrigley-over-mon",
@@ -3219,33 +3219,85 @@
         "as_of": "2026-09-19T02:15:53Z",
         "status": "graded",
         "result": "L"
-      }
-    ],
-    "open": [
+      },
       {
         "id": "min-laa",
         "sport": "MLB",
         "selection": "MIN ML",
         "units": 1.0,
-        "score": "",
+        "score": "MIN 3 LAA 0",
         "source": "ESPN 401816994",
         "slate": "2026-09-18",
         "book": "BetOnline.ag",
-        "notes": "Same-night partial; await final",
+        "notes": "TAG hit:fav/key. Final MIN 3 LAA 0.",
         "price": "-108",
         "price_american": -108.0,
+        "pnl_units": 0.9259,
+        "as_of": "2026-09-20T02:09:12Z",
+        "status": "graded",
+        "result": "W"
+      },
+      {
+        "id": "bos-tb",
+        "sport": "MLB",
+        "selection": "Over 7.5",
+        "units": 1.0,
+        "score": "BOS 1 TB 2 tot 3",
+        "source": "ESPN 401816998",
+        "slate": "2026-09-19",
+        "book": "LowVig.ag",
+        "notes": "TAG miss:miscal. Over 7.5; final total 3.",
+        "price": "-102",
+        "price_american": -102.0,
+        "pnl_units": -1.0,
+        "as_of": "2026-09-20T02:09:12Z",
+        "status": "graded",
+        "result": "L"
+      }
+    ],
+    "open": [
+      {
+        "id": "wsh-stl",
+        "sport": "MLB",
+        "selection": "Over 8.5",
+        "units": 1.0,
+        "score": "",
+        "source": "ESPN 401817006",
+        "slate": "2026-09-19",
+        "book": "LowVig.ag",
+        "notes": "Same-night partial; await final",
+        "price": "-113",
+        "price_american": -113.0,
         "pnl_units": null,
-        "as_of": "2026-09-19T02:14:32Z",
+        "as_of": "2026-09-20T02:09:12Z",
         "status": "open",
-        "lean": "MIN ML",
+        "lean": "Over 8.5",
+        "result": "OPEN"
+      },
+      {
+        "id": "nyy-az",
+        "sport": "MLB",
+        "selection": "Under 7.5",
+        "units": 1.0,
+        "score": "",
+        "source": "ESPN 401817010",
+        "slate": "2026-09-19",
+        "book": "Fanatics",
+        "notes": "Same-night partial; await final",
+        "price": "-120",
+        "price_american": -120.0,
+        "pnl_units": null,
+        "as_of": "2026-09-20T02:09:12Z",
+        "status": "open",
+        "lean": "Under 7.5",
         "result": "OPEN"
       }
     ],
-    "written_record": "21-21",
-    "written_units": -0.2352,
-    "graded_count": 44,
-    "open_count": 1,
-    "row_count": 45,
+    "written_record": "22-22",
+    "written_units": -0.3093,
+    "graded_count": 46,
+    "open_count": 2,
+    "row_count": 48,
     "feed": "ledger_feed_bet_bot_main.csv",
     "shadow": {
       "label": "Shadow (paper)",
