@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-20",
-  "generated_at_ct": "2026-09-19T22:41:31.850661-05:00",
+  "generated_at_ct": "2026-09-19T22:42:01.516463-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -31,8 +31,8 @@
     "props_total": 0,
     "props_clear": 0,
     "props_file": null,
-    "nfl_game_props_events": 0,
-    "nfl_game_props_total": 0,
+    "nfl_game_props_events": 14,
+    "nfl_game_props_total": 56,
     "ledger_rows": 48,
     "ledger_open": 2,
     "ledger_graded": 46
@@ -70,10 +70,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "car-atl",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.073 pts (need \u22652.0) \u00b7 Sit: ATL Jr. Out; ATL Tagovailoa Doubtful; ATL Rush Expected starter",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.073 pts (need \u22652.0) \u00b7 MATERIAL: Penix Out; Tua Doubtful; Rush expected; Lindstrom Q \u2014 soft-kill if lagged",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Chris Blair",
+            "market": "anytime_td",
+            "selection": "Chris Blair yes",
+            "line": null,
+            "price_american": 5000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Feleipe Franks",
+            "market": "anytime_td",
+            "selection": "Feleipe Franks yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Brycen Tremayne",
+            "market": "anytime_td",
+            "selection": "Brycen Tremayne yes",
+            "line": null,
+            "price_american": 2200.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Cooper Rush",
+            "market": "anytime_td",
+            "selection": "Cooper Rush yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -105,10 +158,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "cin-hou",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.091 pts (need \u22652.0) \u00b7 Sit: CIN Burrow Questionable; CIN Hill Questionable; HOU Collins Out",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.091 pts (need \u22652.0) \u00b7 MATERIAL: Collins Out; Ingram Out; Burrow Q (Taylor GTG) \u2014 create CIN if Collins unpriced",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "British Brooks",
+            "market": "anytime_td",
+            "selection": "British Brooks yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Lewis Bond",
+            "market": "anytime_td",
+            "selection": "Lewis Bond yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Tanner Hudson",
+            "market": "anytime_td",
+            "selection": "Tanner Hudson yes",
+            "line": null,
+            "price_american": 1850.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Tahj Brooks",
+            "market": "anytime_td",
+            "selection": "Tahj Brooks yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -140,10 +246,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "cle-tb",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.368 pts (need \u22652.0) \u00b7 Sit: CLE Jenkins Out; CLE Campbell Questionable; TB McMillan Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.368 pts (need \u22652.0) \u00b7 Sit stamped (mild/HOLD)",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Malachi Corley",
+            "market": "anytime_td",
+            "selection": "Malachi Corley yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Bauer Sharp",
+            "market": "anytime_td",
+            "selection": "Bauer Sharp yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Tylan Wallace",
+            "market": "anytime_td",
+            "selection": "Tylan Wallace yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Payne Durham",
+            "market": "anytime_td",
+            "selection": "Payne Durham yes",
+            "line": null,
+            "price_american": 2400.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -175,10 +334,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "gb-nyj",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.159 pts (need \u22652.0) \u00b7 Sit: GB Hargrave Out; GB Brinson Out; GB Banks Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.159 pts (need \u22652.0) \u00b7 Sit stamped (mild/HOLD)",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Arian Smith",
+            "market": "anytime_td",
+            "selection": "Arian Smith yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Andrew Beck",
+            "market": "anytime_td",
+            "selection": "Andrew Beck yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Jelani Woods",
+            "market": "anytime_td",
+            "selection": "Jelani Woods yes",
+            "line": null,
+            "price_american": 1900.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Mark Redman",
+            "market": "anytime_td",
+            "selection": "Mark Redman yes",
+            "line": null,
+            "price_american": 2000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -210,10 +422,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "min-chi",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.322 pts (need \u22652.0) \u00b7 Sit: MIN Murray Out; MIN Jennings Out; MIN O'Neill Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.322 pts (need \u22652.0) \u00b7 MATERIAL: Murray Out; Jennings Out; O'Neill Q; Wentz starts \u2014 soft-kill if lagged",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Gavin Bartholomew",
+            "market": "anytime_td",
+            "selection": "Gavin Bartholomew yes",
+            "line": null,
+            "price_american": 5000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Sam Roush",
+            "market": "anytime_td",
+            "selection": "Sam Roush yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Roschon Johnson",
+            "market": "anytime_td",
+            "selection": "Roschon Johnson yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "FanDuel",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Jahdae Walker",
+            "market": "anytime_td",
+            "selection": "Jahdae Walker yes",
+            "line": null,
+            "price_american": 1400.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -245,10 +510,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "no-bal",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.066 pts (need \u22652.0) \u00b7 Sit: BAL Flowers Out; BAL Madubuike Out; BAL Buchanan Out",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.066 pts (need \u22652.0) \u00b7 MATERIAL: Flowers Out; Madubuike Out; Stanley/Simpson Q \u2014 soft-kill if lagged",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Kevin Austin",
+            "market": "anytime_td",
+            "selection": "Kevin Austin yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Barion Brown",
+            "market": "anytime_td",
+            "selection": "Barion Brown yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Treyton Welch",
+            "market": "anytime_td",
+            "selection": "Treyton Welch yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Matthew Hibner",
+            "market": "anytime_td",
+            "selection": "Matthew Hibner yes",
+            "line": null,
+            "price_american": 1700.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -280,10 +598,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "phi-ten",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.387 pts (need \u22652.0) \u00b7 Sit: PHI Greenard Out; PHI Dickerson IR; PHI Mukuba Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.387 pts (need \u22652.0) \u00b7 Sit stamped (mild/HOLD)",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Nicholas Singleton",
+            "market": "anytime_td",
+            "selection": "Nicholas Singleton yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "David Martin-Robinson",
+            "market": "anytime_td",
+            "selection": "David Martin-Robinson yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Julius Chestnut",
+            "market": "anytime_td",
+            "selection": "Julius Chestnut yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Daniel Bellinger",
+            "market": "anytime_td",
+            "selection": "Daniel Bellinger yes",
+            "line": null,
+            "price_american": 1900.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -315,10 +686,63 @@
         "kick_ct": "12:00 PM CT",
         "kick_utc": "2026-09-20T17:00:00Z",
         "event_id": "pit-ne",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.169 pts (need \u22652.0) \u00b7 Sit: PIT Jr. Out; PIT Jr. Out; PIT Fautanu Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.169 pts (need \u22652.0) \u00b7 MATERIAL: Pittman Out; Porter Out; Fautanu Q \u2014 soft-kill if lagged",
         "slate_date_ct": "2026-09-20",
         "kick_et": "1:00 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Riley Nowakowski",
+            "market": "anytime_td",
+            "selection": "Riley Nowakowski yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Cameron Latu",
+            "market": "anytime_td",
+            "selection": "Cameron Latu yes",
+            "line": null,
+            "price_american": 5000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Eli Heidenreich",
+            "market": "anytime_td",
+            "selection": "Eli Heidenreich yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Corey Kiner",
+            "market": "anytime_td",
+            "selection": "Corey Kiner yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "FILL",
@@ -350,10 +774,63 @@
         "kick_ct": "3:05 PM CT",
         "kick_utc": "2026-09-20T20:05:00Z",
         "event_id": "jax-den",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 1.314 pts (need \u22652.0) \u00b7 Sit: DEN Jr. Out; DEN Harvey Questionable; JAX skill/OL) clean IR",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 1.314 pts (need \u22652.0) \u00b7 MATERIAL: DEN short week post-MNF; Mims Out; Harvey Q \u2014 rest/travel",
         "slate_date_ct": "2026-09-20",
         "kick_et": "4:05 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Nate Adkins",
+            "market": "anytime_td",
+            "selection": "Nate Adkins yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Quintin Morris",
+            "market": "anytime_td",
+            "selection": "Quintin Morris yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Lil'Jordan Humphrey",
+            "market": "anytime_td",
+            "selection": "Lil'Jordan Humphrey yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Tyler Badie",
+            "market": "anytime_td",
+            "selection": "Tyler Badie yes",
+            "line": null,
+            "price_american": 1200.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -385,10 +862,63 @@
         "kick_ct": "3:05 PM CT",
         "kick_utc": "2026-09-20T20:05:00Z",
         "event_id": "lv-lac",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.092 pts (need \u22652.0) \u00b7 Sit: LV Bowers Doubtful; LV O'Connell Out; LV Porter Out",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.092 pts (need \u22652.0) \u00b7 Sit stamped (mild/HOLD)",
         "slate_date_ct": "2026-09-20",
         "kick_et": "4:05 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Dareke Young",
+            "market": "anytime_td",
+            "selection": "Dareke Young yes",
+            "line": null,
+            "price_american": 5500.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Cody White",
+            "market": "anytime_td",
+            "selection": "Cody White yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Kirk Cousins",
+            "market": "anytime_td",
+            "selection": "Kirk Cousins yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Dylan Laube",
+            "market": "anytime_td",
+            "selection": "Dylan Laube yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -420,10 +950,63 @@
         "kick_ct": "3:25 PM CT",
         "kick_utc": "2026-09-20T20:25:00Z",
         "event_id": "mia-sf",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.334 pts (need \u22652.0) \u00b7 Sit: MIA Robinson Out; SF Kittle No designation / expected; SF Pineiro Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.334 pts (need \u22652.0) \u00b7 MATERIAL: MIA cross-country; Chop Robinson Out \u2014 travel",
         "slate_date_ct": "2026-09-20",
         "kick_et": "4:25 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "KhaDarel Hodge",
+            "market": "anytime_td",
+            "selection": "KhaDarel Hodge yes",
+            "line": null,
+            "price_american": 6000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Ryan Miller",
+            "market": "anytime_td",
+            "selection": "Ryan Miller yes",
+            "line": null,
+            "price_american": 6000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "DJ Herman",
+            "market": "anytime_td",
+            "selection": "DJ Herman yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Will Kacmarek",
+            "market": "anytime_td",
+            "selection": "Will Kacmarek yes",
+            "line": null,
+            "price_american": 2200.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "FILL",
@@ -455,10 +1038,63 @@
         "kick_ct": "3:25 PM CT",
         "kick_utc": "2026-09-20T20:25:00Z",
         "event_id": "sea-ari",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 1.162 pts (need \u22652.0) \u00b7 Sit: SEA Darnold Out; SEA Bradford Out; SEA Charbonnet Out",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 1.162 pts (need \u22652.0) \u00b7 MATERIAL: Darnold Out; Lock starts; Bradford Out \u2014 soft-kill if lagged",
         "slate_date_ct": "2026-09-20",
         "kick_et": "4:25 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Simi Fehoko",
+            "market": "anytime_td",
+            "selection": "Simi Fehoko yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Devin Duvernay",
+            "market": "anytime_td",
+            "selection": "Devin Duvernay yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Montorie Foster Jr.",
+            "market": "anytime_td",
+            "selection": "Montorie Foster Jr. yes",
+            "line": null,
+            "price_american": 6600.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Jalen Brooks",
+            "market": "anytime_td",
+            "selection": "Jalen Brooks yes",
+            "line": null,
+            "price_american": 5500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -490,10 +1126,63 @@
         "kick_ct": "7:20 PM CT",
         "kick_utc": "2026-09-21T00:20:00Z",
         "event_id": "ind-kc",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.464 pts (need \u22652.0) \u00b7 Sit: IND Dulin Out; IND Giddens Questionable; KC Jones Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.464 pts (need \u22652.0) \u00b7 MATERIAL: KC short week; Chris Jones Q \u2014 hold until Jones Out",
         "slate_date_ct": "2026-09-20",
         "kick_et": "8:20 PM ET",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Ben VanSumeren",
+            "market": "anytime_td",
+            "selection": "Ben VanSumeren yes",
+            "line": null,
+            "price_american": 6000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Deion Burks",
+            "market": "anytime_td",
+            "selection": "Deion Burks yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Drew Ogletree",
+            "market": "anytime_td",
+            "selection": "Drew Ogletree yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Jalen Royals",
+            "market": "anytime_td",
+            "selection": "Jalen Royals yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "tag": "HOLD",
@@ -525,10 +1214,63 @@
         "kick_ct": "3:25 PM CT",
         "kick_utc": "",
         "event_id": "wsh-dal",
-        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.212 pts (need \u22652.0) \u00b7 Sit: WSH Okonkwo Out; WSH Luvu Out; WSH Kinlaw Questionable",
+        "notes": "Core HOLD \u00b7 REJECT_NFL_EDGE \u00b7 edge 0.212 pts (need \u22652.0) \u00b7 Sit stamped (mild/HOLD)",
         "slate_date_ct": "2026-09-20",
         "kick_et": "",
-        "game_props": []
+        "game_props": [
+          {
+            "rank": 1,
+            "player": "Tyler Goodson",
+            "market": "anytime_td",
+            "selection": "Tyler Goodson yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Jonathan Mingo",
+            "market": "anytime_td",
+            "selection": "Jonathan Mingo yes",
+            "line": null,
+            "price_american": 2000.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Colson Yankoff",
+            "market": "anytime_td",
+            "selection": "Colson Yankoff yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Camden Brown",
+            "market": "anytime_td",
+            "selection": "Camden Brown yes",
+            "line": null,
+            "price_american": 1900.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       }
     ],
     "holds": [],
@@ -1684,98 +2426,840 @@
         "matchup": "Panthers at Falcons",
         "away": "Panthers",
         "home": "Falcons",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Chris Blair",
+            "market": "anytime_td",
+            "selection": "Chris Blair yes",
+            "line": null,
+            "price_american": 5000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Feleipe Franks",
+            "market": "anytime_td",
+            "selection": "Feleipe Franks yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Brycen Tremayne",
+            "market": "anytime_td",
+            "selection": "Brycen Tremayne yes",
+            "line": null,
+            "price_american": 2200.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Cooper Rush",
+            "market": "anytime_td",
+            "selection": "Cooper Rush yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "cin-hou",
         "matchup": "Bengals at Texans",
         "away": "Bengals",
         "home": "Texans",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "British Brooks",
+            "market": "anytime_td",
+            "selection": "British Brooks yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Lewis Bond",
+            "market": "anytime_td",
+            "selection": "Lewis Bond yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Tanner Hudson",
+            "market": "anytime_td",
+            "selection": "Tanner Hudson yes",
+            "line": null,
+            "price_american": 1850.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Tahj Brooks",
+            "market": "anytime_td",
+            "selection": "Tahj Brooks yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "cle-tb",
         "matchup": "Browns at Buccaneers",
         "away": "Browns",
         "home": "Buccaneers",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Malachi Corley",
+            "market": "anytime_td",
+            "selection": "Malachi Corley yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Bauer Sharp",
+            "market": "anytime_td",
+            "selection": "Bauer Sharp yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Tylan Wallace",
+            "market": "anytime_td",
+            "selection": "Tylan Wallace yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Payne Durham",
+            "market": "anytime_td",
+            "selection": "Payne Durham yes",
+            "line": null,
+            "price_american": 2400.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "gb-nyj",
         "matchup": "Packers at Jets",
         "away": "Packers",
         "home": "Jets",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Arian Smith",
+            "market": "anytime_td",
+            "selection": "Arian Smith yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Andrew Beck",
+            "market": "anytime_td",
+            "selection": "Andrew Beck yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Jelani Woods",
+            "market": "anytime_td",
+            "selection": "Jelani Woods yes",
+            "line": null,
+            "price_american": 1900.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Mark Redman",
+            "market": "anytime_td",
+            "selection": "Mark Redman yes",
+            "line": null,
+            "price_american": 2000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "min-chi",
         "matchup": "Vikings at Bears",
         "away": "Vikings",
         "home": "Bears",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Gavin Bartholomew",
+            "market": "anytime_td",
+            "selection": "Gavin Bartholomew yes",
+            "line": null,
+            "price_american": 5000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Sam Roush",
+            "market": "anytime_td",
+            "selection": "Sam Roush yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Roschon Johnson",
+            "market": "anytime_td",
+            "selection": "Roschon Johnson yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "FanDuel",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Jahdae Walker",
+            "market": "anytime_td",
+            "selection": "Jahdae Walker yes",
+            "line": null,
+            "price_american": 1400.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "no-bal",
         "matchup": "Saints at Ravens",
         "away": "Saints",
         "home": "Ravens",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Kevin Austin",
+            "market": "anytime_td",
+            "selection": "Kevin Austin yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Barion Brown",
+            "market": "anytime_td",
+            "selection": "Barion Brown yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Treyton Welch",
+            "market": "anytime_td",
+            "selection": "Treyton Welch yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Matthew Hibner",
+            "market": "anytime_td",
+            "selection": "Matthew Hibner yes",
+            "line": null,
+            "price_american": 1700.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "phi-ten",
         "matchup": "Eagles at Titans",
         "away": "Eagles",
         "home": "Titans",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Nicholas Singleton",
+            "market": "anytime_td",
+            "selection": "Nicholas Singleton yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "David Martin-Robinson",
+            "market": "anytime_td",
+            "selection": "David Martin-Robinson yes",
+            "line": null,
+            "price_american": 4000.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Julius Chestnut",
+            "market": "anytime_td",
+            "selection": "Julius Chestnut yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Daniel Bellinger",
+            "market": "anytime_td",
+            "selection": "Daniel Bellinger yes",
+            "line": null,
+            "price_american": 1900.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "pit-ne",
         "matchup": "Steelers at Patriots",
         "away": "Steelers",
         "home": "Patriots",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Riley Nowakowski",
+            "market": "anytime_td",
+            "selection": "Riley Nowakowski yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Cameron Latu",
+            "market": "anytime_td",
+            "selection": "Cameron Latu yes",
+            "line": null,
+            "price_american": 5000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Eli Heidenreich",
+            "market": "anytime_td",
+            "selection": "Eli Heidenreich yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Corey Kiner",
+            "market": "anytime_td",
+            "selection": "Corey Kiner yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "jax-den",
         "matchup": "Jaguars at Broncos",
         "away": "Jaguars",
         "home": "Broncos",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Nate Adkins",
+            "market": "anytime_td",
+            "selection": "Nate Adkins yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Quintin Morris",
+            "market": "anytime_td",
+            "selection": "Quintin Morris yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Lil'Jordan Humphrey",
+            "market": "anytime_td",
+            "selection": "Lil'Jordan Humphrey yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Tyler Badie",
+            "market": "anytime_td",
+            "selection": "Tyler Badie yes",
+            "line": null,
+            "price_american": 1200.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "lv-lac",
         "matchup": "Raiders at Chargers",
         "away": "Raiders",
         "home": "Chargers",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Dareke Young",
+            "market": "anytime_td",
+            "selection": "Dareke Young yes",
+            "line": null,
+            "price_american": 5500.0,
+            "book": "BetRivers",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Cody White",
+            "market": "anytime_td",
+            "selection": "Cody White yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Kirk Cousins",
+            "market": "anytime_td",
+            "selection": "Kirk Cousins yes",
+            "line": null,
+            "price_american": 2800.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Dylan Laube",
+            "market": "anytime_td",
+            "selection": "Dylan Laube yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "mia-sf",
         "matchup": "Dolphins at 49ers",
         "away": "Dolphins",
         "home": "49ers",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "KhaDarel Hodge",
+            "market": "anytime_td",
+            "selection": "KhaDarel Hodge yes",
+            "line": null,
+            "price_american": 6000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Ryan Miller",
+            "market": "anytime_td",
+            "selection": "Ryan Miller yes",
+            "line": null,
+            "price_american": 6000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "DJ Herman",
+            "market": "anytime_td",
+            "selection": "DJ Herman yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Will Kacmarek",
+            "market": "anytime_td",
+            "selection": "Will Kacmarek yes",
+            "line": null,
+            "price_american": 2200.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "sea-ari",
         "matchup": "Seahawks at Cardinals",
         "away": "Seahawks",
         "home": "Cardinals",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Simi Fehoko",
+            "market": "anytime_td",
+            "selection": "Simi Fehoko yes",
+            "line": null,
+            "price_american": 4500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Devin Duvernay",
+            "market": "anytime_td",
+            "selection": "Devin Duvernay yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Montorie Foster Jr.",
+            "market": "anytime_td",
+            "selection": "Montorie Foster Jr. yes",
+            "line": null,
+            "price_american": 6600.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Jalen Brooks",
+            "market": "anytime_td",
+            "selection": "Jalen Brooks yes",
+            "line": null,
+            "price_american": 5500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "ind-kc",
         "matchup": "Colts at Chiefs",
         "away": "Colts",
         "home": "Chiefs",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Ben VanSumeren",
+            "market": "anytime_td",
+            "selection": "Ben VanSumeren yes",
+            "line": null,
+            "price_american": 6000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Deion Burks",
+            "market": "anytime_td",
+            "selection": "Deion Burks yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Drew Ogletree",
+            "market": "anytime_td",
+            "selection": "Drew Ogletree yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Jalen Royals",
+            "market": "anytime_td",
+            "selection": "Jalen Royals yes",
+            "line": null,
+            "price_american": 2500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       },
       {
         "event_id": "wsh-dal",
         "matchup": "Commanders at Cowboys",
         "away": "Commanders",
         "home": "Cowboys",
-        "props": []
+        "props": [
+          {
+            "rank": 1,
+            "player": "Tyler Goodson",
+            "market": "anytime_td",
+            "selection": "Tyler Goodson yes",
+            "line": null,
+            "price_american": 3500.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 2,
+            "player": "Jonathan Mingo",
+            "market": "anytime_td",
+            "selection": "Jonathan Mingo yes",
+            "line": null,
+            "price_american": 2000.0,
+            "book": "BetMGM",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 3,
+            "player": "Colson Yankoff",
+            "market": "anytime_td",
+            "selection": "Colson Yankoff yes",
+            "line": null,
+            "price_american": 3000.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          },
+          {
+            "rank": 4,
+            "player": "Camden Brown",
+            "market": "anytime_td",
+            "selection": "Camden Brown yes",
+            "line": null,
+            "price_american": 1900.0,
+            "book": "Fanatics",
+            "model_win_pct": null,
+            "market_win_pct": null,
+            "edge_pct": null,
+            "notes": "DESK Props top-4 juice shop; Betr null on TOA"
+          }
+        ]
       }
     ]
   },
@@ -1783,7 +3267,9 @@
     "enabled": true,
     "max_per_game": 4,
     "cfb_props": false,
-    "events_with_props": 0,
-    "feed": null
-  }
+    "events_with_props": 14,
+    "feed": "nfl_game_props_bet_bot_main_20260920.json"
+  },
+  "published_at_ct": "2026-09-19T22:42:01.518730-05:00",
+  "publish_note": "Sun NFL CLEAR0 Board+Props top4"
 }
