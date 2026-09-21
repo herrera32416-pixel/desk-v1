@@ -2,7 +2,7 @@
   "schema": "desk-pwa/v1",
   "brand": "DESK V1",
   "slate_date_ct": "2026-09-20",
-  "generated_at_ct": "2026-09-20T21:13:41.510935-05:00",
+  "generated_at_ct": "2026-09-20T21:15:14.531548-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
@@ -3028,6 +3028,6 @@
     "events_with_props": 14,
     "feed": "nfl_game_props_model_20260920.json"
   },
-  "published_at_ct": "2026-09-20T21:13:41.514611-05:00",
-  "publish_note": "Ledger Written 23-23 refresh"
+  "published_at_ct": "2026-09-20T21:15:14.534022-05:00",
+  "publish_note": "Written 23-23 + Sep20 shadow force"
 }
