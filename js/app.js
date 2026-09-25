@@ -71,7 +71,7 @@ function playCard(p, {star}={}){
   a.dataset.kind=p.kind||'side';
   const hd=el('div','play-hd');
   const pill=el('span','pill'+(star?' star':''), star?'PLAY':(p.tag||'CLEAR'));
-  hd.append(pill, el('span','when',`${p.sport||''} · ${p.kick_ct||p.kick_et||''} · ${p.units||0}u`.replace(/ ·  · /g,' · ').replace(/ · $/,'')));
+  hd.append(pill, el('span','when',[p.sport||'', kickInfo(p).short, `${p.units||0}u`].filter(Boolean).join(' · ')));
   a.append(hd);
   a.append(el('h3','serif',p.matchup||`${p.away||''} at ${p.home||''}`));
   a.append(el('div','side',p.selection|| (p.tag==='HOLD'?'Hold — no number':'')));
@@ -243,14 +243,98 @@ function showPanel(id){
   document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+id));
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===id));
 }
+// ---- Start times (always shown in CT, America/Chicago) ----
+const CT_TZ='America/Chicago';
+const SPORT_ORDER=['MLB','CFB','NFL'];
+const CT_FMT=new Intl.DateTimeFormat('en-US',{timeZone:CT_TZ,weekday:'short',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+const WEEKDAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+function kickFromParts(date, wd, h, mi){
+  const h12=(h%12)||12, ap=h<12?'AM':'PM', mm=String(mi).padStart(2,'0');
+  return {
+    key:`${date} ${String(h).padStart(2,'0')}:${mm}`,       // CT wall clock, sortable
+    short:`${wd} ${h12}:${mm}${ap==='AM'?'a':'p'} CT`,      // row label, e.g. "Sat 11:00a CT"
+    long:`${wd} ${h12}:${mm} ${ap} CT`,                     // group header, e.g. "Sat 11:00 AM CT"
+  };
+}
+// Real start time from the data only: kick_utc first, else the published kick_ct / kick_et
+// wall-clock on the game's CT slate date. Nothing found -> TBD (never invented).
+function kickInfo(p){
+  if(p && p._kick) return p._kick;
+  let info=null;
+  const iso=p.kick_utc||p.commence_time||p.start_time_utc||'';
+  if(iso){
+    const d=new Date(iso);
+    if(!isNaN(d.getTime())){
+      const o={}; CT_FMT.formatToParts(d).forEach(x=>{o[x.type]=x.value;});
+      info=kickFromParts(`${o.year}-${o.month}-${o.day}`, o.weekday, Number(o.hour)%24, Number(o.minute));
+    }
+  }
+  if(!info){
+    const date=p.slate_date_ct||(deskData&&deskData.slate_date)||'';
+    const tryWall=(txt, zone, shift)=>{
+      const m=new RegExp('^\\s*(\\d{1,2}):(\\d{2})\\s*([AP])\\.?M\\.?\\s*'+zone+'\\b','i').exec(txt||'');
+      if(!m || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+      let h=(Number(m[1])%12)+(m[3].toUpperCase()==='P'?12:0)+shift;
+      if(h<0||h>23) return null;
+      return kickFromParts(date, WEEKDAYS[new Date(date+'T12:00:00Z').getUTCDay()], h, Number(m[2]));
+    };
+    info=tryWall(p.kick_ct,'C[DS]?T',0) || tryWall(p.kick_et,'E[DS]?T',-1);
+  }
+  if(!info) info={key:'', short:'TBD', long:'Time TBD'};
+  try{ Object.defineProperty(p,'_kick',{value:info,enumerable:false}); }catch(e){}
+  return info;
+}
+function sportRank(s){
+  const i=SPORT_ORDER.indexOf(s||'');
+  return i<0 ? SPORT_ORDER.length : i;
+}
 function byKickTime(a,b){
-  const ak=a.kick_utc||''; const bk=b.kick_utc||'';
+  const ak=kickInfo(a).key, bk=kickInfo(b).key;
   if(ak!==bk){
-    if(!ak) return 1;
+    if(!ak) return 1;          // TBD sinks to the bottom
     if(!bk) return -1;
     return ak<bk?-1:1;
   }
-  return String(a.selection||'').localeCompare(String(b.selection||''));
+  const sr=sportRank(a.sport)-sportRank(b.sport);
+  if(sr) return sr;
+  const ss=String(a.sport||'').localeCompare(String(b.sport||''));
+  if(ss) return ss;
+  const am=a.matchup||`${a.away||''} at ${a.home||''}`, bm=b.matchup||`${b.away||''} at ${b.home||''}`;
+  return String(am).localeCompare(String(bm)) || String(a.selection||'').localeCompare(String(b.selection||''));
+}
+// Rows are already sorted; drop a small time-slot header before each new slot,
+// plus a jump bar of the slots at the top when there is more than one.
+function renderTimeGroups(slate, rows, makeCard){
+  const groups=[];
+  rows.forEach(p=>{
+    const k=kickInfo(p);
+    const last=groups[groups.length-1];
+    if(last && last.key===k.key) last.rows.push(p);
+    else groups.push({key:k.key, long:k.long, short:k.short, rows:[p]});
+  });
+  if(groups.length>1){
+    const bar=el('nav','jump');
+    bar.setAttribute('aria-label','Jump to start time');
+    groups.forEach((g,i)=>{
+      const b=el('button',null,g.key?g.short.replace(/ CT$/,''):'TBD');
+      b.type='button';
+      b.dataset.slot=String(i);
+      b.title=`${g.long} · ${g.rows.length}`;
+      bar.append(b);
+    });
+    bar.addEventListener('click',e=>{
+      const b=e.target.closest('button'); if(!b) return;
+      const t=document.getElementById('slot-'+b.dataset.slot);
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    slate.append(bar);
+  }
+  groups.forEach((g,i)=>{
+    const h=el('p','section-label time-slot',`${g.long} · ${g.rows.length}`);
+    h.id='slot-'+i;
+    slate.append(h);
+    g.rows.forEach(p=>slate.append(makeCard(p)));
+  });
 }
 function sportMatch(p, s){
   return s==='ALL' || (p.sport||'')===s;
@@ -285,14 +369,14 @@ function renderSlate(){
         emptyMsg='No CLEARs today — open Board to see the full slate.';
       }
       slate.append(el('p','why',emptyMsg));
-    } else rows.forEach(p=>slate.append(playCard(p,{star:true})));
+    } else renderTimeGroups(slate, rows, p=>playCard(p,{star:true}));
   } else {
     // board (default fallback)
     deskMode='board';
     rows=[...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport)).sort(byKickTime);
     if(hint) hint.textContent = deskSport==='ALL' ? 'Full board · FILL + HOLD' : `${deskSport} board · FILL + HOLD`;
     if(!rows.length) slate.append(el('p','why','No board games for this filter.'));
-    else rows.forEach(p=>slate.append(playCard(p)));
+    else renderTimeGroups(slate, rows, p=>playCard(p));
   }
 }
 async function main(){
