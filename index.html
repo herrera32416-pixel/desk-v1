@@ -55,6 +55,22 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 .modes button.on{background:var(--cream);color:#111;font-weight:700;border-color:var(--cream)}
 .play.clear-play{border-color:#5a5540;box-shadow:inset 0 0 0 1px rgba(230,227,211,.12)}
 .play .pill.star{color:#111;background:var(--cream);padding:3px 8px;border-radius:6px}
+.metrics.ou .hi .v{color:#111;background:var(--cream);border-radius:6px;padding:0 6px;display:inline-block}
+.metrics.ou .hi .k{color:var(--cream)}
+.metrics .sub{font-size:11px;color:var(--muted);margin-top:1px}
+.mline{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12px;color:var(--text);margin:0 0 8px;padding:7px 9px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.02)}
+.mline b{font-weight:600;color:var(--muted);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.mline .blank{color:var(--muted)}
+.shop{margin:0 0 4px;color:var(--muted);font-size:12px}
+.why-line{color:var(--text);font-size:13px}
+.why-line b{color:var(--cream);font-weight:600}
+.why-line.muted{color:var(--muted);font-style:italic}
+.why-line.muted b{color:var(--muted)}
+.banner{margin:0 0 14px;padding:9px 12px;border:1px dashed #5a5540;border-radius:10px;color:var(--cream);font-size:12px;letter-spacing:.02em}
+.mline.lines span{flex-basis:100%}
+.banner.practice{border:1px solid var(--cream);background:rgba(230,227,211,.10);font-size:14px;font-weight:700;padding:12px 14px}
+.price-cond{margin:0 0 6px;color:var(--cream);font-size:13px}
+.price-cond b{font-weight:700}
 .section-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:4px 0 10px}
 .jump{display:flex;gap:6px;overflow-x:auto;margin:0 0 12px;padding-bottom:2px}
 .jump button{flex:0 0 auto;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:transparent;color:var(--muted);font-size:11px;letter-spacing:.06em;white-space:nowrap}
@@ -69,6 +85,7 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <div class="asof" id="asof">loading…</div>
 </header>
 <p class="sub">Skip-first clerk · Main owns the card</p>
+<p class="banner" id="deskBanner" hidden></p>
 <nav class="tabs" id="tabs">
   <button class="on" data-p="card">Card</button>
   <button data-p="ledger">Ledger</button>
@@ -149,6 +166,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <span id="status">Loading…</span>
   <button id="refresh" type="button">Refresh</button>
 </div>
-<script src="./js/app.js"></script>
+<script src="./js/app.js?v=0925practice"></script>
 </body>
 </html>

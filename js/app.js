@@ -52,6 +52,9 @@ function normalize(data){
     ledger: data.ledger || null,
     nfl_props: data.nfl_props || { games: [] },
     nfl_props_meta: data.nfl_props_meta || null,
+    banner: data.banner || '',
+    source: data.source || '',
+    practice_run: data.practice_run===true,
   };
 }
 async function loadDesk(){
@@ -65,6 +68,99 @@ function el(tag, cls, text){
   if(text!=null) n.textContent=text;
   return n;
 }
+const DESK_UI_VERSION='0925-practice';
+function fmtPct(v){
+  if(v==null || v==='') return '—';
+  const n=Number(v);
+  return Number.isFinite(n) ? `${Math.round(n*10)/10}%` : '—';
+}
+function fmtNum(v, {signed=false, dp=null}={}){
+  if(v==null || v==='') return '—';
+  const n=Number(v);
+  if(!Number.isFinite(n)) return String(v);
+  const r = dp!=null ? n.toFixed(dp) : String(n);
+  return signed && n>0 ? `+${r}` : r;
+}
+function fmtPrice(v){
+  if(v==null || v==='') return '';
+  const n=Number(v);
+  return Number.isFinite(n) ? (n>0?`+${n}`:String(n)) : String(v);
+}
+// O/U row: OVER x% | UNDER y% | TOTAL — both sides, higher side highlighted.
+function ouRow(p){
+  const ov=p.model_over_pct!=null && p.model_over_pct!=='' ? Number(p.model_over_pct) : null;
+  const un=p.model_under_pct!=null && p.model_under_pct!=='' ? Number(p.model_under_pct) : null;
+  const mOv=p.market_over_pct, mUn=p.market_under_pct;
+  // No model O/U filed → show MARKET no-vig O/U big (labeled MKT), never as a model lean.
+  if(ov==null && un==null && ((mOv!=null && mOv!=='') || (mUn!=null && mUn!==''))){
+    const g=el('div','metrics ou mkt-only');
+    const c=(k,v,sub)=>{const d=el('div'); d.append(el('div','k',k), el('div','v serif',v)); if(sub) d.append(el('div','sub',sub)); return d;};
+    const sb=(price,book)=>[price!=null&&price!==''?fmtPrice(price):'', book||''].filter(Boolean).join(' ');
+    g.append(
+      c('MKT OVER', fmtPct(mOv), sb(p.over_price, p.over_book)),
+      c('MKT UNDER', fmtPct(mUn), sb(p.under_price, p.under_book)),
+      c('TOTAL', p.total_line!=null && p.total_line!=='' ? String(p.total_line) : '—', p.totals_source||''),
+    );
+    return g;
+  }
+  const hiSide = (ov!=null && un!=null && ov!==un) ? (ov>un?'over':'under') : null;
+  const g=el('div','metrics ou');
+  const cell=(k, v, sub, hi)=>{
+    const d=el('div', hi?'hi':null);
+    d.append(el('div','k',k), el('div','v serif',v));
+    if(sub) d.append(el('div','sub',sub));
+    return d;
+  };
+  const sub=(price, mkt)=>[price?`${fmtPrice(price)}`:'', mkt!=null&&mkt!==''?`mkt ${fmtPct(mkt)}`:''].filter(Boolean).join(' · ');
+  g.append(
+    cell('OVER', fmtPct(ov), sub(p.over_price, mOv), hiSide==='over'),
+    cell('UNDER', fmtPct(un), sub(p.under_price, mUn), hiSide==='under'),
+    cell('TOTAL', p.total_line!=null && p.total_line!=='' ? String(p.total_line) : '—', p.totals_source||'', false),
+  );
+  return g;
+}
+// Compact Model line: model · market (no-vig) · shrunk · edge · fair · source. Blank → —.
+function modelLine(p){
+  const d=el('div','mline');
+  const bits=[];
+  const add=(k,v)=>bits.push([k,v]);
+  add('Model', fmtPct(p.model_win_pct));
+  add('Mkt', fmtPct(p.market_win_pct));
+  add('No-vig', fmtPct(p.market_novig_pct));
+  add('Shrunk', fmtPct(p.shrunk_pct));
+  if(p.shrink_w!=null && p.shrink_w!=='') add('w', fmtNum(p.shrink_w));
+  const ePct=p.edge_pct, ePts=p.edge_pts;
+  const eStr=[ePct!=null&&ePct!==''?`${fmtNum(ePct,{signed:true})}pp`:'', ePts!=null&&ePts!==''?`${fmtNum(ePts)} pts`:''].filter(Boolean).join(' · ') || '—';
+  add('Edge', eStr);
+  const fair = p.fair_line!=null&&p.fair_line!=='' ? fmtNum(p.fair_line,{signed:true}) : (p.fair_spread!=null&&p.fair_spread!=='' ? fmtNum(p.fair_spread,{signed:true}) : '—');
+  add('Fair', fair);
+  add('Sim', p.sim_flag||'—');
+  add('Src', p.model_source||p.sim_source||'—');
+  if(p.gap_flag) add('Gap', p.gap_flag);
+  bits.forEach(([k,v])=>{
+    const s=el('span', v==='—'?'blank':null);
+    s.append(el('b',null,k+' '), document.createTextNode(v));
+    d.append(s);
+  });
+  return d;
+}
+// Spread + ML lines with MARKET no-vig % (auto board rows). Skipped when absent.
+function linesBlock(p){
+  const has=(v)=>v!=null && v!=='';
+  if(!has(p.spread_home_line) && !has(p.ml_home_price)) return null;
+  const d=el('div','mline lines');
+  const ab=(n)=>String(n||'').split(' ').slice(-1)[0];
+  const add=(k,txt)=>{const s=el('span'); s.append(el('b',null,k+' '), document.createTextNode(txt)); d.append(s);};
+  if(has(p.spread_home_line)){
+    const sgn=(x)=>Number(x)>0?`+${x}`:String(x);
+    add('Spread', `${ab(p.away)} ${sgn(p.spread_away_line)} ${fmtPrice(p.spread_away_price)} ${p.spread_away_book||''} · mkt ${fmtPct(p.market_away_cover_pct)}`);
+    add('', `${ab(p.home)} ${sgn(p.spread_home_line)} ${fmtPrice(p.spread_home_price)} ${p.spread_home_book||''} · mkt ${fmtPct(p.market_home_cover_pct)}`);
+  }
+  if(has(p.ml_home_price)){
+    add('ML', `${ab(p.away)} ${fmtPrice(p.ml_away_price)} (${fmtPct(p.market_away_ml_pct)}) · ${ab(p.home)} ${fmtPrice(p.ml_home_price)} (${fmtPct(p.market_home_ml_pct)})`);
+  }
+  return d;
+}
 function playCard(p, {star}={}){
   const a=el('article','play'+(star||p.tag==='CLEAR'?' clear-play':''));
   a.dataset.sport=p.sport||'OTHER';
@@ -74,37 +170,32 @@ function playCard(p, {star}={}){
   hd.append(pill, el('span','when',[p.sport||'', kickInfo(p).short, `${p.units||0}u`].filter(Boolean).join(' · ')));
   a.append(hd);
   a.append(el('h3','serif',p.matchup||`${p.away||''} at ${p.home||''}`));
-  a.append(el('div','side',p.selection|| (p.tag==='HOLD'?'Hold — no number':'')));
+  const noSide = p.board_only ? 'Board — no Main side' : (p.tag==='HOLD'||p.tag==='BOARD' ? 'Hold — no number' : '');
+  a.append(el('div','side',p.selection|| noSide));
   const m=el('div','metrics');
   const model = p.model_win_pct!=null ? `${p.model_win_pct}%` : '—';
   const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : '—';
   const edge = (p.edge ?? p.edge_pct);
   const edgeStr = edge!=null && edge!=='' ? String(edge) : '—';
-  const pairs=[['MODEL', model],['MARKET', market],['EDGE', edgeStr]];
-  // Single O/U lean on the same metrics row (stronger of over vs under).
-  if(p.total_line!=null && (p.model_over_pct!=null || p.model_under_pct!=null)){
-    const ov=p.model_over_pct!=null?Number(p.model_over_pct):null;
-    const un=p.model_under_pct!=null?Number(p.model_under_pct):null;
-    let leanLabel='O/U', leanVal='—';
-    if(ov!=null && un!=null){
-      if(ov>=un){ leanLabel='OVER'; leanVal=`${p.total_line} · ${ov}%`; }
-      else { leanLabel='UNDER'; leanVal=`${p.total_line} · ${un}%`; }
-    } else if(ov!=null){ leanLabel='OVER'; leanVal=`${p.total_line} · ${ov}%`; }
-    else if(un!=null){ leanLabel='UNDER'; leanVal=`${p.total_line} · ${un}%`; }
-    pairs.push([leanLabel, leanVal]);
-  }
-  for(const [k,v] of pairs){
+  for(const [k,v] of [['MODEL', model],['MARKET', market],['EDGE', edgeStr]]){
     const d=el('div');
     d.append(el('div','k',k), el('div','v serif',String(v)));
     m.append(d);
   }
   a.append(m);
-  let why=p.notes||'';
-  if(p.book || p.price_american){
-    const shop=[p.book, p.price_american!=null?String(p.price_american):''].filter(Boolean).join(' ');
-    why = why ? `${shop} · ${why}` : shop;
+  a.append(ouRow(p));
+  const lb=linesBlock(p); if(lb) a.append(lb);
+  a.append(modelLine(p));
+  const shop=[p.book, p.price_american!=null?fmtPrice(p.price_american):''].filter(Boolean).join(' ');
+  if(shop) a.append(el('p','shop',shop));
+  if(p.price_condition){
+    const pc=el('p','price-cond');
+    pc.append(el('b',null,'Price: '), document.createTextNode(p.price_condition));
+    a.append(pc);
   }
-  if(why) a.append(el('p','why',why));
+  const w=el('p', 'why why-line'+(p.why?'':' muted'));
+  w.append(el('b',null,'Why: '), document.createTextNode(p.why || 'no note filed'));
+  a.append(w);
   return a;
 }
 function propCard(p){
@@ -373,8 +464,9 @@ function renderSlate(){
   } else {
     // board (default fallback)
     deskMode='board';
-    rows=[...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport)).sort(byKickTime);
-    if(hint) hint.textContent = deskSport==='ALL' ? 'Full board · FILL + HOLD' : `${deskSport} board · FILL + HOLD`;
+    // Luis Sep 25: every game on the Board — CLEAR + FILL + HOLD/BOARD, no cap.
+    rows=[...deskData.clears, ...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport)).sort(byKickTime);
+    if(hint) hint.textContent = (deskSport==='ALL' ? 'Full board' : `${deskSport} board`) + ` · every game · ${rows.length}`;
     if(!rows.length) slate.append(el('p','why','No board games for this filter.'));
     else renderTimeGroups(slate, rows, p=>playCard(p));
   }
@@ -385,9 +477,11 @@ async function main(){
   document.getElementById('asof').textContent=`${data.slate_date}\n${data.timezone}\n${data.as_of_label||''}`;
   document.getElementById('clearCount').textContent=String(data.summary?.published_clear ?? data.clears?.length ?? 0);
   const bc=document.getElementById('boardCount');
-  if(bc) bc.textContent=String((data.fills?.length||0)+(data.holds?.length||0));
+  if(bc) bc.textContent=String((data.clears?.length||0)+(data.fills?.length||0)+(data.holds?.length||0));
   document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · ${data.clears.length} plays`;
 
+  const bn=document.getElementById('deskBanner');
+  if(bn){ bn.textContent=data.banner||''; bn.hidden=!data.banner; bn.classList.toggle('practice', !!data.practice_run); }
   renderSlate();
 
   const parlays=document.getElementById('parlays');
