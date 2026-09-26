@@ -1,0 +1,73 @@
+name: daily-desk
+
+# Once a day, on GitHub's servers (independent of the Grok Bot box):
+# 1 Odds API call (NFL h2h+spreads+totals, regions=us => 3 credits) -> data/today.json.
+# Main-sourced card for today is never overwritten (merge appends missing NFL games only).
+on:
+  schedule:
+    # 9:15am CT. Cron is UTC and has no DST:
+    #   CDT (UTC-5, ~Mar 8 - Nov 1 2026): 14:15 UTC  <- active now
+    #   CST (UTC-6, after Nov 1 2026):   15:15 UTC  -> change to "15 15 * * *" on Nov 1
+    #                                                  (or leave it: runs 8:15am CST)
+    # GitHub may start scheduled runs several minutes late.
+    - cron: "15 14 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Call the API even if today's auto board already exists (uses 3 credits)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # commit data/
+  pages: write      # request a Pages build (GITHUB_TOKEN pushes don't trigger legacy builds)
+
+concurrency:
+  group: daily-desk
+  cancel-in-progress: false
+
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build auto board (1 API call max, no retries)
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            python scripts/auto_board.py --force
+          else
+            python scripts/auto_board.py
+          fi
+
+      - name: Commit + push data/ only if changed
+        id: push
+        run: |
+          if git diff --quiet -- data/ && [ -z "$(git ls-files --others --exclude-standard -- data/)" ]; then
+            echo "No data change."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "auto board $(TZ=America/Chicago date +%F) CT"
+          # box publisher may have pushed meanwhile; rebase data-only commit, never force
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Request Pages build (legacy branch source)
+        if: steps.push.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || \
+            echo "::warning::Pages build request failed — site may stay stale until the next push from the box"
