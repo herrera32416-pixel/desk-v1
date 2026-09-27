@@ -57,6 +57,13 @@ function normalize(data){
     practice_run: data.practice_run===true,
   };
 }
+function writtenHeadline(l){
+  if(!l||!l.written_book) return '';
+  const u=Number(l.written_units);
+  if(!Number.isFinite(u)) return l.written_book;
+  const usd=u*20;
+  return `${l.written_book} · ${usd<0?'−':'+'}$${Math.abs(usd).toFixed(2)}`;
+}
 async function loadDesk(){
   const res=await fetch('./data/today.json?ts='+Date.now(),{cache:'no-store'});
   if(!res.ok) throw new Error('No slate');
@@ -103,7 +110,9 @@ function ouRow(p){
     );
     return g;
   }
-  const hiSide = (ov!=null && un!=null && ov!==un) ? (ov>un?'over':'under') : null;
+  // Totals HOLD / market_devig_v0 → no lean: never highlight the higher side.
+  const totalsHold=/HOLD|devig/i.test(String(p.totals_source||''));
+  const hiSide = (!totalsHold && ov!=null && un!=null && ov!==un) ? (ov>un?'over':'under') : null;
   const g=el('div','metrics ou');
   const cell=(k, v, sub, hi)=>{
     const d=el('div', hi?'hi':null);
@@ -183,7 +192,7 @@ function playCard(p, {star}={}){
     m.append(d);
   }
   a.append(m);
-  a.append(ouRow(p));
+  if((p.kind||'')!=='prop') a.append(ouRow(p));
   const lb=linesBlock(p); if(lb) a.append(lb);
   a.append(modelLine(p));
   const shop=[p.book, p.price_american!=null?fmtPrice(p.price_american):''].filter(Boolean).join(' ');
@@ -287,9 +296,10 @@ function ticketCard(t, kind){
 }
 
 function nflPropCard(p, rank){
-  const a=el('article','play');
+  const clr=p.tag==='CLEAR';
+  const a=el('article','play'+(clr?' clear-play':''));
   const hd=el('div','play-hd');
-  hd.append(el('span','pill',`#${rank}`), el('span','when',[p.market||'PROP', p.book||''].filter(Boolean).join(' · ')));
+  hd.append(el('span','pill'+(clr?' star':''), clr?`CLEAR · ${p.units||0}u`:`#${rank}${p.tag?' · '+p.tag:''}`), el('span','when',[p.market||'PROP', p.book||'', p.kick_ct||''].filter(Boolean).join(' · ')));
   a.append(hd);
   a.append(el('h3','serif',p.player||p.selection||'Prop'));
   a.append(el('div','side',p.selection||`${p.side||''} ${p.line!=null?p.line:''}`.trim()));
@@ -306,7 +316,8 @@ function nflPropCard(p, rank){
     m.append(d);
   }
   a.append(m);
-  if(p.notes) a.append(el('p','why',p.notes));
+  const why=p.why||p.notes;
+  if(why) a.append(el('p','why',why));
   return a;
 }
 function renderNflProps(data){
@@ -325,7 +336,7 @@ function renderNflProps(data){
   }
   games.forEach(g=>{
     bits.append(el('p','section-label', g.matchup || g.event_id || 'NFL'));
-    const props=(g.props||[]).slice(0,4);
+    const props=(g.props||[]).slice(0, (data.nfl_props_meta&&data.nfl_props_meta.max_per_game_display)||50);
     if(!props.length) bits.append(el('p','why','No props ranked for this game.'));
     else props.forEach((p,i)=>bits.append(nflPropCard(p, p.rank||i+1)));
   });
@@ -432,7 +443,7 @@ function sportMatch(p, s){
 }
 function updateSportChips(){
   if(!deskData) return;
-  const all=[...deskData.clears, ...deskData.fills, ...deskData.holds];
+  const all=[...deskData.clears, ...deskData.fills, ...deskData.holds].filter(p=>(p.kind||'')!=='prop');
   document.querySelectorAll('#chips button').forEach(b=>{
     const s=b.dataset.s;
     if(!s) return;
@@ -465,7 +476,8 @@ function renderSlate(){
     // board (default fallback)
     deskMode='board';
     // Luis Sep 25: every game on the Board — CLEAR + FILL + HOLD/BOARD, no cap.
-    rows=[...deskData.clears, ...deskData.fills, ...deskData.holds].filter(p=>sportMatch(p, deskSport)).sort(byKickTime);
+    // Board = games only; CLEAR props live on Plays + Props tab.
+    rows=[...deskData.clears, ...deskData.fills, ...deskData.holds].filter(p=>(p.kind||'')!=='prop' && sportMatch(p, deskSport)).sort(byKickTime);
     if(hint) hint.textContent = (deskSport==='ALL' ? 'Full board' : `${deskSport} board`) + ` · every game · ${rows.length}`;
     if(!rows.length) slate.append(el('p','why','No board games for this filter.'));
     else renderTimeGroups(slate, rows, p=>playCard(p));
@@ -477,8 +489,11 @@ async function main(){
   document.getElementById('asof').textContent=`${data.slate_date}\n${data.timezone}\n${data.as_of_label||''}`;
   document.getElementById('clearCount').textContent=String(data.summary?.published_clear ?? data.clears?.length ?? 0);
   const bc=document.getElementById('boardCount');
-  if(bc) bc.textContent=String((data.clears?.length||0)+(data.fills?.length||0)+(data.holds?.length||0));
-  document.getElementById('asOfFoot').textContent=`As of ${data.as_of_label||''} · ${data.clears.length} plays`;
+  if(bc) bc.textContent=String([...(data.clears||[]),...(data.fills||[]),...(data.holds||[])].filter(p=>(p.kind||'')!=='prop').length);
+  // Headline = Written record from Main's ledger feed (units + $ at $20/unit). No cap/counter.
+  const wh=writtenHeadline(data.ledger);
+  document.getElementById('asOfFoot').textContent=(wh?`Written ${wh}\n`:'')+`As of ${data.as_of_label||''} · ${data.clears.length} plays`;
+  document.getElementById('asOfFoot').style.whiteSpace='pre-line';
 
   const bn=document.getElementById('deskBanner');
   if(bn){ bn.textContent=data.banner||''; bn.hidden=!data.banner; bn.classList.toggle('practice', !!data.practice_run); }
@@ -503,7 +518,7 @@ async function main(){
   });
 
   if(data.ledger){
-    document.getElementById('writtenBook').textContent=data.ledger.written_book||'—';
+    document.getElementById('writtenBook').textContent=writtenHeadline(data.ledger)||'—';
     const openEl=document.getElementById('openClearCount');
     if(openEl) openEl.textContent=String((data.ledger.open||[]).length);
     const sh=data.ledger.shadow;
