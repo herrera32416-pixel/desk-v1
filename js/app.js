@@ -189,10 +189,11 @@ function paperLine(b){
 }
 // ML / Spread / O-U, both sides: price · book · Market no-vig % · Model % · edge. ★ = stronger side (model edge).
 const BOOK_SHORT={DraftKings:'DK',Bovada:'Bovada',Betr:'Betr'};
-function marketsBlock(b){
+function marketsBlock(b, sport){
   const M=b&&b.markets; if(!M) return null;
+  const isNHL=sport==='NHL';
   const wrap=el('div','mkts');
-  const names=[['ml','ML'],['spread','Spread'],['total','O/U']];
+  const names=[['ml','ML'],['spread',isNHL?'Puck line':'Spread'],['total','O/U']];
   const head=el('div','mk-row mk-head');
   ['Price · book','Mkt no-vig','Model','Edge'].forEach(t=>head.append(el('span',null,t)));
   wrap.append(head);
@@ -211,6 +212,8 @@ function marketsBlock(b){
                el('span',null,sd.edge_pp!=null?`${fmtNum(sd.edge_pp,{signed:true})}pp`:'—'));
       wrap.append(r);
     });
+    const fs=(m.sides||[]).filter(sd=>sd.fair_pct!=null);
+    if(fs.length) wrap.append(el('div','mk-title',`Poisson fair from market ML + total (info, not a model): ${fs.map(sd=>`${sd.label} ${fmtPct(sd.fair_pct)}`).join(' · ')}`));
   });
   return wrap;
 }
@@ -302,8 +305,15 @@ function playCard(p, {star}={}){
   a.append(el('h3','serif',p.matchup||`${p.away||''} at ${p.home||''}`));
   const noSide = (p.paper && p.paper.markets) ? `Paper · ${p.paper.status}${p.paper.status==='PAPER'?' (no real bet)':''}` : p.board_only ? 'Board — no Main side' : (p.tag==='HOLD'||p.tag==='BOARD' ? 'Hold — no number' : '');
   a.append(el('div','side',p.selection|| noSide));
-  const mk = p.paper && p.paper.markets ? marketsBlock(p.paper) : null;
+  const mk = p.paper && p.paper.markets ? marketsBlock(p.paper, p.sport) : null;
   if(mk){
+    const g=p.paper.goalies;
+    if(p.sport==='NHL'){
+      const gl=(side,team)=>{const x=g&&g[side]; return `${String(team||'').split(' ').slice(-1)[0]}: ${x?`${x.goalie} (${x.status})`:'—'}`;};
+      const gd=el('p','paper-line muted');
+      gd.append(el('b',null,'Goalies '), document.createTextNode(`${gl('away',p.away)} · ${gl('home',p.home)}`));
+      a.append(gd);
+    }
     // PAPER auto rows: three markets with Market % and Model % (Main rows keep the classic layout below)
     a.append(mk);
     const pl=paperLine(p.paper); if(pl) a.append(pl);
@@ -478,7 +488,7 @@ function showPanel(id){
 }
 // ---- Start times (always shown in CT, America/Chicago) ----
 const CT_TZ='America/Chicago';
-const SPORT_ORDER=['MLB','CFB','NFL'];
+const SPORT_ORDER=['MLB','CFB','NFL','NHL'];
 const CT_FMT=new Intl.DateTimeFormat('en-US',{timeZone:CT_TZ,weekday:'short',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
 const WEEKDAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 function kickFromParts(date, wd, h, mi){

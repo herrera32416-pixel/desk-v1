@@ -1,5 +1,5 @@
-const CACHE='desk-v1-mkts-1002';
-const ASSETS=['./','./index.html','./manifest.webmanifest','./js/app.js?v=1002mkts','./icons/icon-192.png','./icons/icon-512.png','./data/today.json'];
+const CACHE='desk-v1-nhl-1002';
+const ASSETS=['./','./index.html','./manifest.webmanifest','./js/app.js?v=1002nhl','./icons/icon-192.png','./icons/icon-512.png','./data/today.json'];
 self.addEventListener('install', e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS.map(u=>new Request(u,{cache:'reload'})))).then(()=>self.skipWaiting()));
 });
