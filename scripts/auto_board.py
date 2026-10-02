@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """DESK auto board — runs on GitHub Actions, independent of the Grok Bot box.
 
-One call to The Odds API (americanfootball_nfl, regions=us,
-markets=h2h,spreads,totals, oddsFormat=american) -> every NFL game kicking in
-the next 7 days (CT) as BOARD 0u rows with LINES + MARKET no-vig % only.
+One Odds API call per sport per day (regions=us, markets=h2h,spreads,totals,
+oddsFormat=american => 3 credits each): americanfootball_nfl + americanfootball_ncaaf
+-> every NFL/CFB game kicking in the next 7 days (CT) as BOARD 0u rows with LINES +
+MARKET no-vig %, plus a PAPER side from the u3 market-heavy blend (scripts/paper_model.py,
+ESPN FPI, free). PAPER picks are stamped to data/paper_ledger.json (no real bets).
 
 Never writes model_* / why / CLEAR: those come only from Bet Bot Main via the
-box publisher. Blank stays blank.
+box publisher. The paper block lives in row["paper"] and data/paper*.json only.
+Blank stays blank.
 
 Merge rule: if data/today.json is Main-sourced for today's CT slate, Main's
 rows / CLEARs / model / why are untouched; only NFL games kicking today (CT)
@@ -32,13 +35,18 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import paper_model  # noqa: E402
+
 CT = ZoneInfo("America/Chicago")
 UTC = timezone.utc
-SPORT = "americanfootball_nfl"
-API_URL = f"https://api.the-odds-api.com/v4/sports/{SPORT}/odds"
+SPORTS = {"NFL": "americanfootball_nfl", "CFB": "americanfootball_ncaaf"}  # one call each per day
+API_URL = "https://api.the-odds-api.com/v4/sports/{sport}/odds"
 SCHEMA = "desk-pwa/v1"
 WINDOW_DAYS = 7
-BANNER = "Auto board: lines + market % only. Model and notes not filed today."
+MIN_REMAINING = 30  # never spend the last credits: skip further calls below this
+BANNER = ("PAPER ONLY — no real bets. NFL + CFB sides from the u3 market-heavy blend "
+          "(~74% market / ~26% ESPN FPI). Lines + market % from The Odds API. No Main card filed.")
 MARKET_SRC = "The Odds API · no-vig = median across books of two-way de-vig (consensus line)"
 
 # Display ids only (naming, not data). Washington = wsh to match Main's board.
@@ -127,12 +135,12 @@ def kick_fields(iso: str) -> tuple[str, str, datetime]:
 
 
 # ---------------------------------------------------------------- API call
-def fetch_odds(api_key: str, timeout: int = 30) -> tuple[list[dict], dict]:
+def fetch_odds(api_key: str, sport_key: str, timeout: int = 30) -> tuple[list[dict], dict]:
     qs = urllib.parse.urlencode({
         "apiKey": api_key, "regions": "us", "markets": "h2h,spreads,totals",
         "oddsFormat": "american", "dateFormat": "iso",
     })
-    req = urllib.request.Request(f"{API_URL}?{qs}", headers={"User-Agent": "desk-v1-auto-board"})
+    req = urllib.request.Request(f"{API_URL.format(sport=sport_key)}?{qs}", headers={"User-Agent": "desk-v1-auto-board"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             hdr = {k.lower(): v for k, v in r.headers.items()}
@@ -155,11 +163,14 @@ def fetch_odds(api_key: str, timeout: int = 30) -> tuple[list[dict], dict]:
 
 
 # ------------------------------------------------------------- build rows
-def build_row(ev: dict, slate_iso: str) -> dict:
+def build_row(ev: dict, slate_iso: str, sport: str = "NFL") -> dict:
     home, away = ev.get("home_team") or "", ev.get("away_team") or ""
     kick_utc, kick_ct, _ = kick_fields(ev["commence_time"])
-    ha, aa = NFL_ABBR.get(home, ""), NFL_ABBR.get(away, "")
-    eid = f"{aa}-{ha}" if aa and ha else (ev.get("id") or "")
+    if sport == "NFL":
+        ha, aa = NFL_ABBR.get(home, ""), NFL_ABBR.get(away, "")
+        eid = f"{aa}-{ha}" if aa and ha else (ev.get("id") or "")
+    else:
+        eid = f"cfb-{ev.get('id') or ''}"
 
     h2h, spreads, totals = [], [], []
     for bk in ev.get("bookmakers") or []:
@@ -178,7 +189,7 @@ def build_row(ev: dict, slate_iso: str) -> dict:
                     totals.append((title, float(op), outs["Over"]["price"], outs["Under"]["price"]))
 
     row = {
-        "tag": "BOARD", "status": "HOLD", "sport": "NFL", "sport_raw": "nfl",
+        "tag": "BOARD", "status": "HOLD", "sport": sport, "sport_raw": sport.lower(),
         "away": away, "home": home, "matchup": f"{away} at {home}",
         "selection": "", "market": "", "line": None, "price_american": None, "book": "",
         "units": 0,
@@ -189,7 +200,7 @@ def build_row(ev: dict, slate_iso: str) -> dict:
         "shrink_w": None, "model_source": "", "sim_source": "", "sim_flag": "", "gap_flag": "",
         "reject_code": "", "reject_note": "", "hold_reason": "", "ou_lean": "",
         "why": "", "why_source": "", "notes": BANNER,
-        "prob_source": "auto board — market no-vig only; no model filed",
+        "prob_source": "auto board — market no-vig; PAPER blend in row.paper (not Main model)",
         "prob_method": "none",
         "kick_utc": kick_utc, "kick_ct": kick_ct, "event_id": eid,
         "toa_event_id": ev.get("id") or "", "slate_date_ct": slate_iso,
@@ -251,13 +262,18 @@ def default_rules() -> dict:
         "fill": "FILL = Main recommended side, not written",
         "hold": "HOLD/BOARD = full slate game with no Main side",
         "owner": "Bet Bot Main owns the card; Sports Betting shops + exports",
-        "auto": ("Auto board (GitHub Actions, once daily): NFL lines + MARKET no-vig % only. "
-                 "No model, no notes, no CLEAR. Main's feed replaces it when published."),
-        "ledger": "Ledger = Main written CLEAR grades only (Grade via the box). Auto board never edits it.",
+        "auto": ("Auto board (GitHub Actions, once daily 9:15am CT): NFL + CFB lines + MARKET no-vig %. "
+                 "No Main model, no notes, no CLEAR. Main's feed replaces it when published."),
+        "paper": ("PAPER ONLY (no real bets): u3 market-heavy blend, market + w·(ESPN FPI − market), "
+                  "w≈0.26–0.27. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
+                  "PAPER pick if edge ≥3pp vs stamped price; gap >8pp vs no-vig = HOLD. 1u = $20 flat. "
+                  "Stamped once on kick day, graded W/L/P from ESPN finals at the stamped price."),
+        "ledger": "Ledger = Main written CLEAR grades only (Grade via the box). Paper ledger is separate (Paper tab).",
     }
 
 
-def build_auto_doc(rows: list[dict], existing: dict | None, now_ct: datetime, usage: dict) -> dict:
+def build_auto_doc(rows: list[dict], existing: dict | None, now_ct: datetime, usage: dict,
+                   paper_meta: dict | None = None) -> dict:
     slate_iso = now_ct.date().isoformat()
     same_slate = bool(existing) and existing.get("slate_date_ct") == slate_iso
     ledger = (existing or {}).get("ledger")
@@ -282,9 +298,10 @@ def build_auto_doc(rows: list[dict], existing: dict | None, now_ct: datetime, us
         "rules": default_rules(),
         "summary": {
             "published_clear": 0, "fill_total": 0, "fill_shown": 0,
-            "hold_total": n, "board_total": n, "by_sport": {"NFL": n} if n else {},
+            "hold_total": n, "board_total": n,
+            "by_sport": {s: c for s in SPORTS if (c := sum(1 for r in rows if r.get("sport") == s))},
             "with_model_win_pct": 0, "with_market_win_pct": 0,
-            "feed": "the-odds-api (auto)", "board_file": None,
+            "feed": "the-odds-api (auto) + paper u3 blend", "board_file": None,
             "props_total": len(card_props), "props_clear": 0, "props_file": None,
             "ledger_rows": (ledger or {}).get("row_count") or 0,
             "ledger_open": (ledger or {}).get("open_count"),
@@ -298,8 +315,11 @@ def build_auto_doc(rows: list[dict], existing: dict | None, now_ct: datetime, us
                 "requests_remaining": usage.get("x-requests-remaining"),
                 "requests_used": usage.get("x-requests-used"),
                 "requests_last": usage.get("x-requests-last"),
+                "calls": usage.get("calls"),
+                "credits_this_run": usage.get("credits_this_run"),
             },
         },
+        "paper": paper_meta,
         "card": {"clears": [], "fills": [], "holds": rows, "props": card_props},
         "parlays": [], "teasers": [],
         "shop": {"anchors_written": [], "written_shop_notes": {}},
@@ -310,7 +330,7 @@ def build_auto_doc(rows: list[dict], existing: dict | None, now_ct: datetime, us
 
 
 def merge_into_main(existing: dict, rows: list[dict], now_ct: datetime, usage: dict) -> tuple[dict, int]:
-    """Append only today's (CT) NFL games missing from Main's card. Touch nothing else."""
+    """Append only today's (CT) NFL/CFB games missing from Main's card. Touch nothing else."""
     today = now_ct.date()
     have = all_rows(existing)
     have_ids = set().union(*[eid_aliases(str(r.get("event_id") or "")) for r in have]) if have else set()
@@ -331,12 +351,13 @@ def merge_into_main(existing: dict, rows: list[dict], now_ct: datetime, usage: d
     s["hold_total"] = (s.get("hold_total") or 0) + len(added)
     s["board_total"] = (s.get("board_total") or 0) + len(added)
     bs = s.setdefault("by_sport", {})
-    bs["NFL"] = (bs.get("NFL") or 0) + len(added)
+    for r in added:
+        bs[r["sport"]] = (bs.get(r["sport"]) or 0) + 1
     doc["auto_merge"] = {
         "at_ct": now_ct.isoformat(timespec="seconds"),
         "appended": len(added),
         "appended_event_ids": [r["event_id"] for r in added],
-        "note": "Main rows/CLEARs/model/why untouched; missing NFL games appended as BOARD (lines + market % only).",
+        "note": "Main rows/CLEARs/model/why untouched; missing NFL/CFB games appended as BOARD (lines + market %, PAPER block).",
         "requests_remaining": usage.get("x-requests-remaining"),
     }
     return doc, len(added)
@@ -346,7 +367,8 @@ def merge_into_main(existing: dict, rows: list[dict], now_ct: datetime, usage: d
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--data-dir", default=str(Path(__file__).resolve().parents[1] / "data"))
-    ap.add_argument("--from-file", help="Offline: read a saved Odds API JSON instead of calling the API (0 credits)")
+    ap.add_argument("--from-file", help="Offline: read a saved NFL Odds API JSON instead of calling the API (0 credits)")
+    ap.add_argument("--from-file-cfb", help="Offline: read a saved NCAAF Odds API JSON (0 credits)")
     ap.add_argument("--now", help="Override 'now' (ISO, for tests)")
     ap.add_argument("--force", action="store_true", help="Call the API even if today's auto board already exists")
     args = ap.parse_args(argv)
@@ -366,58 +388,128 @@ def main(argv: list[str] | None = None) -> int:
 
     main_today = bool(existing) and existing.get("slate_date_ct") == slate_iso and is_main_sourced(existing)
     if (existing and existing.get("slate_date_ct") == slate_iso
-            and str(existing.get("source") or "") == "auto" and not args.force and not args.from_file):
+            and str(existing.get("source") or "") == "auto" and not args.force
+            and not (args.from_file or args.from_file_cfb)):
         print(f"[auto_board] auto board for {slate_iso} already present — 0 API calls (use --force)")
         return 0
 
-    usage: dict = {}
-    try:
-        if args.from_file:
-            raw = json.loads(Path(args.from_file).read_text(encoding="utf-8"))
-            events = raw if isinstance(raw, list) else (raw.get("data") or raw.get("events") or [])
-            print(f"[auto_board] offline file {args.from_file}: {len(events)} events (0 credits)")
-        else:
-            key = os.environ.get("THE_ODDS_API_KEY", "").strip()
-            if not key:
-                print("[auto_board] THE_ODDS_API_KEY not set", file=sys.stderr)
-                return 4
-            events, usage = fetch_odds(key)
-            print(f"[auto_board] 1 API call · x-requests-last={usage.get('x-requests-last')} "
-                  f"x-requests-used={usage.get('x-requests-used')} "
-                  f"x-requests-remaining={usage.get('x-requests-remaining')}")
-    except ApiStop as e:
-        print(f"[auto_board] HARD STOP (no retry): {e}", file=sys.stderr)
-        return 2
-    except Exception as e:  # network etc. — no retry, keep yesterday's board
-        print(f"[auto_board] API error (no retry): {type(e).__name__}: {e}", file=sys.stderr)
+    usage: dict = {"calls": 0, "credits_this_run": 0}
+    events_by_sport: dict[str, list[dict]] = {}
+    offline = {"NFL": args.from_file, "CFB": args.from_file_cfb}
+    key = os.environ.get("THE_ODDS_API_KEY", "").strip()
+    for sport, sport_key in SPORTS.items():
+        try:
+            if args.from_file or args.from_file_cfb:
+                if not offline[sport]:
+                    events_by_sport[sport] = []
+                    continue
+                raw = json.loads(Path(offline[sport]).read_text(encoding="utf-8"))
+                evs = raw if isinstance(raw, list) else (raw.get("data") or raw.get("events") or [])
+                print(f"[auto_board] {sport} offline file {offline[sport]}: {len(evs)} events (0 credits)")
+            else:
+                if not key:
+                    print("[auto_board] THE_ODDS_API_KEY not set", file=sys.stderr)
+                    return 4
+                rem = usage.get("x-requests-remaining")
+                if rem is not None and float(rem) < MIN_REMAINING:
+                    print(f"[auto_board] {sport}: SKIP call — only {rem} credits left (< {MIN_REMAINING})", file=sys.stderr)
+                    events_by_sport[sport] = []
+                    continue
+                evs, u = fetch_odds(key, sport_key)
+                usage.update({k: v for k, v in u.items() if v is not None})
+                usage["calls"] += 1
+                usage["credits_this_run"] += int(float(u.get("x-requests-last") or 0))
+                usage[f"{sport}_x-requests-last"] = u.get("x-requests-last")
+                print(f"[auto_board] {sport}: 1 API call · x-requests-last={u.get('x-requests-last')} "
+                      f"x-requests-used={u.get('x-requests-used')} "
+                      f"x-requests-remaining={u.get('x-requests-remaining')}")
+            events_by_sport[sport] = evs
+        except ApiStop as e:
+            print(f"[auto_board] {sport} HARD STOP (no retry): {e}", file=sys.stderr)
+            if not any(events_by_sport.values()):
+                return 2
+            events_by_sport[sport] = []
+            break
+        except Exception as e:  # network etc. — no retry
+            print(f"[auto_board] {sport} API error (no retry): {type(e).__name__}: {e}", file=sys.stderr)
+            events_by_sport[sport] = []
+    if not any(events_by_sport.values()) and usage["calls"] == 0 and not (args.from_file or args.from_file_cfb):
         return 3
 
     start = now_ct.replace(hour=0, minute=0, second=0, microsecond=0)
     end = start + timedelta(days=WINDOW_DAYS)
-    rows = []
-    for ev in events:
-        if ev.get("sport_key") not in (None, SPORT) or not ev.get("commence_time"):
-            continue
-        _, _, kct = kick_fields(ev["commence_time"])
-        if start <= kct < end:
-            rows.append(build_row(ev, slate_iso))
-    rows.sort(key=lambda r: (r["kick_utc"], r["event_id"]))
-    with_ou = sum(1 for r in rows if r.get("market_over_pct") is not None)
-    print(f"[auto_board] NFL games in window: {len(rows)} · market O/U %: {with_ou}/{len(rows)}")
+    rows_by_sport: dict[str, list[dict]] = {}
+    paper_stats: dict[str, dict] = {}
+    for sport, sport_key in SPORTS.items():
+        rows, by_toa = [], {}
+        for ev in events_by_sport.get(sport) or []:
+            if ev.get("sport_key") not in (None, sport_key) or not ev.get("commence_time"):
+                continue
+            _, _, kct = kick_fields(ev["commence_time"])
+            if start <= kct < end:
+                rows.append(build_row(ev, slate_iso, sport))
+                by_toa[ev.get("id") or ""] = ev
+        rows.sort(key=lambda r: (r["kick_utc"], r["event_id"]))
+        try:
+            paper_stats[sport] = paper_model.attach_paper(sport, rows, by_toa, now_ct, WINDOW_DAYS)
+        except Exception as e:  # ESPN down etc. -> board still publishes, paper blank
+            print(f"[auto_board] {sport} paper model error: {type(e).__name__}: {e}", file=sys.stderr)
+            paper_stats[sport] = {"games": len(rows), "error": str(e)[:200]}
+        rows_by_sport[sport] = rows
+        with_ou = sum(1 for r in rows if r.get("market_over_pct") is not None)
+        print(f"[auto_board] {sport} games in window: {len(rows)} · market O/U %: {with_ou}/{len(rows)} · "
+              f"paper {paper_stats[sport]}")
+    rows = sorted([r for rs in rows_by_sport.values() for r in rs], key=lambda r: (r["kick_utc"], r["event_id"]))
+
+    # ---- paper ledger: stamp today's PAPER picks (once per game, before kick)
+    led_path = data_dir / "paper_ledger.json"
+    ledger = paper_model.load_ledger(led_path)
+    new = paper_model.stamp_today(ledger, rows_by_sport, now_ct)
+    psum = paper_model.summarize(ledger, now_ct)
+    for p in new:
+        print(f"[auto_board] PAPER stamp {p['id']}: {p['selection']} {p['price_american']:+d} {p['book']} "
+              f"edge {p['edge_pp']:+.1f}pp (model {p['model_pct']}% / no-vig {p['novig_pct']}%)")
+    print(f"[auto_board] paper ledger {psum['record']} · {psum['units']:+.2f}u (${psum['usd']:+.2f}) · open {psum['open']}")
+    paper_meta = {
+        "label": "PAPER ONLY — no real bets", "model": paper_model.MODEL_NAME,
+        "stats": paper_stats, "stamped_today": [p["id"] for p in new],
+        "ledger_summary": psum, "ledger_file": "data/paper_ledger.json",
+    }
+    board = []
+    for r in rows:
+        b = r.get("paper") or {}
+        board.append({
+            "sport": r["sport"], "matchup": r["matchup"], "kick_utc": r["kick_utc"], "kick_ct": r["kick_ct"],
+            "event_id": r["event_id"], "espn_event_id": r.get("espn_event_id"), "status": b.get("status"),
+            "best": b.get("best"), "note": b.get("note"), "fpi_home_margin": b.get("fpi_home_margin"),
+            "mkt_home_margin": b.get("mkt_home_margin"), "blend_home_margin": b.get("blend_home_margin"),
+            "stamped": paper_model.pick_id(r["sport"], r) in {p["id"] for p in ledger["picks"]},
+        })
+    paper_doc = {
+        "schema": "desk-paper/v1", "label": "PAPER ONLY — no real bets", "slate_date_ct": slate_iso,
+        "generated_at_ct": now_ct.isoformat(timespec="seconds"), "model": ledger.get("model"),
+        "stats": paper_stats, "summary": psum, "board": board,
+        "credits": {k: usage.get(k) for k in ("calls", "credits_this_run", "x-requests-remaining",
+                                              "x-requests-used", "NFL_x-requests-last", "CFB_x-requests-last")},
+    }
 
     if main_today:
         doc, added = merge_into_main(existing, rows, now_ct, usage)
         if not added:
-            print("[auto_board] Main card for today already has every NFL game — no change")
-            return 0
-        print(f"[auto_board] MERGE: Main-sourced today.json kept; appended {added} missing NFL game(s)")
+            print("[auto_board] Main card for today already has every NFL/CFB game — card unchanged")
+        else:
+            print(f"[auto_board] MERGE: Main-sourced today.json kept; appended {added} missing game(s)")
     else:
-        doc = build_auto_doc(rows, existing, now_ct, usage)
+        doc = build_auto_doc(rows, existing, now_ct, usage, paper_meta)
+        added = len(rows)
         print(f"[auto_board] AUTO board written for {slate_iso} (ledger preserved: {bool(doc.get('ledger'))})")
 
-    blob = json.dumps(doc, indent=2, ensure_ascii=False)
-    (data_dir / f"{now_ct.strftime('%Y%m%d')}.json").write_text(blob, encoding="utf-8")
-    today_path.write_text(blob, encoding="utf-8")
+    if added:
+        blob = json.dumps(doc, indent=2, ensure_ascii=False)
+        (data_dir / f"{now_ct.strftime('%Y%m%d')}.json").write_text(blob, encoding="utf-8")
+        today_path.write_text(blob, encoding="utf-8")
+    paper_model.write_json(led_path, ledger)
+    paper_model.write_json(data_dir / "paper.json", paper_doc)
     return 0
 
 
