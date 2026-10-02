@@ -2,7 +2,7 @@
   "schema": "desk-paper/v1",
   "label": "PAPER ONLY — no real bets",
   "slate_date_ct": "2026-10-02",
-  "generated_at_ct": "2026-10-02T17:33:47-05:00",
+  "generated_at_ct": "2026-10-02T18:28:54-05:00",
   "model": {
     "name": "market + w·(FPI − market), w refit vs closing line on history (NFL −0.31, CFB 0)",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
@@ -42,26 +42,43 @@
       "paper_picks": 3
     },
     "CFB": {
-      "games": 60,
-      "espn_matched": 60,
-      "with_fpi": 60,
+      "games": 58,
+      "espn_matched": 58,
+      "with_fpi": 58,
       "paper": 0,
       "hold": 0,
-      "pass": 59,
+      "pass": 57,
       "blank": 1,
       "paper_picks": 0
     },
     "NHL": {
-      "games": 18,
-      "espn_matched": 18,
+      "games": 16,
+      "espn_matched": 16,
       "with_fpi": 0,
       "paper": 0,
       "hold": 0,
-      "pass": 0,
-      "blank": 18,
+      "pass": 16,
+      "blank": 0,
       "paper_picks": 0,
-      "goalies_shown": 10,
-      "with_fair": 18
+      "nhl_model": {
+        "last_final": "2026-10-01",
+        "season_games": 16,
+        "w": {
+          "ml": 0.0,
+          "pl": 0.0,
+          "tot": 0.0
+        },
+        "notes": [
+          "0 new finals appended"
+        ],
+        "home": 0.053,
+        "b2b_off": -0.056,
+        "b2b_def": -0.013,
+        "goalie_coef": -0.237
+      },
+      "with_model": 16,
+      "goalies_shown": 6,
+      "with_fair": 16
     }
   },
   "summary": {
@@ -110,236 +127,6 @@
   },
   "board": [
     {
-      "sport": "NHL",
-      "matchup": "New York Rangers at Detroit Red Wings",
-      "kick_utc": "2026-10-02T22:40:00Z",
-      "kick_ct": "Fri 10/2 5:40 PM CT",
-      "event_id": "nhl-5b5466f836933f5fb3ed4b9f267cce75",
-      "espn_event_id": "401891803",
-      "status": "BLANK",
-      "best": null,
-      "picks": [],
-      "by_market": {
-        "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
-        },
-        "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
-        },
-        "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
-        }
-      },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
-      "fpi_home_margin": null,
-      "mkt_home_margin": null,
-      "blend_home_margin": null,
-      "stamped": false,
-      "stamped_markets": []
-    },
-    {
-      "sport": "CFB",
-      "matchup": "Liberty Flames at Delaware Blue Hens",
-      "kick_utc": "2026-10-02T23:00:00Z",
-      "kick_ct": "Fri 10/2 6:00 PM CT",
-      "event_id": "cfb-a39f3695781e9b2f76011e921d63b124",
-      "espn_event_id": "401871050",
-      "status": "PASS",
-      "best": {
-        "side": "home",
-        "label": "Delaware Blue Hens +7",
-        "line": 7.0,
-        "price_american": 100,
-        "book": "Bovada",
-        "novig_pct": 47.8,
-        "model_pct": 50.0,
-        "implied_pct": 50.0,
-        "edge_pp": 0.0,
-        "gap_pp": 2.2,
-        "strong": false,
-        "_edge": 0.0,
-        "_gap": 2.1739130434782594,
-        "market": "spread",
-        "team": "Delaware Blue Hens",
-        "selection": "Delaware Blue Hens +7"
-      },
-      "picks": [],
-      "by_market": {
-        "ml": {
-          "status": "PASS",
-          "note": "edge -1.2pp < 3pp",
-          "best": {
-            "side": "home",
-            "label": "Delaware Blue Hens ML",
-            "line": null,
-            "price_american": 235,
-            "book": "DraftKings",
-            "novig_pct": 28.6,
-            "model_pct": 28.6,
-            "implied_pct": 29.9,
-            "edge_pp": -1.2,
-            "gap_pp": 0.0,
-            "strong": false,
-            "_edge": -1.205869294730899,
-            "_gap": 0.0,
-            "market": "ml",
-            "team": "Delaware Blue Hens",
-            "selection": "Delaware Blue Hens ML"
-          }
-        },
-        "spread": {
-          "status": "PASS",
-          "note": "edge +0.0pp < 3pp",
-          "best": {
-            "side": "home",
-            "label": "Delaware Blue Hens +7",
-            "line": 7.0,
-            "price_american": 100,
-            "book": "Bovada",
-            "novig_pct": 47.8,
-            "model_pct": 50.0,
-            "implied_pct": 50.0,
-            "edge_pp": 0.0,
-            "gap_pp": 2.2,
-            "strong": false,
-            "_edge": 0.0,
-            "_gap": 2.1739130434782594,
-            "market": "spread",
-            "team": "Delaware Blue Hens",
-            "selection": "Delaware Blue Hens +7"
-          }
-        },
-        "total": {
-          "status": "BLANK",
-          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
-        }
-      },
-      "note": "edge +0.0pp < 3pp",
-      "fpi_home_margin": -5.35,
-      "mkt_home_margin": -7.0,
-      "blend_home_margin": -7.0,
-      "stamped": false,
-      "stamped_markets": []
-    },
-    {
-      "sport": "CFB",
-      "matchup": "Pittsburgh Panthers at Virginia Tech Hokies",
-      "kick_utc": "2026-10-02T23:00:00Z",
-      "kick_ct": "Fri 10/2 6:00 PM CT",
-      "event_id": "cfb-e61c74f0e28b46ad83270a6234b425f4",
-      "espn_event_id": "401858245",
-      "status": "PASS",
-      "best": {
-        "side": "home",
-        "label": "Virginia Tech Hokies -1.5",
-        "line": -1.5,
-        "price_american": -110,
-        "book": "Bovada",
-        "novig_pct": 50.0,
-        "model_pct": 51.3,
-        "implied_pct": 52.4,
-        "edge_pp": -1.1,
-        "gap_pp": 1.3,
-        "strong": false,
-        "_edge": -1.0636810003246344,
-        "_gap": 1.3172713806277492,
-        "market": "spread",
-        "team": "Virginia Tech Hokies",
-        "selection": "Virginia Tech Hokies -1.5"
-      },
-      "picks": [],
-      "by_market": {
-        "ml": {
-          "status": "PASS",
-          "note": "edge -1.3pp < 3pp",
-          "best": {
-            "side": "home",
-            "label": "Virginia Tech Hokies ML",
-            "line": null,
-            "price_american": -120,
-            "book": "Bovada",
-            "novig_pct": 52.2,
-            "model_pct": 53.2,
-            "implied_pct": 54.5,
-            "edge_pp": -1.3,
-            "gap_pp": 1.1,
-            "strong": false,
-            "_edge": -1.298701298701288,
-            "_gap": 1.072840203274994,
-            "market": "ml",
-            "team": "Virginia Tech Hokies",
-            "selection": "Virginia Tech Hokies ML"
-          }
-        },
-        "spread": {
-          "status": "PASS",
-          "note": "edge -1.1pp < 3pp",
-          "best": {
-            "side": "home",
-            "label": "Virginia Tech Hokies -1.5",
-            "line": -1.5,
-            "price_american": -110,
-            "book": "Bovada",
-            "novig_pct": 50.0,
-            "model_pct": 51.3,
-            "implied_pct": 52.4,
-            "edge_pp": -1.1,
-            "gap_pp": 1.3,
-            "strong": false,
-            "_edge": -1.0636810003246344,
-            "_gap": 1.3172713806277492,
-            "market": "spread",
-            "team": "Virginia Tech Hokies",
-            "selection": "Virginia Tech Hokies -1.5"
-          }
-        },
-        "total": {
-          "status": "BLANK",
-          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
-        }
-      },
-      "note": "edge -1.1pp < 3pp",
-      "fpi_home_margin": -2.67,
-      "mkt_home_margin": 2.0,
-      "blend_home_margin": 2.0,
-      "stamped": false,
-      "stamped_markets": []
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Washington Capitals at Carolina Hurricanes",
-      "kick_utc": "2026-10-02T23:10:00Z",
-      "kick_ct": "Fri 10/2 6:10 PM CT",
-      "event_id": "nhl-dfc3a73fc50d3d1c4b58150c834e2e7d",
-      "espn_event_id": "401892432",
-      "status": "BLANK",
-      "best": null,
-      "picks": [],
-      "by_market": {
-        "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
-        },
-        "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
-        },
-        "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
-        }
-      },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
-      "fpi_home_margin": null,
-      "mkt_home_margin": null,
-      "blend_home_margin": null,
-      "stamped": false,
-      "stamped_markets": []
-    },
-    {
       "sport": "CFB",
       "matchup": "Penn State Nittany Lions at Northwestern Wildcats",
       "kick_utc": "2026-10-03T00:00:00Z",
@@ -351,16 +138,16 @@
         "side": "home",
         "label": "Northwestern Wildcats +2.5",
         "line": 2.5,
-        "price_american": -102,
+        "price_american": -105,
         "book": "DraftKings",
-        "novig_pct": 48.3,
+        "novig_pct": 48.9,
         "model_pct": 50.0,
-        "implied_pct": 50.5,
-        "edge_pp": -0.5,
-        "gap_pp": 1.7,
+        "implied_pct": 51.2,
+        "edge_pp": -1.2,
+        "gap_pp": 1.1,
         "strong": false,
-        "_edge": -0.4950495049504955,
-        "_gap": 1.7364125716270218,
+        "_edge": -1.2195121951219523,
+        "_gap": 1.0834236186348878,
         "market": "spread",
         "team": "Northwestern Wildcats",
         "selection": "Northwestern Wildcats +2.5"
@@ -369,43 +156,43 @@
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge -1.7pp < 3pp",
+          "note": "edge -1.4pp < 3pp",
           "best": {
-            "side": "home",
-            "label": "Northwestern Wildcats ML",
+            "side": "away",
+            "label": "Penn State Nittany Lions ML",
             "line": null,
-            "price_american": 115,
+            "price_american": -130,
             "book": "Bovada",
-            "novig_pct": 44.7,
-            "model_pct": 44.9,
-            "implied_pct": 46.5,
-            "edge_pp": -1.7,
-            "gap_pp": 0.1,
+            "novig_pct": 54.3,
+            "model_pct": 55.1,
+            "implied_pct": 56.5,
+            "edge_pp": -1.4,
+            "gap_pp": 0.9,
             "strong": false,
-            "_edge": -1.6557393786316432,
-            "_gap": 0.11528881392339763,
+            "_edge": -1.3776276587798786,
+            "_gap": 0.8697575949153435,
             "market": "ml",
-            "team": "Northwestern Wildcats",
-            "selection": "Northwestern Wildcats ML"
+            "team": "Penn State Nittany Lions",
+            "selection": "Penn State Nittany Lions ML"
           }
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -0.5pp < 3pp",
+          "note": "edge -1.2pp < 3pp",
           "best": {
             "side": "home",
             "label": "Northwestern Wildcats +2.5",
             "line": 2.5,
-            "price_american": -102,
+            "price_american": -105,
             "book": "DraftKings",
-            "novig_pct": 48.3,
+            "novig_pct": 48.9,
             "model_pct": 50.0,
-            "implied_pct": 50.5,
-            "edge_pp": -0.5,
-            "gap_pp": 1.7,
+            "implied_pct": 51.2,
+            "edge_pp": -1.2,
+            "gap_pp": 1.1,
             "strong": false,
-            "_edge": -0.4950495049504955,
-            "_gap": 1.7364125716270218,
+            "_edge": -1.2195121951219523,
+            "_gap": 1.0834236186348878,
             "market": "spread",
             "team": "Northwestern Wildcats",
             "selection": "Northwestern Wildcats +2.5"
@@ -416,7 +203,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -0.5pp < 3pp",
+      "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": -2.08,
       "mkt_home_margin": -2.5,
       "blend_home_margin": -2.5,
@@ -430,24 +217,24 @@
       "kick_ct": "Fri 10/2 7:10 PM CT",
       "event_id": "nhl-f5a9759e52a784d5fdcc1f3a2fcfc5a2",
       "espn_event_id": "401891831",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -461,24 +248,24 @@
       "kick_ct": "Fri 10/2 8:10 PM CT",
       "event_id": "nhl-797f03124f9bb08624b199c28f621c61",
       "espn_event_id": "401891782",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -492,24 +279,24 @@
       "kick_ct": "Fri 10/2 9:10 PM CT",
       "event_id": "nhl-bae72d1f63e132b366d199db2807c4df",
       "espn_event_id": "401892433",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -675,22 +462,22 @@
       "espn_event_id": "401858250",
       "status": "PASS",
       "best": {
-        "side": "away",
-        "label": "Notre Dame Fighting Irish -21",
-        "line": -21.0,
-        "price_american": -105,
-        "book": "Bovada",
-        "novig_pct": 48.9,
+        "side": "home",
+        "label": "North Carolina Tar Heels +21",
+        "line": 21.0,
+        "price_american": -110,
+        "book": "DraftKings",
+        "novig_pct": 50.0,
         "model_pct": 50.0,
-        "implied_pct": 51.2,
-        "edge_pp": -1.2,
-        "gap_pp": 1.1,
+        "implied_pct": 52.4,
+        "edge_pp": -2.4,
+        "gap_pp": 0.0,
         "strong": false,
-        "_edge": -1.2195121951219523,
-        "_gap": 1.0834236186348822,
+        "_edge": -2.3809523809523836,
+        "_gap": 0.0,
         "market": "spread",
-        "team": "Notre Dame Fighting Irish",
-        "selection": "Notre Dame Fighting Irish -21"
+        "team": "North Carolina Tar Heels",
+        "selection": "North Carolina Tar Heels +21"
       },
       "picks": [],
       "by_market": {
@@ -700,24 +487,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.2pp < 3pp",
+          "note": "edge -2.4pp < 3pp",
           "best": {
-            "side": "away",
-            "label": "Notre Dame Fighting Irish -21",
-            "line": -21.0,
-            "price_american": -105,
-            "book": "Bovada",
-            "novig_pct": 48.9,
+            "side": "home",
+            "label": "North Carolina Tar Heels +21",
+            "line": 21.0,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
             "model_pct": 50.0,
-            "implied_pct": 51.2,
-            "edge_pp": -1.2,
-            "gap_pp": 1.1,
+            "implied_pct": 52.4,
+            "edge_pp": -2.4,
+            "gap_pp": 0.0,
             "strong": false,
-            "_edge": -1.2195121951219523,
-            "_gap": 1.0834236186348822,
+            "_edge": -2.3809523809523836,
+            "_gap": 0.0,
             "market": "spread",
-            "team": "Notre Dame Fighting Irish",
-            "selection": "Notre Dame Fighting Irish -21"
+            "team": "North Carolina Tar Heels",
+            "selection": "North Carolina Tar Heels +21"
           }
         },
         "total": {
@@ -725,7 +512,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.2pp < 3pp",
+      "note": "edge -2.4pp < 3pp",
       "fpi_home_margin": -20.05,
       "mkt_home_margin": -21.0,
       "blend_home_margin": -21.0,
@@ -1042,44 +829,44 @@
       "status": "PASS",
       "best": {
         "side": "away",
-        "label": "West Virginia Mountaineers +3",
-        "line": 3.0,
-        "price_american": -105,
-        "book": "DraftKings",
-        "novig_pct": 48.9,
-        "model_pct": 50.0,
-        "implied_pct": 51.2,
-        "edge_pp": -1.2,
-        "gap_pp": 1.1,
+        "label": "West Virginia Mountaineers ML",
+        "line": null,
+        "price_american": 135,
+        "book": "Bovada",
+        "novig_pct": 40.9,
+        "model_pct": 41.7,
+        "implied_pct": 42.6,
+        "edge_pp": -0.9,
+        "gap_pp": 0.8,
         "strong": false,
-        "_edge": -1.2195121951219523,
-        "_gap": 1.0834236186348822,
-        "market": "spread",
+        "_edge": -0.8524555940223666,
+        "_gap": 0.8202327506852569,
+        "market": "ml",
         "team": "West Virginia Mountaineers",
-        "selection": "West Virginia Mountaineers +3"
+        "selection": "West Virginia Mountaineers ML"
       },
       "picks": [],
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge -1.7pp < 3pp",
+          "note": "edge -0.9pp < 3pp",
           "best": {
-            "side": "home",
-            "label": "Iowa State Cyclones ML",
+            "side": "away",
+            "label": "West Virginia Mountaineers ML",
             "line": null,
-            "price_american": -150,
+            "price_american": 135,
             "book": "Bovada",
-            "novig_pct": 58.0,
-            "model_pct": 58.3,
-            "implied_pct": 60.0,
-            "edge_pp": -1.7,
-            "gap_pp": 0.3,
+            "novig_pct": 40.9,
+            "model_pct": 41.7,
+            "implied_pct": 42.6,
+            "edge_pp": -0.9,
+            "gap_pp": 0.8,
             "strong": false,
-            "_edge": -1.7007358953393337,
-            "_gap": 0.3160708273497459,
+            "_edge": -0.8524555940223666,
+            "_gap": 0.8202327506852569,
             "market": "ml",
-            "team": "Iowa State Cyclones",
-            "selection": "Iowa State Cyclones ML"
+            "team": "West Virginia Mountaineers",
+            "selection": "West Virginia Mountaineers ML"
           }
         },
         "spread": {
@@ -1109,7 +896,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.2pp < 3pp",
+      "note": "edge -0.9pp < 3pp",
       "fpi_home_margin": 4.26,
       "mkt_home_margin": 3.0,
       "blend_home_margin": 3.0,
@@ -1126,21 +913,21 @@
       "status": "PASS",
       "best": {
         "side": "away",
-        "label": "Stanford Cardinal +14",
-        "line": 14.0,
-        "price_american": -105,
-        "book": "Bovada",
-        "novig_pct": 48.9,
-        "model_pct": 50.0,
-        "implied_pct": 51.2,
-        "edge_pp": -1.2,
-        "gap_pp": 1.1,
+        "label": "Stanford Cardinal +14.5",
+        "line": 14.5,
+        "price_american": -112,
+        "book": "DraftKings",
+        "novig_pct": 50.4,
+        "model_pct": 51.3,
+        "implied_pct": 52.8,
+        "edge_pp": -1.5,
+        "gap_pp": 0.9,
         "strong": false,
-        "_edge": -1.2195121951219523,
-        "_gap": 1.0834236186348822,
+        "_edge": -1.5129172986175332,
+        "_gap": 0.8842959736308664,
         "market": "spread",
         "team": "Stanford Cardinal",
-        "selection": "Stanford Cardinal +14"
+        "selection": "Stanford Cardinal +14.5"
       },
       "picks": [],
       "by_market": {
@@ -1150,24 +937,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.2pp < 3pp",
+          "note": "edge -1.5pp < 3pp",
           "best": {
             "side": "away",
-            "label": "Stanford Cardinal +14",
-            "line": 14.0,
-            "price_american": -105,
-            "book": "Bovada",
-            "novig_pct": 48.9,
-            "model_pct": 50.0,
-            "implied_pct": 51.2,
-            "edge_pp": -1.2,
-            "gap_pp": 1.1,
+            "label": "Stanford Cardinal +14.5",
+            "line": 14.5,
+            "price_american": -112,
+            "book": "DraftKings",
+            "novig_pct": 50.4,
+            "model_pct": 51.3,
+            "implied_pct": 52.8,
+            "edge_pp": -1.5,
+            "gap_pp": 0.9,
             "strong": false,
-            "_edge": -1.2195121951219523,
-            "_gap": 1.0834236186348822,
+            "_edge": -1.5129172986175332,
+            "_gap": 0.8842959736308664,
             "market": "spread",
             "team": "Stanford Cardinal",
-            "selection": "Stanford Cardinal +14"
+            "selection": "Stanford Cardinal +14.5"
           }
         },
         "total": {
@@ -1175,7 +962,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.2pp < 3pp",
+      "note": "edge -1.5pp < 3pp",
       "fpi_home_margin": 16.86,
       "mkt_home_margin": 14.0,
       "blend_home_margin": 14.0,
@@ -1191,22 +978,22 @@
       "espn_event_id": "401858252",
       "status": "PASS",
       "best": {
-        "side": "away",
-        "label": "Syracuse Orange -7",
-        "line": -7.0,
-        "price_american": 100,
-        "book": "Bovada",
-        "novig_pct": 47.8,
+        "side": "home",
+        "label": "UConn Huskies +6.5",
+        "line": 6.5,
+        "price_american": -105,
+        "book": "DraftKings",
+        "novig_pct": 48.9,
         "model_pct": 50.0,
-        "implied_pct": 50.0,
-        "edge_pp": 0.0,
-        "gap_pp": 2.2,
+        "implied_pct": 51.2,
+        "edge_pp": -1.2,
+        "gap_pp": 1.1,
         "strong": false,
-        "_edge": 0.0,
-        "_gap": 2.1739130434782594,
+        "_edge": -1.2195121951219523,
+        "_gap": 1.0834236186348878,
         "market": "spread",
-        "team": "Syracuse Orange",
-        "selection": "Syracuse Orange -7"
+        "team": "UConn Huskies",
+        "selection": "UConn Huskies +6.5"
       },
       "picks": [],
       "by_market": {
@@ -1234,24 +1021,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge +0.0pp < 3pp",
+          "note": "edge -1.2pp < 3pp",
           "best": {
-            "side": "away",
-            "label": "Syracuse Orange -7",
-            "line": -7.0,
-            "price_american": 100,
-            "book": "Bovada",
-            "novig_pct": 47.8,
+            "side": "home",
+            "label": "UConn Huskies +6.5",
+            "line": 6.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
             "model_pct": 50.0,
-            "implied_pct": 50.0,
-            "edge_pp": 0.0,
-            "gap_pp": 2.2,
+            "implied_pct": 51.2,
+            "edge_pp": -1.2,
+            "gap_pp": 1.1,
             "strong": false,
-            "_edge": 0.0,
-            "_gap": 2.1739130434782594,
+            "_edge": -1.2195121951219523,
+            "_gap": 1.0834236186348878,
             "market": "spread",
-            "team": "Syracuse Orange",
-            "selection": "Syracuse Orange -7"
+            "team": "UConn Huskies",
+            "selection": "UConn Huskies +6.5"
           }
         },
         "total": {
@@ -1259,10 +1046,10 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +0.0pp < 3pp",
+      "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": -7.6,
-      "mkt_home_margin": -7.0,
-      "blend_home_margin": -7.0,
+      "mkt_home_margin": -6.5,
+      "blend_home_margin": -6.5,
       "stamped": false,
       "stamped_markets": []
     },
@@ -1509,22 +1296,22 @@
       "espn_event_id": "401866432",
       "status": "PASS",
       "best": {
-        "side": "away",
-        "label": "Western Michigan Broncos -12.5",
-        "line": -12.5,
-        "price_american": -112,
-        "book": "DraftKings",
-        "novig_pct": 50.4,
-        "model_pct": 51.3,
-        "implied_pct": 52.8,
-        "edge_pp": -1.5,
-        "gap_pp": 0.9,
+        "side": "home",
+        "label": "Buffalo Bulls +13",
+        "line": 13.0,
+        "price_american": -105,
+        "book": "Bovada",
+        "novig_pct": 48.9,
+        "model_pct": 50.0,
+        "implied_pct": 51.2,
+        "edge_pp": -1.2,
+        "gap_pp": 1.1,
         "strong": false,
-        "_edge": -1.5129172986175332,
-        "_gap": 0.8842959736308664,
+        "_edge": -1.2195121951219523,
+        "_gap": 1.0834236186348878,
         "market": "spread",
-        "team": "Western Michigan Broncos",
-        "selection": "Western Michigan Broncos -12.5"
+        "team": "Buffalo Bulls",
+        "selection": "Buffalo Bulls +13"
       },
       "picks": [],
       "by_market": {
@@ -1534,24 +1321,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.5pp < 3pp",
+          "note": "edge -1.2pp < 3pp",
           "best": {
-            "side": "away",
-            "label": "Western Michigan Broncos -12.5",
-            "line": -12.5,
-            "price_american": -112,
-            "book": "DraftKings",
-            "novig_pct": 50.4,
-            "model_pct": 51.3,
-            "implied_pct": 52.8,
-            "edge_pp": -1.5,
-            "gap_pp": 0.9,
+            "side": "home",
+            "label": "Buffalo Bulls +13",
+            "line": 13.0,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 50.0,
+            "implied_pct": 51.2,
+            "edge_pp": -1.2,
+            "gap_pp": 1.1,
             "strong": false,
-            "_edge": -1.5129172986175332,
-            "_gap": 0.8842959736308664,
+            "_edge": -1.2195121951219523,
+            "_gap": 1.0834236186348878,
             "market": "spread",
-            "team": "Western Michigan Broncos",
-            "selection": "Western Michigan Broncos -12.5"
+            "team": "Buffalo Bulls",
+            "selection": "Buffalo Bulls +13"
           }
         },
         "total": {
@@ -1559,7 +1346,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.5pp < 3pp",
+      "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": -14.39,
       "mkt_home_margin": -13.0,
       "blend_home_margin": -13.0,
@@ -1725,22 +1512,22 @@
       "espn_event_id": "401862793",
       "status": "PASS",
       "best": {
-        "side": "home",
-        "label": "UAB Blazers -30.5",
-        "line": -30.5,
-        "price_american": -110,
-        "book": "DraftKings",
-        "novig_pct": 50.0,
+        "side": "away",
+        "label": "Samford Bulldogs +30.5",
+        "line": 30.5,
+        "price_american": -105,
+        "book": "Bovada",
+        "novig_pct": 48.9,
         "model_pct": 50.0,
-        "implied_pct": 52.4,
-        "edge_pp": -2.4,
-        "gap_pp": 0.0,
+        "implied_pct": 51.2,
+        "edge_pp": -1.2,
+        "gap_pp": 1.1,
         "strong": false,
-        "_edge": -2.3809523809523836,
-        "_gap": 0.0,
+        "_edge": -1.2195121951219523,
+        "_gap": 1.0834236186348822,
         "market": "spread",
-        "team": "UAB Blazers",
-        "selection": "UAB Blazers -30.5"
+        "team": "Samford Bulldogs",
+        "selection": "Samford Bulldogs +30.5"
       },
       "picks": [],
       "by_market": {
@@ -1750,24 +1537,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -2.4pp < 3pp",
+          "note": "edge -1.2pp < 3pp",
           "best": {
-            "side": "home",
-            "label": "UAB Blazers -30.5",
-            "line": -30.5,
-            "price_american": -110,
-            "book": "DraftKings",
-            "novig_pct": 50.0,
+            "side": "away",
+            "label": "Samford Bulldogs +30.5",
+            "line": 30.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
             "model_pct": 50.0,
-            "implied_pct": 52.4,
-            "edge_pp": -2.4,
-            "gap_pp": 0.0,
+            "implied_pct": 51.2,
+            "edge_pp": -1.2,
+            "gap_pp": 1.1,
             "strong": false,
-            "_edge": -2.3809523809523836,
-            "_gap": 0.0,
+            "_edge": -1.2195121951219523,
+            "_gap": 1.0834236186348822,
             "market": "spread",
-            "team": "UAB Blazers",
-            "selection": "UAB Blazers -30.5"
+            "team": "Samford Bulldogs",
+            "selection": "Samford Bulldogs +30.5"
           }
         },
         "total": {
@@ -1775,7 +1562,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -2.4pp < 3pp",
+      "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": 20.04,
       "mkt_home_margin": 30.5,
       "blend_home_margin": 30.5,
@@ -1965,13 +1752,13 @@
         "price_american": 190,
         "book": "Bovada",
         "novig_pct": 33.1,
-        "model_pct": 34.3,
+        "model_pct": 33.6,
         "implied_pct": 34.5,
-        "edge_pp": -0.2,
-        "gap_pp": 1.2,
+        "edge_pp": -0.8,
+        "gap_pp": 0.5,
         "strong": false,
-        "_edge": -0.23028124025019636,
-        "_gap": 1.1531794867584155,
+        "_edge": -0.8475710398358371,
+        "_gap": 0.5358896871727747,
         "market": "ml",
         "team": "Eastern Michigan Eagles",
         "selection": "Eastern Michigan Eagles ML"
@@ -1980,7 +1767,7 @@
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge -0.2pp < 3pp",
+          "note": "edge -0.8pp < 3pp",
           "best": {
             "side": "away",
             "label": "Eastern Michigan Eagles ML",
@@ -1988,13 +1775,13 @@
             "price_american": 190,
             "book": "Bovada",
             "novig_pct": 33.1,
-            "model_pct": 34.3,
+            "model_pct": 33.6,
             "implied_pct": 34.5,
-            "edge_pp": -0.2,
-            "gap_pp": 1.2,
+            "edge_pp": -0.8,
+            "gap_pp": 0.5,
             "strong": false,
-            "_edge": -0.23028124025019636,
-            "_gap": 1.1531794867584155,
+            "_edge": -0.8475710398358371,
+            "_gap": 0.5358896871727747,
             "market": "ml",
             "team": "Eastern Michigan Eagles",
             "selection": "Eastern Michigan Eagles ML"
@@ -2027,7 +1814,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -0.2pp < 3pp",
+      "note": "edge -0.8pp < 3pp",
       "fpi_home_margin": 13.45,
       "mkt_home_margin": 6.0,
       "blend_home_margin": 6.0,
@@ -2049,13 +1836,13 @@
         "price_american": 100,
         "book": "Bovada",
         "novig_pct": 47.8,
-        "model_pct": 48.7,
+        "model_pct": 50.0,
         "implied_pct": 50.0,
-        "edge_pp": -1.3,
-        "gap_pp": 0.9,
+        "edge_pp": 0.0,
+        "gap_pp": 2.2,
         "strong": false,
-        "_edge": -1.3172713806277492,
-        "_gap": 0.8566416628505102,
+        "_edge": 0.0,
+        "_gap": 2.1739130434782594,
         "market": "spread",
         "team": "NC State Wolfpack",
         "selection": "NC State Wolfpack +3"
@@ -2086,7 +1873,7 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.3pp < 3pp",
+          "note": "edge +0.0pp < 3pp",
           "best": {
             "side": "home",
             "label": "NC State Wolfpack +3",
@@ -2094,13 +1881,13 @@
             "price_american": 100,
             "book": "Bovada",
             "novig_pct": 47.8,
-            "model_pct": 48.7,
+            "model_pct": 50.0,
             "implied_pct": 50.0,
-            "edge_pp": -1.3,
-            "gap_pp": 0.9,
+            "edge_pp": 0.0,
+            "gap_pp": 2.2,
             "strong": false,
-            "_edge": -1.3172713806277492,
-            "_gap": 0.8566416628505102,
+            "_edge": 0.0,
+            "_gap": 2.1739130434782594,
             "market": "spread",
             "team": "NC State Wolfpack",
             "selection": "NC State Wolfpack +3"
@@ -2111,10 +1898,10 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.3pp < 3pp",
+      "note": "edge +0.0pp < 3pp",
       "fpi_home_margin": -6.13,
-      "mkt_home_margin": -3.5,
-      "blend_home_margin": -3.5,
+      "mkt_home_margin": -3.0,
+      "blend_home_margin": -3.0,
       "stamped": false,
       "stamped_markets": []
     },
@@ -2278,21 +2065,21 @@
       "status": "PASS",
       "best": {
         "side": "home",
-        "label": "North Dakota State Bison -17",
-        "line": -17.0,
-        "price_american": -105,
-        "book": "Bovada",
-        "novig_pct": 48.9,
-        "model_pct": 50.0,
-        "implied_pct": 51.2,
-        "edge_pp": -1.2,
-        "gap_pp": 1.1,
+        "label": "North Dakota State Bison -17.5",
+        "line": -17.5,
+        "price_american": -102,
+        "book": "DraftKings",
+        "novig_pct": 48.3,
+        "model_pct": 48.7,
+        "implied_pct": 50.5,
+        "edge_pp": -1.8,
+        "gap_pp": 0.4,
         "strong": false,
-        "_edge": -1.2195121951219523,
-        "_gap": 1.0834236186348878,
+        "_edge": -1.8123208855782447,
+        "_gap": 0.4191411909992726,
         "market": "spread",
         "team": "North Dakota State Bison",
-        "selection": "North Dakota State Bison -17"
+        "selection": "North Dakota State Bison -17.5"
       },
       "picks": [],
       "by_market": {
@@ -2302,24 +2089,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.2pp < 3pp",
+          "note": "edge -1.8pp < 3pp",
           "best": {
             "side": "home",
-            "label": "North Dakota State Bison -17",
-            "line": -17.0,
-            "price_american": -105,
-            "book": "Bovada",
-            "novig_pct": 48.9,
-            "model_pct": 50.0,
-            "implied_pct": 51.2,
-            "edge_pp": -1.2,
-            "gap_pp": 1.1,
+            "label": "North Dakota State Bison -17.5",
+            "line": -17.5,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
+            "model_pct": 48.7,
+            "implied_pct": 50.5,
+            "edge_pp": -1.8,
+            "gap_pp": 0.4,
             "strong": false,
-            "_edge": -1.2195121951219523,
-            "_gap": 1.0834236186348878,
+            "_edge": -1.8123208855782447,
+            "_gap": 0.4191411909992726,
             "market": "spread",
             "team": "North Dakota State Bison",
-            "selection": "North Dakota State Bison -17"
+            "selection": "North Dakota State Bison -17.5"
           }
         },
         "total": {
@@ -2327,7 +2114,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.2pp < 3pp",
+      "note": "edge -1.8pp < 3pp",
       "fpi_home_margin": 20.26,
       "mkt_home_margin": 17.0,
       "blend_home_margin": 17.0,
@@ -2343,42 +2130,42 @@
       "espn_event_id": "401866434",
       "status": "PASS",
       "best": {
-        "side": "home",
-        "label": "Kent State Golden Flashes ML",
-        "line": null,
-        "price_american": 150,
+        "side": "away",
+        "label": "Ohio Bobcats -3.5",
+        "line": -3.5,
+        "price_american": -105,
         "book": "Bovada",
-        "novig_pct": 38.6,
-        "model_pct": 39.1,
-        "implied_pct": 40.0,
-        "edge_pp": -0.9,
-        "gap_pp": 0.5,
+        "novig_pct": 48.9,
+        "model_pct": 50.0,
+        "implied_pct": 51.2,
+        "edge_pp": -1.2,
+        "gap_pp": 1.1,
         "strong": false,
-        "_edge": -0.9236234458259274,
-        "_gap": 0.479885326103896,
-        "market": "ml",
-        "team": "Kent State Golden Flashes",
-        "selection": "Kent State Golden Flashes ML"
+        "_edge": -1.2195121951219523,
+        "_gap": 1.0834236186348822,
+        "market": "spread",
+        "team": "Ohio Bobcats",
+        "selection": "Ohio Bobcats -3.5"
       },
       "picks": [],
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge -0.9pp < 3pp",
+          "note": "edge -1.7pp < 3pp",
           "best": {
             "side": "home",
             "label": "Kent State Golden Flashes ML",
             "line": null,
-            "price_american": 150,
-            "book": "Bovada",
-            "novig_pct": 38.6,
+            "price_american": 145,
+            "book": "DraftKings",
+            "novig_pct": 39.1,
             "model_pct": 39.1,
-            "implied_pct": 40.0,
-            "edge_pp": -0.9,
-            "gap_pp": 0.5,
+            "implied_pct": 40.8,
+            "edge_pp": -1.7,
+            "gap_pp": 0.0,
             "strong": false,
-            "_edge": -0.9236234458259274,
-            "_gap": 0.479885326103896,
+            "_edge": -1.739949976438171,
+            "_gap": 0.0,
             "market": "ml",
             "team": "Kent State Golden Flashes",
             "selection": "Kent State Golden Flashes ML"
@@ -2411,7 +2198,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -0.9pp < 3pp",
+      "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": -10.18,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -3.5,
@@ -2811,22 +2598,22 @@
       "espn_event_id": "401864514",
       "status": "PASS",
       "best": {
-        "side": "away",
-        "label": "UTEP Miners +22.5",
-        "line": 22.5,
-        "price_american": -108,
-        "book": "DraftKings",
-        "novig_pct": 49.6,
-        "model_pct": 50.0,
-        "implied_pct": 51.9,
-        "edge_pp": -1.9,
-        "gap_pp": 0.4,
+        "side": "home",
+        "label": "New Mexico Lobos -23",
+        "line": -23.0,
+        "price_american": -110,
+        "book": "Bovada",
+        "novig_pct": 50.0,
+        "model_pct": 51.3,
+        "implied_pct": 52.4,
+        "edge_pp": -1.1,
+        "gap_pp": 1.3,
         "strong": false,
-        "_edge": -1.9230769230769273,
-        "_gap": 0.43297540699688275,
+        "_edge": -1.0636810003246344,
+        "_gap": 1.3172713806277492,
         "market": "spread",
-        "team": "UTEP Miners",
-        "selection": "UTEP Miners +22.5"
+        "team": "New Mexico Lobos",
+        "selection": "New Mexico Lobos -23"
       },
       "picks": [],
       "by_market": {
@@ -2836,24 +2623,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.9pp < 3pp",
+          "note": "edge -1.1pp < 3pp",
           "best": {
-            "side": "away",
-            "label": "UTEP Miners +22.5",
-            "line": 22.5,
-            "price_american": -108,
-            "book": "DraftKings",
-            "novig_pct": 49.6,
-            "model_pct": 50.0,
-            "implied_pct": 51.9,
-            "edge_pp": -1.9,
-            "gap_pp": 0.4,
+            "side": "home",
+            "label": "New Mexico Lobos -23",
+            "line": -23.0,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 51.3,
+            "implied_pct": 52.4,
+            "edge_pp": -1.1,
+            "gap_pp": 1.3,
             "strong": false,
-            "_edge": -1.9230769230769273,
-            "_gap": 0.43297540699688275,
+            "_edge": -1.0636810003246344,
+            "_gap": 1.3172713806277492,
             "market": "spread",
-            "team": "UTEP Miners",
-            "selection": "UTEP Miners +22.5"
+            "team": "New Mexico Lobos",
+            "selection": "New Mexico Lobos -23"
           }
         },
         "total": {
@@ -2861,10 +2648,10 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.9pp < 3pp",
+      "note": "edge -1.1pp < 3pp",
       "fpi_home_margin": 29.2,
-      "mkt_home_margin": 22.5,
-      "blend_home_margin": 22.5,
+      "mkt_home_margin": 23.5,
+      "blend_home_margin": 23.5,
       "stamped": false,
       "stamped_markets": []
     },
@@ -3048,16 +2835,16 @@
         "side": "home",
         "label": "Colorado State Rams ML",
         "line": null,
-        "price_american": 210,
+        "price_american": 215,
         "book": "Bovada",
-        "novig_pct": 31.1,
+        "novig_pct": 30.5,
         "model_pct": 31.9,
-        "implied_pct": 32.3,
-        "edge_pp": -0.3,
-        "gap_pp": 0.8,
+        "implied_pct": 31.7,
+        "edge_pp": 0.2,
+        "gap_pp": 1.4,
         "strong": false,
-        "_edge": -0.31362007168458383,
-        "_gap": 0.8333333333333415,
+        "_edge": 0.19841269841270326,
+        "_gap": 1.4100932994062787,
         "market": "ml",
         "team": "Colorado State Rams",
         "selection": "Colorado State Rams ML"
@@ -3066,21 +2853,21 @@
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge -0.3pp < 3pp",
+          "note": "edge +0.2pp < 3pp",
           "best": {
             "side": "home",
             "label": "Colorado State Rams ML",
             "line": null,
-            "price_american": 210,
+            "price_american": 215,
             "book": "Bovada",
-            "novig_pct": 31.1,
+            "novig_pct": 30.5,
             "model_pct": 31.9,
-            "implied_pct": 32.3,
-            "edge_pp": -0.3,
-            "gap_pp": 0.8,
+            "implied_pct": 31.7,
+            "edge_pp": 0.2,
+            "gap_pp": 1.4,
             "strong": false,
-            "_edge": -0.31362007168458383,
-            "_gap": 0.8333333333333415,
+            "_edge": 0.19841269841270326,
+            "_gap": 1.4100932994062787,
             "market": "ml",
             "team": "Colorado State Rams",
             "selection": "Colorado State Rams ML"
@@ -3088,21 +2875,21 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.2pp < 3pp",
+          "note": "edge -0.5pp < 3pp",
           "best": {
             "side": "home",
             "label": "Colorado State Rams +6.5",
             "line": 6.5,
-            "price_american": -105,
-            "book": "Bovada",
-            "novig_pct": 48.9,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
             "model_pct": 50.0,
-            "implied_pct": 51.2,
-            "edge_pp": -1.2,
-            "gap_pp": 1.1,
+            "implied_pct": 50.5,
+            "edge_pp": -0.5,
+            "gap_pp": 1.7,
             "strong": false,
-            "_edge": -1.2195121951219523,
-            "_gap": 1.0834236186348878,
+            "_edge": -0.4950495049504955,
+            "_gap": 1.7364125716270218,
             "market": "spread",
             "team": "Colorado State Rams",
             "selection": "Colorado State Rams +6.5"
@@ -3113,7 +2900,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -0.3pp < 3pp",
+      "note": "edge +0.2pp < 3pp",
       "fpi_home_margin": -3.86,
       "mkt_home_margin": -6.5,
       "blend_home_margin": -6.5,
@@ -3577,24 +3364,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-06352e1d8432528164139f83bb76c0d0",
       "espn_event_id": "401892436",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -3608,24 +3395,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-25079431893a620763e5a454d7991922",
       "espn_event_id": "401891826",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -3639,24 +3426,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-25e8169a0a6e2a41ef0aef55d87b3639",
       "espn_event_id": "401892434",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -3670,24 +3457,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-53b58ae0f99c8172ebee3bd82e7c83a7",
       "espn_event_id": "401891822",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -3701,24 +3488,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-5a731787bc9ea054ba101e14b0f3d9ca",
       "espn_event_id": "401892435",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -3732,24 +3519,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-8d556511643d0c038bff0b7cf4f2b64f",
       "espn_event_id": "401891776",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -3763,24 +3550,24 @@
       "kick_ct": "Sat 10/3 6:10 PM CT",
       "event_id": "nhl-d8e6871b9b420af1492a655c1058244c",
       "espn_event_id": "401892437",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -4180,22 +3967,22 @@
       "espn_event_id": "401856821",
       "status": "PASS",
       "best": {
-        "side": "away",
-        "label": "Texas Tech Red Raiders -13.5",
-        "line": -13.5,
-        "price_american": -105,
+        "side": "home",
+        "label": "Colorado Buffaloes +13.5",
+        "line": 13.5,
+        "price_american": -110,
         "book": "DraftKings",
-        "novig_pct": 48.9,
+        "novig_pct": 50.0,
         "model_pct": 50.0,
-        "implied_pct": 51.2,
-        "edge_pp": -1.2,
-        "gap_pp": 1.1,
+        "implied_pct": 52.4,
+        "edge_pp": -2.4,
+        "gap_pp": 0.0,
         "strong": false,
-        "_edge": -1.2195121951219523,
-        "_gap": 1.0834236186348822,
+        "_edge": -2.3809523809523836,
+        "_gap": 0.0,
         "market": "spread",
-        "team": "Texas Tech Red Raiders",
-        "selection": "Texas Tech Red Raiders -13.5"
+        "team": "Colorado Buffaloes",
+        "selection": "Colorado Buffaloes +13.5"
       },
       "picks": [],
       "by_market": {
@@ -4205,24 +3992,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -1.2pp < 3pp",
+          "note": "edge -2.4pp < 3pp",
           "best": {
-            "side": "away",
-            "label": "Texas Tech Red Raiders -13.5",
-            "line": -13.5,
-            "price_american": -105,
+            "side": "home",
+            "label": "Colorado Buffaloes +13.5",
+            "line": 13.5,
+            "price_american": -110,
             "book": "DraftKings",
-            "novig_pct": 48.9,
+            "novig_pct": 50.0,
             "model_pct": 50.0,
-            "implied_pct": 51.2,
-            "edge_pp": -1.2,
-            "gap_pp": 1.1,
+            "implied_pct": 52.4,
+            "edge_pp": -2.4,
+            "gap_pp": 0.0,
             "strong": false,
-            "_edge": -1.2195121951219523,
-            "_gap": 1.0834236186348822,
+            "_edge": -2.3809523809523836,
+            "_gap": 0.0,
             "market": "spread",
-            "team": "Texas Tech Red Raiders",
-            "selection": "Texas Tech Red Raiders -13.5"
+            "team": "Colorado Buffaloes",
+            "selection": "Colorado Buffaloes +13.5"
           }
         },
         "total": {
@@ -4230,7 +4017,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -1.2pp < 3pp",
+      "note": "edge -2.4pp < 3pp",
       "fpi_home_margin": -16.18,
       "mkt_home_margin": -13.5,
       "blend_home_margin": -13.5,
@@ -4244,24 +4031,24 @@
       "kick_ct": "Sat 10/3 6:40 PM CT",
       "event_id": "nhl-3e2c8a883cae029144e27e4fca5ae9e8",
       "espn_event_id": "401891818",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -4491,24 +4278,24 @@
       "kick_ct": "Sat 10/3 7:10 PM CT",
       "event_id": "nhl-17a149453fbdb9bad7efa57f7481a07f",
       "espn_event_id": "401892438",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -4522,24 +4309,24 @@
       "kick_ct": "Sat 10/3 7:10 PM CT",
       "event_id": "nhl-3a9af73961ea2f2322255a6fca4d421e",
       "espn_event_id": "401891814",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -4553,24 +4340,24 @@
       "kick_ct": "Sat 10/3 8:10 PM CT",
       "event_id": "nhl-065b68a0db1926f7e3bff7ebd93e7624",
       "espn_event_id": "401892439",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -4668,24 +4455,24 @@
       "kick_ct": "Sat 10/3 9:10 PM CT",
       "event_id": "nhl-45d984ff127ce23fde997b0182b6336b",
       "espn_event_id": "401892440",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -4699,24 +4486,24 @@
       "kick_ct": "Sat 10/3 9:10 PM CT",
       "event_id": "nhl-fddf3e59117ce7c2597cb67a363a2e06",
       "espn_event_id": "401892441",
-      "status": "BLANK",
+      "status": "PASS",
       "best": null,
       "picks": [],
       "by_market": {
         "ml": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "spread": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         },
         "total": {
-          "status": "BLANK",
-          "note": "MODEL blank (no ESPN NHL predictor)"
+          "status": "PASS",
+          "note": "w=0 (walk-forward CI includes 0): model shown, not used"
         }
       },
-      "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)",
+      "note": "raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps",
       "fpi_home_margin": null,
       "mkt_home_margin": null,
       "blend_home_margin": null,
@@ -5069,21 +4856,21 @@
       "status": "PASS",
       "best": {
         "side": "away",
-        "label": "Indianapolis Colts -4",
-        "line": -4.0,
-        "price_american": -110,
-        "book": "Bovada",
-        "novig_pct": 50.0,
-        "model_pct": 52.7,
-        "implied_pct": 52.4,
-        "edge_pp": 0.3,
-        "gap_pp": 2.7,
+        "label": "Indianapolis Colts -4.5",
+        "line": -4.5,
+        "price_american": -105,
+        "book": "DraftKings",
+        "novig_pct": 48.9,
+        "model_pct": 51.1,
+        "implied_pct": 51.2,
+        "edge_pp": -0.1,
+        "gap_pp": 2.2,
         "strong": false,
-        "_edge": 0.26971495601788575,
-        "_gap": 2.6506673369702693,
+        "_edge": -0.13766309983409553,
+        "_gap": 2.165272713922739,
         "market": "spread",
         "team": "Indianapolis Colts",
-        "selection": "Indianapolis Colts -4"
+        "selection": "Indianapolis Colts -4.5"
       },
       "picks": [],
       "by_market": {
@@ -5111,24 +4898,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge +0.3pp < 3pp",
+          "note": "edge -0.1pp < 3pp",
           "best": {
             "side": "away",
-            "label": "Indianapolis Colts -4",
-            "line": -4.0,
-            "price_american": -110,
-            "book": "Bovada",
-            "novig_pct": 50.0,
-            "model_pct": 52.7,
-            "implied_pct": 52.4,
-            "edge_pp": 0.3,
-            "gap_pp": 2.7,
+            "label": "Indianapolis Colts -4.5",
+            "line": -4.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 51.1,
+            "implied_pct": 51.2,
+            "edge_pp": -0.1,
+            "gap_pp": 2.2,
             "strong": false,
-            "_edge": 0.26971495601788575,
-            "_gap": 2.6506673369702693,
+            "_edge": -0.13766309983409553,
+            "_gap": 2.165272713922739,
             "market": "spread",
             "team": "Indianapolis Colts",
-            "selection": "Indianapolis Colts -4"
+            "selection": "Indianapolis Colts -4.5"
           }
         },
         "total": {
@@ -5136,7 +4923,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +0.3pp < 3pp",
+      "note": "edge -0.1pp < 3pp",
       "fpi_home_margin": -1.28,
       "mkt_home_margin": -4.0,
       "blend_home_margin": -4.84,
@@ -5153,21 +4940,21 @@
       "status": "PASS",
       "best": {
         "side": "away",
-        "label": "Arizona Cardinals -3",
-        "line": -3.0,
-        "price_american": 100,
-        "book": "Bovada",
-        "novig_pct": 47.8,
-        "model_pct": 50.1,
-        "implied_pct": 50.0,
-        "edge_pp": 0.1,
-        "gap_pp": 2.3,
+        "label": "Arizona Cardinals ML",
+        "line": null,
+        "price_american": -142,
+        "book": "DraftKings",
+        "novig_pct": 56.3,
+        "model_pct": 58.0,
+        "implied_pct": 58.7,
+        "edge_pp": -0.7,
+        "gap_pp": 1.7,
         "strong": false,
-        "_edge": 0.13545163842312302,
-        "_gap": 2.3093646819013824,
-        "market": "spread",
+        "_edge": -0.6502957674374255,
+        "_gap": 1.6781838337694532,
+        "market": "ml",
         "team": "Arizona Cardinals",
-        "selection": "Arizona Cardinals -3"
+        "selection": "Arizona Cardinals ML"
       },
       "picks": [],
       "by_market": {
@@ -5195,21 +4982,21 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge +0.1pp < 3pp",
+          "note": "edge -1.1pp < 3pp",
           "best": {
             "side": "away",
             "label": "Arizona Cardinals -3",
             "line": -3.0,
-            "price_american": 100,
+            "price_american": -105,
             "book": "Bovada",
-            "novig_pct": 47.8,
+            "novig_pct": 48.9,
             "model_pct": 50.1,
-            "implied_pct": 50.0,
-            "edge_pp": 0.1,
-            "gap_pp": 2.3,
+            "implied_pct": 51.2,
+            "edge_pp": -1.1,
+            "gap_pp": 1.2,
             "strong": false,
-            "_edge": 0.13545163842312302,
-            "_gap": 2.3093646819013824,
+            "_edge": -1.0840605566988293,
+            "_gap": 1.2188752570580053,
             "market": "spread",
             "team": "Arizona Cardinals",
             "selection": "Arizona Cardinals -3"
@@ -5220,7 +5007,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +0.1pp < 3pp",
+      "note": "edge -0.7pp < 3pp",
       "fpi_home_margin": -0.75,
       "mkt_home_margin": -2.5,
       "blend_home_margin": -3.04,
@@ -5342,16 +5129,16 @@
         "side": "home",
         "label": "Tampa Bay Buccaneers ML",
         "line": null,
-        "price_american": 160,
+        "price_american": 155,
         "book": "Bovada",
-        "novig_pct": 37.2,
+        "novig_pct": 37.9,
         "model_pct": 39.6,
-        "implied_pct": 38.5,
-        "edge_pp": 1.1,
-        "gap_pp": 2.3,
+        "implied_pct": 39.2,
+        "edge_pp": 0.3,
+        "gap_pp": 1.7,
         "strong": false,
-        "_edge": 1.0910697896602983,
-        "_gap": 2.3463419326609003,
+        "_edge": 0.3369219766889586,
+        "_gap": 1.6635690089795485,
         "market": "ml",
         "team": "Tampa Bay Buccaneers",
         "selection": "Tampa Bay Buccaneers ML"
@@ -5360,21 +5147,21 @@
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge +1.1pp < 3pp",
+          "note": "edge +0.3pp < 3pp",
           "best": {
             "side": "home",
             "label": "Tampa Bay Buccaneers ML",
             "line": null,
-            "price_american": 160,
+            "price_american": 155,
             "book": "Bovada",
-            "novig_pct": 37.2,
+            "novig_pct": 37.9,
             "model_pct": 39.6,
-            "implied_pct": 38.5,
-            "edge_pp": 1.1,
-            "gap_pp": 2.3,
+            "implied_pct": 39.2,
+            "edge_pp": 0.3,
+            "gap_pp": 1.7,
             "strong": false,
-            "_edge": 1.0910697896602983,
-            "_gap": 2.3463419326609003,
+            "_edge": 0.3369219766889586,
+            "_gap": 1.6635690089795485,
             "market": "ml",
             "team": "Tampa Bay Buccaneers",
             "selection": "Tampa Bay Buccaneers ML"
@@ -5407,7 +5194,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +1.1pp < 3pp",
+      "note": "edge +0.3pp < 3pp",
       "fpi_home_margin": -4.78,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -3.1,
@@ -5424,21 +5211,21 @@
       "status": "PASS",
       "best": {
         "side": "home",
-        "label": "Cincinnati Bengals -3",
-        "line": -3.0,
-        "price_american": 100,
-        "book": "Bovada",
-        "novig_pct": 47.8,
-        "model_pct": 52.0,
-        "implied_pct": 50.0,
-        "edge_pp": 2.0,
-        "gap_pp": 4.2,
+        "label": "Cincinnati Bengals ML",
+        "line": null,
+        "price_american": -142,
+        "book": "DraftKings",
+        "novig_pct": 56.3,
+        "model_pct": 59.9,
+        "implied_pct": 58.7,
+        "edge_pp": 1.2,
+        "gap_pp": 3.5,
         "strong": false,
-        "_edge": 2.0140221388940227,
-        "_gap": 4.187935182372282,
-        "market": "spread",
+        "_edge": 1.1815190415533028,
+        "_gap": 3.5099986427601815,
+        "market": "ml",
         "team": "Cincinnati Bengals",
-        "selection": "Cincinnati Bengals -3"
+        "selection": "Cincinnati Bengals ML"
       },
       "picks": [],
       "by_market": {
@@ -5466,21 +5253,21 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge +2.0pp < 3pp",
+          "note": "edge +0.8pp < 3pp",
           "best": {
             "side": "home",
             "label": "Cincinnati Bengals -3",
             "line": -3.0,
-            "price_american": 100,
+            "price_american": -105,
             "book": "Bovada",
-            "novig_pct": 47.8,
+            "novig_pct": 48.9,
             "model_pct": 52.0,
-            "implied_pct": 50.0,
-            "edge_pp": 2.0,
-            "gap_pp": 4.2,
+            "implied_pct": 51.2,
+            "edge_pp": 0.8,
+            "gap_pp": 3.1,
             "strong": false,
-            "_edge": 2.0140221388940227,
-            "_gap": 4.187935182372282,
+            "_edge": 0.7945099437720704,
+            "_gap": 3.0974457575289103,
             "market": "spread",
             "team": "Cincinnati Bengals",
             "selection": "Cincinnati Bengals -3"
@@ -5491,7 +5278,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +2.0pp < 3pp",
+      "note": "edge +1.2pp < 3pp",
       "fpi_home_margin": -1.18,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 3.64,
@@ -5594,16 +5381,16 @@
         "side": "home",
         "label": "Buffalo Bills -7",
         "line": -7.0,
-        "price_american": -105,
-        "book": "DraftKings",
-        "novig_pct": 48.9,
+        "price_american": 100,
+        "book": "Bovada",
+        "novig_pct": 47.8,
         "model_pct": 51.3,
-        "implied_pct": 51.2,
-        "edge_pp": 0.1,
-        "gap_pp": 2.4,
+        "implied_pct": 50.0,
+        "edge_pp": 1.3,
+        "gap_pp": 3.5,
         "strong": false,
-        "_edge": 0.08514196607234403,
-        "_gap": 2.3880777798291843,
+        "_edge": 1.3046541611942963,
+        "_gap": 3.4785672046725558,
         "market": "spread",
         "team": "Buffalo Bills",
         "selection": "Buffalo Bills -7"
@@ -5612,21 +5399,21 @@
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge -1.1pp < 3pp",
+          "note": "edge -1.5pp < 3pp",
           "best": {
             "side": "away",
             "label": "New England Patriots ML",
             "line": null,
-            "price_american": 260,
+            "price_american": 255,
             "book": "Bovada",
-            "novig_pct": 26.7,
+            "novig_pct": 27.1,
             "model_pct": 26.7,
-            "implied_pct": 27.8,
-            "edge_pp": -1.1,
-            "gap_pp": -0.0,
+            "implied_pct": 28.2,
+            "edge_pp": -1.5,
+            "gap_pp": -0.4,
             "strong": false,
-            "_edge": -1.072075181178811,
-            "_gap": -0.011854655309417872,
+            "_edge": -1.4633114879080755,
+            "_gap": -0.4376274265721736,
             "market": "ml",
             "team": "New England Patriots",
             "selection": "New England Patriots ML"
@@ -5634,21 +5421,21 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge +0.1pp < 3pp",
+          "note": "edge +1.3pp < 3pp",
           "best": {
             "side": "home",
             "label": "Buffalo Bills -7",
             "line": -7.0,
-            "price_american": -105,
-            "book": "DraftKings",
-            "novig_pct": 48.9,
+            "price_american": 100,
+            "book": "Bovada",
+            "novig_pct": 47.8,
             "model_pct": 51.3,
-            "implied_pct": 51.2,
-            "edge_pp": 0.1,
-            "gap_pp": 2.4,
+            "implied_pct": 50.0,
+            "edge_pp": 1.3,
+            "gap_pp": 3.5,
             "strong": false,
-            "_edge": 0.08514196607234403,
-            "_gap": 2.3880777798291843,
+            "_edge": 1.3046541611942963,
+            "_gap": 3.4785672046725558,
             "market": "spread",
             "team": "Buffalo Bills",
             "selection": "Buffalo Bills -7"
@@ -5659,7 +5446,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +0.1pp < 3pp",
+      "note": "edge +1.3pp < 3pp",
       "fpi_home_margin": 5.66,
       "mkt_home_margin": 7.0,
       "blend_home_margin": 7.42,
@@ -5828,16 +5615,16 @@
         "side": "home",
         "label": "Minnesota Vikings -10",
         "line": -10.0,
-        "price_american": -110,
+        "price_american": -105,
         "book": "Bovada",
-        "novig_pct": 50.0,
-        "model_pct": 52.0,
-        "implied_pct": 52.4,
-        "edge_pp": -0.4,
-        "gap_pp": 2.0,
+        "novig_pct": 48.9,
+        "model_pct": 49.9,
+        "implied_pct": 51.2,
+        "edge_pp": -1.3,
+        "gap_pp": 1.0,
         "strong": false,
-        "_edge": -0.42644655180265056,
-        "_gap": 1.954505829149733,
+        "_edge": -1.321760675517225,
+        "_gap": 0.981175138239615,
         "market": "spread",
         "team": "Minnesota Vikings",
         "selection": "Minnesota Vikings -10"
@@ -5850,21 +5637,21 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -0.4pp < 3pp",
+          "note": "edge -1.3pp < 3pp",
           "best": {
             "side": "home",
             "label": "Minnesota Vikings -10",
             "line": -10.0,
-            "price_american": -110,
+            "price_american": -105,
             "book": "Bovada",
-            "novig_pct": 50.0,
-            "model_pct": 52.0,
-            "implied_pct": 52.4,
-            "edge_pp": -0.4,
-            "gap_pp": 2.0,
+            "novig_pct": 48.9,
+            "model_pct": 49.9,
+            "implied_pct": 51.2,
+            "edge_pp": -1.3,
+            "gap_pp": 1.0,
             "strong": false,
-            "_edge": -0.42644655180265056,
-            "_gap": 1.954505829149733,
+            "_edge": -1.321760675517225,
+            "_gap": 0.981175138239615,
             "market": "spread",
             "team": "Minnesota Vikings",
             "selection": "Minnesota Vikings -10"
@@ -5875,10 +5662,10 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge -0.4pp < 3pp",
+      "note": "edge -1.3pp < 3pp",
       "fpi_home_margin": 10.11,
-      "mkt_home_margin": 10.5,
-      "blend_home_margin": 10.62,
+      "mkt_home_margin": 10.0,
+      "blend_home_margin": 9.97,
       "stamped": false,
       "stamped_markets": []
     },
@@ -6015,16 +5802,16 @@
         "side": "home",
         "label": "Las Vegas Raiders ML",
         "line": null,
-        "price_american": 185,
+        "price_american": 190,
         "book": "Bovada",
-        "novig_pct": 33.6,
+        "novig_pct": 33.1,
         "model_pct": 35.1,
-        "implied_pct": 35.1,
-        "edge_pp": 0.0,
-        "gap_pp": 1.5,
+        "implied_pct": 34.5,
+        "edge_pp": 0.6,
+        "gap_pp": 2.0,
         "strong": false,
-        "_edge": 0.0071872118523996775,
-        "_gap": 1.459718929244197,
+        "_edge": 0.6121478894083543,
+        "_gap": 1.9956086164169662,
         "market": "ml",
         "team": "Las Vegas Raiders",
         "selection": "Las Vegas Raiders ML"
@@ -6033,21 +5820,21 @@
       "by_market": {
         "ml": {
           "status": "PASS",
-          "note": "edge +0.0pp < 3pp",
+          "note": "edge +0.6pp < 3pp",
           "best": {
             "side": "home",
             "label": "Las Vegas Raiders ML",
             "line": null,
-            "price_american": 185,
+            "price_american": 190,
             "book": "Bovada",
-            "novig_pct": 33.6,
+            "novig_pct": 33.1,
             "model_pct": 35.1,
-            "implied_pct": 35.1,
-            "edge_pp": 0.0,
-            "gap_pp": 1.5,
+            "implied_pct": 34.5,
+            "edge_pp": 0.6,
+            "gap_pp": 2.0,
             "strong": false,
-            "_edge": 0.0071872118523996775,
-            "_gap": 1.459718929244197,
+            "_edge": 0.6121478894083543,
+            "_gap": 1.9956086164169662,
             "market": "ml",
             "team": "Las Vegas Raiders",
             "selection": "Las Vegas Raiders ML"
@@ -6080,7 +5867,7 @@
           "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
         }
       },
-      "note": "edge +0.0pp < 3pp",
+      "note": "edge +0.6pp < 3pp",
       "fpi_home_margin": -5.43,
       "mkt_home_margin": -4.5,
       "blend_home_margin": -4.21,
@@ -6223,24 +6010,24 @@
         },
         "spread": {
           "status": "PASS",
-          "note": "edge -2.3pp < 3pp",
+          "note": "edge -1.3pp < 3pp",
           "best": {
-            "side": "away",
-            "label": "Detroit Lions -4",
-            "line": -4.0,
-            "price_american": -105,
+            "side": "home",
+            "label": "Carolina Panthers +4",
+            "line": 4.0,
+            "price_american": -110,
             "book": "Bovada",
-            "novig_pct": 48.9,
-            "model_pct": 48.9,
-            "implied_pct": 51.2,
-            "edge_pp": -2.3,
-            "gap_pp": 0.0,
+            "novig_pct": 50.0,
+            "model_pct": 51.1,
+            "implied_pct": 52.4,
+            "edge_pp": -1.3,
+            "gap_pp": 1.1,
             "strong": false,
-            "_edge": -2.283650892266764,
-            "_gap": 0.019284921490070328,
+            "_edge": -1.3168136838075717,
+            "_gap": 1.064138697144812,
             "market": "spread",
-            "team": "Detroit Lions",
-            "selection": "Detroit Lions -4"
+            "team": "Carolina Panthers",
+            "selection": "Carolina Panthers +4"
           }
         },
         "total": {
@@ -6608,8 +6395,8 @@
   "credits": {
     "calls": 3,
     "credits_this_run": 9,
-    "x-requests-remaining": "16154",
-    "x-requests-used": "3846",
+    "x-requests-remaining": "16145",
+    "x-requests-used": "3855",
     "NFL_x-requests-last": "3",
     "CFB_x-requests-last": "3"
   }
