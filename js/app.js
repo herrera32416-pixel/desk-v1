@@ -1,6 +1,7 @@
 let deskMode = 'plays';
 let deskSport = 'ALL';
 let deskData = null;
+let paperData = null;   // {ledger, board} from data/paper_ledger.json + data/paper.json (PAPER only)
 
 function normalize(data){
   const card = data.card || {};
@@ -170,6 +171,98 @@ function linesBlock(p){
   }
   return d;
 }
+// PAPER block (u3 blend) on board rows. Never a real bet; blank stays blank.
+function paperLine(b){
+  if(!b) return null;
+  const d=el('p','paper-line'+(b.status==='PAPER'?'':' muted'));
+  const bs=b.best;
+  let txt;
+  if(b.status==='BLANK' || !bs) txt=`— ${b.note||'blank'}`;
+  else {
+    const px=[fmtPrice(bs.price_american), bs.book].filter(Boolean).join(' ');
+    const core=`${bs.selection} ${px} · model ${fmtPct(bs.model_pct)} · no-vig ${fmtPct(bs.novig_pct)} · edge ${fmtNum(bs.edge_pp,{signed:true})}pp`;
+    txt = b.status==='PAPER' ? `${core} · 1u ($20) paper` : `${b.status}: ${core} (${b.note||''})`;
+  }
+  d.append(el('b',null,(b.status==='PAPER'?'Paper pick ':'Paper ')), document.createTextNode(txt));
+  return d;
+}
+function money(u){
+  const n=Number(u); if(!Number.isFinite(n)) return '—';
+  const usd=n*20;
+  return `${n>=0?'+':'−'}${Math.abs(n).toFixed(2)}u · ${usd>=0?'+':'−'}$${Math.abs(usd).toFixed(2)}`;
+}
+function paperHeadline(){
+  const s=paperData&&paperData.ledger&&paperData.ledger.summary;
+  if(!s) return '';
+  return `Paper ${s.record} · ${money(s.units)}${s.open?` · ${s.open} open`:''}`;
+}
+function paperPickCard(p){
+  const res=(p.result||'').toUpperCase();
+  const a=el('article','play');
+  a.dataset.sport=p.sport||'';
+  const hd=el('div','play-hd');
+  hd.append(el('span','pill paper', p.status==='open'?'PAPER · OPEN':`PAPER · ${res||'—'}`),
+            el('span','when',[p.sport, kickInfo(p).short, '1u ($20)'].filter(Boolean).join(' · ')));
+  a.append(hd);
+  a.append(el('h3','serif',p.matchup||`${p.away} at ${p.home}`));
+  a.append(el('div','side',`${p.selection} ${fmtPrice(p.price_american)} ${p.book||''}`.trim()));
+  const m=el('div','metrics');
+  const pairs = p.status==='open'
+    ? [['MODEL', fmtPct(p.model_pct)],['NO-VIG', fmtPct(p.novig_pct)],['EDGE', `${fmtNum(p.edge_pp,{signed:true})}pp`]]
+    : [['RESULT', res||'—'],['UNITS', p.pnl_units!=null?`${p.pnl_units>=0?'+':''}${Number(p.pnl_units).toFixed(2)}u`:'—'],['$', p.pnl_usd!=null?`${p.pnl_usd>=0?'+':'−'}$${Math.abs(p.pnl_usd).toFixed(2)}`:'—']];
+  for(const [k,v] of pairs){ const d=el('div'); d.append(el('div','k',k), el('div','v serif',v)); m.append(d); }
+  a.append(m);
+  const bits=[p.score?`Final: ${p.score}`:'', `Stamped ${String(p.stamped_at_ct||'').replace('T',' ').slice(0,16)} CT`,
+              `FPI ${fmtNum(p.fpi_home_margin,{signed:true})} · mkt ${fmtNum(p.mkt_home_margin,{signed:true})} · blend ${fmtNum(p.blend_home_margin,{signed:true})} (home margin)`];
+  a.append(el('p','why',bits.filter(Boolean).join(' · ')));
+  return a;
+}
+function renderPaper(){
+  const bits=document.getElementById('paperBits'); if(!bits) return;
+  bits.innerHTML='';
+  const led=paperData&&paperData.ledger, board=paperData&&paperData.board;
+  const s=led&&led.summary;
+  document.getElementById('paperUnits').textContent=s?money(s.units):'—';
+  document.getElementById('paperRecord').textContent=s?s.record:'—';
+  const foot=document.getElementById('paperFoot');
+  if(foot){
+    const bySp=s&&s.by_sport?Object.entries(s.by_sport).map(([k,v])=>`${k} ${v.record} ${v.units>=0?'+':''}${v.units}u`).join(' · '):'';
+    foot.textContent=[bySp, board?`Board ${board.slate_date_ct} · generated ${String(board.generated_at_ct||'').replace('T',' ').slice(0,16)} CT`:'',
+                      'Paper only · not bankroll · not CLEARs'].filter(Boolean).join('\n');
+    foot.style.whiteSpace='pre-line';
+  }
+  if(!led && !board){ bits.append(el('p','why','No paper data yet.')); return; }
+  const picks=(led&&led.picks)||[];
+  const open=picks.filter(p=>p.status==='open').sort(byKickTime);
+  const done=picks.filter(p=>p.status!=='open').sort((a,b)=>String(b.kick_utc).localeCompare(String(a.kick_utc)));
+  bits.append(el('p','section-label',`Open paper picks · ${open.length}`));
+  if(!open.length) bits.append(el('p','why','No open paper picks. Picks stamp on game day (9:15am CT run) when edge ≥3pp and gap ≤8pp.'));
+  open.forEach(p=>bits.append(paperPickCard(p)));
+  if(board&&board.board){
+    const leans=board.board.filter(r=>r.status==='PAPER' && !r.stamped);
+    if(leans.length){
+      bits.append(el('p','section-label',`Upcoming paper leans (not stamped until game day) · ${leans.length}`));
+      leans.forEach(r=>{
+        const d=el('p','paper-line');
+        d.append(el('b',null,`${r.sport} ${kickInfo(r).short} `), document.createTextNode(`${r.matchup} — ${r.best.selection} ${fmtPrice(r.best.price_american)} ${r.best.book} · edge ${fmtNum(r.best.edge_pp,{signed:true})}pp`));
+        bits.append(d);
+      });
+    }
+  }
+  bits.append(el('p','section-label',`Settled paper picks · ${done.length}`));
+  if(!done.length) bits.append(el('p','why','None graded yet.'));
+  done.forEach(p=>bits.append(paperPickCard(p)));
+  if(led&&led.model){
+    const r=led.model.rules||{};
+    bits.append(el('p','why',`Model: ${led.model.name}. Edge ≥${r.edge_min_pp}pp vs stamped price; gap >${r.gap_hold_pp}pp vs no-vig = HOLD. Books: ${r.books}. Grading: ${r.grading}.`));
+  }
+}
+async function loadPaper(){
+  const get=async u=>{ try{ const r=await fetch(u+'?ts='+Date.now(),{cache:'no-store'}); return r.ok?await r.json():null; }catch(e){ return null; } };
+  const [ledger, board]=await Promise.all([get('./data/paper_ledger.json'), get('./data/paper.json')]);
+  paperData={ledger, board};
+  return paperData;
+}
 function playCard(p, {star}={}){
   const a=el('article','play'+(star||p.tag==='CLEAR'?' clear-play':''));
   a.dataset.sport=p.sport||'OTHER';
@@ -195,6 +288,7 @@ function playCard(p, {star}={}){
   if((p.kind||'')!=='prop') a.append(ouRow(p));
   const lb=linesBlock(p); if(lb) a.append(lb);
   a.append(modelLine(p));
+  const pl=paperLine(p.paper); if(pl) a.append(pl);
   const shop=[p.book, p.price_american!=null?fmtPrice(p.price_american):''].filter(Boolean).join(' ');
   if(shop) a.append(el('p','shop',shop));
   if(p.price_condition){
@@ -467,6 +561,8 @@ function renderSlate(){
     if(!rows.length){
       const boardN=(deskData.fills.length||0)+(deskData.holds.length||0);
       let emptyMsg='No CLEARs today — open Board to see the full slate.';
+      const nPaper=((paperData&&paperData.ledger&&paperData.ledger.picks)||[]).filter(x=>x.status==='open').length;
+      if(nPaper) emptyMsg+=` ${nPaper} open PAPER pick${nPaper>1?'s':''} (no real bets) on the Paper tab.`;
       if(deskData.clears.length===0 && boardN>0){
         emptyMsg='No CLEARs today — open Board to see the full slate.';
       }
@@ -484,6 +580,7 @@ function renderSlate(){
   }
 }
 async function main(){
+  await loadPaper();
   deskData=await loadDesk();
   const data=deskData;
   document.getElementById('asof').textContent=`${data.slate_date}\n${data.timezone}\n${data.as_of_label||''}`;
@@ -492,7 +589,8 @@ async function main(){
   if(bc) bc.textContent=String([...(data.clears||[]),...(data.fills||[]),...(data.holds||[])].filter(p=>(p.kind||'')!=='prop').length);
   // Headline = Written record from Main's ledger feed (units + $ at $20/unit). No cap/counter.
   const wh=writtenHeadline(data.ledger);
-  document.getElementById('asOfFoot').textContent=(wh?`Written ${wh}\n`:'')+`As of ${data.as_of_label||''} · ${data.clears.length} plays`;
+  const ph=paperHeadline();
+  document.getElementById('asOfFoot').textContent=(wh?`Written ${wh}\n`:'')+(ph?`${ph} (paper only)\n`:'')+`As of ${data.as_of_label||''} · ${data.clears.length} plays`;
   document.getElementById('asOfFoot').style.whiteSpace='pre-line';
 
   const bn=document.getElementById('deskBanner');
@@ -566,6 +664,7 @@ async function main(){
     }
   }
   renderNflProps(data);
+  renderPaper();
   document.getElementById('status').textContent='Live · pull to refresh';
 }
 document.getElementById('tabs').addEventListener('click',e=>{
