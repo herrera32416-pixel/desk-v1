@@ -1,7 +1,7 @@
 {
   "schema": "desk-paper-ledger/v1",
   "picks": [],
-  "updated_at_ct": "2026-10-02T15:19:45-05:00",
+  "updated_at_ct": "2026-10-02T15:25:50-05:00",
   "model": {
     "name": "u3 market-heavy blend (market + w·(FPI − market))",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
@@ -22,7 +22,7 @@
       "gap_hold_pp": 8.0,
       "unit_usd": 20,
       "books": "DraftKings / Betr / Bovada as returned by The Odds API",
-      "stamp": "once per game on kick day (CT) before kick; games before 10:30am CT are stamped the prior day",
+      "stamp": "once per market per game on kick day (CT) before kick; games before 10:30am CT are stamped the prior day; totals never (no model)",
       "grading": "ESPN public scoreboard finals; W/L/P at stamped price"
     }
   },

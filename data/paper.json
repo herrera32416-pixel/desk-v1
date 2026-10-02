@@ -2,7 +2,7 @@
   "schema": "desk-paper/v1",
   "label": "PAPER ONLY — no real bets",
   "slate_date_ct": "2026-10-02",
-  "generated_at_ct": "2026-10-02T15:19:45-05:00",
+  "generated_at_ct": "2026-10-02T15:25:50-05:00",
   "model": {
     "name": "u3 market-heavy blend (market + w·(FPI − market))",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
@@ -23,7 +23,7 @@
       "gap_hold_pp": 8.0,
       "unit_usd": 20,
       "books": "DraftKings / Betr / Bovada as returned by The Odds API",
-      "stamp": "once per game on kick day (CT) before kick; games before 10:30am CT are stamped the prior day",
+      "stamp": "once per market per game on kick day (CT) before kick; games before 10:30am CT are stamped the prior day; totals never (no model)",
       "grading": "ESPN public scoreboard finals; W/L/P at stamped price"
     }
   },
@@ -32,10 +32,11 @@
       "games": 16,
       "espn_matched": 16,
       "with_fpi": 16,
-      "paper": 1,
+      "paper": 2,
       "hold": 0,
-      "pass": 15,
-      "blank": 0
+      "pass": 14,
+      "blank": 0,
+      "paper_picks": 2
     },
     "CFB": {
       "games": 60,
@@ -44,7 +45,8 @@
       "paper": 5,
       "hold": 0,
       "pass": 54,
-      "blank": 1
+      "blank": 1,
+      "paper_picks": 6
     }
   },
   "summary": {
@@ -91,24 +93,80 @@
       "espn_event_id": "401871050",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Delaware Blue Hens +6.5",
         "line": 6.5,
         "price_american": 105,
         "book": "DraftKings",
-        "model_pct": 49.9,
         "novig_pct": 46.8,
+        "model_pct": 49.9,
         "implied_pct": 48.8,
         "edge_pp": 1.1,
         "gap_pp": 3.1,
-        "selection": "Delaware Blue Hens +6.5",
-        "team": "Delaware Blue Hens"
+        "strong": false,
+        "_edge": 1.0972376165336972,
+        "_gap": 3.1244786681649925,
+        "market": "spread",
+        "team": "Delaware Blue Hens",
+        "selection": "Delaware Blue Hens +6.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.7pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Delaware Blue Hens ML",
+            "line": null,
+            "price_american": 230,
+            "book": "Bovada",
+            "novig_pct": 29.1,
+            "model_pct": 31.0,
+            "implied_pct": 30.3,
+            "edge_pp": 0.7,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": 0.7135791709419415,
+            "_gap": 1.8755051794937194,
+            "market": "ml",
+            "team": "Delaware Blue Hens",
+            "selection": "Delaware Blue Hens ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.1pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Delaware Blue Hens +6.5",
+            "line": 6.5,
+            "price_american": 105,
+            "book": "DraftKings",
+            "novig_pct": 46.8,
+            "model_pct": 49.9,
+            "implied_pct": 48.8,
+            "edge_pp": 1.1,
+            "gap_pp": 3.1,
+            "strong": false,
+            "_edge": 1.0972376165336972,
+            "_gap": 3.1244786681649925,
+            "market": "spread",
+            "team": "Delaware Blue Hens",
+            "selection": "Delaware Blue Hens +6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.1pp < 3pp",
       "fpi_home_margin": -5.35,
       "mkt_home_margin": -7.0,
       "blend_home_margin": -6.55,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -119,24 +177,80 @@
       "espn_event_id": "401858245",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Pittsburgh Panthers ML",
         "line": null,
         "price_american": 110,
         "book": "DraftKings",
-        "model_pct": 49.4,
         "novig_pct": 45.7,
+        "model_pct": 49.4,
         "implied_pct": 47.6,
         "edge_pp": 1.8,
-        "gap_pp": 3.6,
-        "selection": "Pittsburgh Panthers ML",
-        "team": "Pittsburgh Panthers"
+        "gap_pp": 3.7,
+        "strong": false,
+        "_edge": 1.7790893287877085,
+        "_gap": 3.672490824574892,
+        "market": "ml",
+        "team": "Pittsburgh Panthers",
+        "selection": "Pittsburgh Panthers ML"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Pittsburgh Panthers ML",
+            "line": null,
+            "price_american": 110,
+            "book": "DraftKings",
+            "novig_pct": 45.7,
+            "model_pct": 49.4,
+            "implied_pct": 47.6,
+            "edge_pp": 1.8,
+            "gap_pp": 3.7,
+            "strong": false,
+            "_edge": 1.7790893287877085,
+            "_gap": 3.672490824574892,
+            "market": "ml",
+            "team": "Pittsburgh Panthers",
+            "selection": "Pittsburgh Panthers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Pittsburgh Panthers +2.5",
+            "line": 2.5,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 53.7,
+            "implied_pct": 53.5,
+            "edge_pp": 0.2,
+            "gap_pp": 2.6,
+            "strong": false,
+            "_edge": 0.1870917413116624,
+            "_gap": 2.59204021570002,
+            "market": "spread",
+            "team": "Pittsburgh Panthers",
+            "selection": "Pittsburgh Panthers +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.8pp < 3pp",
       "fpi_home_margin": -2.67,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 1.08,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -147,24 +261,80 @@
       "espn_event_id": "401858476",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Northwestern Wildcats +2.5",
         "line": 2.5,
         "price_american": -102,
         "book": "DraftKings",
-        "model_pct": 50.3,
         "novig_pct": 48.3,
+        "model_pct": 50.3,
         "implied_pct": 50.5,
         "edge_pp": -0.2,
         "gap_pp": 2.0,
-        "selection": "Northwestern Wildcats +2.5",
-        "team": "Northwestern Wildcats"
+        "strong": false,
+        "_edge": -0.19971544015189302,
+        "_gap": 2.0317466364256243,
+        "market": "spread",
+        "team": "Northwestern Wildcats",
+        "selection": "Northwestern Wildcats +2.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.4pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Penn State Nittany Lions ML",
+            "line": null,
+            "price_american": -135,
+            "book": "Bovada",
+            "novig_pct": 55.3,
+            "model_pct": 56.1,
+            "implied_pct": 57.4,
+            "edge_pp": -1.4,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.3893605913126494,
+            "_gap": 0.7980476337473563,
+            "market": "ml",
+            "team": "Penn State Nittany Lions",
+            "selection": "Penn State Nittany Lions ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Northwestern Wildcats +2.5",
+            "line": 2.5,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
+            "model_pct": 50.3,
+            "implied_pct": 50.5,
+            "edge_pp": -0.2,
+            "gap_pp": 2.0,
+            "strong": false,
+            "_edge": -0.19971544015189302,
+            "_gap": 2.0317466364256243,
+            "market": "spread",
+            "team": "Northwestern Wildcats",
+            "selection": "Northwestern Wildcats +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.2pp < 3pp",
       "fpi_home_margin": -2.08,
       "mkt_home_margin": -2.5,
       "blend_home_margin": -2.39,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -175,24 +345,62 @@
       "espn_event_id": "401862787",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Charlotte 49ers +20.5",
         "line": 20.5,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 51.6,
         "novig_pct": 50.0,
+        "model_pct": 51.6,
         "implied_pct": 52.4,
         "edge_pp": -0.8,
         "gap_pp": 1.6,
-        "selection": "Charlotte 49ers +20.5",
-        "team": "Charlotte 49ers"
+        "strong": false,
+        "_edge": -0.8249579412460628,
+        "_gap": 1.5559944397063208,
+        "market": "spread",
+        "team": "Charlotte 49ers",
+        "selection": "Charlotte 49ers +20.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.8pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Charlotte 49ers +20.5",
+            "line": 20.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 51.6,
+            "implied_pct": 52.4,
+            "edge_pp": -0.8,
+            "gap_pp": 1.6,
+            "strong": false,
+            "_edge": -0.8249579412460628,
+            "_gap": 1.5559944397063208,
+            "market": "spread",
+            "team": "Charlotte 49ers",
+            "selection": "Charlotte 49ers +20.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.8pp < 3pp",
       "fpi_home_margin": -18.31,
       "mkt_home_margin": -20.5,
       "blend_home_margin": -19.9,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -203,24 +411,80 @@
       "espn_event_id": "401856819",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
-        "line": null,
-        "price_american": 350,
-        "book": "DraftKings",
-        "model_pct": 23.2,
-        "novig_pct": 21.3,
-        "implied_pct": 22.2,
-        "edge_pp": 1.0,
-        "gap_pp": 1.9,
-        "selection": "UCF Knights ML",
-        "team": "UCF Knights"
+        "label": "UCF Knights +11",
+        "line": 11.0,
+        "price_american": -105,
+        "book": "Bovada",
+        "novig_pct": 48.9,
+        "model_pct": 52.0,
+        "implied_pct": 51.2,
+        "edge_pp": 0.8,
+        "gap_pp": 3.1,
+        "strong": false,
+        "_edge": 0.8056985351769907,
+        "_gap": 3.1086343489338253,
+        "market": "spread",
+        "team": "UCF Knights",
+        "selection": "UCF Knights +11"
       },
-      "note": "edge +1.0pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.6pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "UCF Knights ML",
+            "line": null,
+            "price_american": 350,
+            "book": "DraftKings",
+            "novig_pct": 21.3,
+            "model_pct": 22.8,
+            "implied_pct": 22.2,
+            "edge_pp": 0.6,
+            "gap_pp": 1.5,
+            "strong": false,
+            "_edge": 0.6099116063914445,
+            "_gap": 1.506485413628078,
+            "market": "ml",
+            "team": "UCF Knights",
+            "selection": "UCF Knights ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "UCF Knights +11",
+            "line": 11.0,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 52.0,
+            "implied_pct": 51.2,
+            "edge_pp": 0.8,
+            "gap_pp": 3.1,
+            "strong": false,
+            "_edge": 0.8056985351769907,
+            "_gap": 3.1086343489338253,
+            "market": "spread",
+            "team": "UCF Knights",
+            "selection": "UCF Knights +11"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +0.8pp < 3pp",
       "fpi_home_margin": 8.15,
       "mkt_home_margin": 11.0,
       "blend_home_margin": 10.22,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -231,24 +495,62 @@
       "espn_event_id": "401858250",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "North Carolina Tar Heels +21",
         "line": 21.0,
         "price_american": -108,
         "book": "DraftKings",
-        "model_pct": 50.7,
         "novig_pct": 49.6,
+        "model_pct": 50.7,
         "implied_pct": 51.9,
         "edge_pp": -1.2,
         "gap_pp": 1.1,
-        "selection": "North Carolina Tar Heels +21",
-        "team": "North Carolina Tar Heels"
+        "strong": false,
+        "_edge": -1.2463256223648078,
+        "_gap": 1.1097267077090023,
+        "market": "spread",
+        "team": "North Carolina Tar Heels",
+        "selection": "North Carolina Tar Heels +21"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "North Carolina Tar Heels +21",
+            "line": 21.0,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 50.7,
+            "implied_pct": 51.9,
+            "edge_pp": -1.2,
+            "gap_pp": 1.1,
+            "strong": false,
+            "_edge": -1.2463256223648078,
+            "_gap": 1.1097267077090023,
+            "market": "spread",
+            "team": "North Carolina Tar Heels",
+            "selection": "North Carolina Tar Heels +21"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": -20.05,
       "mkt_home_margin": -21.0,
       "blend_home_margin": -20.74,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -259,24 +561,62 @@
       "espn_event_id": "401858246",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
-        "line": 21.5,
-        "price_american": -115,
+        "label": "Boston College Eagles +21",
+        "line": 21.0,
+        "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 52.2,
-        "novig_pct": 51.1,
-        "implied_pct": 53.5,
-        "edge_pp": -1.3,
-        "gap_pp": 1.1,
-        "selection": "Boston College Eagles +21.5",
-        "team": "Boston College Eagles"
+        "novig_pct": 48.9,
+        "model_pct": 50.9,
+        "implied_pct": 51.2,
+        "edge_pp": -0.3,
+        "gap_pp": 2.0,
+        "strong": false,
+        "_edge": -0.3170809572067279,
+        "_gap": 1.9858548565501066,
+        "market": "spread",
+        "team": "Boston College Eagles",
+        "selection": "Boston College Eagles +21"
       },
-      "note": "edge -1.3pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.3pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Boston College Eagles +21",
+            "line": 21.0,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 50.9,
+            "implied_pct": 51.2,
+            "edge_pp": -0.3,
+            "gap_pp": 2.0,
+            "strong": false,
+            "_edge": -0.3170809572067279,
+            "_gap": 1.9858548565501066,
+            "market": "spread",
+            "team": "Boston College Eagles",
+            "selection": "Boston College Eagles +21"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.3pp < 3pp",
       "fpi_home_margin": 18.41,
       "mkt_home_margin": 21.5,
       "blend_home_margin": 20.65,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -287,24 +627,62 @@
       "espn_event_id": "401856807",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Middle Tennessee Blue Raiders +19.5",
         "line": 19.5,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 51.0,
         "novig_pct": 48.9,
+        "model_pct": 51.0,
         "implied_pct": 51.2,
         "edge_pp": -0.2,
         "gap_pp": 2.1,
-        "selection": "Middle Tennessee Blue Raiders +19.5",
-        "team": "Middle Tennessee Blue Raiders"
+        "strong": false,
+        "_edge": -0.1791907384749991,
+        "_gap": 2.1237450752818354,
+        "market": "spread",
+        "team": "Middle Tennessee Blue Raiders",
+        "selection": "Middle Tennessee Blue Raiders +19.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Middle Tennessee Blue Raiders +19.5",
+            "line": 19.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 51.0,
+            "implied_pct": 51.2,
+            "edge_pp": -0.2,
+            "gap_pp": 2.1,
+            "strong": false,
+            "_edge": -0.1791907384749991,
+            "_gap": 2.1237450752818354,
+            "market": "spread",
+            "team": "Middle Tennessee Blue Raiders",
+            "selection": "Middle Tennessee Blue Raiders +19.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.2pp < 3pp",
       "fpi_home_margin": 18.04,
       "mkt_home_margin": 19.5,
       "blend_home_margin": 19.1,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -315,24 +693,80 @@
       "espn_event_id": "401862791",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
-        "line": -3.0,
-        "price_american": -108,
-        "book": "DraftKings",
-        "model_pct": 51.6,
-        "novig_pct": 49.6,
-        "implied_pct": 51.9,
-        "edge_pp": -0.3,
-        "gap_pp": 2.0,
-        "selection": "Air Force Falcons -3",
-        "team": "Air Force Falcons"
+        "label": "Air Force Falcons ML",
+        "line": null,
+        "price_american": -150,
+        "book": "Bovada",
+        "novig_pct": 58.0,
+        "model_pct": 59.8,
+        "implied_pct": 60.0,
+        "edge_pp": -0.2,
+        "gap_pp": 1.9,
+        "strong": false,
+        "_edge": -0.1536910688529125,
+        "_gap": 1.863115653836167,
+        "market": "ml",
+        "team": "Air Force Falcons",
+        "selection": "Air Force Falcons ML"
       },
-      "note": "edge -0.3pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Air Force Falcons ML",
+            "line": null,
+            "price_american": -150,
+            "book": "Bovada",
+            "novig_pct": 58.0,
+            "model_pct": 59.8,
+            "implied_pct": 60.0,
+            "edge_pp": -0.2,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -0.1536910688529125,
+            "_gap": 1.863115653836167,
+            "market": "ml",
+            "team": "Air Force Falcons",
+            "selection": "Air Force Falcons ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.3pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Air Force Falcons -3",
+            "line": -3.0,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 51.6,
+            "implied_pct": 51.9,
+            "edge_pp": -0.3,
+            "gap_pp": 2.0,
+            "strong": false,
+            "_edge": -0.3350828811033879,
+            "_gap": 2.020969448970422,
+            "market": "spread",
+            "team": "Air Force Falcons",
+            "selection": "Air Force Falcons -3"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.2pp < 3pp",
       "fpi_home_margin": 5.23,
       "mkt_home_margin": 3.0,
       "blend_home_margin": 3.61,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -343,24 +777,80 @@
       "espn_event_id": "401856707",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Alabama Crimson Tide -5.5",
         "line": -5.5,
         "price_american": -108,
         "book": "DraftKings",
-        "model_pct": 52.5,
         "novig_pct": 49.6,
+        "model_pct": 52.5,
         "implied_pct": 51.9,
         "edge_pp": 0.6,
         "gap_pp": 3.0,
-        "selection": "Alabama Crimson Tide -5.5",
-        "team": "Alabama Crimson Tide"
+        "strong": false,
+        "_edge": 0.6072920343968224,
+        "_gap": 2.9633443644706325,
+        "market": "spread",
+        "team": "Alabama Crimson Tide",
+        "selection": "Alabama Crimson Tide -5.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Alabama Crimson Tide ML",
+            "line": null,
+            "price_american": -218,
+            "book": "DraftKings",
+            "novig_pct": 65.7,
+            "model_pct": 68.0,
+            "implied_pct": 68.6,
+            "edge_pp": -0.5,
+            "gap_pp": 2.3,
+            "strong": false,
+            "_edge": -0.5050890799357721,
+            "_gap": 2.30084742000054,
+            "market": "ml",
+            "team": "Alabama Crimson Tide",
+            "selection": "Alabama Crimson Tide ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.6pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Alabama Crimson Tide -5.5",
+            "line": -5.5,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 52.5,
+            "implied_pct": 51.9,
+            "edge_pp": 0.6,
+            "gap_pp": 3.0,
+            "strong": false,
+            "_edge": 0.6072920343968224,
+            "_gap": 2.9633443644706325,
+            "market": "spread",
+            "team": "Alabama Crimson Tide",
+            "selection": "Alabama Crimson Tide -5.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.6pp < 3pp",
       "fpi_home_margin": -9.06,
       "mkt_home_margin": -5.5,
       "blend_home_margin": -6.47,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -371,24 +861,80 @@
       "espn_event_id": "401856822",
       "status": "PASS",
       "best": {
-        "market": "ml",
-        "side": "home",
-        "line": null,
-        "price_american": -155,
+        "side": "away",
+        "label": "West Virginia Mountaineers +3",
+        "line": 3.0,
+        "price_american": -102,
         "book": "DraftKings",
-        "model_pct": 59.6,
-        "novig_pct": 58.3,
-        "implied_pct": 60.8,
-        "edge_pp": -1.2,
-        "gap_pp": 1.3,
-        "selection": "Iowa State Cyclones ML",
-        "team": "Iowa State Cyclones"
+        "novig_pct": 48.3,
+        "model_pct": 49.1,
+        "implied_pct": 50.5,
+        "edge_pp": -1.4,
+        "gap_pp": 0.8,
+        "strong": false,
+        "_edge": -1.3945050184899443,
+        "_gap": 0.8369570580875618,
+        "market": "spread",
+        "team": "West Virginia Mountaineers",
+        "selection": "West Virginia Mountaineers +3"
       },
-      "note": "edge -1.2pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.6pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Iowa State Cyclones ML",
+            "line": null,
+            "price_american": -155,
+            "book": "DraftKings",
+            "novig_pct": 58.3,
+            "model_pct": 59.2,
+            "implied_pct": 60.8,
+            "edge_pp": -1.6,
+            "gap_pp": 0.9,
+            "strong": false,
+            "_edge": -1.6072034438911476,
+            "_gap": 0.8778461769383794,
+            "market": "ml",
+            "team": "Iowa State Cyclones",
+            "selection": "Iowa State Cyclones ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.4pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "West Virginia Mountaineers +3",
+            "line": 3.0,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
+            "model_pct": 49.1,
+            "implied_pct": 50.5,
+            "edge_pp": -1.4,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.3945050184899443,
+            "_gap": 0.8369570580875618,
+            "market": "spread",
+            "team": "West Virginia Mountaineers",
+            "selection": "West Virginia Mountaineers +3"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -1.4pp < 3pp",
       "fpi_home_margin": 4.26,
       "mkt_home_margin": 3.0,
       "blend_home_margin": 3.35,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -399,24 +945,62 @@
       "espn_event_id": "401858251",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Wake Forest Demon Deacons -14",
         "line": -14.0,
         "price_american": -115,
         "book": "DraftKings",
-        "model_pct": 52.0,
         "novig_pct": 51.1,
+        "model_pct": 52.0,
         "implied_pct": 53.5,
         "edge_pp": -1.5,
         "gap_pp": 1.0,
-        "selection": "Wake Forest Demon Deacons -14",
-        "team": "Wake Forest Demon Deacons"
+        "strong": false,
+        "_edge": -1.4517896425385035,
+        "_gap": 0.9531588318498652,
+        "market": "spread",
+        "team": "Wake Forest Demon Deacons",
+        "selection": "Wake Forest Demon Deacons -14"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Wake Forest Demon Deacons -14",
+            "line": -14.0,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 52.0,
+            "implied_pct": 53.5,
+            "edge_pp": -1.5,
+            "gap_pp": 1.0,
+            "strong": false,
+            "_edge": -1.4517896425385035,
+            "_gap": 0.9531588318498652,
+            "market": "spread",
+            "team": "Wake Forest Demon Deacons",
+            "selection": "Wake Forest Demon Deacons -14"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.5pp < 3pp",
       "fpi_home_margin": 16.86,
       "mkt_home_margin": 14.0,
       "blend_home_margin": 14.78,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -427,24 +1011,80 @@
       "espn_event_id": "401858252",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Syracuse Orange -7",
         "line": -7.0,
         "price_american": -102,
         "book": "DraftKings",
-        "model_pct": 50.4,
         "novig_pct": 48.3,
+        "model_pct": 50.4,
         "implied_pct": 50.5,
         "edge_pp": -0.1,
         "gap_pp": 2.2,
-        "selection": "Syracuse Orange -7",
-        "team": "Syracuse Orange"
+        "strong": false,
+        "_edge": -0.07091120525039019,
+        "_gap": 2.160550871327116,
+        "market": "spread",
+        "team": "Syracuse Orange",
+        "selection": "Syracuse Orange -7"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.7pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "UConn Huskies ML",
+            "line": null,
+            "price_american": 215,
+            "book": "DraftKings",
+            "novig_pct": 30.4,
+            "model_pct": 30.1,
+            "implied_pct": 31.7,
+            "edge_pp": -1.7,
+            "gap_pp": -0.4,
+            "strong": false,
+            "_edge": -1.6939987150437485,
+            "_gap": -0.3709717616771413,
+            "market": "ml",
+            "team": "UConn Huskies",
+            "selection": "UConn Huskies ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Syracuse Orange -7",
+            "line": -7.0,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
+            "model_pct": 50.4,
+            "implied_pct": 50.5,
+            "edge_pp": -0.1,
+            "gap_pp": 2.2,
+            "strong": false,
+            "_edge": -0.07091120525039019,
+            "_gap": 2.160550871327116,
+            "market": "spread",
+            "team": "Syracuse Orange",
+            "selection": "Syracuse Orange -7"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.1pp < 3pp",
       "fpi_home_margin": -7.6,
       "mkt_home_margin": -7.0,
       "blend_home_margin": -7.16,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -455,24 +1095,80 @@
       "espn_event_id": "401858474",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Michigan Wolverines -6",
         "line": -6.0,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 52.6,
         "novig_pct": 50.0,
+        "model_pct": 52.6,
         "implied_pct": 52.4,
         "edge_pp": 0.2,
         "gap_pp": 2.6,
-        "selection": "Michigan Wolverines -6",
-        "team": "Michigan Wolverines"
+        "strong": false,
+        "_edge": 0.20907243954997323,
+        "_gap": 2.590024820502357,
+        "market": "spread",
+        "team": "Michigan Wolverines",
+        "selection": "Michigan Wolverines -6"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Michigan Wolverines ML",
+            "line": null,
+            "price_american": -225,
+            "book": "DraftKings",
+            "novig_pct": 66.4,
+            "model_pct": 68.7,
+            "implied_pct": 69.2,
+            "edge_pp": -0.5,
+            "gap_pp": 2.3,
+            "strong": false,
+            "_edge": -0.5292250510624541,
+            "_gap": 2.3367317605605953,
+            "market": "ml",
+            "team": "Michigan Wolverines",
+            "selection": "Michigan Wolverines ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Michigan Wolverines -6",
+            "line": -6.0,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 52.6,
+            "implied_pct": 52.4,
+            "edge_pp": 0.2,
+            "gap_pp": 2.6,
+            "strong": false,
+            "_edge": 0.20907243954997323,
+            "_gap": 2.590024820502357,
+            "market": "spread",
+            "team": "Michigan Wolverines",
+            "selection": "Michigan Wolverines -6"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.2pp < 3pp",
       "fpi_home_margin": -9.64,
       "mkt_home_margin": -6.0,
       "blend_home_margin": -7.0,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -483,24 +1179,80 @@
       "espn_event_id": "401858479",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Michigan State Spartans +9.5",
         "line": 9.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 52.4,
         "novig_pct": 48.9,
+        "model_pct": 52.4,
         "implied_pct": 51.2,
         "edge_pp": 1.2,
         "gap_pp": 3.5,
-        "selection": "Michigan State Spartans +9.5",
-        "team": "Michigan State Spartans"
+        "strong": false,
+        "_edge": 1.1631133456443732,
+        "_gap": 3.4660491594012077,
+        "market": "spread",
+        "team": "Michigan State Spartans",
+        "selection": "Michigan State Spartans +9.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.9pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Michigan State Spartans ML",
+            "line": null,
+            "price_american": 300,
+            "book": "DraftKings",
+            "novig_pct": 24.0,
+            "model_pct": 25.9,
+            "implied_pct": 25.0,
+            "edge_pp": 0.9,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": 0.8963734299407,
+            "_gap": 1.896373429940712,
+            "market": "ml",
+            "team": "Michigan State Spartans",
+            "selection": "Michigan State Spartans ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Michigan State Spartans +9.5",
+            "line": 9.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 52.4,
+            "implied_pct": 51.2,
+            "edge_pp": 1.2,
+            "gap_pp": 3.5,
+            "strong": false,
+            "_edge": 1.1631133456443732,
+            "_gap": 3.4660491594012077,
+            "market": "spread",
+            "team": "Michigan State Spartans",
+            "selection": "Michigan State Spartans +9.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.2pp < 3pp",
       "fpi_home_margin": 6.15,
       "mkt_home_margin": 9.5,
       "blend_home_margin": 8.58,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -511,24 +1263,62 @@
       "espn_event_id": "401856705",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Georgia Bulldogs -25",
         "line": -25.0,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 50.5,
         "novig_pct": 50.0,
+        "model_pct": 50.5,
         "implied_pct": 52.4,
         "edge_pp": -1.8,
         "gap_pp": 0.5,
-        "selection": "Georgia Bulldogs -25",
-        "team": "Georgia Bulldogs"
+        "strong": false,
+        "_edge": -1.8401112634268135,
+        "_gap": 0.5408411175255701,
+        "market": "spread",
+        "team": "Georgia Bulldogs",
+        "selection": "Georgia Bulldogs -25"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.8pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Georgia Bulldogs -25",
+            "line": -25.0,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 50.5,
+            "implied_pct": 52.4,
+            "edge_pp": -1.8,
+            "gap_pp": 0.5,
+            "strong": false,
+            "_edge": -1.8401112634268135,
+            "_gap": 0.5408411175255701,
+            "market": "spread",
+            "team": "Georgia Bulldogs",
+            "selection": "Georgia Bulldogs -25"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.8pp < 3pp",
       "fpi_home_margin": 25.76,
       "mkt_home_margin": 25.0,
       "blend_home_margin": 25.21,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -539,24 +1329,62 @@
       "espn_event_id": "401866432",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Western Michigan Broncos -12.5",
         "line": -12.5,
         "price_american": -112,
         "book": "DraftKings",
-        "model_pct": 52.3,
         "novig_pct": 50.4,
+        "model_pct": 52.3,
         "implied_pct": 52.8,
         "edge_pp": -0.5,
         "gap_pp": 1.9,
-        "selection": "Western Michigan Broncos -12.5",
-        "team": "Western Michigan Broncos"
+        "strong": false,
+        "_edge": -0.5414701553445478,
+        "_gap": 1.8557431169038519,
+        "market": "spread",
+        "team": "Western Michigan Broncos",
+        "selection": "Western Michigan Broncos -12.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Western Michigan Broncos -12.5",
+            "line": -12.5,
+            "price_american": -112,
+            "book": "DraftKings",
+            "novig_pct": 50.4,
+            "model_pct": 52.3,
+            "implied_pct": 52.8,
+            "edge_pp": -0.5,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -0.5414701553445478,
+            "_gap": 1.8557431169038519,
+            "market": "spread",
+            "team": "Western Michigan Broncos",
+            "selection": "Western Michigan Broncos -12.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.5pp < 3pp",
       "fpi_home_margin": -14.39,
       "mkt_home_margin": -13.0,
       "blend_home_margin": -13.38,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -567,24 +1395,62 @@
       "espn_event_id": "401866431",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Toledo Rockets -21",
         "line": -21.0,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 51.7,
         "novig_pct": 48.9,
+        "model_pct": 51.7,
         "implied_pct": 51.2,
         "edge_pp": 0.5,
         "gap_pp": 2.8,
-        "selection": "Toledo Rockets -21",
-        "team": "Toledo Rockets"
+        "strong": false,
+        "_edge": 0.49931380401897485,
+        "_gap": 2.8022496177758094,
+        "market": "spread",
+        "team": "Toledo Rockets",
+        "selection": "Toledo Rockets -21"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Toledo Rockets -21",
+            "line": -21.0,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 51.7,
+            "implied_pct": 51.2,
+            "edge_pp": 0.5,
+            "gap_pp": 2.8,
+            "strong": false,
+            "_edge": 0.49931380401897485,
+            "_gap": 2.8022496177758094,
+            "market": "spread",
+            "team": "Toledo Rockets",
+            "selection": "Toledo Rockets -21"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.5pp < 3pp",
       "fpi_home_margin": -23.42,
       "mkt_home_margin": -21.0,
       "blend_home_margin": -21.66,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -595,24 +1461,80 @@
       "espn_event_id": "401858253",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Virginia Cavaliers ML",
         "line": null,
         "price_american": -120,
         "book": "Bovada",
-        "model_pct": 53.5,
         "novig_pct": 52.2,
+        "model_pct": 53.3,
         "implied_pct": 54.5,
-        "edge_pp": -1.1,
-        "gap_pp": 1.3,
-        "selection": "Virginia Cavaliers ML",
-        "team": "Virginia Cavaliers"
+        "edge_pp": -1.3,
+        "gap_pp": 1.1,
+        "strong": false,
+        "_edge": -1.277470322812646,
+        "_gap": 1.094071179163636,
+        "market": "ml",
+        "team": "Virginia Cavaliers",
+        "selection": "Virginia Cavaliers ML"
       },
-      "note": "edge -1.1pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.3pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Virginia Cavaliers ML",
+            "line": null,
+            "price_american": -120,
+            "book": "Bovada",
+            "novig_pct": 52.2,
+            "model_pct": 53.3,
+            "implied_pct": 54.5,
+            "edge_pp": -1.3,
+            "gap_pp": 1.1,
+            "strong": false,
+            "_edge": -1.277470322812646,
+            "_gap": 1.094071179163636,
+            "market": "ml",
+            "team": "Virginia Cavaliers",
+            "selection": "Virginia Cavaliers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.7pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Virginia Cavaliers -1.5",
+            "line": -1.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 50.7,
+            "implied_pct": 52.4,
+            "edge_pp": -1.7,
+            "gap_pp": 0.7,
+            "strong": false,
+            "_edge": -1.7198552858925353,
+            "_gap": 0.6610970950598483,
+            "market": "spread",
+            "team": "Virginia Cavaliers",
+            "selection": "Virginia Cavaliers -1.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -1.3pp < 3pp",
       "fpi_home_margin": -2.43,
       "mkt_home_margin": -1.5,
       "blend_home_margin": -1.75,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -623,24 +1545,81 @@
       "espn_event_id": "401862793",
       "status": "PAPER",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Samford Bulldogs +30.5",
         "line": 30.5,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 57.4,
         "novig_pct": 50.0,
+        "model_pct": 57.4,
         "implied_pct": 52.4,
         "edge_pp": 5.0,
         "gap_pp": 7.4,
-        "selection": "Samford Bulldogs +30.5",
-        "team": "Samford Bulldogs"
+        "strong": false,
+        "_edge": 5.021385890016039,
+        "_gap": 7.402338270968423,
+        "market": "spread",
+        "team": "Samford Bulldogs",
+        "selection": "Samford Bulldogs +30.5"
+      },
+      "picks": [
+        {
+          "side": "away",
+          "label": "Samford Bulldogs +30.5",
+          "line": 30.5,
+          "price_american": -110,
+          "book": "DraftKings",
+          "novig_pct": 50.0,
+          "model_pct": 57.4,
+          "implied_pct": 52.4,
+          "edge_pp": 5.0,
+          "gap_pp": 7.4,
+          "strong": false,
+          "_edge": 5.021385890016039,
+          "_gap": 7.402338270968423,
+          "market": "spread",
+          "team": "Samford Bulldogs",
+          "selection": "Samford Bulldogs +30.5"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "away",
+            "label": "Samford Bulldogs +30.5",
+            "line": 30.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 57.4,
+            "implied_pct": 52.4,
+            "edge_pp": 5.0,
+            "gap_pp": 7.4,
+            "strong": false,
+            "_edge": 5.021385890016039,
+            "_gap": 7.402338270968423,
+            "market": "spread",
+            "team": "Samford Bulldogs",
+            "selection": "Samford Bulldogs +30.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": 20.04,
       "mkt_home_margin": 30.5,
       "blend_home_margin": 27.63,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -651,24 +1630,80 @@
       "espn_event_id": "401856708",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Florida Gators -5.5",
         "line": -5.5,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 51.3,
         "novig_pct": 50.0,
+        "model_pct": 51.3,
         "implied_pct": 52.4,
         "edge_pp": -1.1,
         "gap_pp": 1.3,
-        "selection": "Florida Gators -5.5",
-        "team": "Florida Gators"
+        "strong": false,
+        "_edge": -1.1165534690115053,
+        "_gap": 1.2643989119408783,
+        "market": "spread",
+        "team": "Florida Gators",
+        "selection": "Florida Gators -5.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.6pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Florida Gators ML",
+            "line": null,
+            "price_american": -218,
+            "book": "DraftKings",
+            "novig_pct": 65.7,
+            "model_pct": 66.9,
+            "implied_pct": 68.6,
+            "edge_pp": -1.6,
+            "gap_pp": 1.2,
+            "strong": false,
+            "_edge": -1.648824232371049,
+            "_gap": 1.1571122675652634,
+            "market": "ml",
+            "team": "Florida Gators",
+            "selection": "Florida Gators ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Florida Gators -5.5",
+            "line": -5.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 51.3,
+            "implied_pct": 52.4,
+            "edge_pp": -1.1,
+            "gap_pp": 1.3,
+            "strong": false,
+            "_edge": -1.1165534690115053,
+            "_gap": 1.2643989119408783,
+            "market": "spread",
+            "team": "Florida Gators",
+            "selection": "Florida Gators -5.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.1pp < 3pp",
       "fpi_home_margin": -7.28,
       "mkt_home_margin": -5.5,
       "blend_home_margin": -5.99,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -679,24 +1714,80 @@
       "espn_event_id": "401866477",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Miami (OH) RedHawks -12",
         "line": -12.0,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 54.2,
         "novig_pct": 50.0,
+        "model_pct": 54.2,
         "implied_pct": 52.4,
         "edge_pp": 1.8,
         "gap_pp": 4.2,
-        "selection": "Miami (OH) RedHawks -12",
-        "team": "Miami (OH) RedHawks"
+        "strong": false,
+        "_edge": 1.7703086697994697,
+        "_gap": 4.151261050751853,
+        "market": "spread",
+        "team": "Miami (OH) RedHawks",
+        "selection": "Miami (OH) RedHawks -12"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Miami (OH) RedHawks ML",
+            "line": null,
+            "price_american": -500,
+            "book": "DraftKings",
+            "novig_pct": 80.0,
+            "model_pct": 81.9,
+            "implied_pct": 83.3,
+            "edge_pp": -1.4,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -1.3871956576476996,
+            "_gap": 1.946137675685644,
+            "market": "ml",
+            "team": "Miami (OH) RedHawks",
+            "selection": "Miami (OH) RedHawks ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.8pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Miami (OH) RedHawks -12",
+            "line": -12.0,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 54.2,
+            "implied_pct": 52.4,
+            "edge_pp": 1.8,
+            "gap_pp": 4.2,
+            "strong": false,
+            "_edge": 1.7703086697994697,
+            "_gap": 4.151261050751853,
+            "market": "spread",
+            "team": "Miami (OH) RedHawks",
+            "selection": "Miami (OH) RedHawks -12"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.8pp < 3pp",
       "fpi_home_margin": 16.52,
       "mkt_home_margin": 12.5,
       "blend_home_margin": 13.6,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -707,24 +1798,99 @@
       "espn_event_id": "401866433",
       "status": "PAPER",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "UMass Minutemen -5.5",
         "line": -5.5,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 55.6,
         "novig_pct": 50.0,
+        "model_pct": 55.6,
         "implied_pct": 52.4,
         "edge_pp": 3.3,
         "gap_pp": 5.6,
-        "selection": "UMass Minutemen -5.5",
-        "team": "UMass Minutemen"
+        "strong": false,
+        "_edge": 3.254978230578842,
+        "_gap": 5.635930611531226,
+        "market": "spread",
+        "team": "UMass Minutemen",
+        "selection": "UMass Minutemen -5.5"
+      },
+      "picks": [
+        {
+          "side": "home",
+          "label": "UMass Minutemen -5.5",
+          "line": -5.5,
+          "price_american": -110,
+          "book": "DraftKings",
+          "novig_pct": 50.0,
+          "model_pct": 55.6,
+          "implied_pct": 52.4,
+          "edge_pp": 3.3,
+          "gap_pp": 5.6,
+          "strong": false,
+          "_edge": 3.254978230578842,
+          "_gap": 5.635930611531226,
+          "market": "spread",
+          "team": "UMass Minutemen",
+          "selection": "UMass Minutemen -5.5"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +2.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "UMass Minutemen ML",
+            "line": null,
+            "price_american": -218,
+            "book": "DraftKings",
+            "novig_pct": 65.7,
+            "model_pct": 70.8,
+            "implied_pct": 68.6,
+            "edge_pp": 2.2,
+            "gap_pp": 5.0,
+            "strong": false,
+            "_edge": 2.2388475656016205,
+            "_gap": 5.044784065537932,
+            "market": "ml",
+            "team": "UMass Minutemen",
+            "selection": "UMass Minutemen ML"
+          }
+        },
+        "spread": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "home",
+            "label": "UMass Minutemen -5.5",
+            "line": -5.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 55.6,
+            "implied_pct": 52.4,
+            "edge_pp": 3.3,
+            "gap_pp": 5.6,
+            "strong": false,
+            "_edge": 3.254978230578842,
+            "_gap": 5.635930611531226,
+            "market": "spread",
+            "team": "UMass Minutemen",
+            "selection": "UMass Minutemen -5.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": 13.45,
       "mkt_home_margin": 5.5,
       "blend_home_margin": 7.68,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -735,24 +1901,80 @@
       "espn_event_id": "401858248",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Louisville Cardinals ML",
         "line": null,
         "price_american": -160,
         "book": "Bovada",
-        "model_pct": 61.9,
         "novig_pct": 59.1,
+        "model_pct": 61.8,
         "implied_pct": 61.5,
-        "edge_pp": 0.4,
-        "gap_pp": 2.8,
-        "selection": "Louisville Cardinals ML",
-        "team": "Louisville Cardinals"
+        "edge_pp": 0.2,
+        "gap_pp": 2.6,
+        "strong": false,
+        "_edge": 0.22567199610408206,
+        "_gap": 2.644636679219714,
+        "market": "ml",
+        "team": "Louisville Cardinals",
+        "selection": "Louisville Cardinals ML"
       },
-      "note": "edge +0.4pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Louisville Cardinals ML",
+            "line": null,
+            "price_american": -160,
+            "book": "Bovada",
+            "novig_pct": 59.1,
+            "model_pct": 61.8,
+            "implied_pct": 61.5,
+            "edge_pp": 0.2,
+            "gap_pp": 2.6,
+            "strong": false,
+            "_edge": 0.22567199610408206,
+            "_gap": 2.644636679219714,
+            "market": "ml",
+            "team": "Louisville Cardinals",
+            "selection": "Louisville Cardinals ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.0pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Louisville Cardinals -3",
+            "line": -3.0,
+            "price_american": -118,
+            "book": "DraftKings",
+            "novig_pct": 51.7,
+            "model_pct": 53.2,
+            "implied_pct": 54.1,
+            "edge_pp": -1.0,
+            "gap_pp": 1.4,
+            "strong": false,
+            "_edge": -0.9629003168595385,
+            "_gap": 1.4291274784859143,
+            "market": "spread",
+            "team": "Louisville Cardinals",
+            "selection": "Louisville Cardinals -3"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +0.2pp < 3pp",
       "fpi_home_margin": -6.13,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -4.22,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -763,24 +1985,80 @@
       "espn_event_id": "401866430",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Akron Zips +6.5",
         "line": 6.5,
         "price_american": -102,
         "book": "DraftKings",
-        "model_pct": 50.2,
         "novig_pct": 48.3,
+        "model_pct": 50.2,
         "implied_pct": 50.5,
         "edge_pp": -0.3,
         "gap_pp": 2.0,
-        "selection": "Akron Zips +6.5",
-        "team": "Akron Zips"
+        "strong": false,
+        "_edge": -0.2523766979610098,
+        "_gap": 1.9790853786164964,
+        "market": "spread",
+        "team": "Akron Zips",
+        "selection": "Akron Zips +6.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.6pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Akron Zips ML",
+            "line": null,
+            "price_american": 210,
+            "book": "Bovada",
+            "novig_pct": 31.1,
+            "model_pct": 31.7,
+            "implied_pct": 32.3,
+            "edge_pp": -0.6,
+            "gap_pp": 0.6,
+            "strong": false,
+            "_edge": -0.5811006997196888,
+            "_gap": 0.565852705298231,
+            "market": "ml",
+            "team": "Akron Zips",
+            "selection": "Akron Zips ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.3pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Akron Zips +6.5",
+            "line": 6.5,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
+            "model_pct": 50.2,
+            "implied_pct": 50.5,
+            "edge_pp": -0.3,
+            "gap_pp": 2.0,
+            "strong": false,
+            "_edge": -0.2523766979610098,
+            "_gap": 1.9790853786164964,
+            "market": "spread",
+            "team": "Akron Zips",
+            "selection": "Akron Zips +6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.3pp < 3pp",
       "fpi_home_margin": 6.16,
       "mkt_home_margin": 6.5,
       "blend_home_margin": 6.41,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -791,24 +2069,62 @@
       "espn_event_id": "401858473",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Ohio State Buckeyes -14.5",
         "line": -14.5,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 49.3,
         "novig_pct": 48.9,
+        "model_pct": 49.3,
         "implied_pct": 51.2,
         "edge_pp": -2.0,
         "gap_pp": 0.3,
-        "selection": "Ohio State Buckeyes -14.5",
-        "team": "Ohio State Buckeyes"
+        "strong": false,
+        "_edge": -1.9588792521397558,
+        "_gap": 0.34405656161707876,
+        "market": "spread",
+        "team": "Ohio State Buckeyes",
+        "selection": "Ohio State Buckeyes -14.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.0pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Ohio State Buckeyes -14.5",
+            "line": -14.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 49.3,
+            "implied_pct": 51.2,
+            "edge_pp": -2.0,
+            "gap_pp": 0.3,
+            "strong": false,
+            "_edge": -1.9588792521397558,
+            "_gap": 0.34405656161707876,
+            "market": "spread",
+            "team": "Ohio State Buckeyes",
+            "selection": "Ohio State Buckeyes -14.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -2.0pp < 3pp",
       "fpi_home_margin": -13.46,
       "mkt_home_margin": -14.5,
       "blend_home_margin": -14.22,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -819,24 +2135,62 @@
       "espn_event_id": "401864515",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "North Dakota State Bison -17",
         "line": -17.0,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 52.3,
         "novig_pct": 48.9,
+        "model_pct": 52.3,
         "implied_pct": 51.2,
         "edge_pp": 1.1,
         "gap_pp": 3.4,
-        "selection": "North Dakota State Bison -17",
-        "team": "North Dakota State Bison"
+        "strong": false,
+        "_edge": 1.096333815850925,
+        "_gap": 3.3992696296077654,
+        "market": "spread",
+        "team": "North Dakota State Bison",
+        "selection": "North Dakota State Bison -17"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.1pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "North Dakota State Bison -17",
+            "line": -17.0,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 52.3,
+            "implied_pct": 51.2,
+            "edge_pp": 1.1,
+            "gap_pp": 3.4,
+            "strong": false,
+            "_edge": 1.096333815850925,
+            "_gap": 3.3992696296077654,
+            "market": "spread",
+            "team": "North Dakota State Bison",
+            "selection": "North Dakota State Bison -17"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.1pp < 3pp",
       "fpi_home_margin": 20.26,
       "mkt_home_margin": 17.0,
       "blend_home_margin": 17.89,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -847,24 +2201,99 @@
       "espn_event_id": "401866434",
       "status": "PAPER",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Ohio Bobcats -3.5",
         "line": -3.5,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 54.7,
         "novig_pct": 48.9,
+        "model_pct": 54.7,
         "implied_pct": 51.2,
         "edge_pp": 3.5,
         "gap_pp": 5.8,
-        "selection": "Ohio Bobcats -3.5",
-        "team": "Ohio Bobcats"
+        "strong": false,
+        "_edge": 3.525235617455269,
+        "_gap": 5.828171431212104,
+        "market": "spread",
+        "team": "Ohio Bobcats",
+        "selection": "Ohio Bobcats -3.5"
+      },
+      "picks": [
+        {
+          "side": "away",
+          "label": "Ohio Bobcats -3.5",
+          "line": -3.5,
+          "price_american": -105,
+          "book": "Bovada",
+          "novig_pct": 48.9,
+          "model_pct": 54.7,
+          "implied_pct": 51.2,
+          "edge_pp": 3.5,
+          "gap_pp": 5.8,
+          "strong": false,
+          "_edge": 3.525235617455269,
+          "_gap": 5.828171431212104,
+          "market": "spread",
+          "team": "Ohio Bobcats",
+          "selection": "Ohio Bobcats -3.5"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Ohio Bobcats ML",
+            "line": null,
+            "price_american": -175,
+            "book": "DraftKings",
+            "novig_pct": 60.9,
+            "model_pct": 65.4,
+            "implied_pct": 63.6,
+            "edge_pp": 1.8,
+            "gap_pp": 4.5,
+            "strong": false,
+            "_edge": 1.7784458513951829,
+            "_gap": 4.4911860419328935,
+            "market": "ml",
+            "team": "Ohio Bobcats",
+            "selection": "Ohio Bobcats ML"
+          }
+        },
+        "spread": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "away",
+            "label": "Ohio Bobcats -3.5",
+            "line": -3.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 54.7,
+            "implied_pct": 51.2,
+            "edge_pp": 3.5,
+            "gap_pp": 5.8,
+            "strong": false,
+            "_edge": 3.525235617455269,
+            "_gap": 5.828171431212104,
+            "market": "spread",
+            "team": "Ohio Bobcats",
+            "selection": "Ohio Bobcats -3.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": -10.18,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -5.33,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -875,24 +2304,80 @@
       "espn_event_id": "401869956",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Georgia State Panthers ML",
         "line": null,
         "price_american": -135,
         "book": "DraftKings",
-        "model_pct": 57.2,
         "novig_pct": 55.1,
+        "model_pct": 57.1,
         "implied_pct": 57.4,
-        "edge_pp": -0.2,
-        "gap_pp": 2.1,
-        "selection": "Georgia State Panthers ML",
-        "team": "Georgia State Panthers"
+        "edge_pp": -0.4,
+        "gap_pp": 1.9,
+        "strong": false,
+        "_edge": -0.38636623848987695,
+        "_gap": 1.9163308004935264,
+        "market": "ml",
+        "team": "Georgia State Panthers",
+        "selection": "Georgia State Panthers ML"
       },
-      "note": "edge -0.2pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Georgia State Panthers ML",
+            "line": null,
+            "price_american": -135,
+            "book": "DraftKings",
+            "novig_pct": 55.1,
+            "model_pct": 57.1,
+            "implied_pct": 57.4,
+            "edge_pp": -0.4,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -0.38636623848987695,
+            "_gap": 1.9163308004935264,
+            "market": "ml",
+            "team": "Georgia State Panthers",
+            "selection": "Georgia State Panthers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Georgia State Panthers -2.5",
+            "line": -2.5,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 51.9,
+            "implied_pct": 52.4,
+            "edge_pp": -0.4,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -0.4424563702817408,
+            "_gap": 1.9384960106706428,
+            "market": "spread",
+            "team": "Georgia State Panthers",
+            "selection": "Georgia State Panthers -2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.4pp < 3pp",
       "fpi_home_margin": 5.22,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 3.25,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -903,24 +2388,80 @@
       "espn_event_id": "401858247",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "California Golden Bears +2.5",
         "line": 2.5,
         "price_american": -102,
         "book": "DraftKings",
-        "model_pct": 50.8,
         "novig_pct": 48.3,
+        "model_pct": 50.8,
         "implied_pct": 50.5,
         "edge_pp": 0.3,
         "gap_pp": 2.5,
-        "selection": "California Golden Bears +2.5",
-        "team": "California Golden Bears"
+        "strong": false,
+        "_edge": 0.31760412348845746,
+        "_gap": 2.5490662000659636,
+        "market": "spread",
+        "team": "California Golden Bears",
+        "selection": "California Golden Bears +2.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.0pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "California Golden Bears ML",
+            "line": null,
+            "price_american": 120,
+            "book": "DraftKings",
+            "novig_pct": 43.7,
+            "model_pct": 44.5,
+            "implied_pct": 45.5,
+            "edge_pp": -1.0,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.0001043251899933,
+            "_gap": 0.8036474785618086,
+            "market": "ml",
+            "team": "California Golden Bears",
+            "selection": "California Golden Bears ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.3pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "California Golden Bears +2.5",
+            "line": 2.5,
+            "price_american": -102,
+            "book": "DraftKings",
+            "novig_pct": 48.3,
+            "model_pct": 50.8,
+            "implied_pct": 50.5,
+            "edge_pp": 0.3,
+            "gap_pp": 2.5,
+            "strong": false,
+            "_edge": 0.31760412348845746,
+            "_gap": 2.5490662000659636,
+            "market": "spread",
+            "team": "California Golden Bears",
+            "selection": "California Golden Bears +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.3pp < 3pp",
       "fpi_home_margin": 1.36,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 2.19,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -931,24 +2472,80 @@
       "espn_event_id": "401856710",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Auburn Tigers +6.5",
         "line": 6.5,
         "price_american": 100,
         "book": "DraftKings",
-        "model_pct": 49.2,
         "novig_pct": 47.8,
+        "model_pct": 49.2,
         "implied_pct": 50.0,
         "edge_pp": -0.8,
         "gap_pp": 1.4,
-        "selection": "Auburn Tigers +6.5",
-        "team": "Auburn Tigers"
+        "strong": false,
+        "_edge": -0.8055385435972062,
+        "_gap": 1.3683744998810532,
+        "market": "spread",
+        "team": "Auburn Tigers",
+        "selection": "Auburn Tigers +6.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Tennessee Volunteers ML",
+            "line": null,
+            "price_american": -260,
+            "book": "Bovada",
+            "novig_pct": 69.5,
+            "model_pct": 70.7,
+            "implied_pct": 72.2,
+            "edge_pp": -1.5,
+            "gap_pp": 1.2,
+            "strong": false,
+            "_edge": -1.5078368241049245,
+            "_gap": 1.2487365431554598,
+            "market": "ml",
+            "team": "Tennessee Volunteers",
+            "selection": "Tennessee Volunteers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Auburn Tigers +6.5",
+            "line": 6.5,
+            "price_american": 100,
+            "book": "DraftKings",
+            "novig_pct": 47.8,
+            "model_pct": 49.2,
+            "implied_pct": 50.0,
+            "edge_pp": -0.8,
+            "gap_pp": 1.4,
+            "strong": false,
+            "_edge": -0.8055385435972062,
+            "_gap": 1.3683744998810532,
+            "market": "spread",
+            "team": "Auburn Tigers",
+            "selection": "Auburn Tigers +6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.8pp < 3pp",
       "fpi_home_margin": 7.63,
       "mkt_home_margin": 6.5,
       "blend_home_margin": 6.81,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -959,24 +2556,62 @@
       "espn_event_id": "401869962",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "James Madison Dukes -18.5",
         "line": -18.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 52.6,
         "novig_pct": 48.9,
+        "model_pct": 52.6,
         "implied_pct": 51.2,
         "edge_pp": 1.4,
         "gap_pp": 3.7,
-        "selection": "James Madison Dukes -18.5",
-        "team": "James Madison Dukes"
+        "strong": false,
+        "_edge": 1.3527585051894886,
+        "_gap": 3.6556943189463285,
+        "market": "spread",
+        "team": "James Madison Dukes",
+        "selection": "James Madison Dukes -18.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "James Madison Dukes -18.5",
+            "line": -18.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 52.6,
+            "implied_pct": 51.2,
+            "edge_pp": 1.4,
+            "gap_pp": 3.7,
+            "strong": false,
+            "_edge": 1.3527585051894886,
+            "_gap": 3.6556943189463285,
+            "market": "spread",
+            "team": "James Madison Dukes",
+            "selection": "James Madison Dukes -18.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.4pp < 3pp",
       "fpi_home_margin": 22.12,
       "mkt_home_margin": 18.5,
       "blend_home_margin": 19.49,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -987,24 +2622,62 @@
       "espn_event_id": "401858475",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Nebraska Cornhuskers -14.5",
         "line": -14.5,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 55.1,
         "novig_pct": 50.0,
+        "model_pct": 55.1,
         "implied_pct": 52.4,
         "edge_pp": 2.7,
         "gap_pp": 5.1,
-        "selection": "Nebraska Cornhuskers -14.5",
-        "team": "Nebraska Cornhuskers"
+        "strong": false,
+        "_edge": 2.7373794034444066,
+        "_gap": 5.118331784396791,
+        "market": "spread",
+        "team": "Nebraska Cornhuskers",
+        "selection": "Nebraska Cornhuskers -14.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +2.7pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Nebraska Cornhuskers -14.5",
+            "line": -14.5,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 55.1,
+            "implied_pct": 52.4,
+            "edge_pp": 2.7,
+            "gap_pp": 5.1,
+            "strong": false,
+            "_edge": 2.7373794034444066,
+            "_gap": 5.118331784396791,
+            "market": "spread",
+            "team": "Nebraska Cornhuskers",
+            "selection": "Nebraska Cornhuskers -14.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +2.7pp < 3pp",
       "fpi_home_margin": 21.71,
       "mkt_home_margin": 14.5,
       "blend_home_margin": 16.48,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1015,24 +2688,62 @@
       "espn_event_id": "401864514",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "New Mexico Lobos -22.5",
         "line": -22.5,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 54.8,
         "novig_pct": 50.0,
+        "model_pct": 54.8,
         "implied_pct": 52.4,
         "edge_pp": 2.4,
         "gap_pp": 4.8,
-        "selection": "New Mexico Lobos -22.5",
-        "team": "New Mexico Lobos"
+        "strong": false,
+        "_edge": 2.3786340292312302,
+        "_gap": 4.759586410183614,
+        "market": "spread",
+        "team": "New Mexico Lobos",
+        "selection": "New Mexico Lobos -22.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +2.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "New Mexico Lobos -22.5",
+            "line": -22.5,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 54.8,
+            "implied_pct": 52.4,
+            "edge_pp": 2.4,
+            "gap_pp": 4.8,
+            "strong": false,
+            "_edge": 2.3786340292312302,
+            "_gap": 4.759586410183614,
+            "market": "spread",
+            "team": "New Mexico Lobos",
+            "selection": "New Mexico Lobos -22.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +2.4pp < 3pp",
       "fpi_home_margin": 29.2,
       "mkt_home_margin": 22.5,
       "blend_home_margin": 24.34,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1043,24 +2754,80 @@
       "espn_event_id": "401858472",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Illinois Fighting Illini -10",
         "line": -10.0,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 51.7,
         "novig_pct": 50.0,
+        "model_pct": 51.7,
         "implied_pct": 52.4,
         "edge_pp": -0.7,
         "gap_pp": 1.7,
-        "selection": "Illinois Fighting Illini -10",
-        "team": "Illinois Fighting Illini"
+        "strong": false,
+        "_edge": -0.6720803545144038,
+        "_gap": 1.7088720264379798,
+        "market": "spread",
+        "team": "Illinois Fighting Illini",
+        "selection": "Illinois Fighting Illini -10"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.9pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Illinois Fighting Illini ML",
+            "line": null,
+            "price_american": -375,
+            "book": "DraftKings",
+            "novig_pct": 75.7,
+            "model_pct": 77.0,
+            "implied_pct": 78.9,
+            "edge_pp": -1.9,
+            "gap_pp": 1.3,
+            "strong": false,
+            "_edge": -1.90825757410924,
+            "_gap": 1.3202610066878062,
+            "market": "ml",
+            "team": "Illinois Fighting Illini",
+            "selection": "Illinois Fighting Illini ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.7pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Illinois Fighting Illini -10",
+            "line": -10.0,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 51.7,
+            "implied_pct": 52.4,
+            "edge_pp": -0.7,
+            "gap_pp": 1.7,
+            "strong": false,
+            "_edge": -0.6720803545144038,
+            "_gap": 1.7088720264379798,
+            "market": "spread",
+            "team": "Illinois Fighting Illini",
+            "selection": "Illinois Fighting Illini -10"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.7pp < 3pp",
       "fpi_home_margin": 12.4,
       "mkt_home_margin": 10.0,
       "blend_home_margin": 10.66,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1071,24 +2838,80 @@
       "espn_event_id": "401856709",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "South Carolina Gamecocks ML",
         "line": null,
         "price_american": -130,
         "book": "Bovada",
-        "model_pct": 55.5,
         "novig_pct": 54.3,
+        "model_pct": 56.5,
         "implied_pct": 56.5,
-        "edge_pp": -1.0,
-        "gap_pp": 1.3,
-        "selection": "South Carolina Gamecocks ML",
-        "team": "South Carolina Gamecocks"
+        "edge_pp": -0.0,
+        "gap_pp": 2.2,
+        "strong": false,
+        "_edge": -0.032750766818590016,
+        "_gap": 2.214634486876621,
+        "market": "ml",
+        "team": "South Carolina Gamecocks",
+        "selection": "South Carolina Gamecocks ML"
       },
-      "note": "edge -1.0pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.0pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "South Carolina Gamecocks ML",
+            "line": null,
+            "price_american": -130,
+            "book": "Bovada",
+            "novig_pct": 54.3,
+            "model_pct": 56.5,
+            "implied_pct": 56.5,
+            "edge_pp": -0.0,
+            "gap_pp": 2.2,
+            "strong": false,
+            "_edge": -0.032750766818590016,
+            "_gap": 2.214634486876621,
+            "market": "ml",
+            "team": "South Carolina Gamecocks",
+            "selection": "South Carolina Gamecocks ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Kentucky Wildcats +2.5",
+            "line": 2.5,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 49.9,
+            "implied_pct": 51.9,
+            "edge_pp": -2.1,
+            "gap_pp": 0.3,
+            "strong": false,
+            "_edge": -2.0646959406213083,
+            "_gap": 0.29135638945250175,
+            "market": "spread",
+            "team": "Kentucky Wildcats",
+            "selection": "Kentucky Wildcats +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.0pp < 3pp",
       "fpi_home_margin": 2.7,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 2.55,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1099,24 +2922,80 @@
       "espn_event_id": "401860899",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Colorado State Rams ML",
         "line": null,
         "price_american": 210,
         "book": "Bovada",
-        "model_pct": 34.5,
         "novig_pct": 31.1,
+        "model_pct": 33.6,
         "implied_pct": 32.3,
-        "edge_pp": 2.3,
-        "gap_pp": 3.4,
-        "selection": "Colorado State Rams ML",
-        "team": "Colorado State Rams"
+        "edge_pp": 1.4,
+        "gap_pp": 2.5,
+        "strong": false,
+        "_edge": 1.3880298649557865,
+        "_gap": 2.534983269973712,
+        "market": "ml",
+        "team": "Colorado State Rams",
+        "selection": "Colorado State Rams ML"
       },
-      "note": "edge +2.3pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Colorado State Rams ML",
+            "line": null,
+            "price_american": 210,
+            "book": "Bovada",
+            "novig_pct": 31.1,
+            "model_pct": 33.6,
+            "implied_pct": 32.3,
+            "edge_pp": 1.4,
+            "gap_pp": 2.5,
+            "strong": false,
+            "_edge": 1.3880298649557865,
+            "_gap": 2.534983269973712,
+            "market": "ml",
+            "team": "Colorado State Rams",
+            "selection": "Colorado State Rams ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.7pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Colorado State Rams +6.5",
+            "line": 6.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 51.9,
+            "implied_pct": 51.2,
+            "edge_pp": 0.7,
+            "gap_pp": 3.0,
+            "strong": false,
+            "_edge": 0.6592732411968449,
+            "_gap": 2.962209054953685,
+            "market": "spread",
+            "team": "Colorado State Rams",
+            "selection": "Colorado State Rams +6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +1.4pp < 3pp",
       "fpi_home_margin": -3.86,
       "mkt_home_margin": -6.5,
       "blend_home_margin": -5.78,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1127,24 +3006,81 @@
       "espn_event_id": "401862790",
       "status": "PAPER",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Texas Southern Tigers +44",
         "line": 44.0,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 56.8,
         "novig_pct": 48.9,
+        "model_pct": 56.8,
         "implied_pct": 51.2,
         "edge_pp": 5.6,
         "gap_pp": 7.9,
-        "selection": "Texas Southern Tigers +44",
-        "team": "Texas Southern Tigers"
+        "strong": false,
+        "_edge": 5.556112174637073,
+        "_gap": 7.8590479883939075,
+        "market": "spread",
+        "team": "Texas Southern Tigers",
+        "selection": "Texas Southern Tigers +44"
+      },
+      "picks": [
+        {
+          "side": "away",
+          "label": "Texas Southern Tigers +44",
+          "line": 44.0,
+          "price_american": -105,
+          "book": "Bovada",
+          "novig_pct": 48.9,
+          "model_pct": 56.8,
+          "implied_pct": 51.2,
+          "edge_pp": 5.6,
+          "gap_pp": 7.9,
+          "strong": false,
+          "_edge": 5.556112174637073,
+          "_gap": 7.8590479883939075,
+          "market": "spread",
+          "team": "Texas Southern Tigers",
+          "selection": "Texas Southern Tigers +44"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "away",
+            "label": "Texas Southern Tigers +44",
+            "line": 44.0,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 56.8,
+            "implied_pct": 51.2,
+            "edge_pp": 5.6,
+            "gap_pp": 7.9,
+            "strong": false,
+            "_edge": 5.556112174637073,
+            "_gap": 7.8590479883939075,
+            "market": "spread",
+            "team": "Texas Southern Tigers",
+            "selection": "Texas Southern Tigers +44"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": 33.11,
       "mkt_home_margin": 44.5,
       "blend_home_margin": 41.38,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1155,24 +3091,80 @@
       "espn_event_id": "401862788",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "UTSA Roadrunners -12.5",
         "line": -12.5,
         "price_american": -108,
         "book": "DraftKings",
-        "model_pct": 49.9,
         "novig_pct": 49.6,
+        "model_pct": 49.9,
         "implied_pct": 51.9,
         "edge_pp": -2.0,
         "gap_pp": 0.4,
-        "selection": "UTSA Roadrunners -12.5",
-        "team": "UTSA Roadrunners"
+        "strong": false,
+        "_edge": -1.9892607936893403,
+        "_gap": 0.3667915363844698,
+        "market": "spread",
+        "team": "UTSA Roadrunners",
+        "selection": "UTSA Roadrunners -12.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -2.1pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Rice Owls ML",
+            "line": null,
+            "price_american": 360,
+            "book": "Bovada",
+            "novig_pct": 20.7,
+            "model_pct": 19.6,
+            "implied_pct": 21.7,
+            "edge_pp": -2.1,
+            "gap_pp": -1.1,
+            "strong": false,
+            "_edge": -2.1225504141941824,
+            "_gap": -1.0730751518253672,
+            "market": "ml",
+            "team": "Rice Owls",
+            "selection": "Rice Owls ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.0pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "UTSA Roadrunners -12.5",
+            "line": -12.5,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 49.9,
+            "implied_pct": 51.9,
+            "edge_pp": -2.0,
+            "gap_pp": 0.4,
+            "strong": false,
+            "_edge": -1.9892607936893403,
+            "_gap": 0.3667915363844698,
+            "market": "spread",
+            "team": "UTSA Roadrunners",
+            "selection": "UTSA Roadrunners -12.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -2.0pp < 3pp",
       "fpi_home_margin": -12.41,
       "mkt_home_margin": -12.5,
       "blend_home_margin": -12.47,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1183,24 +3175,62 @@
       "espn_event_id": "401871089",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "South Alabama Jaguars -14",
         "line": -14.0,
         "price_american": -115,
         "book": "DraftKings",
-        "model_pct": 53.4,
         "novig_pct": 51.1,
+        "model_pct": 53.4,
         "implied_pct": 53.5,
         "edge_pp": -0.1,
         "gap_pp": 2.3,
-        "selection": "South Alabama Jaguars -14",
-        "team": "South Alabama Jaguars"
+        "strong": false,
+        "_edge": -0.08865232910489906,
+        "_gap": 2.3162961452834696,
+        "market": "spread",
+        "team": "South Alabama Jaguars",
+        "selection": "South Alabama Jaguars -14"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.1pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "South Alabama Jaguars -14",
+            "line": -14.0,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 53.4,
+            "implied_pct": 53.5,
+            "edge_pp": -0.1,
+            "gap_pp": 2.3,
+            "strong": false,
+            "_edge": -0.08865232910489906,
+            "_gap": 2.3162961452834696,
+            "market": "spread",
+            "team": "South Alabama Jaguars",
+            "selection": "South Alabama Jaguars -14"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.1pp < 3pp",
       "fpi_home_margin": 18.78,
       "mkt_home_margin": 14.0,
       "blend_home_margin": 15.31,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1211,24 +3241,80 @@
       "espn_event_id": "401869942",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Georgia Southern Eagles -1.5",
         "line": -1.5,
         "price_american": -115,
         "book": "DraftKings",
-        "model_pct": 51.4,
         "novig_pct": 51.1,
+        "model_pct": 51.4,
         "implied_pct": 53.5,
         "edge_pp": -2.1,
         "gap_pp": 0.3,
-        "selection": "Georgia Southern Eagles -1.5",
-        "team": "Georgia Southern Eagles"
+        "strong": false,
+        "_edge": -2.05980446001629,
+        "_gap": 0.34514401437206743,
+        "market": "spread",
+        "team": "Georgia Southern Eagles",
+        "selection": "Georgia Southern Eagles -1.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -2.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Coastal Carolina Chanticleers ML",
+            "line": null,
+            "price_american": 105,
+            "book": "DraftKings",
+            "novig_pct": 46.8,
+            "model_pct": 46.6,
+            "implied_pct": 48.8,
+            "edge_pp": -2.2,
+            "gap_pp": -0.1,
+            "strong": false,
+            "_edge": -2.157024870568869,
+            "_gap": -0.1297838189375733,
+            "market": "ml",
+            "team": "Coastal Carolina Chanticleers",
+            "selection": "Coastal Carolina Chanticleers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Georgia Southern Eagles -1.5",
+            "line": -1.5,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 51.4,
+            "implied_pct": 53.5,
+            "edge_pp": -2.1,
+            "gap_pp": 0.3,
+            "strong": false,
+            "_edge": -2.05980446001629,
+            "_gap": 0.34514401437206743,
+            "market": "spread",
+            "team": "Georgia Southern Eagles",
+            "selection": "Georgia Southern Eagles -1.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -2.1pp < 3pp",
       "fpi_home_margin": -2.18,
       "mkt_home_margin": -2.0,
       "blend_home_margin": -2.05,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1239,24 +3325,80 @@
       "espn_event_id": "401856818",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "BYU Cougars ML",
         "line": null,
         "price_american": -230,
         "book": "DraftKings",
-        "model_pct": 67.8,
         "novig_pct": 66.9,
+        "model_pct": 67.8,
         "implied_pct": 69.7,
         "edge_pp": -1.9,
         "gap_pp": 0.9,
-        "selection": "BYU Cougars ML",
-        "team": "BYU Cougars"
+        "strong": false,
+        "_edge": -1.8842584762642112,
+        "_gap": 0.9120091143865361,
+        "market": "ml",
+        "team": "BYU Cougars",
+        "selection": "BYU Cougars ML"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.9pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "BYU Cougars ML",
+            "line": null,
+            "price_american": -230,
+            "book": "DraftKings",
+            "novig_pct": 66.9,
+            "model_pct": 67.8,
+            "implied_pct": 69.7,
+            "edge_pp": -1.9,
+            "gap_pp": 0.9,
+            "strong": false,
+            "_edge": -1.8842584762642112,
+            "_gap": 0.9120091143865361,
+            "market": "ml",
+            "team": "BYU Cougars",
+            "selection": "BYU Cougars ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "BYU Cougars -6.5",
+            "line": -6.5,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 49.7,
+            "implied_pct": 51.9,
+            "edge_pp": -2.2,
+            "gap_pp": 0.1,
+            "strong": false,
+            "_edge": -2.21258804149681,
+            "_gap": 0.1434642885769999,
+            "market": "spread",
+            "team": "BYU Cougars",
+            "selection": "BYU Cougars -6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.9pp < 3pp",
       "fpi_home_margin": -7.42,
       "mkt_home_margin": -6.0,
       "blend_home_margin": -6.39,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1267,24 +3409,62 @@
       "espn_event_id": "401856711",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Texas A&M Aggies -14",
         "line": -14.0,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 50.5,
         "novig_pct": 48.9,
+        "model_pct": 50.5,
         "implied_pct": 51.2,
         "edge_pp": -0.8,
         "gap_pp": 1.5,
-        "selection": "Texas A&M Aggies -14",
-        "team": "Texas A&M Aggies"
+        "strong": false,
+        "_edge": -0.7553938391789083,
+        "_gap": 1.5475419745779317,
+        "market": "spread",
+        "team": "Texas A&M Aggies",
+        "selection": "Texas A&M Aggies -14"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.8pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Texas A&M Aggies -14",
+            "line": -14.0,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 50.5,
+            "implied_pct": 51.2,
+            "edge_pp": -0.8,
+            "gap_pp": 1.5,
+            "strong": false,
+            "_edge": -0.7553938391789083,
+            "_gap": 1.5475419745779317,
+            "market": "spread",
+            "team": "Texas A&M Aggies",
+            "selection": "Texas A&M Aggies -14"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.8pp < 3pp",
       "fpi_home_margin": 15.98,
       "mkt_home_margin": 13.5,
       "blend_home_margin": 14.18,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1295,24 +3475,80 @@
       "espn_event_id": "401869842",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Louisiana Tech Bulldogs ML",
         "line": null,
         "price_american": 102,
         "book": "DraftKings",
-        "model_pct": 48.6,
         "novig_pct": 47.4,
+        "model_pct": 48.2,
         "implied_pct": 49.5,
-        "edge_pp": -0.9,
-        "gap_pp": 1.2,
-        "selection": "Louisiana Tech Bulldogs ML",
-        "team": "Louisiana Tech Bulldogs"
+        "edge_pp": -1.3,
+        "gap_pp": 0.8,
+        "strong": false,
+        "_edge": -1.2893557811275103,
+        "_gap": 0.824253240093975,
+        "market": "ml",
+        "team": "Louisiana Tech Bulldogs",
+        "selection": "Louisiana Tech Bulldogs ML"
       },
-      "note": "edge -0.9pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.3pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Louisiana Tech Bulldogs ML",
+            "line": null,
+            "price_american": 102,
+            "book": "DraftKings",
+            "novig_pct": 47.4,
+            "model_pct": 48.2,
+            "implied_pct": 49.5,
+            "edge_pp": -1.3,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.2893557811275103,
+            "_gap": 0.824253240093975,
+            "market": "ml",
+            "team": "Louisiana Tech Bulldogs",
+            "selection": "Louisiana Tech Bulldogs ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.6pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Louisiana Tech Bulldogs +1.5",
+            "line": 1.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 50.8,
+            "implied_pct": 52.4,
+            "edge_pp": -1.6,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.555491665107911,
+            "_gap": 0.8254607158444727,
+            "market": "spread",
+            "team": "Louisiana Tech Bulldogs",
+            "selection": "Louisiana Tech Bulldogs +1.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -1.3pp < 3pp",
       "fpi_home_margin": -0.34,
       "mkt_home_margin": -1.5,
       "blend_home_margin": -1.18,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1323,24 +3559,80 @@
       "espn_event_id": "401862792",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "South Florida Bulls -6",
         "line": -6.0,
         "price_american": -108,
         "book": "DraftKings",
-        "model_pct": 50.5,
         "novig_pct": 49.6,
+        "model_pct": 50.5,
         "implied_pct": 51.9,
         "edge_pp": -1.4,
         "gap_pp": 0.9,
-        "selection": "South Florida Bulls -6",
-        "team": "South Florida Bulls"
+        "strong": false,
+        "_edge": -1.4277778729705815,
+        "_gap": 0.9282744571032286,
+        "market": "spread",
+        "team": "South Florida Bulls",
+        "selection": "South Florida Bulls -6"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Temple Owls ML",
+            "line": null,
+            "price_american": 190,
+            "book": "DraftKings",
+            "novig_pct": 33.1,
+            "model_pct": 32.7,
+            "implied_pct": 34.5,
+            "edge_pp": -1.8,
+            "gap_pp": -0.4,
+            "strong": false,
+            "_edge": -1.8324006253981229,
+            "_gap": -0.448939898389511,
+            "market": "ml",
+            "team": "Temple Owls",
+            "selection": "Temple Owls ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "South Florida Bulls -6",
+            "line": -6.0,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 50.5,
+            "implied_pct": 51.9,
+            "edge_pp": -1.4,
+            "gap_pp": 0.9,
+            "strong": false,
+            "_edge": -1.4277778729705815,
+            "_gap": 0.9282744571032286,
+            "market": "spread",
+            "team": "South Florida Bulls",
+            "selection": "South Florida Bulls -6"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.4pp < 3pp",
       "fpi_home_margin": 6.7,
       "mkt_home_margin": 6.0,
       "blend_home_margin": 6.19,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1351,24 +3643,62 @@
       "espn_event_id": "401858249",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Miami Hurricanes -15",
         "line": -15.0,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 51.1,
         "novig_pct": 50.0,
+        "model_pct": 51.1,
         "implied_pct": 52.4,
         "edge_pp": -1.3,
         "gap_pp": 1.1,
-        "selection": "Miami Hurricanes -15",
-        "team": "Miami Hurricanes"
+        "strong": false,
+        "_edge": -1.3000809353912235,
+        "_gap": 1.08087144556116,
+        "market": "spread",
+        "team": "Miami Hurricanes",
+        "selection": "Miami Hurricanes -15"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.3pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Miami Hurricanes -15",
+            "line": -15.0,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 51.1,
+            "implied_pct": 52.4,
+            "edge_pp": -1.3,
+            "gap_pp": 1.1,
+            "strong": false,
+            "_edge": -1.3000809353912235,
+            "_gap": 1.08087144556116,
+            "market": "spread",
+            "team": "Miami Hurricanes",
+            "selection": "Miami Hurricanes -15"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.3pp < 3pp",
       "fpi_home_margin": -16.52,
       "mkt_home_margin": -15.0,
       "blend_home_margin": -15.42,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1379,24 +3709,62 @@
       "espn_event_id": "401860898",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Boise State Broncos -18.5",
         "line": -18.5,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 52.9,
         "novig_pct": 50.0,
+        "model_pct": 52.9,
         "implied_pct": 52.4,
         "edge_pp": 0.5,
         "gap_pp": 2.9,
-        "selection": "Boise State Broncos -18.5",
-        "team": "Boise State Broncos"
+        "strong": false,
+        "_edge": 0.49151687192555693,
+        "_gap": 2.8724692528779405,
+        "market": "spread",
+        "team": "Boise State Broncos",
+        "selection": "Boise State Broncos -18.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Boise State Broncos -18.5",
+            "line": -18.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 52.9,
+            "implied_pct": 52.4,
+            "edge_pp": 0.5,
+            "gap_pp": 2.9,
+            "strong": false,
+            "_edge": 0.49151687192555693,
+            "_gap": 2.8724692528779405,
+            "market": "spread",
+            "team": "Boise State Broncos",
+            "selection": "Boise State Broncos -18.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.5pp < 3pp",
       "fpi_home_margin": 21.21,
       "mkt_home_margin": 19.0,
       "blend_home_margin": 19.61,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1407,24 +3775,80 @@
       "espn_event_id": "401858478",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "USC Trojans -8.5",
         "line": -8.5,
         "price_american": -112,
         "book": "DraftKings",
-        "model_pct": 54.9,
         "novig_pct": 50.4,
+        "model_pct": 54.9,
         "implied_pct": 52.8,
         "edge_pp": 2.0,
         "gap_pp": 4.4,
-        "selection": "USC Trojans -8.5",
-        "team": "USC Trojans"
+        "strong": false,
+        "_edge": 2.0267629827913525,
+        "_gap": 4.423976255039753,
+        "market": "spread",
+        "team": "USC Trojans",
+        "selection": "USC Trojans -8.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "USC Trojans ML",
+            "line": null,
+            "price_american": -360,
+            "book": "DraftKings",
+            "novig_pct": 75.1,
+            "model_pct": 77.8,
+            "implied_pct": 78.3,
+            "edge_pp": -0.4,
+            "gap_pp": 2.8,
+            "strong": false,
+            "_edge": -0.4284749496177631,
+            "_gap": 2.751137844202012,
+            "market": "ml",
+            "team": "USC Trojans",
+            "selection": "USC Trojans ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +2.0pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "USC Trojans -8.5",
+            "line": -8.5,
+            "price_american": -112,
+            "book": "DraftKings",
+            "novig_pct": 50.4,
+            "model_pct": 54.9,
+            "implied_pct": 52.8,
+            "edge_pp": 2.0,
+            "gap_pp": 4.4,
+            "strong": false,
+            "_edge": 2.0267629827913525,
+            "_gap": 4.423976255039753,
+            "market": "spread",
+            "team": "USC Trojans",
+            "selection": "USC Trojans -8.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +2.0pp < 3pp",
       "fpi_home_margin": 14.02,
       "mkt_home_margin": 9.0,
       "blend_home_margin": 10.37,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1435,24 +3859,62 @@
       "espn_event_id": "401856821",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Texas Tech Red Raiders -13.5",
         "line": -13.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 51.9,
         "novig_pct": 48.9,
+        "model_pct": 51.9,
         "implied_pct": 51.2,
         "edge_pp": 0.7,
         "gap_pp": 3.0,
-        "selection": "Texas Tech Red Raiders -13.5",
-        "team": "Texas Tech Red Raiders"
+        "strong": false,
+        "_edge": 0.688418223110765,
+        "_gap": 2.9913540368675995,
+        "market": "spread",
+        "team": "Texas Tech Red Raiders",
+        "selection": "Texas Tech Red Raiders -13.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.7pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Texas Tech Red Raiders -13.5",
+            "line": -13.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 51.9,
+            "implied_pct": 51.2,
+            "edge_pp": 0.7,
+            "gap_pp": 3.0,
+            "strong": false,
+            "_edge": 0.688418223110765,
+            "_gap": 2.9913540368675995,
+            "market": "spread",
+            "team": "Texas Tech Red Raiders",
+            "selection": "Texas Tech Red Raiders -13.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.7pp < 3pp",
       "fpi_home_margin": -16.18,
       "mkt_home_margin": -13.5,
       "blend_home_margin": -14.23,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1463,24 +3925,62 @@
       "espn_event_id": "401856706",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "LSU Tigers -52.5",
         "line": -52.5,
         "price_american": -115,
         "book": "DraftKings",
-        "model_pct": 51.9,
         "novig_pct": 51.1,
+        "model_pct": 51.9,
         "implied_pct": 53.5,
         "edge_pp": -1.6,
         "gap_pp": 0.8,
-        "selection": "LSU Tigers -52.5",
-        "team": "LSU Tigers"
+        "strong": false,
+        "_edge": -1.5869689834161815,
+        "_gap": 0.8179794909721871,
+        "market": "spread",
+        "team": "LSU Tigers",
+        "selection": "LSU Tigers -52.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.6pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "LSU Tigers -52.5",
+            "line": -52.5,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 51.9,
+            "implied_pct": 53.5,
+            "edge_pp": -1.6,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.5869689834161815,
+            "_gap": 0.8179794909721871,
+            "market": "spread",
+            "team": "LSU Tigers",
+            "selection": "LSU Tigers -52.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.6pp < 3pp",
       "fpi_home_margin": 53.85,
       "mkt_home_margin": 53.0,
       "blend_home_margin": 53.23,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1491,24 +3991,80 @@
       "espn_event_id": "401869932",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Louisiana Ragin Cajuns -6.5",
         "line": -6.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 51.2,
         "novig_pct": 48.9,
+        "model_pct": 51.2,
         "implied_pct": 51.2,
         "edge_pp": 0.0,
         "gap_pp": 2.3,
-        "selection": "Louisiana Ragin Cajuns -6.5",
-        "team": "Louisiana Ragin Cajuns"
+        "strong": false,
+        "_edge": 0.025100033826053192,
+        "_gap": 2.3280358475828935,
+        "market": "spread",
+        "team": "Louisiana Ragin Cajuns",
+        "selection": "Louisiana Ragin Cajuns -6.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Louisiana Ragin Cajuns ML",
+            "line": null,
+            "price_american": -230,
+            "book": "DraftKings",
+            "novig_pct": 66.9,
+            "model_pct": 69.2,
+            "implied_pct": 69.7,
+            "edge_pp": -0.5,
+            "gap_pp": 2.3,
+            "strong": false,
+            "_edge": -0.5180646572149228,
+            "_gap": 2.2782029334358245,
+            "market": "ml",
+            "team": "Louisiana Ragin Cajuns",
+            "selection": "Louisiana Ragin Cajuns ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.0pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Louisiana Ragin Cajuns -6.5",
+            "line": -6.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 51.2,
+            "implied_pct": 51.2,
+            "edge_pp": 0.0,
+            "gap_pp": 2.3,
+            "strong": false,
+            "_edge": 0.025100033826053192,
+            "_gap": 2.3280358475828935,
+            "market": "spread",
+            "team": "Louisiana Ragin Cajuns",
+            "selection": "Louisiana Ragin Cajuns -6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.0pp < 3pp",
       "fpi_home_margin": 9.57,
       "mkt_home_margin": 6.0,
       "blend_home_margin": 6.98,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1519,24 +4075,62 @@
       "espn_event_id": "401858477",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Indiana Hoosiers -24.5",
         "line": -24.5,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 51.4,
         "novig_pct": 48.9,
+        "model_pct": 51.4,
         "implied_pct": 51.2,
         "edge_pp": 0.1,
         "gap_pp": 2.5,
-        "selection": "Indiana Hoosiers -24.5",
-        "team": "Indiana Hoosiers"
+        "strong": false,
+        "_edge": 0.14873173198980405,
+        "_gap": 2.4516675457466386,
+        "market": "spread",
+        "team": "Indiana Hoosiers",
+        "selection": "Indiana Hoosiers -24.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Indiana Hoosiers -24.5",
+            "line": -24.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 51.4,
+            "implied_pct": 51.2,
+            "edge_pp": 0.1,
+            "gap_pp": 2.5,
+            "strong": false,
+            "_edge": 0.14873173198980405,
+            "_gap": 2.4516675457466386,
+            "market": "spread",
+            "team": "Indiana Hoosiers",
+            "selection": "Indiana Hoosiers -24.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +0.1pp < 3pp",
       "fpi_home_margin": -26.42,
       "mkt_home_margin": -24.5,
       "blend_home_margin": -25.03,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1547,24 +4141,80 @@
       "espn_event_id": "401860921",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Fresno State Bulldogs +1.5",
         "line": 1.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 54.0,
         "novig_pct": 48.9,
+        "model_pct": 54.0,
         "implied_pct": 51.2,
         "edge_pp": 2.7,
         "gap_pp": 5.0,
-        "selection": "Fresno State Bulldogs +1.5",
-        "team": "Fresno State Bulldogs"
+        "strong": false,
+        "_edge": 2.7400170831105464,
+        "_gap": 5.042952896867381,
+        "market": "spread",
+        "team": "Fresno State Bulldogs",
+        "selection": "Fresno State Bulldogs +1.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +2.6pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Fresno State Bulldogs ML",
+            "line": null,
+            "price_american": 105,
+            "book": "Bovada",
+            "novig_pct": 46.8,
+            "model_pct": 51.4,
+            "implied_pct": 48.8,
+            "edge_pp": 2.6,
+            "gap_pp": 4.6,
+            "strong": false,
+            "_edge": 2.574783566954564,
+            "_gap": 4.602024618585865,
+            "market": "ml",
+            "team": "Fresno State Bulldogs",
+            "selection": "Fresno State Bulldogs ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +2.7pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Fresno State Bulldogs +1.5",
+            "line": 1.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 54.0,
+            "implied_pct": 51.2,
+            "edge_pp": 2.7,
+            "gap_pp": 5.0,
+            "strong": false,
+            "_edge": 2.7400170831105464,
+            "_gap": 5.042952896867381,
+            "market": "spread",
+            "team": "Fresno State Bulldogs",
+            "selection": "Fresno State Bulldogs +1.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +2.7pp < 3pp",
       "fpi_home_margin": -4.07,
       "mkt_home_margin": 1.5,
       "blend_home_margin": -0.03,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1575,24 +4225,80 @@
       "espn_event_id": "401856817",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Baylor Bears +3.5",
         "line": 3.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 53.1,
         "novig_pct": 48.9,
+        "model_pct": 53.1,
         "implied_pct": 51.2,
         "edge_pp": 1.8,
         "gap_pp": 4.1,
-        "selection": "Baylor Bears +3.5",
-        "team": "Baylor Bears"
+        "strong": false,
+        "_edge": 1.8418628355104327,
+        "_gap": 4.144798649267267,
+        "market": "spread",
+        "team": "Baylor Bears",
+        "selection": "Baylor Bears +3.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Baylor Bears ML",
+            "line": null,
+            "price_american": 155,
+            "book": "Bovada",
+            "novig_pct": 37.9,
+            "model_pct": 40.7,
+            "implied_pct": 39.2,
+            "edge_pp": 1.5,
+            "gap_pp": 2.8,
+            "strong": false,
+            "_edge": 1.4888308560722374,
+            "_gap": 2.8154778883628273,
+            "market": "ml",
+            "team": "Baylor Bears",
+            "selection": "Baylor Bears ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Baylor Bears +3.5",
+            "line": 3.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 53.1,
+            "implied_pct": 51.2,
+            "edge_pp": 1.8,
+            "gap_pp": 4.1,
+            "strong": false,
+            "_edge": 1.8418628355104327,
+            "_gap": 4.144798649267267,
+            "market": "spread",
+            "team": "Baylor Bears",
+            "selection": "Baylor Bears +3.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.8pp < 3pp",
       "fpi_home_margin": -0.81,
       "mkt_home_margin": 3.5,
       "blend_home_margin": 2.32,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1603,24 +4309,117 @@
       "espn_event_id": "401860900",
       "status": "PAPER",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "San Diego State Aztecs ML",
         "line": null,
         "price_american": 270,
         "book": "Bovada",
-        "model_pct": 31.9,
         "novig_pct": 25.9,
+        "model_pct": 31.4,
         "implied_pct": 27.0,
-        "edge_pp": 4.9,
-        "gap_pp": 6.0,
-        "selection": "San Diego State Aztecs ML",
-        "team": "San Diego State Aztecs"
+        "edge_pp": 4.4,
+        "gap_pp": 5.5,
+        "strong": false,
+        "_edge": 4.404538641924615,
+        "_gap": 5.518727035264953,
+        "market": "ml",
+        "team": "San Diego State Aztecs",
+        "selection": "San Diego State Aztecs ML"
+      },
+      "picks": [
+        {
+          "side": "home",
+          "label": "San Diego State Aztecs ML",
+          "line": null,
+          "price_american": 270,
+          "book": "Bovada",
+          "novig_pct": 25.9,
+          "model_pct": 31.4,
+          "implied_pct": 27.0,
+          "edge_pp": 4.4,
+          "gap_pp": 5.5,
+          "strong": false,
+          "_edge": 4.404538641924615,
+          "_gap": 5.518727035264953,
+          "market": "ml",
+          "team": "San Diego State Aztecs",
+          "selection": "San Diego State Aztecs ML"
+        },
+        {
+          "side": "home",
+          "label": "San Diego State Aztecs +8.5",
+          "line": 8.5,
+          "price_american": -110,
+          "book": "Bovada",
+          "novig_pct": 50.0,
+          "model_pct": 55.6,
+          "implied_pct": 52.4,
+          "edge_pp": 3.2,
+          "gap_pp": 5.6,
+          "strong": false,
+          "_edge": 3.1824010489366783,
+          "_gap": 5.563353429889062,
+          "market": "spread",
+          "team": "San Diego State Aztecs",
+          "selection": "San Diego State Aztecs +8.5"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "home",
+            "label": "San Diego State Aztecs ML",
+            "line": null,
+            "price_american": 270,
+            "book": "Bovada",
+            "novig_pct": 25.9,
+            "model_pct": 31.4,
+            "implied_pct": 27.0,
+            "edge_pp": 4.4,
+            "gap_pp": 5.5,
+            "strong": false,
+            "_edge": 4.404538641924615,
+            "_gap": 5.518727035264953,
+            "market": "ml",
+            "team": "San Diego State Aztecs",
+            "selection": "San Diego State Aztecs ML"
+          }
+        },
+        "spread": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "home",
+            "label": "San Diego State Aztecs +8.5",
+            "line": 8.5,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 55.6,
+            "implied_pct": 52.4,
+            "edge_pp": 3.2,
+            "gap_pp": 5.6,
+            "strong": false,
+            "_edge": 3.1824010489366783,
+            "_gap": 5.563353429889062,
+            "market": "spread",
+            "team": "San Diego State Aztecs",
+            "selection": "San Diego State Aztecs +8.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": -0.66,
       "mkt_home_margin": -8.5,
       "blend_home_margin": -6.35,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1631,24 +4430,80 @@
       "espn_event_id": "401856820",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Cincinnati Bearcats ML",
         "line": null,
         "price_american": 210,
         "book": "Bovada",
-        "model_pct": 34.6,
         "novig_pct": 31.1,
+        "model_pct": 34.3,
         "implied_pct": 32.3,
-        "edge_pp": 2.4,
-        "gap_pp": 3.5,
-        "selection": "Cincinnati Bearcats ML",
-        "team": "Cincinnati Bearcats"
+        "edge_pp": 2.0,
+        "gap_pp": 3.2,
+        "strong": false,
+        "_edge": 2.0254761255897593,
+        "_gap": 3.172429530607679,
+        "market": "ml",
+        "team": "Cincinnati Bearcats",
+        "selection": "Cincinnati Bearcats ML"
       },
-      "note": "edge +2.4pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +2.0pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Cincinnati Bearcats ML",
+            "line": null,
+            "price_american": 210,
+            "book": "Bovada",
+            "novig_pct": 31.1,
+            "model_pct": 34.3,
+            "implied_pct": 32.3,
+            "edge_pp": 2.0,
+            "gap_pp": 3.2,
+            "strong": false,
+            "_edge": 2.0254761255897593,
+            "_gap": 3.172429530607679,
+            "market": "ml",
+            "team": "Cincinnati Bearcats",
+            "selection": "Cincinnati Bearcats ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.9pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Cincinnati Bearcats +6.5",
+            "line": 6.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 53.1,
+            "implied_pct": 51.2,
+            "edge_pp": 1.9,
+            "gap_pp": 4.2,
+            "strong": false,
+            "_edge": 1.8929485127304968,
+            "_gap": 4.195884326487331,
+            "market": "spread",
+            "team": "Cincinnati Bearcats",
+            "selection": "Cincinnati Bearcats +6.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +2.0pp < 3pp",
       "fpi_home_margin": 2.12,
       "mkt_home_margin": 6.5,
       "blend_home_margin": 5.3,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -1659,24 +4514,80 @@
       "espn_event_id": "401864513",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Hawaii Rainbow Warriors ML",
         "line": null,
         "price_american": -155,
         "book": "DraftKings",
-        "model_pct": 60.4,
         "novig_pct": 58.3,
+        "model_pct": 60.5,
         "implied_pct": 60.8,
-        "edge_pp": -0.4,
-        "gap_pp": 2.1,
-        "selection": "Hawaii Rainbow Warriors ML",
-        "team": "Hawaii Rainbow Warriors"
+        "edge_pp": -0.3,
+        "gap_pp": 2.2,
+        "strong": false,
+        "_edge": -0.32526190943423794,
+        "_gap": 2.159787711395289,
+        "market": "ml",
+        "team": "Hawaii Rainbow Warriors",
+        "selection": "Hawaii Rainbow Warriors ML"
       },
-      "note": "edge -0.4pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.3pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Hawaii Rainbow Warriors ML",
+            "line": null,
+            "price_american": -155,
+            "book": "DraftKings",
+            "novig_pct": 58.3,
+            "model_pct": 60.5,
+            "implied_pct": 60.8,
+            "edge_pp": -0.3,
+            "gap_pp": 2.2,
+            "strong": false,
+            "_edge": -0.32526190943423794,
+            "_gap": 2.159787711395289,
+            "market": "ml",
+            "team": "Hawaii Rainbow Warriors",
+            "selection": "Hawaii Rainbow Warriors ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.3pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Hawaii Rainbow Warriors -3",
+            "line": -3.0,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 52.2,
+            "implied_pct": 53.5,
+            "edge_pp": -1.3,
+            "gap_pp": 1.1,
+            "strong": false,
+            "_edge": -1.2677336318725807,
+            "_gap": 1.137214842515788,
+            "market": "spread",
+            "team": "Hawaii Rainbow Warriors",
+            "selection": "Hawaii Rainbow Warriors -3"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.3pp < 3pp",
       "fpi_home_margin": 6.12,
       "mkt_home_margin": 3.0,
       "blend_home_margin": 3.86,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1687,24 +4598,80 @@
       "espn_event_id": "401872965",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Washington Commanders ML",
         "line": null,
         "price_american": 175,
         "book": "Bovada",
-        "model_pct": 37.6,
         "novig_pct": 34.9,
+        "model_pct": 37.6,
         "implied_pct": 36.4,
         "edge_pp": 1.2,
-        "gap_pp": 2.6,
-        "selection": "Washington Commanders ML",
-        "team": "Washington Commanders"
+        "gap_pp": 2.7,
+        "strong": false,
+        "_edge": 1.2261718484641304,
+        "_gap": 2.6602307473117595,
+        "market": "ml",
+        "team": "Washington Commanders",
+        "selection": "Washington Commanders ML"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Washington Commanders ML",
+            "line": null,
+            "price_american": 175,
+            "book": "Bovada",
+            "novig_pct": 34.9,
+            "model_pct": 37.6,
+            "implied_pct": 36.4,
+            "edge_pp": 1.2,
+            "gap_pp": 2.7,
+            "strong": false,
+            "_edge": 1.2261718484641304,
+            "_gap": 2.6602307473117595,
+            "market": "ml",
+            "team": "Washington Commanders",
+            "selection": "Washington Commanders ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Washington Commanders +4.5",
+            "line": 4.5,
+            "price_american": -115,
+            "book": "DraftKings",
+            "novig_pct": 51.1,
+            "model_pct": 53.7,
+            "implied_pct": 53.5,
+            "edge_pp": 0.2,
+            "gap_pp": 2.6,
+            "strong": false,
+            "_edge": 0.2279236015104047,
+            "_gap": 2.6328720758987734,
+            "market": "spread",
+            "team": "Washington Commanders",
+            "selection": "Washington Commanders +4.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.2pp < 3pp",
       "fpi_home_margin": -1.28,
       "mkt_home_margin": -4.0,
       "blend_home_margin": -3.29,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1715,24 +4682,80 @@
       "espn_event_id": "401872966",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "New York Giants +2.5",
         "line": 2.5,
         "price_american": 100,
         "book": "Bovada",
-        "model_pct": 51.4,
         "novig_pct": 47.8,
+        "model_pct": 51.4,
         "implied_pct": 50.0,
         "edge_pp": 1.4,
         "gap_pp": 3.6,
-        "selection": "New York Giants +2.5",
-        "team": "New York Giants"
+        "strong": false,
+        "_edge": 1.40727205854152,
+        "_gap": 3.5811851020197794,
+        "market": "spread",
+        "team": "New York Giants",
+        "selection": "New York Giants +2.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.6pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "New York Giants ML",
+            "line": null,
+            "price_american": 125,
+            "book": "Bovada",
+            "novig_pct": 42.9,
+            "model_pct": 45.0,
+            "implied_pct": 44.4,
+            "edge_pp": 0.6,
+            "gap_pp": 2.2,
+            "strong": false,
+            "_edge": 0.599685510701714,
+            "_gap": 2.1557273293255905,
+            "market": "ml",
+            "team": "New York Giants",
+            "selection": "New York Giants ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "New York Giants +2.5",
+            "line": 2.5,
+            "price_american": 100,
+            "book": "Bovada",
+            "novig_pct": 47.8,
+            "model_pct": 51.4,
+            "implied_pct": 50.0,
+            "edge_pp": 1.4,
+            "gap_pp": 3.6,
+            "strong": false,
+            "_edge": 1.40727205854152,
+            "_gap": 3.5811851020197794,
+            "market": "spread",
+            "team": "New York Giants",
+            "selection": "New York Giants +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +1.4pp < 3pp",
       "fpi_home_margin": -0.75,
       "mkt_home_margin": -2.5,
       "blend_home_margin": -2.04,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1743,24 +4766,80 @@
       "espn_event_id": "401872967",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Dallas Cowboys ML",
         "line": null,
         "price_american": 140,
         "book": "Bovada",
-        "model_pct": 44.1,
         "novig_pct": 40.1,
+        "model_pct": 44.0,
         "implied_pct": 41.7,
         "edge_pp": 2.4,
         "gap_pp": 4.0,
-        "selection": "Dallas Cowboys ML",
-        "team": "Dallas Cowboys"
+        "strong": false,
+        "_edge": 2.375157692439106,
+        "_gap": 3.951052800860688,
+        "market": "ml",
+        "team": "Dallas Cowboys",
+        "selection": "Dallas Cowboys ML"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +2.4pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Dallas Cowboys ML",
+            "line": null,
+            "price_american": 140,
+            "book": "Bovada",
+            "novig_pct": 40.1,
+            "model_pct": 44.0,
+            "implied_pct": 41.7,
+            "edge_pp": 2.4,
+            "gap_pp": 4.0,
+            "strong": false,
+            "_edge": 2.375157692439106,
+            "_gap": 3.951052800860688,
+            "market": "ml",
+            "team": "Dallas Cowboys",
+            "selection": "Dallas Cowboys ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Dallas Cowboys +3",
+            "line": 3.0,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 53.4,
+            "implied_pct": 52.4,
+            "edge_pp": 1.1,
+            "gap_pp": 3.4,
+            "strong": false,
+            "_edge": 1.0581669950083916,
+            "_gap": 3.439119375960775,
+            "market": "spread",
+            "team": "Dallas Cowboys",
+            "selection": "Dallas Cowboys +3"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge +2.4pp < 3pp",
       "fpi_home_margin": -1.29,
       "mkt_home_margin": 3.0,
       "blend_home_margin": 1.88,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1771,24 +4850,80 @@
       "espn_event_id": "401872968",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Green Bay Packers -3.5",
         "line": -3.5,
         "price_american": -105,
         "book": "Bovada",
-        "model_pct": 51.0,
         "novig_pct": 48.9,
+        "model_pct": 51.0,
         "implied_pct": 51.2,
         "edge_pp": -0.2,
         "gap_pp": 2.1,
-        "selection": "Green Bay Packers -3.5",
-        "team": "Green Bay Packers"
+        "strong": false,
+        "_edge": -0.19287505470514388,
+        "_gap": 2.1100607590516907,
+        "market": "spread",
+        "team": "Green Bay Packers",
+        "selection": "Green Bay Packers -3.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.7pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Tampa Bay Buccaneers ML",
+            "line": null,
+            "price_american": 160,
+            "book": "Bovada",
+            "novig_pct": 37.2,
+            "model_pct": 36.8,
+            "implied_pct": 38.5,
+            "edge_pp": -1.7,
+            "gap_pp": -0.4,
+            "strong": false,
+            "_edge": -1.682154455522239,
+            "_gap": -0.426882312521637,
+            "market": "ml",
+            "team": "Tampa Bay Buccaneers",
+            "selection": "Tampa Bay Buccaneers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Green Bay Packers -3.5",
+            "line": -3.5,
+            "price_american": -105,
+            "book": "Bovada",
+            "novig_pct": 48.9,
+            "model_pct": 51.0,
+            "implied_pct": 51.2,
+            "edge_pp": -0.2,
+            "gap_pp": 2.1,
+            "strong": false,
+            "_edge": -0.19287505470514388,
+            "_gap": 2.1100607590516907,
+            "market": "spread",
+            "team": "Green Bay Packers",
+            "selection": "Green Bay Packers -3.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.2pp < 3pp",
       "fpi_home_margin": -4.78,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -3.83,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1797,26 +4932,101 @@
       "kick_ct": "Sun 10/4 12:00 PM CT",
       "event_id": "jax-cin",
       "espn_event_id": "401872969",
-      "status": "PASS",
+      "status": "PAPER",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Jacksonville Jaguars ML",
         "line": null,
         "price_american": 130,
         "book": "Bovada",
-        "model_pct": 46.4,
         "novig_pct": 42.0,
+        "model_pct": 46.6,
         "implied_pct": 43.5,
-        "edge_pp": 3.0,
-        "gap_pp": 4.4,
-        "selection": "Jacksonville Jaguars ML",
-        "team": "Jacksonville Jaguars"
+        "edge_pp": 3.1,
+        "gap_pp": 4.6,
+        "strong": false,
+        "_edge": 3.107800773447128,
+        "_gap": 4.569254920323262,
+        "market": "ml",
+        "team": "Jacksonville Jaguars",
+        "selection": "Jacksonville Jaguars ML"
       },
-      "note": "edge +3.0pp < 3pp",
+      "picks": [
+        {
+          "side": "away",
+          "label": "Jacksonville Jaguars ML",
+          "line": null,
+          "price_american": 130,
+          "book": "Bovada",
+          "novig_pct": 42.0,
+          "model_pct": 46.6,
+          "implied_pct": 43.5,
+          "edge_pp": 3.1,
+          "gap_pp": 4.6,
+          "strong": false,
+          "_edge": 3.107800773447128,
+          "_gap": 4.569254920323262,
+          "market": "ml",
+          "team": "Jacksonville Jaguars",
+          "selection": "Jacksonville Jaguars ML"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "away",
+            "label": "Jacksonville Jaguars ML",
+            "line": null,
+            "price_american": 130,
+            "book": "Bovada",
+            "novig_pct": 42.0,
+            "model_pct": 46.6,
+            "implied_pct": 43.5,
+            "edge_pp": 3.1,
+            "gap_pp": 4.6,
+            "strong": false,
+            "_edge": 3.107800773447128,
+            "_gap": 4.569254920323262,
+            "market": "ml",
+            "team": "Jacksonville Jaguars",
+            "selection": "Jacksonville Jaguars ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +1.7pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Jacksonville Jaguars +2.5",
+            "line": 2.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 53.0,
+            "implied_pct": 51.2,
+            "edge_pp": 1.7,
+            "gap_pp": 4.0,
+            "strong": false,
+            "_edge": 1.735913345608986,
+            "_gap": 4.038849159365821,
+            "market": "spread",
+            "team": "Jacksonville Jaguars",
+            "selection": "Jacksonville Jaguars +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": -1.18,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 1.54,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1827,24 +5037,80 @@
       "espn_event_id": "401872970",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Philadelphia Eagles ML",
         "line": null,
         "price_american": 165,
         "book": "Bovada",
-        "model_pct": 36.7,
         "novig_pct": 36.3,
+        "model_pct": 37.5,
         "implied_pct": 37.7,
-        "edge_pp": -1.0,
-        "gap_pp": 0.4,
-        "selection": "Philadelphia Eagles ML",
-        "team": "Philadelphia Eagles"
+        "edge_pp": -0.2,
+        "gap_pp": 1.2,
+        "strong": false,
+        "_edge": -0.23858996291312717,
+        "_gap": 1.1560210277836547,
+        "market": "ml",
+        "team": "Philadelphia Eagles",
+        "selection": "Philadelphia Eagles ML"
       },
-      "note": "edge -1.0pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Philadelphia Eagles ML",
+            "line": null,
+            "price_american": 165,
+            "book": "Bovada",
+            "novig_pct": 36.3,
+            "model_pct": 37.5,
+            "implied_pct": 37.7,
+            "edge_pp": -0.2,
+            "gap_pp": 1.2,
+            "strong": false,
+            "_edge": -0.23858996291312717,
+            "_gap": 1.1560210277836547,
+            "market": "ml",
+            "team": "Philadelphia Eagles",
+            "selection": "Philadelphia Eagles ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Los Angeles Rams -3.5",
+            "line": -3.5,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 50.3,
+            "implied_pct": 52.4,
+            "edge_pp": -2.1,
+            "gap_pp": 0.3,
+            "strong": false,
+            "_edge": -2.111814038571047,
+            "_gap": 0.2691383423813365,
+            "market": "spread",
+            "team": "Los Angeles Rams",
+            "selection": "Los Angeles Rams -3.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.2pp < 3pp",
       "fpi_home_margin": -3.83,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -3.59,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1855,24 +5121,80 @@
       "espn_event_id": "401872971",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "New England Patriots ML",
         "line": null,
         "price_american": 260,
         "book": "Bovada",
-        "model_pct": 27.5,
         "novig_pct": 26.7,
+        "model_pct": 28.7,
         "implied_pct": 27.8,
-        "edge_pp": -0.3,
-        "gap_pp": 0.8,
-        "selection": "New England Patriots ML",
-        "team": "New England Patriots"
+        "edge_pp": 0.9,
+        "gap_pp": 2.0,
+        "strong": false,
+        "_edge": 0.9265206129747905,
+        "_gap": 1.9867411388441836,
+        "market": "ml",
+        "team": "New England Patriots",
+        "selection": "New England Patriots ML"
       },
-      "note": "edge -0.3pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.9pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "New England Patriots ML",
+            "line": null,
+            "price_american": 260,
+            "book": "Bovada",
+            "novig_pct": 26.7,
+            "model_pct": 28.7,
+            "implied_pct": 27.8,
+            "edge_pp": 0.9,
+            "gap_pp": 2.0,
+            "strong": false,
+            "_edge": 0.9265206129747905,
+            "_gap": 1.9867411388441836,
+            "market": "ml",
+            "team": "New England Patriots",
+            "selection": "New England Patriots ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -2.3pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Buffalo Bills -7",
+            "line": -7.0,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 48.9,
+            "implied_pct": 51.2,
+            "edge_pp": -2.3,
+            "gap_pp": 0.0,
+            "strong": false,
+            "_edge": -2.295943084395924,
+            "_gap": 0.006992729360916217,
+            "market": "spread",
+            "team": "Buffalo Bills",
+            "selection": "Buffalo Bills -7"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +0.9pp < 3pp",
       "fpi_home_margin": 5.66,
       "mkt_home_margin": 7.0,
       "blend_home_margin": 6.65,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1883,24 +5205,80 @@
       "espn_event_id": "401872972",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "New York Jets ML",
         "line": null,
         "price_american": 165,
         "book": "Bovada",
-        "model_pct": 37.5,
         "novig_pct": 36.3,
+        "model_pct": 37.9,
         "implied_pct": 37.7,
-        "edge_pp": -0.2,
-        "gap_pp": 1.2,
-        "selection": "New York Jets ML",
-        "team": "New York Jets"
+        "edge_pp": 0.1,
+        "gap_pp": 1.5,
+        "strong": false,
+        "_edge": 0.11931581923846357,
+        "_gap": 1.513926809935251,
+        "market": "ml",
+        "team": "New York Jets",
+        "selection": "New York Jets ML"
       },
-      "note": "edge -0.2pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +0.1pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "New York Jets ML",
+            "line": null,
+            "price_american": 165,
+            "book": "Bovada",
+            "novig_pct": 36.3,
+            "model_pct": 37.9,
+            "implied_pct": 37.7,
+            "edge_pp": 0.1,
+            "gap_pp": 1.5,
+            "strong": false,
+            "_edge": 0.11931581923846357,
+            "_gap": 1.513926809935251,
+            "market": "ml",
+            "team": "New York Jets",
+            "selection": "New York Jets ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.8pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "New York Jets +3.5",
+            "line": 3.5,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 50.1,
+            "implied_pct": 51.9,
+            "edge_pp": -1.8,
+            "gap_pp": 0.5,
+            "strong": false,
+            "_edge": -1.8162243013885249,
+            "_gap": 0.5398280286852852,
+            "market": "spread",
+            "team": "New York Jets",
+            "selection": "New York Jets +3.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +0.1pp < 3pp",
       "fpi_home_margin": 3.37,
       "mkt_home_margin": 3.5,
       "blend_home_margin": 3.47,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1911,24 +5289,62 @@
       "espn_event_id": "401872973",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Tennessee Titans +11.5",
         "line": 11.5,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 50.8,
         "novig_pct": 50.0,
+        "model_pct": 50.8,
         "implied_pct": 52.4,
         "edge_pp": -1.5,
         "gap_pp": 0.8,
-        "selection": "Tennessee Titans +11.5",
-        "team": "Tennessee Titans"
+        "strong": false,
+        "_edge": -1.5462763931026302,
+        "_gap": 0.8346759878497534,
+        "market": "spread",
+        "team": "Tennessee Titans",
+        "selection": "Tennessee Titans +11.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Tennessee Titans +11.5",
+            "line": 11.5,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 50.8,
+            "implied_pct": 52.4,
+            "edge_pp": -1.5,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.5462763931026302,
+            "_gap": 0.8346759878497534,
+            "market": "spread",
+            "team": "Tennessee Titans",
+            "selection": "Tennessee Titans +11.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.5pp < 3pp",
       "fpi_home_margin": 10.46,
       "mkt_home_margin": 11.5,
       "blend_home_margin": 11.23,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1939,24 +5355,62 @@
       "espn_event_id": "401872974",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Minnesota Vikings -10",
         "line": -10.0,
         "price_american": -110,
         "book": "Bovada",
-        "model_pct": 51.2,
         "novig_pct": 50.0,
+        "model_pct": 51.2,
         "implied_pct": 52.4,
         "edge_pp": -1.2,
         "gap_pp": 1.2,
-        "selection": "Minnesota Vikings -10",
-        "team": "Minnesota Vikings"
+        "strong": false,
+        "_edge": -1.1652712259836995,
+        "_gap": 1.2156811549686841,
+        "market": "spread",
+        "team": "Minnesota Vikings",
+        "selection": "Minnesota Vikings -10"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.2pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Minnesota Vikings -10",
+            "line": -10.0,
+            "price_american": -110,
+            "book": "Bovada",
+            "novig_pct": 50.0,
+            "model_pct": 51.2,
+            "implied_pct": 52.4,
+            "edge_pp": -1.2,
+            "gap_pp": 1.2,
+            "strong": false,
+            "_edge": -1.1652712259836995,
+            "_gap": 1.2156811549686841,
+            "market": "spread",
+            "team": "Minnesota Vikings",
+            "selection": "Minnesota Vikings -10"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": 10.11,
       "mkt_home_margin": 10.5,
       "blend_home_margin": 10.4,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1967,24 +5421,99 @@
       "espn_event_id": "401872975",
       "status": "PAPER",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "San Francisco 49ers ML",
         "line": null,
         "price_american": -140,
         "book": "Bovada",
-        "model_pct": 61.3,
         "novig_pct": 56.2,
+        "model_pct": 61.4,
         "implied_pct": 58.3,
-        "edge_pp": 3.0,
-        "gap_pp": 5.1,
-        "selection": "San Francisco 49ers ML",
-        "team": "San Francisco 49ers"
+        "edge_pp": 3.1,
+        "gap_pp": 5.2,
+        "strong": false,
+        "_edge": 3.1060817348899428,
+        "_gap": 5.235035506179475,
+        "market": "ml",
+        "team": "San Francisco 49ers",
+        "selection": "San Francisco 49ers ML"
+      },
+      "picks": [
+        {
+          "side": "home",
+          "label": "San Francisco 49ers ML",
+          "line": null,
+          "price_american": -140,
+          "book": "Bovada",
+          "novig_pct": 56.2,
+          "model_pct": 61.4,
+          "implied_pct": 58.3,
+          "edge_pp": 3.1,
+          "gap_pp": 5.2,
+          "strong": false,
+          "_edge": 3.1060817348899428,
+          "_gap": 5.235035506179475,
+          "market": "ml",
+          "team": "San Francisco 49ers",
+          "selection": "San Francisco 49ers ML"
+        }
+      ],
+      "by_market": {
+        "ml": {
+          "status": "PAPER",
+          "note": "PAPER 1u ($20) — no real bet",
+          "best": {
+            "side": "home",
+            "label": "San Francisco 49ers ML",
+            "line": null,
+            "price_american": -140,
+            "book": "Bovada",
+            "novig_pct": 56.2,
+            "model_pct": 61.4,
+            "implied_pct": 58.3,
+            "edge_pp": 3.1,
+            "gap_pp": 5.2,
+            "strong": false,
+            "_edge": 3.1060817348899428,
+            "_gap": 5.235035506179475,
+            "market": "ml",
+            "team": "San Francisco 49ers",
+            "selection": "San Francisco 49ers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +2.8pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "San Francisco 49ers -3",
+            "line": -3.0,
+            "price_american": 100,
+            "book": "DraftKings",
+            "novig_pct": 47.8,
+            "model_pct": 52.8,
+            "implied_pct": 50.0,
+            "edge_pp": 2.8,
+            "gap_pp": 5.0,
+            "strong": false,
+            "_edge": 2.8196880490399145,
+            "_gap": 4.993601092518174,
+            "market": "spread",
+            "team": "San Francisco 49ers",
+            "selection": "San Francisco 49ers -3"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "PAPER 1u ($20) — no real bet",
       "fpi_home_margin": 7.92,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 3.92,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -1995,24 +5524,80 @@
       "espn_event_id": "401872976",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "away",
+        "label": "Kansas City Chiefs -4",
         "line": -4.0,
         "price_american": -115,
         "book": "Bovada",
-        "model_pct": 52.3,
         "novig_pct": 51.1,
+        "model_pct": 52.3,
         "implied_pct": 53.5,
         "edge_pp": -1.2,
         "gap_pp": 1.2,
-        "selection": "Kansas City Chiefs -4",
-        "team": "Kansas City Chiefs"
+        "strong": false,
+        "_edge": -1.205222995721611,
+        "_gap": 1.1997254786667466,
+        "market": "spread",
+        "team": "Kansas City Chiefs",
+        "selection": "Kansas City Chiefs -4"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Las Vegas Raiders ML",
+            "line": null,
+            "price_american": 185,
+            "book": "Bovada",
+            "novig_pct": 33.6,
+            "model_pct": 33.6,
+            "implied_pct": 35.1,
+            "edge_pp": -1.5,
+            "gap_pp": -0.1,
+            "strong": false,
+            "_edge": -1.5244378794356916,
+            "_gap": -0.07190616204389433,
+            "market": "ml",
+            "team": "Las Vegas Raiders",
+            "selection": "Las Vegas Raiders ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Kansas City Chiefs -4",
+            "line": -4.0,
+            "price_american": -115,
+            "book": "Bovada",
+            "novig_pct": 51.1,
+            "model_pct": 52.3,
+            "implied_pct": 53.5,
+            "edge_pp": -1.2,
+            "gap_pp": 1.2,
+            "strong": false,
+            "_edge": -1.205222995721611,
+            "_gap": 1.1997254786667466,
+            "market": "spread",
+            "team": "Kansas City Chiefs",
+            "selection": "Kansas City Chiefs -4"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -1.2pp < 3pp",
       "fpi_home_margin": -5.43,
       "mkt_home_margin": -4.5,
       "blend_home_margin": -4.74,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -2023,24 +5608,80 @@
       "espn_event_id": "401872977",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Los Angeles Chargers ML",
         "line": null,
         "price_american": 295,
         "book": "DraftKings",
-        "model_pct": 25.6,
         "novig_pct": 24.3,
+        "model_pct": 24.4,
         "implied_pct": 25.3,
-        "edge_pp": 0.2,
-        "gap_pp": 1.3,
-        "selection": "Los Angeles Chargers ML",
-        "team": "Los Angeles Chargers"
+        "edge_pp": -0.9,
+        "gap_pp": 0.2,
+        "strong": false,
+        "_edge": -0.8838460232615697,
+        "_gap": 0.15145951319655016,
+        "market": "ml",
+        "team": "Los Angeles Chargers",
+        "selection": "Los Angeles Chargers ML"
       },
-      "note": "edge +0.2pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.9pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Los Angeles Chargers ML",
+            "line": null,
+            "price_american": 295,
+            "book": "DraftKings",
+            "novig_pct": 24.3,
+            "model_pct": 24.4,
+            "implied_pct": 25.3,
+            "edge_pp": -0.9,
+            "gap_pp": 0.2,
+            "strong": false,
+            "_edge": -0.8838460232615697,
+            "_gap": 0.15145951319655016,
+            "market": "ml",
+            "team": "Los Angeles Chargers",
+            "selection": "Los Angeles Chargers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.0pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Los Angeles Chargers +7",
+            "line": 7.0,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 50.2,
+            "implied_pct": 51.2,
+            "edge_pp": -1.0,
+            "gap_pp": 1.3,
+            "strong": false,
+            "_edge": -1.0266959543353327,
+            "_gap": 1.2762398594215019,
+            "market": "spread",
+            "team": "Los Angeles Chargers",
+            "selection": "Los Angeles Chargers +7"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.9pp < 3pp",
       "fpi_home_margin": 6.76,
       "mkt_home_margin": 7.0,
       "blend_home_margin": 6.94,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -2051,24 +5692,80 @@
       "espn_event_id": "401872978",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "home",
+        "label": "Carolina Panthers ML",
         "line": null,
         "price_american": 170,
         "book": "Bovada",
-        "model_pct": 36.9,
         "novig_pct": 35.7,
+        "model_pct": 38.2,
         "implied_pct": 37.0,
-        "edge_pp": -0.1,
-        "gap_pp": 1.2,
-        "selection": "Carolina Panthers ML",
-        "team": "Carolina Panthers"
+        "edge_pp": 1.1,
+        "gap_pp": 2.4,
+        "strong": false,
+        "_edge": 1.1148788434709678,
+        "_gap": 2.437630166222288,
+        "market": "ml",
+        "team": "Carolina Panthers",
+        "selection": "Carolina Panthers ML"
       },
-      "note": "edge -0.1pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.1pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Carolina Panthers ML",
+            "line": null,
+            "price_american": 170,
+            "book": "Bovada",
+            "novig_pct": 35.7,
+            "model_pct": 38.2,
+            "implied_pct": 37.0,
+            "edge_pp": 1.1,
+            "gap_pp": 2.4,
+            "strong": false,
+            "_edge": 1.1148788434709678,
+            "_gap": 2.437630166222288,
+            "market": "ml",
+            "team": "Carolina Panthers",
+            "selection": "Carolina Panthers ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Carolina Panthers +3.5",
+            "line": 3.5,
+            "price_american": -108,
+            "book": "DraftKings",
+            "novig_pct": 49.6,
+            "model_pct": 50.4,
+            "implied_pct": 51.9,
+            "edge_pp": -1.5,
+            "gap_pp": 0.9,
+            "strong": false,
+            "_edge": -1.5053144103019833,
+            "_gap": 0.8507379197718268,
+            "market": "spread",
+            "team": "Carolina Panthers",
+            "selection": "Carolina Panthers +3.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +1.1pp < 3pp",
       "fpi_home_margin": -2.98,
       "mkt_home_margin": -3.5,
       "blend_home_margin": -3.36,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -2079,24 +5776,80 @@
       "espn_event_id": "401872979",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "New Orleans Saints -2.5",
         "line": -2.5,
         "price_american": -105,
         "book": "DraftKings",
-        "model_pct": 50.8,
         "novig_pct": 48.9,
+        "model_pct": 50.8,
         "implied_pct": 51.2,
         "edge_pp": -0.4,
         "gap_pp": 1.9,
-        "selection": "New Orleans Saints -2.5",
-        "team": "New Orleans Saints"
+        "strong": false,
+        "_edge": -0.4322272539599492,
+        "_gap": 1.8707085597968909,
+        "market": "spread",
+        "team": "New Orleans Saints",
+        "selection": "New Orleans Saints -2.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -1.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "New Orleans Saints ML",
+            "line": null,
+            "price_american": -135,
+            "book": "DraftKings",
+            "novig_pct": 55.1,
+            "model_pct": 55.9,
+            "implied_pct": 57.4,
+            "edge_pp": -1.5,
+            "gap_pp": 0.8,
+            "strong": false,
+            "_edge": -1.5229613788918295,
+            "_gap": 0.7797356600915739,
+            "market": "ml",
+            "team": "New Orleans Saints",
+            "selection": "New Orleans Saints ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.4pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "New Orleans Saints -2.5",
+            "line": -2.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 50.8,
+            "implied_pct": 51.2,
+            "edge_pp": -0.4,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -0.4322272539599492,
+            "_gap": 1.8707085597968909,
+            "market": "spread",
+            "team": "New Orleans Saints",
+            "selection": "New Orleans Saints -2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.4pp < 3pp",
       "fpi_home_margin": 3.48,
       "mkt_home_margin": 2.5,
       "blend_home_margin": 2.76,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -2107,24 +5860,80 @@
       "espn_event_id": "401871090",
       "status": "PASS",
       "best": {
-        "market": "ml",
         "side": "away",
+        "label": "Southern Mississippi Golden Eagles ML",
         "line": null,
         "price_american": 280,
         "book": "DraftKings",
-        "model_pct": 27.0,
         "novig_pct": 25.2,
+        "model_pct": 27.6,
         "implied_pct": 26.3,
-        "edge_pp": 0.7,
-        "gap_pp": 1.8,
-        "selection": "Southern Mississippi Golden Eagles ML",
-        "team": "Southern Mississippi Golden Eagles"
+        "edge_pp": 1.2,
+        "gap_pp": 2.3,
+        "strong": false,
+        "_edge": 1.2425102335458849,
+        "_gap": 2.336570217207923,
+        "market": "ml",
+        "team": "Southern Mississippi Golden Eagles",
+        "selection": "Southern Mississippi Golden Eagles ML"
       },
-      "note": "edge +0.7pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge +1.2pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Southern Mississippi Golden Eagles ML",
+            "line": null,
+            "price_american": 280,
+            "book": "DraftKings",
+            "novig_pct": 25.2,
+            "model_pct": 27.6,
+            "implied_pct": 26.3,
+            "edge_pp": 1.2,
+            "gap_pp": 2.3,
+            "strong": false,
+            "_edge": 1.2425102335458849,
+            "_gap": 2.336570217207923,
+            "market": "ml",
+            "team": "Southern Mississippi Golden Eagles",
+            "selection": "Southern Mississippi Golden Eagles ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge +0.5pp < 3pp",
+          "best": {
+            "side": "away",
+            "label": "Southern Mississippi Golden Eagles +9.5",
+            "line": 9.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 52.9,
+            "implied_pct": 52.4,
+            "edge_pp": 0.5,
+            "gap_pp": 2.9,
+            "strong": false,
+            "_edge": 0.4696418776537148,
+            "_gap": 2.8505942586060984,
+            "market": "spread",
+            "team": "Southern Mississippi Golden Eagles",
+            "selection": "Southern Mississippi Golden Eagles +9.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge +1.2pp < 3pp",
       "fpi_home_margin": 5.49,
       "mkt_home_margin": 9.5,
       "blend_home_margin": 8.4,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -2135,24 +5944,80 @@
       "espn_event_id": "401871051",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
-        "line": 2.5,
-        "price_american": -105,
+        "label": "Kennesaw State Owls ML",
+        "line": null,
+        "price_american": 120,
         "book": "DraftKings",
-        "model_pct": 50.2,
-        "novig_pct": 48.9,
-        "implied_pct": 51.2,
-        "edge_pp": -1.0,
-        "gap_pp": 1.3,
-        "selection": "Kennesaw State Owls +2.5",
-        "team": "Kennesaw State Owls"
+        "novig_pct": 43.7,
+        "model_pct": 45.2,
+        "implied_pct": 45.5,
+        "edge_pp": -0.3,
+        "gap_pp": 1.5,
+        "strong": false,
+        "_edge": -0.3036794901642048,
+        "_gap": 1.5000723135876026,
+        "market": "ml",
+        "team": "Kennesaw State Owls",
+        "selection": "Kennesaw State Owls ML"
       },
-      "note": "edge -1.0pp < 3pp",
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "PASS",
+          "note": "edge -0.3pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Kennesaw State Owls ML",
+            "line": null,
+            "price_american": 120,
+            "book": "DraftKings",
+            "novig_pct": 43.7,
+            "model_pct": 45.2,
+            "implied_pct": 45.5,
+            "edge_pp": -0.3,
+            "gap_pp": 1.5,
+            "strong": false,
+            "_edge": -0.3036794901642048,
+            "_gap": 1.5000723135876026,
+            "market": "ml",
+            "team": "Kennesaw State Owls",
+            "selection": "Kennesaw State Owls ML"
+          }
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -1.0pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Kennesaw State Owls +2.5",
+            "line": 2.5,
+            "price_american": -105,
+            "book": "DraftKings",
+            "novig_pct": 48.9,
+            "model_pct": 50.2,
+            "implied_pct": 51.2,
+            "edge_pp": -1.0,
+            "gap_pp": 1.3,
+            "strong": false,
+            "_edge": -1.0030403192320958,
+            "_gap": 1.2998954945247443,
+            "market": "spread",
+            "team": "Kennesaw State Owls",
+            "selection": "Kennesaw State Owls +2.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
+      "note": "edge -0.3pp < 3pp",
       "fpi_home_margin": -0.87,
       "mkt_home_margin": -3.0,
       "blend_home_margin": -2.42,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "CFB",
@@ -2163,11 +6028,27 @@
       "espn_event_id": "401871066",
       "status": "BLANK",
       "best": null,
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
+      },
       "note": "no DraftKings/Betr/Bovada price returned",
       "fpi_home_margin": 5.43,
       "mkt_home_margin": 4.5,
       "blend_home_margin": 4.75,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     },
     {
       "sport": "NFL",
@@ -2178,31 +6059,69 @@
       "espn_event_id": "401872980",
       "status": "PASS",
       "best": {
-        "market": "spread",
         "side": "home",
+        "label": "Dallas Cowboys -9.5",
         "line": -9.5,
         "price_american": -110,
         "book": "DraftKings",
-        "model_pct": 51.9,
         "novig_pct": 50.0,
+        "model_pct": 51.9,
         "implied_pct": 52.4,
         "edge_pp": -0.5,
         "gap_pp": 1.9,
-        "selection": "Dallas Cowboys -9.5",
-        "team": "Dallas Cowboys"
+        "strong": false,
+        "_edge": -0.5209427932975852,
+        "_gap": 1.8600095876547984,
+        "market": "spread",
+        "team": "Dallas Cowboys",
+        "selection": "Dallas Cowboys -9.5"
+      },
+      "picks": [],
+      "by_market": {
+        "ml": {
+          "status": "BLANK",
+          "note": "no DraftKings/Betr/Bovada price returned"
+        },
+        "spread": {
+          "status": "PASS",
+          "note": "edge -0.5pp < 3pp",
+          "best": {
+            "side": "home",
+            "label": "Dallas Cowboys -9.5",
+            "line": -9.5,
+            "price_american": -110,
+            "book": "DraftKings",
+            "novig_pct": 50.0,
+            "model_pct": 51.9,
+            "implied_pct": 52.4,
+            "edge_pp": -0.5,
+            "gap_pp": 1.9,
+            "strong": false,
+            "_edge": -0.5209427932975852,
+            "_gap": 1.8600095876547984,
+            "market": "spread",
+            "team": "Dallas Cowboys",
+            "selection": "Dallas Cowboys -9.5"
+          }
+        },
+        "total": {
+          "status": "BLANK",
+          "note": "MODEL blank: no free projected total (ESPN predictor has win % and point diff only)"
+        }
       },
       "note": "edge -0.5pp < 3pp",
       "fpi_home_margin": 11.82,
       "mkt_home_margin": 9.5,
       "blend_home_margin": 10.11,
-      "stamped": false
+      "stamped": false,
+      "stamped_markets": []
     }
   ],
   "credits": {
     "calls": 2,
     "credits_this_run": 6,
-    "x-requests-remaining": "18704",
-    "x-requests-used": "1296",
+    "x-requests-remaining": "16186",
+    "x-requests-used": "3814",
     "NFL_x-requests-last": "3",
     "CFB_x-requests-last": "3"
   }
