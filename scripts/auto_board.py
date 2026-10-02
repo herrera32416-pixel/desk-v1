@@ -40,13 +40,15 @@ import paper_model  # noqa: E402
 
 CT = ZoneInfo("America/Chicago")
 UTC = timezone.utc
-SPORTS = {"NFL": "americanfootball_nfl", "CFB": "americanfootball_ncaaf"}  # one call each per day
+SPORTS = {"NFL": "americanfootball_nfl", "CFB": "americanfootball_ncaaf",
+          "NHL": "icehockey_nhl"}  # one call each per day: 3 x 3 credits = 9/day
+WINDOW_BY_SPORT = {"NFL": 7, "CFB": 7, "NHL": 2}  # NHL: today + tomorrow (CT), ~15 games/day
 API_URL = "https://api.the-odds-api.com/v4/sports/{sport}/odds"
 SCHEMA = "desk-pwa/v1"
 WINDOW_DAYS = 7
 MIN_REMAINING = 30  # never spend the last credits: skip further calls below this
-BANNER = ("PAPER ONLY — no real bets. NFL + CFB sides from the u3 market-heavy blend "
-          "(~74% market / ~26% ESPN FPI). Lines + market % from The Odds API. No Main card filed.")
+BANNER = ("PAPER ONLY — no real bets. NFL + CFB + NHL: ML / spread (puck line) / O-U with market and model %. "
+          "Lines from The Odds API. No Main card filed.")
 MARKET_SRC = "The Odds API · no-vig = median across books of two-way de-vig (consensus line)"
 
 # Display ids only (naming, not data). Washington = wsh to match Main's board.
@@ -170,7 +172,7 @@ def build_row(ev: dict, slate_iso: str, sport: str = "NFL") -> dict:
         ha, aa = NFL_ABBR.get(home, ""), NFL_ABBR.get(away, "")
         eid = f"{aa}-{ha}" if aa and ha else (ev.get("id") or "")
     else:
-        eid = f"cfb-{ev.get('id') or ''}"
+        eid = f"{sport.lower()}-{ev.get('id') or ''}"
 
     h2h, spreads, totals = [], [], []
     for bk in ev.get("bookmakers") or []:
@@ -264,8 +266,8 @@ def default_rules() -> dict:
         "owner": "Bet Bot Main owns the card; Sports Betting shops + exports",
         "auto": ("Auto board (GitHub Actions, once daily 9:15am CT): NFL + CFB lines + MARKET no-vig %. "
                  "No Main model, no notes, no CLEAR. Main's feed replaces it when published."),
-        "paper": ("PAPER ONLY (no real bets): u3 market-heavy blend, market + w·(ESPN FPI − market), "
-                  "w≈0.26–0.27. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
+        "paper": ("PAPER ONLY (no real bets): football = market + w·(ESPN FPI − market), w refit vs closing "
+                  "lines on history (NFL −0.31, CFB 0); NHL = market only (MODEL blank), Poisson fair shown. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
                   "PAPER pick if edge ≥3pp vs stamped price; gap >8pp vs no-vig = HOLD. 1u = $20 flat. "
                   "Stamped once on kick day, graded W/L/P from ESPN finals at the stamped price."),
         "ledger": "Ledger = Main written CLEAR grades only (Grade via the box). Paper ledger is separate (Paper tab).",
@@ -369,6 +371,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--data-dir", default=str(Path(__file__).resolve().parents[1] / "data"))
     ap.add_argument("--from-file", help="Offline: read a saved NFL Odds API JSON instead of calling the API (0 credits)")
     ap.add_argument("--from-file-cfb", help="Offline: read a saved NCAAF Odds API JSON (0 credits)")
+    ap.add_argument("--from-file-nhl", help="Offline: read a saved NHL Odds API JSON (0 credits)")
     ap.add_argument("--now", help="Override 'now' (ISO, for tests)")
     ap.add_argument("--force", action="store_true", help="Call the API even if today's auto board already exists")
     args = ap.parse_args(argv)
@@ -389,17 +392,17 @@ def main(argv: list[str] | None = None) -> int:
     main_today = bool(existing) and existing.get("slate_date_ct") == slate_iso and is_main_sourced(existing)
     if (existing and existing.get("slate_date_ct") == slate_iso
             and str(existing.get("source") or "") == "auto" and not args.force
-            and not (args.from_file or args.from_file_cfb)):
+            and not (args.from_file or args.from_file_cfb or args.from_file_nhl)):
         print(f"[auto_board] auto board for {slate_iso} already present — 0 API calls (use --force)")
         return 0
 
     usage: dict = {"calls": 0, "credits_this_run": 0}
     events_by_sport: dict[str, list[dict]] = {}
-    offline = {"NFL": args.from_file, "CFB": args.from_file_cfb}
+    offline = {"NFL": args.from_file, "CFB": args.from_file_cfb, "NHL": args.from_file_nhl}
     key = os.environ.get("THE_ODDS_API_KEY", "").strip()
     for sport, sport_key in SPORTS.items():
         try:
-            if args.from_file or args.from_file_cfb:
+            if args.from_file or args.from_file_cfb or args.from_file_nhl:
                 if not offline[sport]:
                     events_by_sport[sport] = []
                     continue
@@ -433,15 +436,15 @@ def main(argv: list[str] | None = None) -> int:
         except Exception as e:  # network etc. — no retry
             print(f"[auto_board] {sport} API error (no retry): {type(e).__name__}: {e}", file=sys.stderr)
             events_by_sport[sport] = []
-    if not any(events_by_sport.values()) and usage["calls"] == 0 and not (args.from_file or args.from_file_cfb):
+    if not any(events_by_sport.values()) and usage["calls"] == 0 and not (args.from_file or args.from_file_cfb or args.from_file_nhl):
         return 3
 
     start = now_ct.replace(hour=0, minute=0, second=0, microsecond=0)
-    end = start + timedelta(days=WINDOW_DAYS)
     rows_by_sport: dict[str, list[dict]] = {}
     paper_stats: dict[str, dict] = {}
     for sport, sport_key in SPORTS.items():
         rows, by_toa = [], {}
+        end = start + timedelta(days=WINDOW_BY_SPORT.get(sport, WINDOW_DAYS))
         for ev in events_by_sport.get(sport) or []:
             if ev.get("sport_key") not in (None, sport_key) or not ev.get("commence_time"):
                 continue
@@ -451,7 +454,8 @@ def main(argv: list[str] | None = None) -> int:
                 by_toa[ev.get("id") or ""] = ev
         rows.sort(key=lambda r: (r["kick_utc"], r["event_id"]))
         try:
-            paper_stats[sport] = paper_model.attach_paper(sport, rows, by_toa, now_ct, WINDOW_DAYS)
+            paper_stats[sport] = paper_model.attach_paper(sport, rows, by_toa, now_ct,
+                                                          WINDOW_BY_SPORT.get(sport, WINDOW_DAYS))
         except Exception as e:  # ESPN down etc. -> board still publishes, paper blank
             print(f"[auto_board] {sport} paper model error: {type(e).__name__}: {e}", file=sys.stderr)
             paper_stats[sport] = {"games": len(rows), "error": str(e)[:200]}

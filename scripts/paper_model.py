@@ -9,9 +9,9 @@ Model (from betbot-revamp/research/upgrades-2026-10, u3_blend, FINAL_REPORT 2026
   pred  = A + w * (fpi - A)            w = weight on FPI's disagreement (market weight = 1 - w)
   P(home cover at line L) = 1 - Phi((-L - pred) / sigma)
   P(home win)             = Phi(Phi^-1(q_ML no-vig) + (pred - A) / sigma)   (anchored to the ML market)
-  w / sigma = u3 'open|blend:fpi' mean weekly walk-forward weight and last refit residual SD:
-    NFL w=0.262 (~74% market) sigma=13.01 · CFB w=0.274 (~73% market) sigma=15.36
-  (cross-check, 2023-26 SD of margin vs close: NFL 12.72 on 904 games, CFB 15.06 on 3043 games)
+  w / sigma: refit vs the closing line on data/history (scripts/history/fit_w.py, data/history/fit_w.json):
+    NFL w=-0.31 (90% CI excludes 0) sigma=12.70 · CFB w=0 (CI includes 0) sigma=15.14
+    (earlier u3 open-track weights 0.26/0.27 were vs openers; DESK prices later lines)
   Totals: no free projected total exists (ESPN predictor carries win % and point diff only),
   so O/U shows MARKET no-vig only and MODEL stays blank; totals are never stamped.
   Market no-vig per market = DraftKings two-way pair when DK quotes it, else Bovada, else Betr,
@@ -43,15 +43,26 @@ from pathlib import Path
 from statistics import NormalDist
 from zoneinfo import ZoneInfo
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import nhl_model  # noqa: E402
+
 CT = ZoneInfo("America/Chicago")
 UTC = timezone.utc
 ND = NormalDist()
 
 MODEL = {
-    "NFL": {"w": 0.262, "sigma": 13.01, "league": "nfl", "groups": ""},
-    "CFB": {"w": 0.274, "sigma": 15.36, "league": "college-football", "groups": "&groups=80&limit=400"},
+    # Refit 2026-10-02 on data/history vs the CLOSING spread (scripts/history/fit_w.py -> data/history/fit_w.json):
+    #   NFL w=-0.310, 90% CI [-0.523, -0.103] (904 games 2023-26) -> CI excludes 0 -> used (fades FPI's disagreement)
+    #   CFB w=+0.034, 90% CI [-0.053, +0.118] (3,934 games 2022-26) -> CI includes 0 -> w = 0 (pure market)
+    #   sigma = residual SD of margin vs the fitted pred: NFL 12.70, CFB 15.14
+    "NFL": {"w": -0.310, "sigma": 12.70, "league": "nfl", "path": "football/nfl", "groups": ""},
+    "CFB": {"w": 0.0, "sigma": 15.14, "league": "college-football", "path": "football/college-football",
+            "groups": "&groups=80&limit=400"},
+    # NHL: ESPN has no NHL predictor ("Predictor is not supported for sport: hockey") -> no independent
+    # model; MODEL blank, Poisson fair prices from the market ML + total shown for information only.
+    "NHL": {"w": None, "sigma": None, "league": "nhl", "path": "hockey/nhl", "groups": "&limit=100"},
 }
-MODEL_NAME = "u3 market-heavy blend (market + w·(FPI − market))"
+MODEL_NAME = "market + w·(FPI − market), w refit vs closing line on history (NFL −0.31, CFB 0)"
 MODEL_SRC = ("betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; "
              "FINAL_REPORT 2026-10-02: every sport stays on paper")
 EDGE_MIN = 3.0      # pp vs stamped price
@@ -60,7 +71,7 @@ ML_CAP = 500        # ML side only when both prices within +-100..500
 UNIT_USD = 20
 EARLY_CUTOFF_MIN = 10 * 60 + 30  # games before 10:30am CT tomorrow are stamped today (next run may be late)
 SOP_KEYS = {"draftkings": "DraftKings", "bovada": "Bovada"}  # Betr matched by title below
-SB_URL = "https://site.api.espn.com/apis/site/v2/sports/football/{lg}/scoreboard?dates={d}{g}"
+SB_URL = "https://site.api.espn.com/apis/site/v2/sports/{path}/scoreboard?dates={d}{g}"
 PRED_URL = "https://sports.core.api.espn.com/v2/sports/football/leagues/{lg}/events/{i}/competitions/{i}/predictor"
 UA = {"User-Agent": "desk-v1-paper-model (github actions)"}
 LEDGER_SCHEMA = "desk-paper-ledger/v1"
@@ -137,7 +148,7 @@ def espn_events(sport: str, days: list[str]) -> dict[str, dict]:
     cfg = MODEL[sport]
     out: dict[str, dict] = {}
     for d in days:
-        js = get_json(SB_URL.format(lg=cfg["league"], d=d, g=cfg["groups"]))
+        js = get_json(SB_URL.format(path=cfg["path"], d=d, g=cfg["groups"]))
         for e in (js or {}).get("events") or []:
             try:
                 c = e["competitions"][0]
@@ -423,6 +434,77 @@ def home_or_away(row: dict, side: str) -> str:
     return row["home"] if side == "home" else row["away"]
 
 
+# ----------------------------------------------------------------- NHL
+NHL_ABBR = {
+    "Anaheim Ducks": "ANA", "Boston Bruins": "BOS", "Buffalo Sabres": "BUF", "Calgary Flames": "CGY",
+    "Carolina Hurricanes": "CAR", "Chicago Blackhawks": "CHI", "Colorado Avalanche": "COL",
+    "Columbus Blue Jackets": "CBJ", "Dallas Stars": "DAL", "Detroit Red Wings": "DET", "Edmonton Oilers": "EDM",
+    "Florida Panthers": "FLA", "Los Angeles Kings": "LAK", "Minnesota Wild": "MIN", "Montréal Canadiens": "MTL",
+    "Montreal Canadiens": "MTL", "Nashville Predators": "NSH", "New Jersey Devils": "NJD",
+    "New York Islanders": "NYI", "New York Rangers": "NYR", "Ottawa Senators": "OTT", "Philadelphia Flyers": "PHI",
+    "Pittsburgh Penguins": "PIT", "San Jose Sharks": "SJS", "Seattle Kraken": "SEA", "St Louis Blues": "STL",
+    "St. Louis Blues": "STL", "Tampa Bay Lightning": "TBL", "Toronto Maple Leafs": "TOR", "Utah Mammoth": "UTA",
+    "Utah Hockey Club": "UTA", "Vancouver Canucks": "VAN", "Vegas Golden Knights": "VGK",
+    "Washington Capitals": "WSH", "Winnipeg Jets": "WPG",
+}
+GOALIE_LOGS = ("data/nhl_goalie_log.jsonl", "/workspace/research/nhl-2026-10/sit/goalie_log.jsonl")
+
+
+def load_goalies(repo_root: Path) -> dict:
+    """Latest goalie-log entry per (game date CT, team). Missing file -> {} (goalie stays blank)."""
+    out: dict = {}
+    for gp in GOALIE_LOGS:
+        f = Path(gp) if gp.startswith("/") else repo_root / gp
+        if not f.exists():
+            continue
+        for line in f.read_text(encoding="utf-8").splitlines():
+            try:
+                g = json.loads(line)
+                k = (str(g.get("game_start_ct") or "")[:10], g.get("team"))
+            except (json.JSONDecodeError, AttributeError):
+                continue
+            if not g.get("goalie") or g.get("status") not in ("Confirmed", "Likely"):
+                continue
+            if k not in out or str(g.get("seen_time_ct") or "") >= str(out[k].get("seen_time_ct") or ""):
+                out[k] = {"goalie": g["goalie"], "status": g["status"], "source": g.get("source"),
+                          "seen_time_ct": g.get("seen_time_ct"), "file": f.name}
+    return out
+
+
+def nhl_block(row: dict, ev: dict, goalies: dict) -> dict:
+    """ML / puck line / O-U market % for display; MODEL blank; Poisson fair from market ML + total."""
+    quotes = book_quotes(ev, row)
+    blk = {"label": "PAPER", "model": "none (ESPN has no NHL predictor) — MODEL blank",
+           "status": "BLANK", "pick": None, "best": None, "picks": [], "by_market": {},
+           "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)"}
+    mk = three_markets("NHL", row, quotes, None)
+    for k in ("ml", "spread", "total"):
+        blk["by_market"][k] = {"status": "BLANK", "note": "MODEL blank (no ESPN NHL predictor)"}
+    try:
+        nv_h = mk["ml"]["sides"][1]["novig_pct"] / 100
+        T = mk["total"]["line"]
+        nv_o = mk["total"]["sides"][0]["novig_pct"] / 100
+        lh, la = nhl_model.market_lambdas(nv_h, nv_o, T)
+        L = mk["spread"]["line_home"] if "spread" in mk else None
+        f = nhl_model.probs(lh, la, home_line=L, total=T)
+        fair = {"ml": (1 - f["ml_home"], f["ml_home"]), "total": (f["over"], 1 - f["over"])}
+        if L is not None and f.get("pl_home") is not None:
+            fair["spread"] = (1 - f["pl_home"], f["pl_home"])
+        for k, (a, b) in fair.items():
+            sides = mk[k]["sides"]
+            sides[0]["fair_pct"], sides[1]["fair_pct"] = r1(100 * a), r1(100 * b)
+        blk["fair"] = {"lam_home": round(lh, 3), "lam_away": round(la, 3), "reg_tie_pct": r1(100 * f["reg_tie"]),
+                       "source": "Poisson + draw inflation 1.50 + empty-net overlay + OT/SO (P home 0.524), "
+                                 "solved to the market no-vig ML and total"}
+    except (KeyError, TypeError, ValueError, ZeroDivisionError, IndexError):
+        blk["fair"] = None
+    blk["markets"] = mk
+    d = row["kick_utc"] and kick_ct(row["kick_utc"]).date().isoformat()
+    ha, aa = NHL_ABBR.get(row["home"]), NHL_ABBR.get(row["away"])
+    blk["goalies"] = {"home": goalies.get((d, ha)), "away": goalies.get((d, aa))}
+    return blk
+
+
 def attach_paper(sport: str, rows: list[dict], events_by_toa: dict[str, dict], now_ct: datetime,
                  window_days: int) -> dict:
     """Adds row['paper'] (+ espn ids) to each row. Returns stats."""
@@ -445,6 +527,14 @@ def attach_paper(sport: str, rows: list[dict], events_by_toa: dict[str, dict], n
             r["espn_swapped"] = sw
             matched.append((r, ev, sw))
     stats["espn_matched"] = len(matched)
+    if sport == "NHL":
+        goalies = load_goalies(Path(__file__).resolve().parents[1])
+        for r in rows:
+            r["paper"] = nhl_block(r, events_by_toa.get(r.get("toa_event_id") or "", {}), goalies)
+            stats["blank"] += 1
+        stats["goalies_shown"] = sum(1 for r in rows for v in (r["paper"].get("goalies") or {}).values() if v)
+        stats["with_fair"] = sum(1 for r in rows if r["paper"].get("fair"))
+        return stats
     with cf.ThreadPoolExecutor(8) as ex:
         fpis = list(ex.map(lambda t: espn_fpi(sport, t[1]["id"]), matched))
     fpi_by_row = {id(t[0]): (f, t[2]) for t, f in zip(matched, fpis)}
@@ -590,13 +680,14 @@ def summarize(ledger: dict, now_ct: datetime) -> dict:
                 "open": sum(p.get("status") == "open" for p in ps)}
 
     s = block(picks)
-    s["by_sport"] = {sp: block([p for p in picks if p["sport"] == sp]) for sp in ("NFL", "CFB")}
+    s["by_sport"] = {sp: block([p for p in picks if p["sport"] == sp]) for sp in ("NFL", "CFB", "NHL")}
     s["unit_usd"] = UNIT_USD
     s["label"] = "PAPER — no real bets"
     ledger["schema"] = LEDGER_SCHEMA
     ledger["updated_at_ct"] = now_ct.isoformat(timespec="seconds")
     ledger["model"] = {"name": MODEL_NAME, "source": MODEL_SRC,
-                       "params": {k: {"w_fpi": v["w"], "w_market": round(1 - v["w"], 3), "sigma": v["sigma"]}
+                       "params": {k: ({"w_fpi": v["w"], "w_market": round(1 - v["w"], 3), "sigma": v["sigma"]}
+                                      if v["w"] is not None else {"model": "none (market only, MODEL blank)"})
                                   for k, v in MODEL.items()},
                        "rules": {"edge_min_pp": EDGE_MIN, "gap_hold_pp": GAP_MAX, "unit_usd": UNIT_USD,
                                  "books": "DraftKings / Betr / Bovada as returned by The Odds API",
