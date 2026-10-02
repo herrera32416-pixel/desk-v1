@@ -476,14 +476,18 @@ def main(argv: list[str] | None = None) -> int:
         "ledger_summary": psum, "ledger_file": "data/paper_ledger.json",
     }
     board = []
+    stamped_ids = {p["id"] for p in ledger["picks"]}
     for r in rows:
         b = r.get("paper") or {}
         board.append({
             "sport": r["sport"], "matchup": r["matchup"], "kick_utc": r["kick_utc"], "kick_ct": r["kick_ct"],
             "event_id": r["event_id"], "espn_event_id": r.get("espn_event_id"), "status": b.get("status"),
-            "best": b.get("best"), "note": b.get("note"), "fpi_home_margin": b.get("fpi_home_margin"),
+            "best": b.get("best"), "picks": b.get("picks") or [], "by_market": b.get("by_market"),
+            "note": b.get("note"), "fpi_home_margin": b.get("fpi_home_margin"),
             "mkt_home_margin": b.get("mkt_home_margin"), "blend_home_margin": b.get("blend_home_margin"),
-            "stamped": paper_model.pick_id(r["sport"], r) in {p["id"] for p in ledger["picks"]},
+            "stamped": any(paper_model.pick_id(r["sport"], r, m) in stamped_ids for m in ("ml", "spread", "total")),
+            "stamped_markets": [m for m in ("ml", "spread", "total")
+                                if paper_model.pick_id(r["sport"], r, m) in stamped_ids],
         })
     paper_doc = {
         "schema": "desk-paper/v1", "label": "PAPER ONLY — no real bets", "slate_date_ct": slate_iso,
