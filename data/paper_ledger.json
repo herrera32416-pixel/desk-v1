@@ -1,20 +1,23 @@
 {
   "schema": "desk-paper-ledger/v1",
   "picks": [],
-  "updated_at_ct": "2026-10-02T15:25:50-05:00",
+  "updated_at_ct": "2026-10-02T17:33:47-05:00",
   "model": {
-    "name": "u3 market-heavy blend (market + w·(FPI − market))",
+    "name": "market + w·(FPI − market), w refit vs closing line on history (NFL −0.31, CFB 0)",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
     "params": {
       "NFL": {
-        "w_fpi": 0.262,
-        "w_market": 0.738,
-        "sigma": 13.01
+        "w_fpi": -0.31,
+        "w_market": 1.31,
+        "sigma": 12.7
       },
       "CFB": {
-        "w_fpi": 0.274,
-        "w_market": 0.726,
-        "sigma": 15.36
+        "w_fpi": 0.0,
+        "w_market": 1.0,
+        "sigma": 15.14
+      },
+      "NHL": {
+        "model": "none (market only, MODEL blank)"
       }
     },
     "rules": {
@@ -47,6 +50,16 @@
         "open": 0
       },
       "CFB": {
+        "record": "0-0-0",
+        "w": 0,
+        "l": 0,
+        "p": 0,
+        "units": 0,
+        "usd": 0,
+        "graded": 0,
+        "open": 0
+      },
+      "NHL": {
         "record": "0-0-0",
         "w": 0,
         "l": 0,
