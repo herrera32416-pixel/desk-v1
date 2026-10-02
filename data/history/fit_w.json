@@ -1,0 +1,150 @@
+{
+ "nfl": {
+  "n_games": 904,
+  "seasons": [
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "w": -0.31,
+  "ci90": [
+   -0.523,
+   -0.103
+  ],
+  "ci95": [
+   -0.566,
+   -0.058
+  ],
+  "sigma_resid": 12.7,
+  "sigma_market_only": 12.72,
+  "track": "close (spread)",
+  "walk_forward_units_ats_close": {
+   "bets": 21,
+   "W": 13,
+   "L": 8,
+   "P": 0,
+   "units": 4.11,
+   "roi": 0.1959,
+   "ci90": [
+    -3.574,
+    11.718
+   ],
+   "ci95": [
+    -5.349,
+    12.04
+   ]
+  },
+  "walk_forward_units_ml_close": {
+   "bets": 12,
+   "W": 6,
+   "L": 6,
+   "P": 0,
+   "units": -1.27,
+   "roi": -0.1054,
+   "ci90": [
+    -6.749,
+    4.243
+   ],
+   "ci95": [
+    -7.775,
+    5.761
+   ]
+  },
+  "decision": "use fitted w"
+ },
+ "cfb": {
+  "n_games": 3934,
+  "seasons": [
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "w": 0.034,
+  "ci90": [
+   -0.053,
+   0.118
+  ],
+  "ci95": [
+   -0.067,
+   0.137
+  ],
+  "sigma_resid": 15.14,
+  "sigma_market_only": 15.14,
+  "track": "close (spread)",
+  "walk_forward_units_ats_close": {
+   "bets": 42,
+   "W": 21,
+   "L": 21,
+   "P": 0,
+   "units": 7.65,
+   "roi": 0.1821,
+   "ci90": [
+    -5.905,
+    21.2
+   ],
+   "ci95": [
+    -8.851,
+    23.402
+   ]
+  },
+  "walk_forward_units_ml_close": {
+   "bets": 0
+  },
+  "decision": "w = 0 (90% CI includes 0)"
+ },
+ "nhl": {
+  "n_games": 3936,
+  "seasons": [
+   2023,
+   2024,
+   2025
+  ],
+  "w": -0.049,
+  "ci90": [
+   -0.457,
+   0.36
+  ],
+  "ci95": [
+   -0.551,
+   0.426
+  ],
+  "track": "close (ML, ESPN-listed final pregame line)",
+  "model": "MoneyPuck pregame home_win (comparison only; not used live)",
+  "brier_market": 0.2365,
+  "brier_model": 0.2376,
+  "walk_forward_units_ml_close": {
+   "bets": 0
+  },
+  "note": "ESPN has no NHL predictor; live DESK NHL model stays blank (market only).",
+  "decision": "w = 0 (90% CI includes 0)"
+ },
+ "mlb": {
+  "n_games": 9690,
+  "seasons": [
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "w": 0.059,
+  "ci90": [
+   -0.077,
+   0.187
+  ],
+  "ci95": [
+   -0.1,
+   0.216
+  ],
+  "track": "close (ML, ESPN-listed final pregame line)",
+  "model": "ESPN predictor winProbability",
+  "brier_market": 0.2418,
+  "brier_model": 0.2451,
+  "walk_forward_units_ml_close": {
+   "bets": 0
+  },
+  "decision": "w = 0 (90% CI includes 0)"
+ }
+}

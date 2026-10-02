@@ -1,0 +1,1273 @@
+away,date_utc,espn_id,home,season,away_name,away_score,home_name,home_score,ml_away,ml_away_close,ml_away_open,ml_home,ml_home_close,ml_home_open,neutral,odds_provider,odds_providers_n,over_price,periods,result_type,sp_price_away,sp_price_home,spread_home,status_detail,total,under_price
+PIT,2021-10-12T23:30Z,401349134,TB,2021,Pittsburgh Penguins,6,Tampa Bay Lightning,2,400,,,-190,,,False,DraftKings,13,100,3,REG,-120,100,-1.5,Final,6.0,-120
+SEA,2021-10-13T02:15Z,401349135,VGK,2021,Seattle Kraken,3,Vegas Golden Knights,4,300,,,-140,,,False,DraftKings,14,110,3,REG,-130,110,-1.5,Final,5.5,-130
+MTL,2021-10-13T23:00Z,401349136,TOR,2021,Montreal Canadiens,1,Toronto Maple Leafs,2,285,,,-135,,,False,DraftKings,12,-110,3,REG,-155,135,-1.5,Final,6.0,-110
+NYR,2021-10-13T23:30Z,401349137,WSH,2021,New York Rangers,1,Washington Capitals,5,180,,,120,,,False,DraftKings,14,-125,3,REG,-240,195,-1.5,Final,6.0,105
+CHI,2021-10-14T02:00Z,401349138,COL,2021,Chicago Blackhawks,2,Colorado Avalanche,4,285,,,-135,,,False,DraftKings,14,-125,3,REG,-150,130,-1.5,Final,6.0,105
+VAN,2021-10-14T02:00Z,401349139,EDM,2021,Vancouver Canucks,2,Edmonton Oilers,3,310,,,-145,,,False,DraftKings,13,-130,5,SO,-140,120,-1.5,Final/SO,6.5,110
+WPG,2021-10-14T02:00Z,401349148,ANA,2021,Winnipeg Jets,1,Anaheim Ducks,4,-105,,,225,,,False,DraftKings,14,100,3,REG,170,-200,1.5,Final,5.5,-120
+MTL,2021-10-14T23:00Z,401349140,BUF,2021,Montreal Canadiens,1,Buffalo Sabres,5,100,,,210,,,False,DraftKings,13,-125,3,REG,175,-210,1.5,Final,5.5,105
+TOR,2021-10-14T23:00Z,401349141,OTT,2021,Toronto Maple Leafs,2,Ottawa Senators,3,-125,,,265,,,False,DraftKings,12,100,3,REG,140,-160,1.5,Final,6.5,-120
+PIT,2021-10-14T23:00Z,401349143,FLA,2021,Pittsburgh Penguins,4,Florida Panthers,5,270,,,-130,,,False,DraftKings,13,-105,4,OT,-160,140,-1.5,Final/OT,6.5,-115
+DAL,2021-10-14T23:00Z,401349144,NYR,2021,Dallas Stars,3,New York Rangers,2,190,,,115,,,False,DraftKings,12,100,4,OT,-225,185,-1.5,Final/OT,6.0,-120
+NYI,2021-10-14T23:00Z,401349145,CAR,2021,New York Islanders,3,Carolina Hurricanes,6,195,,,110,,,False,DraftKings,13,-105,3,REG,-240,195,-1.5,Final,5.5,-115
+ARI,2021-10-14T23:00Z,401349146,CBJ,2021,Arizona Coyotes,2,Columbus Blue Jackets,8,250,,,-115,,,False,DraftKings,13,-105,3,REG,-165,145,-1.5,Final,5.5,-115
+TB,2021-10-14T23:30Z,401349142,DET,2021,Tampa Bay Lightning,7,Detroit Red Wings,6,-160,,,360,,,False,DraftKings,12,-110,4,OT,105,-125,1.5,Final/OT,5.5,-110
+SEA,2021-10-15T00:00Z,401349147,NSH,2021,Seattle Kraken,4,Nashville Predators,3,200,,,105,,,False,DraftKings,12,-120,3,REG,-210,175,-1.5,Final,5.5,100
+VGK,2021-10-15T02:30Z,401349149,LA,2021,Vegas Golden Knights,2,Los Angeles Kings,6,-110,,,235,,,False,DraftKings,13,-110,3,REG,155,-180,1.5,Final,5.5,-110
+CHI,2021-10-15T23:00Z,401349150,NJ,2021,Chicago Blackhawks,3,New Jersey Devils,4,185,,,110,,,False,DraftKings,13,100,4,OT,-225,185,-1.5,Final/OT,6.5,-120
+VAN,2021-10-15T23:00Z,401349151,PHI,2021,Vancouver Canucks,5,Philadelphia Flyers,4,215,,,-105,,,False,DraftKings,13,-120,5,SO,-190,160,-1.5,Final/SO,6.0,100
+MIN,2021-10-16T02:00Z,401349152,ANA,2021,Minnesota Wild,2,Anaheim Ducks,1,-110,,,250,,,False,DraftKings,13,105,3,REG,155,-180,1.5,Final,5.5,-125
+ARI,2021-10-16T17:00Z,401349154,BUF,2021,Arizona Coyotes,1,Buffalo Sabres,2,160,,,130,,,False,DraftKings,13,100,5,SO,-235,190,-1.5,Final/SO,6.0,-120
+NYI,2021-10-16T22:00Z,401349158,FLA,2021,New York Islanders,1,Florida Panthers,5,175,,,120,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,5.5,100
+DAL,2021-10-16T23:00Z,401349153,BOS,2021,Dallas Stars,1,Boston Bruins,3,270,,,-125,,,False,DraftKings,13,115,3,REG,-160,140,-1.5,Final,5.5,-135
+OTT,2021-10-16T23:00Z,401349155,TOR,2021,Ottawa Senators,1,Toronto Maple Leafs,3,360,,,-175,,,False,DraftKings,13,100,3,REG,-115,-105,-1.5,Final,6.5,-120
+NYR,2021-10-16T23:00Z,401349156,MTL,2021,New York Rangers,3,Montreal Canadiens,1,145,,,145,,,False,DraftKings,13,-115,3,REG,-275,220,-1.5,Final,5.5,-105
+VAN,2021-10-16T23:00Z,401349157,DET,2021,Vancouver Canucks,1,Detroit Red Wings,3,130,,,155,,,False,DraftKings,13,-115,3,REG,190,-235,1.5,Final,5.5,-105
+CHI,2021-10-16T23:00Z,401349159,PIT,2021,Chicago Blackhawks,2,Pittsburgh Penguins,5,200,,,100,,,False,DraftKings,13,-115,3,REG,-190,160,-1.5,Final,6.0,-105
+TB,2021-10-16T23:00Z,401349160,WSH,2021,Tampa Bay Lightning,2,Washington Capitals,1,120,,,165,,,False,DraftKings,13,100,4,OT,185,-225,1.5,Final/OT,6.5,-120
+SEA,2021-10-16T23:00Z,401349161,CBJ,2021,Seattle Kraken,1,Columbus Blue Jackets,2,145,,,145,,,False,DraftKings,13,-115,4,OT,-275,220,-1.5,Final/OT,5.5,-105
+CAR,2021-10-17T00:00Z,401349162,NSH,2021,Carolina Hurricanes,3,Nashville Predators,2,130,,,160,,,False,DraftKings,12,100,3,REG,-275,220,-1.5,Final,6.0,-120
+STL,2021-10-17T01:00Z,401349163,COL,2021,St. Louis Blues,5,Colorado Avalanche,3,225,,,-110,,,False,DraftKings,13,100,3,REG,-170,150,-1.5,Final,6.0,-120
+CGY,2021-10-17T02:00Z,401349164,EDM,2021,Calgary Flames,2,Edmonton Oilers,5,190,,,105,,,False,DraftKings,12,100,3,REG,-195,165,-1.5,Final,6.5,-120
+WPG,2021-10-17T02:00Z,401349166,SJ,2021,Winnipeg Jets,3,San Jose Sharks,4,130,,,155,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,6.0,100
+MIN,2021-10-17T02:30Z,401349165,LA,2021,Minnesota Wild,3,Los Angeles Kings,2,120,,,175,,,False,DraftKings,11,100,3,REG,195,-240,1.5,Final,6.0,-120
+DAL,2021-10-17T21:00Z,401349167,OTT,2021,Dallas Stars,2,Ottawa Senators,3,120,,,170,,,False,DraftKings,13,100,3,REG,175,-210,1.5,Final,5.5,-120
+NYR,2021-10-18T23:00Z,401349168,TOR,2021,New York Rangers,2,Toronto Maple Leafs,1,275,,,-130,,,False,DraftKings,13,-115,4,OT,-155,135,-1.5,Final/OT,6.0,-105
+SEA,2021-10-18T23:00Z,401349169,PHI,2021,Seattle Kraken,1,Philadelphia Flyers,6,220,,,100,,,False,DraftKings,13,-120,3,REG,-200,170,-1.5,Final,5.5,100
+ANA,2021-10-19T01:30Z,401349170,CGY,2021,Anaheim Ducks,3,Calgary Flames,2,270,,,-145,,,False,DraftKings,13,-105,4,OT,-155,135,-1.5,Final/OT,5.5,-115
+STL,2021-10-19T02:00Z,401349171,ARI,2021,St. Louis Blues,7,Arizona Coyotes,4,-120,,,265,,,False,DraftKings,13,-105,3,REG,155,-180,1.5,Final,5.5,-115
+VAN,2021-10-19T23:00Z,401349172,BUF,2021,Vancouver Canucks,2,Buffalo Sabres,5,-105,,,220,,,False,DraftKings,13,100,3,REG,180,-220,1.5,Final,6.0,-120
+SJ,2021-10-19T23:00Z,401349173,MTL,2021,San Jose Sharks,5,Montreal Canadiens,0,230,,,-105,,,False,DraftKings,13,-115,3,REG,-200,170,-1.5,Final,5.5,-105
+FLA,2021-10-19T23:00Z,401349175,TB,2021,Florida Panthers,4,Tampa Bay Lightning,1,190,,,110,,,False,DraftKings,12,-115,3,REG,-210,175,-1.5,Final,6.0,-105
+SEA,2021-10-19T23:00Z,401349176,NJ,2021,Seattle Kraken,2,New Jersey Devils,4,240,,,-110,,,False,DraftKings,13,-120,3,REG,-190,160,-1.5,Final,5.5,100
+DAL,2021-10-19T23:00Z,401349177,PIT,2021,Dallas Stars,2,Pittsburgh Penguins,1,200,,,110,,,False,DraftKings,13,-105,5,SO,-210,175,-1.5,Final/SO,5.5,-115
+COL,2021-10-19T23:00Z,401349178,WSH,2021,Colorado Avalanche,3,Washington Capitals,6,135,,,155,,,False,DraftKings,13,-115,3,REG,-275,220,-1.5,Final,6.0,-105
+CBJ,2021-10-19T23:30Z,401349174,DET,2021,Columbus Blue Jackets,1,Detroit Red Wings,4,180,,,120,,,False,DraftKings,13,105,3,REG,-225,185,-1.5,Final,5.5,-125
+NYI,2021-10-20T00:00Z,401349179,CHI,2021,New York Islanders,4,Chicago Blackhawks,1,125,,,155,,,False,DraftKings,13,-115,3,REG,190,-235,1.5,Final,5.5,-105
+LA,2021-10-20T00:00Z,401349180,NSH,2021,Los Angeles Kings,1,Nashville Predators,2,225,,,100,,,False,DraftKings,13,100,3,REG,-210,175,-1.5,Final,5.5,-120
+WPG,2021-10-20T00:00Z,401349181,MIN,2021,Winnipeg Jets,5,Minnesota Wild,6,225,,,-105,,,False,DraftKings,13,-120,4,OT,-200,170,-1.5,Final/OT,5.5,100
+ANA,2021-10-20T01:00Z,401349182,EDM,2021,Anaheim Ducks,5,Edmonton Oilers,6,400,,,-190,,,False,DraftKings,13,-110,3,REG,-110,-110,-1.5,Final,6.0,-110
+BOS,2021-10-20T23:30Z,401349183,PHI,2021,Boston Bruins,3,Philadelphia Flyers,6,140,,,150,,,False,DraftKings,12,100,3,REG,180,-220,1.5,Final,6.0,-120
+STL,2021-10-21T02:00Z,401349184,VGK,2021,St. Louis Blues,3,Vegas Golden Knights,1,175,,,120,,,False,DraftKings,13,-125,3,REG,-210,175,-1.5,Final,5.5,105
+CAR,2021-10-21T23:00Z,401349185,MTL,2021,Carolina Hurricanes,4,Montreal Canadiens,1,135,,,150,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,5.5,100
+SJ,2021-10-21T23:00Z,401349186,OTT,2021,San Jose Sharks,2,Ottawa Senators,1,145,,,150,,,False,DraftKings,13,-110,3,REG,-240,195,-1.5,Final,6.0,-110
+COL,2021-10-21T23:00Z,401349188,FLA,2021,Colorado Avalanche,1,Florida Panthers,4,150,,,135,,,False,DraftKings,13,-115,3,REG,-235,190,-1.5,Final,6.5,-105
+WSH,2021-10-21T23:00Z,401349189,NJ,2021,Washington Capitals,4,New Jersey Devils,1,125,,,155,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,6.0,100
+NYI,2021-10-21T23:00Z,401349190,CBJ,2021,New York Islanders,2,Columbus Blue Jackets,3,110,,,195,,,False,DraftKings,13,115,4,OT,180,-220,1.5,Final/OT,5.5,-135
+CGY,2021-10-21T23:30Z,401349187,DET,2021,Calgary Flames,3,Detroit Red Wings,0,110,,,200,,,False,DraftKings,13,-110,3,REG,190,-235,1.5,Final,5.5,-110
+NYR,2021-10-22T00:00Z,401349192,NSH,2021,New York Rangers,3,Nashville Predators,1,160,,,130,,,False,DraftKings,13,-105,3,REG,-265,215,-1.5,Final,5.5,-115
+ANA,2021-10-22T00:00Z,401349193,WPG,2021,Anaheim Ducks,1,Winnipeg Jets,5,220,,,-105,,,False,DraftKings,13,-105,3,REG,-155,135,-1.5,Final,5.5,-115
+VAN,2021-10-22T00:30Z,401349191,CHI,2021,Vancouver Canucks,4,Chicago Blackhawks,1,170,,,115,,,False,DraftKings,13,100,3,REG,-200,170,-1.5,Final,6.5,-120
+EDM,2021-10-22T02:00Z,401349194,ARI,2021,Edmonton Oilers,5,Arizona Coyotes,1,-120,,,250,,,False,DraftKings,13,105,3,REG,120,-140,1.5,Final,6.5,-125
+SJ,2021-10-22T22:00Z,401349196,TOR,2021,San Jose Sharks,5,Toronto Maple Leafs,3,300,,,-140,,,False,DraftKings,13,-120,3,REG,-130,110,-1.5,Final,6.0,100
+BOS,2021-10-22T23:00Z,401349195,BUF,2021,Boston Bruins,4,Buffalo Sabres,1,-140,,,290,,,False,DraftKings,13,-115,3,REG,120,-140,1.5,Final,5.5,-105
+LA,2021-10-23T00:30Z,401349197,DAL,2021,Los Angeles Kings,2,Dallas Stars,3,195,,,105,,,False,DraftKings,13,-140,4,OT,-195,165,-1.5,Final/OT,5.0,120
+EDM,2021-10-23T02:00Z,401349198,VGK,2021,Edmonton Oilers,5,Vegas Golden Knights,3,175,,,115,,,False,DraftKings,13,100,3,REG,-200,170,-1.5,Final,6.5,-120
+NYR,2021-10-23T17:00Z,401349200,OTT,2021,New York Rangers,3,Ottawa Senators,2,100,,,210,,,False,DraftKings,13,-110,3,REG,165,-195,1.5,Final,6.0,-110
+CGY,2021-10-23T17:00Z,401349205,WSH,2021,Calgary Flames,4,Washington Capitals,3,250,,,-115,,,False,DraftKings,13,-105,4,OT,-170,150,-1.5,Final/OT,6.0,-115
+ANA,2021-10-23T22:00Z,401349208,MIN,2021,Anaheim Ducks,3,Minnesota Wild,4,390,,,-175,,,False,DraftKings,13,-105,4,OT,-120,100,-1.5,Final/OT,5.5,-115
+DET,2021-10-23T23:00Z,401349199,MTL,2021,Detroit Red Wings,1,Montreal Canadiens,6,260,,,-115,,,False,DraftKings,13,110,3,REG,-165,145,-1.5,Final,5.5,-130
+COL,2021-10-23T23:00Z,401349201,TB,2021,Colorado Avalanche,4,Tampa Bay Lightning,3,175,,,120,,,False,DraftKings,13,-110,5,SO,-265,215,-1.5,Final/SO,6.0,-110
+BUF,2021-10-23T23:00Z,401349202,NJ,2021,Buffalo Sabres,1,New Jersey Devils,2,270,,,-125,,,False,DraftKings,13,120,4,OT,-150,130,-1.5,Final/OT,6.5,-140
+FLA,2021-10-23T23:00Z,401349203,PHI,2021,Florida Panthers,4,Philadelphia Flyers,2,100,,,210,,,False,DraftKings,13,100,3,REG,165,-195,1.5,Final,6.5,-120
+TOR,2021-10-23T23:00Z,401349204,PIT,2021,Toronto Maple Leafs,1,Pittsburgh Penguins,7,-115,,,245,,,False,DraftKings,13,-105,3,REG,165,-195,1.5,Final,6.0,-115
+CAR,2021-10-23T23:00Z,401349206,CBJ,2021,Carolina Hurricanes,5,Columbus Blue Jackets,1,-110,,,235,,,False,DraftKings,13,-115,3,REG,170,-200,1.5,Final,5.5,-105
+NSH,2021-10-23T23:00Z,401349209,WPG,2021,Nashville Predators,4,Winnipeg Jets,6,205,,,105,,,False,DraftKings,12,-115,3,REG,-220,180,-1.5,Final,5.5,-105
+LA,2021-10-24T00:00Z,401349207,STL,2021,Los Angeles Kings,3,St. Louis Blues,7,270,,,-125,,,False,DraftKings,13,-105,3,REG,-160,140,-1.5,Final,5.5,-115
+NYI,2021-10-24T01:00Z,401349210,ARI,2021,New York Islanders,3,Arizona Coyotes,0,-120,,,255,,,False,DraftKings,13,105,3,REG,130,-150,1.5,Final,5.5,-125
+VAN,2021-10-24T02:00Z,401349211,SEA,2021,Vancouver Canucks,4,Seattle Kraken,2,205,,,105,,,False,DraftKings,13,100,3,REG,-220,180,-1.5,Final,6.0,-120
+SJ,2021-10-24T17:00Z,401349212,BOS,2021,San Jose Sharks,3,Boston Bruins,4,270,,,-120,,,False,DraftKings,13,-120,3,REG,-140,120,-1.5,Final,5.5,100
+NSH,2021-10-24T22:00Z,401349214,MIN,2021,Nashville Predators,5,Minnesota Wild,2,285,,,-115,,,False,DraftKings,13,-115,3,REG,-160,140,-1.5,Final,5.5,-105
+DET,2021-10-24T23:00Z,401349213,CHI,2021,Detroit Red Wings,6,Chicago Blackhawks,3,250,,,-120,,,False,DraftKings,13,100,3,REG,-170,150,-1.5,Final,6.0,-120
+NYI,2021-10-25T02:00Z,401349215,VGK,2021,New York Islanders,2,Vegas Golden Knights,0,230,,,-105,,,False,DraftKings,13,-105,3,REG,-210,175,-1.5,Final,5.5,-115
+TB,2021-10-25T23:00Z,401349216,BUF,2021,Tampa Bay Lightning,1,Buffalo Sabres,5,-125,,,280,,,False,DraftKings,13,-105,3,REG,150,-170,1.5,Final,6.0,-115
+WSH,2021-10-25T23:00Z,401349217,OTT,2021,Washington Capitals,7,Ottawa Senators,5,100,,,220,,,False,DraftKings,12,100,3,REG,150,-170,1.5,Final,6.5,-120
+ARI,2021-10-25T23:00Z,401349218,FLA,2021,Arizona Coyotes,3,Florida Panthers,5,500,,,-220,,,False,DraftKings,13,-115,3,REG,130,-150,-1.5,Final,6.0,-105
+CGY,2021-10-25T23:00Z,401349219,NYR,2021,Calgary Flames,5,New York Rangers,1,210,,,110,,,False,DraftKings,13,105,3,REG,-220,180,-1.5,Final,5.5,-125
+TOR,2021-10-25T23:00Z,401349220,CAR,2021,Toronto Maple Leafs,1,Carolina Hurricanes,4,150,,,135,,,False,DraftKings,13,-115,3,REG,205,-255,1.5,Final,6.0,-105
+DAL,2021-10-25T23:00Z,401349221,CBJ,2021,Dallas Stars,1,Columbus Blue Jackets,4,120,,,190,,,False,DraftKings,13,110,3,REG,185,-225,1.5,Final,5.5,-130
+LA,2021-10-26T00:00Z,401349222,STL,2021,Los Angeles Kings,0,St. Louis Blues,3,275,,,-115,,,False,DraftKings,12,-120,3,REG,-155,135,-1.5,Final,5.5,100
+CGY,2021-10-26T23:00Z,401349223,NJ,2021,Calgary Flames,5,New Jersey Devils,3,175,,,135,,,False,DraftKings,13,100,3,REG,220,-275,1.5,Final,6.0,-120
+TB,2021-10-26T23:00Z,401349224,PIT,2021,Tampa Bay Lightning,5,Pittsburgh Penguins,1,105,,,210,,,False,DraftKings,13,-105,3,REG,180,-220,1.5,Final,5.5,-115
+VGK,2021-10-27T00:00Z,401349226,COL,2021,Vegas Golden Knights,3,Colorado Avalanche,1,245,,,-110,,,False,DraftKings,13,100,3,REG,-155,135,-1.5,Final,6.0,-120
+SJ,2021-10-27T00:30Z,401349225,NSH,2021,San Jose Sharks,1,Nashville Predators,3,160,,,125,,,False,DraftKings,13,100,3,REG,-210,175,-1.5,Final,6.0,-120
+MIN,2021-10-27T02:00Z,401349227,VAN,2021,Minnesota Wild,3,Vancouver Canucks,2,130,,,175,,,False,DraftKings,11,100,3,REG,190,-235,1.5,Final,6.0,-120
+WPG,2021-10-27T02:00Z,401349228,ANA,2021,Winnipeg Jets,4,Anaheim Ducks,3,125,,,185,,,False,DraftKings,13,-115,3,REG,170,-200,1.5,Final,5.5,-105
+MTL,2021-10-27T02:00Z,401349229,SEA,2021,Montreal Canadiens,1,Seattle Kraken,5,185,,,135,,,False,DraftKings,13,-105,3,REG,-240,195,-1.5,Final,5.5,-115
+BOS,2021-10-27T23:00Z,401349230,FLA,2021,Boston Bruins,1,Florida Panthers,4,175,,,125,,,False,DraftKings,13,-120,3,REG,-235,190,-1.5,Final,5.5,100
+DET,2021-10-27T23:00Z,401349231,WSH,2021,Detroit Red Wings,3,Washington Capitals,2,330,,,-145,,,False,DraftKings,13,100,4,OT,-140,120,-1.5,Final/OT,6.5,-120
+TOR,2021-10-27T23:30Z,401349232,CHI,2021,Toronto Maple Leafs,3,Chicago Blackhawks,2,-140,,,295,,,False,DraftKings,13,-120,4,OT,120,-140,1.5,Final/OT,6.0,100
+VGK,2021-10-28T00:30Z,401349233,DAL,2021,Vegas Golden Knights,3,Dallas Stars,2,210,,,105,,,False,DraftKings,12,105,4,OT,-200,170,-1.5,Final/OT,5.5,-125
+PHI,2021-10-28T02:00Z,401349234,EDM,2021,Philadelphia Flyers,5,Edmonton Oilers,3,245,,,-115,,,False,DraftKings,13,-130,3,REG,-150,130,-1.5,Final,6.5,110
+ARI,2021-10-28T23:00Z,401349235,TB,2021,Arizona Coyotes,1,Tampa Bay Lightning,5,500,,,-225,,,False,DraftKings,13,-120,3,REG,105,-125,-1.5,Final,5.5,100
+CGY,2021-10-28T23:00Z,401349236,PIT,2021,Calgary Flames,4,Pittsburgh Penguins,0,165,,,130,,,False,DraftKings,13,-115,3,REG,-235,190,-1.5,Final,5.5,-105
+BOS,2021-10-28T23:00Z,401349237,CAR,2021,Boston Bruins,0,Carolina Hurricanes,3,175,,,115,,,False,DraftKings,13,-115,3,REG,-225,185,-1.5,Final,5.5,-105
+COL,2021-10-29T00:00Z,401349238,STL,2021,Colorado Avalanche,4,St. Louis Blues,3,125,,,165,,,False,DraftKings,13,-105,3,REG,185,-225,1.5,Final,6.0,-115
+PHI,2021-10-29T02:00Z,401349239,VAN,2021,Philadelphia Flyers,2,Vancouver Canucks,1,205,,,100,,,False,DraftKings,13,-120,3,REG,-235,190,-1.5,Final,6.0,100
+BUF,2021-10-29T02:00Z,401349240,ANA,2021,Buffalo Sabres,4,Anaheim Ducks,3,185,,,115,,,False,DraftKings,13,-110,4,OT,-225,185,-1.5,Final/OT,5.5,-110
+MIN,2021-10-29T02:00Z,401349243,SEA,2021,Minnesota Wild,1,Seattle Kraken,4,130,,,160,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,5.5,100
+WPG,2021-10-29T02:30Z,401349241,LA,2021,Winnipeg Jets,3,Los Angeles Kings,2,180,,,115,,,False,DraftKings,12,-120,3,REG,210,-260,1.5,Final,5.5,100
+MTL,2021-10-29T02:30Z,401349242,SJ,2021,Montreal Canadiens,4,San Jose Sharks,0,175,,,115,,,False,DraftKings,13,-120,3,REG,-220,180,-1.5,Final,5.5,100
+FLA,2021-10-29T23:00Z,401349244,DET,2021,Florida Panthers,3,Detroit Red Wings,2,-125,,,270,,,False,DraftKings,13,-110,4,OT,140,-160,1.5,Final/OT,6.0,-110
+CBJ,2021-10-29T23:00Z,401349245,NYR,2021,Columbus Blue Jackets,0,New York Rangers,4,250,,,-115,,,False,DraftKings,13,110,3,REG,-180,155,-1.5,Final,5.5,-130
+ARI,2021-10-29T23:00Z,401349246,WSH,2021,Arizona Coyotes,0,Washington Capitals,2,500,,,-230,,,False,DraftKings,12,-105,3,REG,110,-130,-1.5,Final,6.0,-115
+CHI,2021-10-29T23:00Z,401349247,CAR,2021,Chicago Blackhawks,3,Carolina Hurricanes,6,320,,,-150,,,False,DraftKings,13,-105,3,REG,-135,115,-1.5,Final,6.0,-115
+ANA,2021-10-30T00:00Z,401349249,VGK,2021,Anaheim Ducks,4,Vegas Golden Knights,5,200,,,-230,,,False,Caesars Sportsbook,12,-110,5,SO,-135,115,-1.5,Final/SO,5.5,100
+OTT,2021-10-30T00:30Z,401349248,DAL,2021,Ottawa Senators,4,Dallas Stars,1,280,,,-130,,,False,DraftKings,13,-115,3,REG,-155,135,-1.5,Final,5.5,-105
+NYI,2021-10-30T17:30Z,401349254,NSH,2021,New York Islanders,2,Nashville Predators,3,145,,,155,,,False,DraftKings,13,115,5,SO,205,-255,1.5,Final/SO,5.5,-135
+MTL,2021-10-30T20:00Z,401349258,LA,2021,Montreal Canadiens,2,Los Angeles Kings,5,180,,,125,,,False,DraftKings,13,-105,3,REG,-240,195,-1.5,Final,5.5,-115
+FLA,2021-10-30T23:00Z,401349250,BOS,2021,Florida Panthers,2,Boston Bruins,3,180,,,125,,,False,DraftKings,13,-120,5,SO,-200,170,-1.5,Final/SO,5.5,100
+DET,2021-10-30T23:00Z,401349251,TOR,2021,Detroit Red Wings,4,Toronto Maple Leafs,5,425,,,-185,,,False,DraftKings,13,100,3,REG,100,-120,-1.5,Final,6.5,-120
+NJ,2021-10-30T23:00Z,401349252,PIT,2021,New Jersey Devils,4,Pittsburgh Penguins,2,205,,,105,,,False,DraftKings,13,100,3,REG,-180,155,-1.5,Final,6.0,-120
+WPG,2021-10-30T23:15Z,401349259,SJ,2021,Winnipeg Jets,1,San Jose Sharks,2,135,,,155,,,False,DraftKings,13,-115,4,OT,-255,205,-1.5,Final/OT,6.0,-105
+CHI,2021-10-31T00:00Z,401349253,STL,2021,Chicago Blackhawks,0,St. Louis Blues,1,300,,,-130,,,False,DraftKings,13,100,3,REG,-135,115,-1.5,Final,6.0,-120
+MIN,2021-10-31T01:00Z,401349255,COL,2021,Minnesota Wild,1,Colorado Avalanche,4,205,,,105,,,False,DraftKings,13,100,3,REG,-170,150,-1.5,Final,6.0,-120
+PHI,2021-10-31T02:00Z,401349256,CGY,2021,Philadelphia Flyers,0,Calgary Flames,4,210,,,105,,,False,DraftKings,13,-110,3,REG,-170,150,-1.5,Final,6.0,-110
+EDM,2021-10-31T02:00Z,401349257,VAN,2021,Edmonton Oilers,2,Vancouver Canucks,1,120,,,185,,,False,DraftKings,13,-120,3,REG,170,-200,1.5,Final,6.5,100
+ARI,2021-10-31T17:00Z,401349261,CAR,2021,Arizona Coyotes,1,Carolina Hurricanes,2,450,,,-210,,,False,DraftKings,13,110,3,REG,125,-145,-1.5,Final,6.0,-130
+MTL,2021-10-31T20:00Z,401349262,ANA,2021,Montreal Canadiens,2,Anaheim Ducks,4,140,,,150,,,False,DraftKings,12,-115,3,REG,220,-275,1.5,Final,5.5,-105
+BUF,2021-10-31T20:00Z,401349263,LA,2021,Buffalo Sabres,2,Los Angeles Kings,3,180,,,120,,,False,DraftKings,13,-120,3,REG,-220,180,-1.5,Final,5.5,100
+CBJ,2021-10-31T21:00Z,401349260,NJ,2021,Columbus Blue Jackets,4,New Jersey Devils,3,165,,,130,,,False,DraftKings,13,-120,5,SO,-225,185,-1.5,Final/SO,5.5,100
+NYR,2021-11-01T01:00Z,401349264,SEA,2021,New York Rangers,3,Seattle Kraken,1,135,,,160,,,False,DraftKings,13,100,3,REG,190,-235,1.5,Final,5.5,-120
+WSH,2021-11-01T23:00Z,401349265,TB,2021,Washington Capitals,2,Tampa Bay Lightning,3,195,,,105,,,False,DraftKings,13,-120,3,REG,-190,160,-1.5,Final,5.5,100
+OTT,2021-11-02T00:00Z,401349266,CHI,2021,Ottawa Senators,1,Chicago Blackhawks,5,190,,,110,,,False,DraftKings,13,-110,3,REG,-195,165,-1.5,Final,6.0,-110
+SEA,2021-11-02T01:30Z,401349267,EDM,2021,Seattle Kraken,2,Edmonton Oilers,5,310,,,-180,,,False,DraftKings,13,100,3,REG,-120,100,-1.5,Final,6.5,-120
+VGK,2021-11-02T23:00Z,401349268,TOR,2021,Vegas Golden Knights,0,Toronto Maple Leafs,4,225,,,-115,,,False,DraftKings,13,100,3,REG,-155,135,-1.5,Final,6.0,-120
+DET,2021-11-02T23:00Z,401349269,MTL,2021,Detroit Red Wings,0,Montreal Canadiens,3,195,,,105,,,False,DraftKings,13,-105,3,REG,-200,170,-1.5,Final,5.5,-115
+ARI,2021-11-02T23:00Z,401349270,PHI,2021,Arizona Coyotes,0,Philadelphia Flyers,3,300,,,-145,,,False,DraftKings,13,-110,3,REG,-130,110,-1.5,Final,5.5,-110
+OTT,2021-11-03T00:00Z,401349271,MIN,2021,Ottawa Senators,4,Minnesota Wild,5,260,,,-120,,,False,DraftKings,13,100,4,OT,-135,115,-1.5,Final/OT,6.0,-120
+DAL,2021-11-03T00:00Z,401349272,WPG,2021,Dallas Stars,3,Winnipeg Jets,4,160,,,140,,,False,DraftKings,13,-115,5,SO,-275,220,-1.5,Final/SO,5.5,-105
+NSH,2021-11-03T01:00Z,401349273,CGY,2021,Nashville Predators,3,Calgary Flames,2,205,,,105,,,False,DraftKings,13,-105,4,OT,-195,165,-1.5,Final/OT,5.5,-115
+NYR,2021-11-03T02:00Z,401349274,VAN,2021,New York Rangers,2,Vancouver Canucks,3,125,,,180,,,False,DraftKings,13,-105,4,OT,200,-250,1.5,Final/OT,5.5,-115
+NJ,2021-11-03T02:00Z,401349275,ANA,2021,New Jersey Devils,0,Anaheim Ducks,4,125,,,180,,,False,DraftKings,13,-110,3,REG,195,-240,1.5,Final,5.5,-110
+BUF,2021-11-03T02:30Z,401349276,SJ,2021,Buffalo Sabres,3,San Jose Sharks,5,190,,,115,,,False,DraftKings,13,-110,3,REG,-190,160,-1.5,Final,5.5,-110
+CAR,2021-11-04T00:30Z,401349277,CHI,2021,Carolina Hurricanes,4,Chicago Blackhawks,3,105,,,195,,,False,DraftKings,12,-110,3,REG,155,-180,1.5,Final,6.0,-110
+NSH,2021-11-04T00:30Z,401349279,EDM,2021,Nashville Predators,2,Edmonton Oilers,5,280,,,-135,,,False,DraftKings,11,-120,3,REG,-135,115,-1.5,Final,6.0,100
+CBJ,2021-11-04T01:00Z,401349278,COL,2021,Columbus Blue Jackets,5,Colorado Avalanche,4,280,,,-135,,,False,DraftKings,12,-110,4,OT,-150,130,-1.5,Final/OT,5.5,-110
+STL,2021-11-04T02:00Z,401349280,LA,2021,St. Louis Blues,2,Los Angeles Kings,3,-105,,,230,,,False,DraftKings,12,-115,5,SO,180,-220,1.5,Final/SO,5.5,-105
+DET,2021-11-04T23:00Z,401349281,BOS,2021,Detroit Red Wings,1,Boston Bruins,5,360,,,-165,,,False,DraftKings,12,-105,3,REG,-115,-105,-1.5,Final,5.5,-115
+TB,2021-11-04T23:00Z,401349282,TOR,2021,Tampa Bay Lightning,1,Toronto Maple Leafs,2,180,,,120,,,False,DraftKings,12,-120,4,OT,-200,170,-1.5,Final/OT,5.5,100
+NYI,2021-11-04T23:00Z,401349283,MTL,2021,New York Islanders,6,Montreal Canadiens,2,120,,,180,,,False,DraftKings,12,110,3,REG,180,-220,1.5,Final,5.5,-130
+VGK,2021-11-04T23:00Z,401349284,OTT,2021,Vegas Golden Knights,5,Ottawa Senators,1,125,,,165,,,False,DraftKings,12,-115,3,REG,185,-225,1.5,Final,5.5,-105
+WSH,2021-11-04T23:00Z,401349285,FLA,2021,Washington Capitals,4,Florida Panthers,5,200,,,110,,,False,DraftKings,12,-110,4,OT,-195,165,-1.5,Final/OT,6.0,-110
+PHI,2021-11-04T23:00Z,401349286,PIT,2021,Philadelphia Flyers,2,Pittsburgh Penguins,3,185,,,115,,,False,DraftKings,12,-105,4,OT,-220,180,-1.5,Final/OT,6.0,-115
+DAL,2021-11-05T01:00Z,401349287,CGY,2021,Dallas Stars,4,Calgary Flames,3,205,,,105,,,False,DraftKings,12,115,4,OT,-200,170,-1.5,Final/OT,5.5,-135
+BUF,2021-11-05T02:00Z,401349289,SEA,2021,Buffalo Sabres,2,Seattle Kraken,5,285,,,-130,,,False,DraftKings,12,-105,3,REG,-155,135,-1.5,Final,5.5,-115
+STL,2021-11-05T02:30Z,401349288,SJ,2021,St. Louis Blues,5,San Jose Sharks,3,130,,,170,,,False,DraftKings,12,-120,3,REG,190,-235,1.5,Final,5.5,100
+CHI,2021-11-06T00:00Z,401349290,WPG,2021,Chicago Blackhawks,1,Winnipeg Jets,5,230,,,-105,,,False,DraftKings,12,-120,3,REG,-180,155,-1.5,Final,6.0,100
+NYR,2021-11-06T01:30Z,401349291,EDM,2021,New York Rangers,5,Edmonton Oilers,6,205,,,105,,,False,DraftKings,12,-120,4,OT,-180,155,-1.5,Final/OT,6.0,100
+NSH,2021-11-06T02:00Z,401349292,VAN,2021,Nashville Predators,3,Vancouver Canucks,2,170,,,130,,,False,DraftKings,12,100,3,REG,-240,195,-1.5,Final,5.5,-120
+ARI,2021-11-06T02:00Z,401349293,ANA,2021,Arizona Coyotes,1,Anaheim Ducks,3,255,,,-110,,,False,DraftKings,12,115,3,REG,-180,155,-1.5,Final,5.5,-135
+NJ,2021-11-06T02:30Z,401349294,LA,2021,New Jersey Devils,2,Los Angeles Kings,3,170,,,130,,,False,DraftKings,12,-120,4,OT,-235,190,-1.5,Final/OT,5.5,100
+TB,2021-11-06T18:00Z,401349298,OTT,2021,Tampa Bay Lightning,5,Ottawa Senators,3,-110,,,240,,,False,DraftKings,12,-115,3,REG,145,-165,1.5,Final,6.0,-105
+CAR,2021-11-06T22:00Z,401349299,FLA,2021,Carolina Hurricanes,2,Florida Panthers,5,200,,,105,,,False,DraftKings,13,-120,3,REG,-210,175,-1.5,Final,6.0,100
+DET,2021-11-06T23:00Z,401349295,BUF,2021,Detroit Red Wings,4,Buffalo Sabres,3,165,,,135,,,False,DraftKings,13,105,4,OT,-275,220,-1.5,Final/OT,5.5,-125
+BOS,2021-11-06T23:00Z,401349296,TOR,2021,Boston Bruins,2,Toronto Maple Leafs,5,180,,,125,,,False,DraftKings,13,-110,3,REG,-220,180,-1.5,Final,5.5,-110
+VGK,2021-11-06T23:00Z,401349297,MTL,2021,Vegas Golden Knights,5,Montreal Canadiens,2,135,,,165,,,False,DraftKings,13,-105,3,REG,215,-265,1.5,Final,5.5,-115
+MIN,2021-11-06T23:00Z,401349300,PIT,2021,Minnesota Wild,5,Pittsburgh Penguins,4,155,,,130,,,False,DraftKings,13,100,5,SO,-255,205,-1.5,Final/SO,6.0,-120
+PHI,2021-11-06T23:00Z,401349301,WSH,2021,Philadelphia Flyers,2,Washington Capitals,1,205,,,105,,,False,DraftKings,13,-120,3,REG,-170,150,-1.5,Final,6.0,100
+COL,2021-11-06T23:00Z,401349302,CBJ,2021,Colorado Avalanche,2,Columbus Blue Jackets,4,-120,,,270,,,False,DraftKings,13,100,3,REG,150,-170,1.5,Final,5.5,-120
+NYI,2021-11-06T23:00Z,401349303,WPG,2021,New York Islanders,2,Winnipeg Jets,0,130,,,170,,,False,DraftKings,12,-120,3,REG,190,-235,1.5,Final,5.5,100
+NYR,2021-11-07T02:00Z,401349304,CGY,2021,New York Rangers,0,Calgary Flames,6,220,,,-105,,,False,DraftKings,13,110,3,REG,-190,160,-1.5,Final,5.5,-130
+SEA,2021-11-07T02:00Z,401349305,ARI,2021,Seattle Kraken,4,Arizona Coyotes,5,-120,,,270,,,False,DraftKings,13,115,3,REG,130,-150,1.5,Final,5.5,-135
+NJ,2021-11-07T02:30Z,401349306,SJ,2021,New Jersey Devils,3,San Jose Sharks,2,185,,,115,,,False,DraftKings,13,100,5,SO,-210,175,-1.5,Final/SO,5.5,-120
+VGK,2021-11-07T23:00Z,401349307,DET,2021,Vegas Golden Knights,2,Detroit Red Wings,5,125,,,175,,,False,DraftKings,13,-110,3,REG,180,-220,1.5,Final,5.5,-110
+NSH,2021-11-08T00:00Z,401349308,CHI,2021,Nashville Predators,1,Chicago Blackhawks,2,150,,,150,,,False,DraftKings,13,-120,4,OT,235,-300,1.5,Final/OT,5.5,100
+NYI,2021-11-08T01:00Z,401349309,MIN,2021,New York Islanders,2,Minnesota Wild,5,155,,,145,,,False,DraftKings,13,-105,3,REG,-250,200,-1.5,Final,5.5,-115
+STL,2021-11-08T01:00Z,401349311,ANA,2021,St. Louis Blues,1,Anaheim Ducks,4,-105,,,235,,,False,DraftKings,13,-110,3,REG,155,-180,1.5,Final,5.5,-110
+DAL,2021-11-08T03:00Z,401349310,VAN,2021,Dallas Stars,3,Vancouver Canucks,6,150,,,150,,,False,DraftKings,13,100,3,REG,205,-255,1.5,Final,5.5,-120
+FLA,2021-11-09T00:00Z,401349313,NYR,2021,Florida Panthers,3,New York Rangers,4,145,,,150,,,False,DraftKings,12,105,3,REG,195,-240,1.5,Final,6.0,-125
+BUF,2021-11-09T00:00Z,401349314,WSH,2021,Buffalo Sabres,3,Washington Capitals,5,330,,,-145,,,False,DraftKings,12,-130,3,REG,-115,-105,-1.5,Final,5.5,110
+LA,2021-11-09T00:30Z,401349312,TOR,2021,Los Angeles Kings,5,Toronto Maple Leafs,1,370,,,-160,,,False,DraftKings,13,100,3,REG,-115,-105,-1.5,Final,6.0,-120
+OTT,2021-11-10T00:00Z,401349315,BOS,2021,Ottawa Senators,2,Boston Bruins,3,400,,,-195,,,False,DraftKings,13,100,3,REG,105,-125,-1.5,Final,6.0,-120
+LA,2021-11-10T00:00Z,401349316,MTL,2021,Los Angeles Kings,3,Montreal Canadiens,2,185,,,115,,,False,DraftKings,13,100,4,OT,-190,160,-1.5,Final/OT,5.5,-120
+CAR,2021-11-10T00:00Z,401349318,TB,2021,Carolina Hurricanes,2,Tampa Bay Lightning,1,185,,,120,,,False,DraftKings,13,-110,4,OT,-210,175,-1.5,Final/OT,5.5,-110
+FLA,2021-11-10T00:00Z,401349319,NJ,2021,Florida Panthers,3,New Jersey Devils,7,115,,,180,,,False,DraftKings,13,-105,3,REG,170,-200,1.5,Final,6.0,-115
+EDM,2021-11-10T00:30Z,401349317,DET,2021,Edmonton Oilers,2,Detroit Red Wings,4,-110,,,215,,,False,DraftKings,13,105,3,REG,145,-165,1.5,Final,6.5,-125
+STL,2021-11-10T01:00Z,401349321,WPG,2021,St. Louis Blues,3,Winnipeg Jets,2,165,,,135,,,False,DraftKings,12,-105,5,SO,220,-275,1.5,Final/SO,6.0,-115
+PIT,2021-11-10T01:30Z,401349320,CHI,2021,Pittsburgh Penguins,2,Chicago Blackhawks,3,115,,,190,,,False,DraftKings,13,-115,5,SO,175,-210,1.5,Final/SO,6.0,-105
+SJ,2021-11-10T02:00Z,401349322,CGY,2021,San Jose Sharks,4,Calgary Flames,1,290,,,-130,,,False,DraftKings,13,-110,3,REG,-125,105,-1.5,Final,5.5,-110
+ANA,2021-11-10T03:00Z,401349323,VAN,2021,Anaheim Ducks,3,Vancouver Canucks,2,220,,,-105,,,False,DraftKings,13,-110,4,OT,-190,160,-1.5,Final/OT,5.5,-110
+SEA,2021-11-10T03:00Z,401349324,VGK,2021,Seattle Kraken,2,Vegas Golden Knights,4,170,,,115,,,False,DraftKings,13,-110,3,REG,-235,190,-1.5,Final,5.5,-110
+TOR,2021-11-11T00:30Z,401349325,PHI,2021,Toronto Maple Leafs,3,Philadelphia Flyers,0,125,,,160,,,False,DraftKings,13,-110,3,REG,180,-220,1.5,Final,6.0,-110
+NSH,2021-11-11T01:30Z,401349326,DAL,2021,Nashville Predators,4,Dallas Stars,2,225,,,100,,,False,DraftKings,13,115,3,REG,-200,170,-1.5,Final,5.5,-135
+MIN,2021-11-11T03:00Z,401349327,ARI,2021,Minnesota Wild,5,Arizona Coyotes,2,-145,,,320,,,False,DraftKings,13,-120,3,REG,120,-140,1.5,Final,5.5,100
+EDM,2021-11-12T00:00Z,401349328,BOS,2021,Edmonton Oilers,5,Boston Bruins,3,205,,,105,,,False,DraftKings,13,-115,3,REG,-200,170,-1.5,Final,6.0,-105
+CGY,2021-11-12T00:00Z,401349329,MTL,2021,Calgary Flames,2,Montreal Canadiens,4,100,,,215,,,False,DraftKings,13,100,3,REG,175,-210,1.5,Final,5.5,-120
+LA,2021-11-12T00:00Z,401349330,OTT,2021,Los Angeles Kings,2,Ottawa Senators,0,125,,,170,,,False,DraftKings,13,-115,3,REG,200,-250,1.5,Final,5.5,-105
+NYI,2021-11-12T00:00Z,401349332,NJ,2021,New York Islanders,0,New Jersey Devils,4,120,,,180,,,False,DraftKings,13,105,3,REG,190,-235,1.5,Final,5.5,-125
+FLA,2021-11-12T00:00Z,401349333,PIT,2021,Florida Panthers,2,Pittsburgh Penguins,3,120,,,170,,,False,DraftKings,13,-105,5,SO,190,-235,1.5,Final/SO,6.0,-115
+WSH,2021-11-12T00:30Z,401349331,DET,2021,Washington Capitals,2,Detroit Red Wings,0,110,,,195,,,False,DraftKings,13,-105,3,REG,175,-210,1.5,Final,6.0,-115
+NSH,2021-11-12T01:00Z,401349334,STL,2021,Nashville Predators,4,St. Louis Blues,3,260,,,-120,,,False,DraftKings,13,-115,4,OT,-165,145,-1.5,Final/OT,5.5,-105
+SJ,2021-11-12T01:00Z,401349335,WPG,2021,San Jose Sharks,1,Winnipeg Jets,4,285,,,-130,,,False,DraftKings,13,-120,3,REG,-155,135,-1.5,Final,5.5,100
+VAN,2021-11-12T02:00Z,401349336,COL,2021,Vancouver Canucks,1,Colorado Avalanche,7,285,,,-130,,,False,DraftKings,13,-120,3,REG,-140,120,-1.5,Final,5.5,100
+MIN,2021-11-12T03:00Z,401349337,VGK,2021,Minnesota Wild,2,Vegas Golden Knights,3,145,,,150,,,False,DraftKings,13,100,3,REG,-275,220,-1.5,Final,6.0,-120
+ANA,2021-11-12T03:00Z,401349338,SEA,2021,Anaheim Ducks,7,Seattle Kraken,4,250,,,-115,,,False,DraftKings,13,110,3,REG,-165,145,-1.5,Final,5.5,-130
+EDM,2021-11-13T00:00Z,401349339,BUF,2021,Edmonton Oilers,2,Buffalo Sabres,3,100,,,210,,,False,DraftKings,13,100,3,REG,145,-165,1.5,Final,6.5,-120
+CGY,2021-11-13T00:00Z,401349340,TOR,2021,Calgary Flames,1,Toronto Maple Leafs,2,220,,,100,,,False,DraftKings,13,-120,4,OT,-160,140,-1.5,Final/OT,5.5,100
+PHI,2021-11-13T00:00Z,401349341,CAR,2021,Philadelphia Flyers,2,Carolina Hurricanes,1,280,,,-130,,,False,DraftKings,13,-105,3,REG,-155,135,-1.5,Final,6.0,-115
+WSH,2021-11-13T00:00Z,401349342,CBJ,2021,Washington Capitals,4,Columbus Blue Jackets,3,125,,,170,,,False,DraftKings,13,-120,3,REG,180,-220,1.5,Final,5.5,100
+ARI,2021-11-13T01:30Z,401349343,CHI,2021,Arizona Coyotes,1,Chicago Blackhawks,2,300,,,-145,,,False,DraftKings,13,-105,3,REG,-135,115,-1.5,Final,5.5,-115
+BOS,2021-11-13T18:00Z,401349348,NJ,2021,Boston Bruins,5,New Jersey Devils,2,100,,,215,,,False,DraftKings,13,100,3,REG,170,-200,1.5,Final,5.5,-120
+TOR,2021-11-14T00:00Z,401349344,BUF,2021,Toronto Maple Leafs,5,Buffalo Sabres,4,-125,,,260,,,False,DraftKings,12,-110,3,REG,130,-150,1.5,Final,6.0,-110
+PIT,2021-11-14T00:00Z,401349345,OTT,2021,Pittsburgh Penguins,3,Ottawa Senators,6,105,,,205,,,False,DraftKings,13,-125,3,REG,170,-200,1.5,Final,5.5,105
+MTL,2021-11-14T00:00Z,401349346,DET,2021,Montreal Canadiens,2,Detroit Red Wings,3,170,,,125,,,False,DraftKings,13,-105,4,OT,-235,190,-1.5,Final/OT,5.5,-115
+FLA,2021-11-14T00:00Z,401349347,TB,2021,Florida Panthers,2,Tampa Bay Lightning,3,160,,,130,,,False,DraftKings,13,-115,4,OT,-240,195,-1.5,Final/OT,5.5,-105
+NYR,2021-11-14T00:00Z,401349350,CBJ,2021,New York Rangers,5,Columbus Blue Jackets,3,110,,,200,,,False,DraftKings,13,105,3,REG,190,-235,1.5,Final,5.5,-125
+LA,2021-11-14T00:00Z,401349353,WPG,2021,Los Angeles Kings,2,Winnipeg Jets,3,255,,,-115,,,False,DraftKings,13,-105,4,OT,-165,145,-1.5,Final/OT,5.5,-115
+STL,2021-11-14T00:30Z,401349349,CAR,2021,St. Louis Blues,2,Carolina Hurricanes,3,200,,,105,,,False,DraftKings,13,-115,3,REG,-220,180,-1.5,Final,5.5,-105
+ARI,2021-11-14T01:00Z,401349351,NSH,2021,Arizona Coyotes,1,Nashville Predators,4,390,,,-170,,,False,DraftKings,13,100,3,REG,-110,-110,-1.5,Final,5.5,-120
+PHI,2021-11-14T01:00Z,401349352,DAL,2021,Philadelphia Flyers,2,Dallas Stars,5,235,,,-105,,,False,DraftKings,13,-105,3,REG,-180,155,-1.5,Final,5.5,-115
+SJ,2021-11-14T02:00Z,401349354,COL,2021,San Jose Sharks,2,Colorado Avalanche,6,320,,,-155,,,False,DraftKings,12,-105,3,REG,-130,110,-1.5,Final,6.0,-115
+VAN,2021-11-14T03:00Z,401349355,VGK,2021,Vancouver Canucks,4,Vegas Golden Knights,7,200,,,105,,,False,DraftKings,12,-115,3,REG,-200,170,-1.5,Final,5.5,-105
+MIN,2021-11-14T03:00Z,401349356,SEA,2021,Minnesota Wild,4,Seattle Kraken,2,130,,,160,,,False,DraftKings,13,-115,3,REG,195,-240,1.5,Final,5.5,-105
+CGY,2021-11-14T22:00Z,401349358,OTT,2021,Calgary Flames,4,Ottawa Senators,0,-125,,,275,,,False,DraftKings,13,-115,3,REG,135,-155,1.5,Final,5.5,-105
+MTL,2021-11-15T00:00Z,401349357,BOS,2021,Montreal Canadiens,2,Boston Bruins,5,330,,,-160,,,False,DraftKings,13,-105,3,REG,-125,105,-1.5,Final,5.5,-115
+NJ,2021-11-15T00:00Z,401349359,NYR,2021,New Jersey Devils,3,New York Rangers,4,190,,,105,,,False,DraftKings,13,100,5,SO,-190,160,-1.5,Final/SO,6.0,-120
+PIT,2021-11-15T00:00Z,401349360,WSH,2021,Pittsburgh Penguins,1,Washington Capitals,6,190,,,110,,,False,DraftKings,13,-115,3,REG,-210,175,-1.5,Final,6.0,-105
+EDM,2021-11-15T00:00Z,401349361,STL,2021,Edmonton Oilers,5,St. Louis Blues,4,135,,,160,,,False,DraftKings,13,-110,3,REG,220,-275,1.5,Final,6.0,-110
+VAN,2021-11-15T01:00Z,401349362,ANA,2021,Vancouver Canucks,1,Anaheim Ducks,5,195,,,105,,,False,DraftKings,13,-110,3,REG,-210,175,-1.5,Final,5.5,-110
+NYI,2021-11-16T00:00Z,401349363,TB,2021,New York Islanders,1,Tampa Bay Lightning,4,180,,,120,,,False,DraftKings,13,115,3,REG,-210,175,-1.5,Final,5.5,-135
+DET,2021-11-16T00:00Z,401349364,CBJ,2021,Detroit Red Wings,3,Columbus Blue Jackets,5,170,,,125,,,False,DraftKings,13,-105,3,REG,-220,180,-1.5,Final,5.5,-115
+NSH,2021-11-17T00:00Z,401349365,TOR,2021,Nashville Predators,0,Toronto Maple Leafs,3,260,,,-125,,,False,DraftKings,12,-105,3,REG,-150,130,-1.5,Final,5.5,-115
+NYI,2021-11-17T00:00Z,401349366,FLA,2021,New York Islanders,1,Florida Panthers,6,280,,,-130,,,False,DraftKings,12,-120,3,REG,-165,145,-1.5,Final,5.5,100
+MTL,2021-11-17T00:00Z,401349368,NYR,2021,Montreal Canadiens,2,New York Rangers,3,260,,,-120,,,False,DraftKings,12,-115,3,REG,-155,135,-1.5,Final,5.5,-105
+CGY,2021-11-17T00:00Z,401349369,PHI,2021,Calgary Flames,1,Philadelphia Flyers,2,150,,,150,,,False,DraftKings,12,-110,4,OT,190,-235,1.5,Final/OT,5.5,-110
+BUF,2021-11-17T00:00Z,401349370,PIT,2021,Buffalo Sabres,2,Pittsburgh Penguins,1,300,,,-145,,,False,DraftKings,12,100,3,REG,-120,100,-1.5,Final,6.0,-120
+ARI,2021-11-17T01:00Z,401349371,STL,2021,Arizona Coyotes,3,St. Louis Blues,2,390,,,-195,,,False,DraftKings,11,-120,3,REG,100,-120,-1.5,Final,5.5,100
+SJ,2021-11-17T01:00Z,401349373,MIN,2021,San Jose Sharks,4,Minnesota Wild,1,265,,,-125,,,False,DraftKings,12,-105,3,REG,-155,135,-1.5,Final,6.0,-115
+EDM,2021-11-17T01:00Z,401349374,WPG,2021,Edmonton Oilers,2,Winnipeg Jets,5,145,,,145,,,False,DraftKings,12,100,3,REG,-240,195,-1.5,Final,6.5,-120
+DET,2021-11-17T01:30Z,401349372,DAL,2021,Detroit Red Wings,2,Dallas Stars,5,260,,,-125,,,False,DraftKings,12,100,3,REG,-155,135,-1.5,Final,5.5,-120
+CAR,2021-11-17T03:00Z,401349375,VGK,2021,Carolina Hurricanes,4,Vegas Golden Knights,2,105,,,215,,,False,DraftKings,12,-105,3,REG,165,-195,1.5,Final,6.0,-115
+WSH,2021-11-17T03:00Z,401349376,ANA,2021,Washington Capitals,2,Anaheim Ducks,3,125,,,175,,,False,DraftKings,12,-120,4,OT,185,-225,1.5,Final/OT,5.5,100
+COL,2021-11-18T02:00Z,401349377,VAN,2021,Colorado Avalanche,4,Vancouver Canucks,2,100,,,220,,,False,DraftKings,13,-105,3,REG,155,-180,1.5,Final,6.0,-115
+CHI,2021-11-18T03:00Z,401349379,SEA,2021,Chicago Blackhawks,4,Seattle Kraken,2,205,,,110,,,False,DraftKings,13,-115,3,REG,-190,160,-1.5,Final,5.5,-105
+WSH,2021-11-18T03:30Z,401349378,LA,2021,Washington Capitals,2,Los Angeles Kings,0,135,,,160,,,False,DraftKings,13,100,3,REG,215,-265,1.5,Final,5.5,-120
+CGY,2021-11-19T00:00Z,401349380,BUF,2021,Calgary Flames,5,Buffalo Sabres,0,-115,,,270,,,False,DraftKings,13,-105,3,REG,140,-160,1.5,Final,5.5,-115
+NYR,2021-11-19T00:00Z,401349381,TOR,2021,New York Rangers,1,Toronto Maple Leafs,2,220,,,100,,,False,DraftKings,13,-110,3,REG,-165,145,-1.5,Final,5.5,-110
+PIT,2021-11-19T00:00Z,401349382,MTL,2021,Pittsburgh Penguins,6,Montreal Canadiens,0,110,,,205,,,False,DraftKings,13,-120,3,REG,165,-195,1.5,Final,5.5,100
+NJ,2021-11-19T00:00Z,401349384,FLA,2021,New Jersey Devils,1,Florida Panthers,4,250,,,-110,,,False,DraftKings,12,-120,3,REG,-145,125,-1.5,Final,6.0,100
+TB,2021-11-19T00:00Z,401349385,PHI,2021,Tampa Bay Lightning,4,Philadelphia Flyers,3,125,,,180,,,False,DraftKings,13,-105,5,SO,195,-240,1.5,Final/SO,5.5,-115
+SJ,2021-11-19T01:00Z,401349386,STL,2021,San Jose Sharks,1,St. Louis Blues,4,220,,,100,,,False,DraftKings,13,-105,3,REG,-180,155,-1.5,Final,6.0,-115
+DAL,2021-11-19T01:00Z,401349387,MIN,2021,Dallas Stars,2,Minnesota Wild,7,205,,,110,,,False,DraftKings,13,100,3,REG,-210,175,-1.5,Final,5.5,-120
+WPG,2021-11-19T02:00Z,401349388,EDM,2021,Winnipeg Jets,1,Edmonton Oilers,2,180,,,110,,,False,DraftKings,13,-120,5,SO,-180,155,-1.5,Final/SO,6.0,100
+CBJ,2021-11-19T02:00Z,401349389,ARI,2021,Columbus Blue Jackets,5,Arizona Coyotes,4,115,,,190,,,False,DraftKings,13,110,5,SO,160,-190,1.5,Final/SO,5.5,-130
+DET,2021-11-19T03:00Z,401349390,VGK,2021,Detroit Red Wings,2,Vegas Golden Knights,5,215,,,-105,,,False,DraftKings,12,-115,3,REG,-180,155,-1.5,Final,5.5,-105
+CAR,2021-11-19T03:00Z,401349391,ANA,2021,Carolina Hurricanes,2,Anaheim Ducks,1,110,,,205,,,False,DraftKings,13,-115,3,REG,160,-190,1.5,Final,5.5,-105
+WPG,2021-11-20T03:00Z,401349392,VAN,2021,Winnipeg Jets,2,Vancouver Canucks,3,150,,,145,,,False,DraftKings,13,-105,3,REG,220,-275,1.5,Final,6.0,-115
+COL,2021-11-20T03:00Z,401349393,SEA,2021,Colorado Avalanche,7,Seattle Kraken,3,100,,,210,,,False,DraftKings,13,-125,3,REG,165,-195,1.5,Final,5.5,105
+NJ,2021-11-20T21:00Z,401349397,TB,2021,New Jersey Devils,5,Tampa Bay Lightning,3,275,,,-120,,,False,DraftKings,13,-105,3,REG,-135,115,-1.5,Final,5.5,-115
+CAR,2021-11-20T21:00Z,401349405,LA,2021,Carolina Hurricanes,5,Los Angeles Kings,4,100,,,215,,,False,DraftKings,13,-105,3,REG,165,-195,1.5,Final,5.5,-115
+MIN,2021-11-20T23:00Z,401349398,FLA,2021,Minnesota Wild,4,Florida Panthers,5,200,,,110,,,False,DraftKings,13,-110,3,REG,-180,155,-1.5,Final,6.0,-110
+PIT,2021-11-21T00:00Z,401349394,TOR,2021,Pittsburgh Penguins,2,Toronto Maple Leafs,0,255,,,-120,,,False,DraftKings,13,-120,3,REG,-160,140,-1.5,Final,5.5,100
+NSH,2021-11-21T00:00Z,401349395,MTL,2021,Nashville Predators,3,Montreal Canadiens,6,130,,,170,,,False,DraftKings,13,100,3,REG,225,-280,1.5,Final,5.5,-120
+CGY,2021-11-21T00:00Z,401349399,NYI,2021,Calgary Flames,5,New York Islanders,2,135,,,165,,,False,DraftKings,13,100,3,REG,-305,240,-1.5,Final,5.5,-120
+BOS,2021-11-21T00:00Z,401349400,PHI,2021,Boston Bruins,5,Philadelphia Flyers,2,130,,,170,,,False,DraftKings,12,-120,3,REG,175,-210,1.5,Final,5.5,100
+STL,2021-11-21T01:00Z,401349401,DAL,2021,St. Louis Blues,1,Dallas Stars,4,170,,,130,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,5.5,100
+DET,2021-11-21T01:00Z,401349403,ARI,2021,Detroit Red Wings,1,Arizona Coyotes,2,115,,,195,,,False,DraftKings,13,105,4,OT,180,-220,1.5,Final/OT,5.5,-125
+CHI,2021-11-21T03:00Z,401349402,EDM,2021,Chicago Blackhawks,2,Edmonton Oilers,5,285,,,-130,,,False,DraftKings,13,-115,3,REG,-130,110,-1.5,Final,6.5,-105
+CBJ,2021-11-21T03:00Z,401349404,VGK,2021,Columbus Blue Jackets,2,Vegas Golden Knights,3,195,,,110,,,False,DraftKings,13,100,3,REG,-200,170,-1.5,Final,6.0,-120
+WSH,2021-11-21T03:30Z,401349406,SJ,2021,Washington Capitals,4,San Jose Sharks,0,120,,,185,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,5.5,100
+MIN,2021-11-21T22:00Z,401349408,TB,2021,Minnesota Wild,4,Tampa Bay Lightning,5,155,,,135,,,False,DraftKings,12,-115,5,SO,-210,175,-1.5,Final/SO,6.0,-105
+BUF,2021-11-21T23:00Z,401349410,NYR,2021,Buffalo Sabres,4,New York Rangers,5,290,,,-130,,,False,DraftKings,13,-130,3,REG,-120,100,-1.5,Final,5.5,110
+CGY,2021-11-22T00:00Z,401349407,BOS,2021,Calgary Flames,4,Boston Bruins,0,210,,,105,,,False,DraftKings,13,100,3,REG,-170,150,-1.5,Final,5.5,-120
+TOR,2021-11-22T00:30Z,401349409,NYI,2021,Toronto Maple Leafs,3,New York Islanders,0,120,,,185,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,5.5,100
+CHI,2021-11-22T01:00Z,401349411,VAN,2021,Chicago Blackhawks,1,Vancouver Canucks,0,180,,,125,,,False,DraftKings,12,100,3,REG,-210,175,-1.5,Final,6.0,-120
+WSH,2021-11-22T02:00Z,401349413,SEA,2021,Washington Capitals,2,Seattle Kraken,5,125,,,180,,,False,DraftKings,13,-115,3,REG,190,-235,1.5,Final,5.5,-105
+ARI,2021-11-22T03:00Z,401349412,LA,2021,Arizona Coyotes,2,Los Angeles Kings,1,330,,,-135,,,False,DraftKings,13,105,4,OT,-125,105,-1.5,Final/OT,5.5,-125
+CBJ,2021-11-23T00:00Z,401349414,BUF,2021,Columbus Blue Jackets,7,Buffalo Sabres,4,125,,,175,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,5.5,100
+VGK,2021-11-23T01:00Z,401349415,STL,2021,Vegas Golden Knights,2,St. Louis Blues,5,200,,,105,,,False,DraftKings,13,100,3,REG,-180,155,-1.5,Final,6.0,-120
+ANA,2021-11-23T01:00Z,401349416,NSH,2021,Anaheim Ducks,2,Nashville Predators,3,215,,,105,,,False,DraftKings,13,105,3,REG,-210,175,-1.5,Final,5.5,-125
+PIT,2021-11-23T01:30Z,401349417,WPG,2021,Pittsburgh Penguins,3,Winnipeg Jets,1,160,,,130,,,False,DraftKings,13,-105,3,REG,-235,190,-1.5,Final,5.5,-115
+OTT,2021-11-23T01:30Z,401349418,COL,2021,Ottawa Senators,5,Colorado Avalanche,7,425,,,-205,,,False,DraftKings,13,-105,3,REG,115,-135,-1.5,Final,6.0,-115
+CAR,2021-11-23T03:30Z,401349419,SJ,2021,Carolina Hurricanes,1,San Jose Sharks,2,-105,,,225,,,False,DraftKings,13,-120,4,OT,165,-195,1.5,Final/OT,5.5,100
+PHI,2021-11-24T00:00Z,401349420,TB,2021,Philadelphia Flyers,0,Tampa Bay Lightning,4,235,,,-110,,,False,DraftKings,13,-105,3,REG,-170,150,-1.5,Final,5.5,-115
+EDM,2021-11-24T01:30Z,401349421,DAL,2021,Edmonton Oilers,1,Dallas Stars,4,160,,,130,,,False,DraftKings,13,-120,3,REG,-240,195,-1.5,Final,6.0,100
+CHI,2021-11-24T02:00Z,401349422,CGY,2021,Chicago Blackhawks,2,Calgary Flames,5,320,,,-140,,,False,DraftKings,13,105,3,REG,-140,120,-1.5,Final,5.5,-125
+BOS,2021-11-25T00:00Z,401349423,BUF,2021,Boston Bruins,5,Buffalo Sabres,1,-140,,,330,,,False,DraftKings,13,-120,3,REG,105,-125,1.5,Final,5.5,100
+PHI,2021-11-25T00:00Z,401349425,FLA,2021,Philadelphia Flyers,1,Florida Panthers,2,275,,,-120,,,False,DraftKings,12,-115,4,OT,-125,105,-1.5,Final/OT,6.0,-105
+VAN,2021-11-25T00:00Z,401349428,PIT,2021,Vancouver Canucks,1,Pittsburgh Penguins,4,260,,,-115,,,False,DraftKings,13,100,3,REG,-140,120,-1.5,Final,6.0,-120
+MTL,2021-11-25T00:00Z,401349429,WSH,2021,Montreal Canadiens,3,Washington Capitals,6,255,,,-115,,,False,DraftKings,13,-120,3,REG,-135,115,-1.5,Final,5.5,100
+WPG,2021-11-25T00:00Z,401349430,CBJ,2021,Winnipeg Jets,0,Columbus Blue Jackets,3,125,,,185,,,False,DraftKings,13,-115,3,REG,185,-225,1.5,Final,5.5,-105
+STL,2021-11-25T00:30Z,401349424,DET,2021,St. Louis Blues,2,Detroit Red Wings,4,120,,,185,,,False,DraftKings,13,100,3,REG,175,-210,1.5,Final,6.0,-120
+NYR,2021-11-25T00:30Z,401349427,NYI,2021,New York Rangers,4,New York Islanders,1,140,,,160,,,False,DraftKings,13,100,3,REG,195,-240,1.5,Final,5.5,-120
+MIN,2021-11-25T00:33Z,401349426,NJ,2021,Minnesota Wild,3,New Jersey Devils,2,130,,,170,,,False,DraftKings,13,-120,5,SO,190,-235,1.5,Final/SO,6.0,100
+VGK,2021-11-25T01:00Z,401349431,NSH,2021,Vegas Golden Knights,5,Nashville Predators,2,165,,,135,,,False,DraftKings,13,-105,3,REG,-235,190,-1.5,Final,5.5,-115
+ANA,2021-11-25T02:00Z,401349432,COL,2021,Anaheim Ducks,2,Colorado Avalanche,5,290,,,-135,,,False,DraftKings,13,-120,3,REG,-130,110,-1.5,Final,5.5,100
+EDM,2021-11-25T03:00Z,401349433,ARI,2021,Edmonton Oilers,5,Arizona Coyotes,3,-140,,,320,,,False,DraftKings,13,-115,3,REG,125,-145,1.5,Final,6.0,-105
+TOR,2021-11-25T03:00Z,401349434,LA,2021,Toronto Maple Leafs,6,Los Angeles Kings,2,105,,,215,,,False,DraftKings,13,115,3,REG,150,-170,1.5,Final,5.5,-135
+CAR,2021-11-25T03:00Z,401349436,SEA,2021,Carolina Hurricanes,1,Seattle Kraken,2,110,,,200,,,False,DraftKings,13,-115,3,REG,170,-200,1.5,Final,5.5,-105
+OTT,2021-11-25T03:30Z,401349435,SJ,2021,Ottawa Senators,3,San Jose Sharks,6,230,,,-105,,,False,DraftKings,13,100,3,REG,-160,140,-1.5,Final,6.0,-120
+NYR,2021-11-26T18:00Z,401349437,BOS,2021,New York Rangers,5,Boston Bruins,2,205,,,105,,,False,DraftKings,12,-115,3,REG,-190,160,-1.5,Final,5.5,-105
+CAR,2021-11-26T20:30Z,401349441,PHI,2021,Carolina Hurricanes,6,Philadelphia Flyers,3,115,,,185,,,False,DraftKings,12,-115,3,REG,160,-190,1.5,Final,5.5,-105
+STL,2021-11-26T20:30Z,401349444,CHI,2021,St. Louis Blues,2,Chicago Blackhawks,3,110,,,205,,,False,DraftKings,12,-125,4,OT,180,-220,1.5,Final/OT,5.5,105
+WPG,2021-11-26T20:30Z,401349447,MIN,2021,Winnipeg Jets,1,Minnesota Wild,7,180,,,125,,,False,DraftKings,12,100,3,REG,-220,180,-1.5,Final,6.0,-120
+OTT,2021-11-26T21:00Z,401349448,ANA,2021,Ottawa Senators,0,Anaheim Ducks,4,225,,,100,,,False,DraftKings,12,100,3,REG,-180,155,-1.5,Final,6.0,-120
+FLA,2021-11-26T22:00Z,401349442,WSH,2021,Florida Panthers,3,Washington Capitals,4,155,,,135,,,False,DraftKings,12,-105,3,REG,-235,190,-1.5,Final,6.0,-115
+NJ,2021-11-26T23:00Z,401349445,NSH,2021,New Jersey Devils,2,Nashville Predators,4,190,,,115,,,False,DraftKings,12,-125,3,REG,-195,165,-1.5,Final,5.5,105
+MTL,2021-11-27T00:00Z,401349438,BUF,2021,Montreal Canadiens,1,Buffalo Sabres,4,150,,,150,,,False,DraftKings,12,-110,3,REG,215,-265,1.5,Final,6.0,-110
+SEA,2021-11-27T00:00Z,401349439,TB,2021,Seattle Kraken,0,Tampa Bay Lightning,3,260,,,-120,,,False,DraftKings,12,100,3,REG,-150,130,-1.5,Final,5.5,-120
+VAN,2021-11-27T00:00Z,401349443,CBJ,2021,Vancouver Canucks,2,Columbus Blue Jackets,4,185,,,120,,,False,DraftKings,12,-120,3,REG,-200,170,-1.5,Final,5.5,100
+PIT,2021-11-27T00:30Z,401349440,NYI,2021,Pittsburgh Penguins,1,New York Islanders,0,105,,,215,,,False,DraftKings,12,100,3,REG,170,-200,1.5,Final,5.5,-120
+COL,2021-11-27T00:30Z,401349446,DAL,2021,Colorado Avalanche,1,Dallas Stars,3,125,,,165,,,False,DraftKings,12,-120,3,REG,175,-210,1.5,Final,5.5,100
+TOR,2021-11-27T03:30Z,401349449,SJ,2021,Toronto Maple Leafs,4,San Jose Sharks,1,100,,,195,,,False,DraftKings,12,-110,3,REG,160,-190,1.5,Final,6.0,-110
+SEA,2021-11-27T23:00Z,401349451,FLA,2021,Seattle Kraken,4,Florida Panthers,1,255,,,-115,,,False,DraftKings,12,100,3,REG,-135,115,-1.5,Final,6.0,-120
+BUF,2021-11-28T00:00Z,401349450,DET,2021,Buffalo Sabres,2,Detroit Red Wings,3,240,,,-110,,,False,DraftKings,12,-120,4,OT,-150,130,-1.5,Final/OT,5.5,100
+MTL,2021-11-28T00:00Z,401349452,PIT,2021,Montreal Canadiens,6,Pittsburgh Penguins,3,255,,,-120,,,False,DraftKings,12,-120,3,REG,-135,115,-1.5,Final,5.5,100
+EDM,2021-11-28T00:00Z,401349458,VGK,2021,Edmonton Oilers,3,Vegas Golden Knights,2,165,,,135,,,False,DraftKings,12,100,3,REG,-235,190,-1.5,Final,6.5,-120
+OTT,2021-11-28T00:00Z,401349459,LA,2021,Ottawa Senators,2,Los Angeles Kings,4,285,,,-130,,,False,DraftKings,12,-125,3,REG,-145,125,-1.5,Final,5.5,105
+CBJ,2021-11-28T01:00Z,401349453,STL,2021,Columbus Blue Jackets,3,St. Louis Blues,6,235,,,-110,,,False,DraftKings,12,-115,3,REG,-165,145,-1.5,Final,6.0,-105
+DAL,2021-11-28T01:00Z,401349457,ARI,2021,Dallas Stars,3,Arizona Coyotes,2,-120,,,265,,,False,DraftKings,12,115,3,REG,135,-155,1.5,Final,5.5,-135
+NSH,2021-11-28T02:00Z,401349454,COL,2021,Nashville Predators,2,Colorado Avalanche,6,275,,,-120,,,False,DraftKings,12,-110,3,REG,-135,115,-1.5,Final,6.0,-110
+WPG,2021-11-28T03:00Z,401349456,CGY,2021,Winnipeg Jets,4,Calgary Flames,2,245,,,-105,,,False,DraftKings,12,-110,3,REG,-155,135,-1.5,Final,5.5,-110
+WSH,2021-11-28T18:00Z,401349463,CAR,2021,Washington Capitals,4,Carolina Hurricanes,2,210,,,105,,,False,DraftKings,13,-120,3,REG,-180,155,-1.5,Final,5.5,100
+TB,2021-11-28T19:00Z,401349465,MIN,2021,Tampa Bay Lightning,2,Minnesota Wild,4,155,,,145,,,False,DraftKings,13,-105,3,REG,-255,205,-1.5,Final,5.5,-115
+VAN,2021-11-29T00:00Z,401349460,BOS,2021,Vancouver Canucks,2,Boston Bruins,3,370,,,-155,,,False,DraftKings,13,-115,3,REG,-110,-110,-1.5,Final,5.5,-105
+PHI,2021-11-29T00:00Z,401349461,NJ,2021,Philadelphia Flyers,2,New Jersey Devils,5,180,,,120,,,False,DraftKings,12,-130,3,REG,-200,170,-1.5,Final,5.5,110
+SJ,2021-11-29T00:00Z,401349464,CHI,2021,San Jose Sharks,2,Chicago Blackhawks,0,170,,,130,,,False,DraftKings,13,-115,3,REG,-235,190,-1.5,Final,5.5,-105
+TOR,2021-11-29T01:00Z,401349466,ANA,2021,Toronto Maple Leafs,5,Anaheim Ducks,1,-115,,,250,,,False,DraftKings,13,-105,3,REG,145,-165,1.5,Final,5.5,-115
+SEA,2021-11-30T00:00Z,401349467,BUF,2021,Seattle Kraken,7,Buffalo Sabres,4,110,,,195,,,False,DraftKings,13,110,3,REG,190,-235,1.5,Final,5.5,-130
+VAN,2021-11-30T00:30Z,401349468,MTL,2021,Vancouver Canucks,2,Montreal Canadiens,1,175,,,125,,,False,DraftKings,13,-115,3,REG,-220,180,-1.5,Final,5.5,-105
+ARI,2021-11-30T00:30Z,401349469,WPG,2021,Arizona Coyotes,1,Winnipeg Jets,0,425,,,-195,,,False,DraftKings,13,-120,3,REG,100,-120,-1.5,Final,5.5,100
+PIT,2021-11-30T02:00Z,401349470,CGY,2021,Pittsburgh Penguins,1,Calgary Flames,2,185,,,125,,,False,DraftKings,13,115,5,SO,-200,170,-1.5,Final/SO,5.5,-135
+DET,2021-12-01T00:00Z,401349471,BOS,2021,Detroit Red Wings,2,Boston Bruins,1,300,,,-140,,,False,DraftKings,13,100,3,REG,-125,105,-1.5,Final,5.5,-120
+WSH,2021-12-01T00:00Z,401349472,FLA,2021,Washington Capitals,4,Florida Panthers,5,175,,,120,,,False,DraftKings,13,-110,3,REG,-200,170,-1.5,Final,6.0,-110
+SJ,2021-12-01T00:00Z,401349473,NJ,2021,San Jose Sharks,5,New Jersey Devils,2,200,,,105,,,False,DraftKings,13,-120,3,REG,-200,170,-1.5,Final,5.5,100
+TB,2021-12-01T01:00Z,401349475,STL,2021,Tampa Bay Lightning,3,St. Louis Blues,4,210,,,105,,,False,DraftKings,13,-120,5,SO,-210,175,-1.5,Final/SO,5.5,100
+CBJ,2021-12-01T01:00Z,401349476,NSH,2021,Columbus Blue Jackets,0,Nashville Predators,6,215,,,100,,,False,DraftKings,13,105,3,REG,-180,155,-1.5,Final,5.5,-125
+ARI,2021-12-01T01:00Z,401349478,MIN,2021,Arizona Coyotes,2,Minnesota Wild,5,450,,,-210,,,False,DraftKings,12,-125,3,REG,115,-135,-1.5,Final,5.5,105
+CAR,2021-12-01T01:30Z,401349477,DAL,2021,Carolina Hurricanes,1,Dallas Stars,4,145,,,145,,,False,DraftKings,13,-105,3,REG,200,-250,1.5,Final,5.5,-115
+ANA,2021-12-01T03:30Z,401349479,LA,2021,Anaheim Ducks,5,Los Angeles Kings,4,165,,,125,,,False,DraftKings,13,110,5,SO,-220,180,-1.5,Final/SO,5.5,-130
+PHI,2021-12-02T00:00Z,401349483,NYR,2021,Philadelphia Flyers,1,New York Rangers,4,260,,,-120,,,False,DraftKings,13,100,3,REG,-150,130,-1.5,Final,6.0,-120
+COL,2021-12-02T00:30Z,401349480,TOR,2021,Colorado Avalanche,3,Toronto Maple Leafs,8,170,,,130,,,False,DraftKings,13,100,3,REG,-210,175,-1.5,Final,6.0,-120
+VAN,2021-12-02T00:30Z,401349481,OTT,2021,Vancouver Canucks,6,Ottawa Senators,2,130,,,165,,,False,DraftKings,13,-120,3,REG,195,-240,1.5,Final,5.5,100
+SEA,2021-12-02T00:30Z,401349482,DET,2021,Seattle Kraken,3,Detroit Red Wings,4,130,,,165,,,False,DraftKings,12,110,5,SO,-290,230,-1.5,Final/SO,5.5,-130
+PIT,2021-12-02T03:00Z,401349484,EDM,2021,Pittsburgh Penguins,2,Edmonton Oilers,5,165,,,125,,,False,DraftKings,13,-115,3,REG,-210,175,-1.5,Final,6.0,-105
+VGK,2021-12-02T03:00Z,401349485,ANA,2021,Vegas Golden Knights,5,Anaheim Ducks,6,115,,,200,,,False,DraftKings,13,-115,3,REG,150,-170,1.5,Final,5.5,-105
+COL,2021-12-03T00:00Z,401349486,MTL,2021,Colorado Avalanche,4,Montreal Canadiens,1,-110,,,245,,,False,DraftKings,13,-105,3,REG,130,-150,1.5,Final,6.5,-115
+STL,2021-12-03T00:00Z,401349487,TB,2021,St. Louis Blues,2,Tampa Bay Lightning,4,205,,,105,,,False,DraftKings,13,-115,3,REG,-190,160,-1.5,Final,5.5,-105
+BUF,2021-12-03T00:00Z,401349488,FLA,2021,Buffalo Sabres,4,Florida Panthers,7,380,,,-175,,,False,DraftKings,13,-105,3,REG,100,-120,-1.5,Final,6.0,-115
+CHI,2021-12-03T00:00Z,401349490,WSH,2021,Chicago Blackhawks,4,Washington Capitals,3,250,,,-115,,,False,DraftKings,12,-110,5,SO,-135,115,-1.5,Final/SO,6.0,-110
+OTT,2021-12-03T00:00Z,401349491,CAR,2021,Ottawa Senators,3,Carolina Hurricanes,2,450,,,-195,,,False,DraftKings,12,-115,3,REG,115,-135,-1.5,Final,6.0,-105
+SJ,2021-12-03T00:30Z,401349489,NYI,2021,San Jose Sharks,2,New York Islanders,1,180,,,115,,,False,DraftKings,13,105,4,OT,-225,185,-1.5,Final/OT,5.5,-125
+BOS,2021-12-03T01:00Z,401349492,NSH,2021,Boston Bruins,2,Nashville Predators,0,140,,,155,,,False,DraftKings,13,115,3,REG,195,-240,1.5,Final,5.5,-135
+NJ,2021-12-03T01:00Z,401349494,MIN,2021,New Jersey Devils,2,Minnesota Wild,5,240,,,-110,,,False,DraftKings,13,-115,3,REG,-150,130,-1.5,Final,6.0,-105
+CBJ,2021-12-03T01:30Z,401349493,DAL,2021,Columbus Blue Jackets,2,Dallas Stars,3,280,,,-120,,,False,DraftKings,13,-115,3,REG,-140,120,-1.5,Final,5.5,-105
+CGY,2021-12-03T03:30Z,401349495,LA,2021,Calgary Flames,3,Los Angeles Kings,2,105,,,215,,,False,DraftKings,13,110,3,REG,170,-200,1.5,Final,5.5,-130
+SJ,2021-12-04T00:00Z,401349496,NYR,2021,San Jose Sharks,0,New York Rangers,1,280,,,-125,,,False,DraftKings,12,-110,3,REG,-140,120,-1.5,Final,5.5,-110
+NJ,2021-12-04T01:00Z,401349497,WPG,2021,New Jersey Devils,4,Winnipeg Jets,8,230,,,-105,,,False,DraftKings,13,105,3,REG,-150,130,-1.5,Final,6.0,-125
+VGK,2021-12-04T02:30Z,401349498,ARI,2021,Vegas Golden Knights,7,Arizona Coyotes,1,-135,,,300,,,False,DraftKings,13,-110,3,REG,115,-135,1.5,Final,6.0,-110
+CGY,2021-12-04T03:00Z,401349499,ANA,2021,Calgary Flames,4,Anaheim Ducks,3,120,,,180,,,False,DraftKings,13,115,5,SO,185,-225,1.5,Final/SO,5.5,-135
+EDM,2021-12-04T03:00Z,401349500,SEA,2021,Edmonton Oilers,3,Seattle Kraken,4,120,,,175,,,False,DraftKings,13,-115,3,REG,180,-220,1.5,Final,6.0,-105
+STL,2021-12-04T18:00Z,401349504,FLA,2021,St. Louis Blues,3,Florida Panthers,4,225,,,-110,,,False,DraftKings,13,-120,5,SO,-165,145,-1.5,Final/SO,6.0,100
+TB,2021-12-05T00:00Z,401349501,BOS,2021,Tampa Bay Lightning,3,Boston Bruins,2,145,,,155,,,False,DraftKings,13,115,4,OT,-250,200,-1.5,Final/OT,5.5,-135
+COL,2021-12-05T00:00Z,401349502,OTT,2021,Colorado Avalanche,5,Ottawa Senators,6,-150,,,350,,,False,DraftKings,13,100,4,OT,115,-135,1.5,Final/OT,6.5,-120
+NYI,2021-12-05T00:00Z,401349503,DET,2021,New York Islanders,3,Detroit Red Wings,4,150,,,150,,,False,DraftKings,13,-140,4,OT,-275,220,-1.5,Final/OT,5.0,120
+CBJ,2021-12-05T00:00Z,401349506,WSH,2021,Columbus Blue Jackets,1,Washington Capitals,3,300,,,-135,,,False,DraftKings,13,-120,3,REG,-120,100,-1.5,Final,6.0,100
+MTL,2021-12-05T00:00Z,401349508,NSH,2021,Montreal Canadiens,3,Nashville Predators,4,290,,,-130,,,False,DraftKings,13,-110,4,OT,-135,115,-1.5,Final/OT,5.5,-110
+TOR,2021-12-05T00:00Z,401349509,MIN,2021,Toronto Maple Leafs,3,Minnesota Wild,4,130,,,170,,,False,DraftKings,13,-110,5,SO,195,-240,1.5,Final/SO,6.0,-110
+BUF,2021-12-05T00:30Z,401349507,CAR,2021,Buffalo Sabres,2,Carolina Hurricanes,6,425,,,-190,,,False,DraftKings,13,-120,3,REG,105,-125,-1.5,Final,6.0,100
+CHI,2021-12-05T01:00Z,401349505,NYR,2021,Chicago Blackhawks,2,New York Rangers,3,240,,,-110,,,False,DraftKings,13,-120,3,REG,-160,140,-1.5,Final,6.0,100
+PIT,2021-12-05T03:00Z,401349510,VAN,2021,Pittsburgh Penguins,4,Vancouver Canucks,1,110,,,205,,,False,DraftKings,13,-120,3,REG,165,-195,1.5,Final,5.5,100
+TB,2021-12-05T23:00Z,401349511,PHI,2021,Tampa Bay Lightning,7,Philadelphia Flyers,1,130,,,170,,,False,DraftKings,12,100,3,REG,195,-240,1.5,Final,6.0,-120
+SJ,2021-12-05T23:00Z,401349512,CBJ,2021,San Jose Sharks,4,Columbus Blue Jackets,6,160,,,135,,,False,DraftKings,12,-110,3,REG,-260,210,-1.5,Final,5.5,-110
+CHI,2021-12-06T00:30Z,401350103,NYI,2021,Chicago Blackhawks,3,New York Islanders,2,205,,,105,,,False,DraftKings,12,115,5,SO,-180,155,-1.5,Final/SO,5.5,-135
+TOR,2021-12-06T01:00Z,401349513,WPG,2021,Toronto Maple Leafs,3,Winnipeg Jets,6,150,,,140,,,False,DraftKings,11,-115,3,REG,-280,225,-1.5,Final,6.0,-105
+LA,2021-12-06T01:00Z,401349514,EDM,2021,Los Angeles Kings,5,Edmonton Oilers,1,310,,,-150,,,False,DraftKings,13,100,3,REG,-145,125,-1.5,Final,6.5,-120
+CGY,2021-12-06T03:00Z,401349515,VGK,2021,Calgary Flames,2,Vegas Golden Knights,3,170,,,125,,,False,DraftKings,13,-120,3,REG,-235,190,-1.5,Final,5.5,100
+COL,2021-12-07T00:00Z,401349516,PHI,2021,Colorado Avalanche,7,Philadelphia Flyers,5,-125,,,280,,,False,DraftKings,13,100,3,REG,120,-140,1.5,Final,6.5,-120
+ANA,2021-12-07T00:00Z,401349517,WSH,2021,Anaheim Ducks,3,Washington Capitals,4,270,,,-130,,,False,DraftKings,12,-120,5,SO,-135,115,-1.5,Final/SO,5.5,100
+OTT,2021-12-07T00:00Z,401388692,NJ,2021,Ottawa Senators,3,New Jersey Devils,2,250,,,-120,,,False,DraftKings,13,100,5,SO,-150,130,-1.5,Final/SO,6.5,-120
+ARI,2021-12-07T01:30Z,401349518,DAL,2021,Arizona Coyotes,1,Dallas Stars,4,450,,,-200,,,False,DraftKings,12,-105,3,REG,105,-125,-1.5,Final,5.5,-115
+LA,2021-12-07T03:00Z,401349519,VAN,2021,Los Angeles Kings,0,Vancouver Canucks,4,180,,,115,,,False,DraftKings,13,-110,3,REG,-210,175,-1.5,Final,5.5,-110
+PIT,2021-12-07T03:00Z,401349520,SEA,2021,Pittsburgh Penguins,6,Seattle Kraken,1,115,,,180,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,5.5,100
+CBJ,2021-12-08T00:00Z,401349522,TOR,2021,Columbus Blue Jackets,4,Toronto Maple Leafs,5,330,,,-155,,,False,DraftKings,13,-125,3,REG,-110,-110,-1.5,Final,5.5,105
+TB,2021-12-08T00:00Z,401349523,MTL,2021,Tampa Bay Lightning,3,Montreal Canadiens,2,-130,,,285,,,False,DraftKings,13,105,3,REG,120,-140,1.5,Final,5.5,-125
+NYI,2021-12-08T00:00Z,401349524,OTT,2021,New York Islanders,5,Ottawa Senators,3,105,,,215,,,False,DraftKings,13,-140,3,REG,165,-195,1.5,Final,5.0,120
+NSH,2021-12-08T00:00Z,401349525,DET,2021,Nashville Predators,5,Detroit Red Wings,2,145,,,155,,,False,DraftKings,13,100,3,REG,190,-235,1.5,Final,5.5,-120
+ANA,2021-12-08T00:30Z,401349521,BUF,2021,Anaheim Ducks,2,Buffalo Sabres,0,130,,,170,,,False,DraftKings,13,-110,3,REG,185,-225,1.5,Final,6.0,-110
+FLA,2021-12-08T01:00Z,401349527,STL,2021,Florida Panthers,3,St. Louis Blues,4,105,,,210,,,False,DraftKings,13,-105,4,OT,155,-180,1.5,Final/OT,6.5,-115
+CAR,2021-12-08T01:00Z,401349528,WPG,2021,Carolina Hurricanes,4,Winnipeg Jets,2,145,,,155,,,False,DraftKings,13,-120,3,REG,-265,215,-1.5,Final,5.5,100
+NYR,2021-12-08T01:30Z,401349526,CHI,2021,New York Rangers,6,Chicago Blackhawks,2,130,,,170,,,False,DraftKings,13,-120,3,REG,180,-220,1.5,Final,5.5,100
+MIN,2021-12-08T02:00Z,401349529,EDM,2021,Minnesota Wild,4,Edmonton Oilers,1,165,,,130,,,False,DraftKings,13,-125,3,REG,-225,185,-1.5,Final,6.5,105
+CGY,2021-12-08T03:30Z,401349530,SJ,2021,Calgary Flames,3,San Jose Sharks,5,110,,,205,,,False,DraftKings,13,110,3,REG,170,-200,1.5,Final,5.5,-130
+PHI,2021-12-09T00:00Z,401349531,NJ,2021,Philadelphia Flyers,0,New Jersey Devils,3,190,,,110,,,False,DraftKings,12,-120,3,REG,-180,155,-1.5,Final,6.0,100
+COL,2021-12-09T00:00Z,401349532,NYR,2021,Colorado Avalanche,7,New York Rangers,3,100,,,210,,,False,DraftKings,11,-130,3,REG,145,-165,1.5,Final,6.0,110
+BOS,2021-12-09T02:00Z,401349533,VAN,2021,Boston Bruins,1,Vancouver Canucks,2,110,,,200,,,False,DraftKings,12,-115,5,SO,160,-190,1.5,Final/SO,5.5,-105
+DAL,2021-12-09T03:00Z,401349534,VGK,2021,Dallas Stars,4,Vegas Golden Knights,5,190,,,115,,,False,DraftKings,12,-120,3,REG,-210,175,-1.5,Final,5.5,100
+TB,2021-12-10T00:00Z,401349535,TOR,2021,Tampa Bay Lightning,5,Toronto Maple Leafs,3,175,,,125,,,False,DraftKings,13,105,3,REG,-210,175,-1.5,Final,5.5,-125
+CHI,2021-12-10T00:00Z,401349536,MTL,2021,Chicago Blackhawks,2,Montreal Canadiens,0,130,,,175,,,False,DraftKings,13,105,3,REG,190,-235,1.5,Final,5.5,-125
+ANA,2021-12-10T00:00Z,401349538,CBJ,2021,Anaheim Ducks,2,Columbus Blue Jackets,1,145,,,155,,,False,DraftKings,13,-115,5,SO,205,-255,1.5,Final/SO,5.5,-105
+NSH,2021-12-10T00:30Z,401349537,NYI,2021,Nashville Predators,4,New York Islanders,3,170,,,135,,,False,DraftKings,13,105,3,REG,-255,205,-1.5,Final,5.5,-125
+DET,2021-12-10T01:00Z,401349539,STL,2021,Detroit Red Wings,2,St. Louis Blues,6,230,,,-105,,,False,DraftKings,13,-105,3,REG,-180,155,-1.5,Final,6.0,-115
+CAR,2021-12-10T02:00Z,401349540,CGY,2021,Carolina Hurricanes,2,Calgary Flames,1,180,,,125,,,False,DraftKings,13,-115,4,OT,-235,190,-1.5,Final/OT,5.5,-105
+BOS,2021-12-10T02:00Z,401349541,EDM,2021,Boston Bruins,3,Edmonton Oilers,2,180,,,120,,,False,DraftKings,12,-110,3,REG,-225,185,-1.5,Final,6.0,-110
+WPG,2021-12-10T03:00Z,401349544,SEA,2021,Winnipeg Jets,3,Seattle Kraken,0,145,,,150,,,False,DraftKings,13,-120,3,REG,200,-250,1.5,Final,5.5,100
+DAL,2021-12-10T03:30Z,401349542,LA,2021,Dallas Stars,0,Los Angeles Kings,4,120,,,190,,,False,DraftKings,13,105,3,REG,180,-220,1.5,Final,5.5,-125
+MIN,2021-12-10T03:30Z,401349543,SJ,2021,Minnesota Wild,5,San Jose Sharks,2,105,,,205,,,False,DraftKings,13,100,3,REG,160,-190,1.5,Final,6.0,-120
+NYR,2021-12-11T00:00Z,401349545,BUF,2021,New York Rangers,2,Buffalo Sabres,1,-130,,,280,,,False,DraftKings,13,-110,3,REG,130,-150,1.5,Final,6.0,-110
+PIT,2021-12-11T00:00Z,401349547,WSH,2021,Pittsburgh Penguins,4,Washington Capitals,2,190,,,110,,,False,DraftKings,13,100,3,REG,-200,170,-1.5,Final,6.0,-120
+NSH,2021-12-11T00:30Z,401349546,NJ,2021,Nashville Predators,3,New Jersey Devils,2,150,,,145,,,False,DraftKings,13,-120,3,REG,-275,220,-1.5,Final,5.5,100
+DET,2021-12-11T02:00Z,401349548,COL,2021,Detroit Red Wings,3,Colorado Avalanche,7,425,,,-220,,,False,DraftKings,12,-125,3,REG,140,-160,-1.5,Final,6.0,105
+FLA,2021-12-11T02:00Z,401349549,ARI,2021,Florida Panthers,3,Arizona Coyotes,1,-200,,,390,,,False,DraftKings,13,-125,3,REG,-125,105,1.5,Final,5.5,105
+WPG,2021-12-11T03:00Z,401349550,VAN,2021,Winnipeg Jets,3,Vancouver Canucks,4,195,,,110,,,False,DraftKings,12,-130,5,SO,-210,175,-1.5,Final/SO,6.0,110
+PHI,2021-12-11T03:00Z,401349551,VGK,2021,Philadelphia Flyers,4,Vegas Golden Knights,3,330,,,-160,,,False,DraftKings,13,-120,3,REG,-115,-105,-1.5,Final,6.0,100
+TB,2021-12-11T18:00Z,401349554,OTT,2021,Tampa Bay Lightning,0,Ottawa Senators,4,-135,,,300,,,False,DraftKings,13,-115,3,REG,135,-155,1.5,Final,6.0,-105
+WSH,2021-12-12T00:00Z,401349552,BUF,2021,Washington Capitals,3,Buffalo Sabres,2,-125,,,285,,,False,DraftKings,13,100,5,SO,110,-130,1.5,Final/SO,6.0,-120
+CHI,2021-12-12T00:00Z,401349553,TOR,2021,Chicago Blackhawks,4,Toronto Maple Leafs,5,330,,,-150,,,False,DraftKings,13,-120,3,REG,-115,-105,-1.5,Final,6.0,100
+ANA,2021-12-12T00:00Z,401349556,PIT,2021,Anaheim Ducks,0,Pittsburgh Penguins,1,225,,,-105,,,False,DraftKings,13,105,3,REG,-180,155,-1.5,Final,6.0,-125
+MTL,2021-12-12T00:00Z,401349557,STL,2021,Montreal Canadiens,1,St. Louis Blues,4,310,,,-150,,,False,DraftKings,13,-115,3,REG,-115,-105,-1.5,Final,6.0,-105
+NJ,2021-12-12T00:30Z,401349555,NYI,2021,New Jersey Devils,2,New York Islanders,4,240,,,-105,,,False,DraftKings,12,110,3,REG,-170,150,-1.5,Final,5.5,-130
+PHI,2021-12-12T02:00Z,401349560,ARI,2021,Philadelphia Flyers,5,Arizona Coyotes,3,-110,,,240,,,False,DraftKings,13,100,3,REG,155,-180,1.5,Final,5.5,-120
+BOS,2021-12-12T03:00Z,401349558,CGY,2021,Boston Bruins,4,Calgary Flames,2,170,,,125,,,False,DraftKings,13,110,3,REG,-220,180,-1.5,Final,5.5,-130
+CAR,2021-12-12T03:00Z,401349559,EDM,2021,Carolina Hurricanes,3,Edmonton Oilers,1,155,,,135,,,False,DraftKings,13,100,3,REG,-225,185,-1.5,Final,6.5,-120
+CBJ,2021-12-12T03:00Z,401349563,SEA,2021,Columbus Blue Jackets,5,Seattle Kraken,4,210,,,100,,,False,DraftKings,13,100,4,OT,-190,160,-1.5,Final/OT,6.0,-120
+MIN,2021-12-12T03:30Z,401349561,LA,2021,Minnesota Wild,1,Los Angeles Kings,2,105,,,205,,,False,DraftKings,12,-105,3,REG,190,-235,1.5,Final,6.0,-115
+DAL,2021-12-12T03:30Z,401349562,SJ,2021,Dallas Stars,1,San Jose Sharks,2,130,,,170,,,False,DraftKings,13,100,3,REG,195,-240,1.5,Final,5.5,-120
+NSH,2021-12-13T00:00Z,401349564,NYR,2021,Nashville Predators,1,New York Rangers,0,190,,,110,,,False,DraftKings,12,-115,3,REG,-195,165,-1.5,Final,5.5,-105
+ANA,2021-12-13T00:00Z,401349565,STL,2021,Anaheim Ducks,3,St. Louis Blues,2,195,,,105,,,False,DraftKings,12,100,4,OT,-200,170,-1.5,Final/OT,6.0,-120
+FLA,2021-12-13T01:00Z,401349566,COL,2021,Florida Panthers,2,Colorado Avalanche,3,205,,,100,,,False,DraftKings,13,-110,3,REG,-190,160,-1.5,Final,6.5,-110
+MIN,2021-12-13T02:00Z,401349568,VGK,2021,Minnesota Wild,4,Vegas Golden Knights,6,180,,,120,,,False,DraftKings,13,-105,3,REG,-180,155,-1.5,Final,6.0,-115
+CAR,2021-12-13T03:00Z,401349567,VAN,2021,Carolina Hurricanes,1,Vancouver Canucks,2,125,,,185,,,False,DraftKings,12,-120,3,REG,195,-240,1.5,Final,5.5,100
+VGK,2021-12-15T00:00Z,401349570,BOS,2021,Vegas Golden Knights,4,Boston Bruins,1,155,,,130,,,False,DraftKings,13,-115,3,REG,-265,215,-1.5,Final,5.5,-105
+LA,2021-12-15T00:00Z,401349572,TB,2021,Los Angeles Kings,2,Tampa Bay Lightning,3,255,,,-120,,,False,DraftKings,13,115,4,OT,-165,145,-1.5,Final/OT,5.5,-135
+OTT,2021-12-15T00:00Z,401349573,FLA,2021,Ottawa Senators,8,Florida Panthers,2,340,,,-180,,,False,DraftKings,12,-120,3,REG,-105,-115,-1.5,Final,6.0,100
+NJ,2021-12-15T00:00Z,401349574,PHI,2021,New Jersey Devils,1,Philadelphia Flyers,6,160,,,125,,,False,DraftKings,12,100,3,REG,-225,185,-1.5,Final,6.0,-120
+MTL,2021-12-15T00:00Z,401349575,PIT,2021,Montreal Canadiens,2,Pittsburgh Penguins,5,400,,,-175,,,False,DraftKings,13,110,3,REG,100,-120,-1.5,Final,5.5,-130
+NYI,2021-12-15T00:30Z,401349571,DET,2021,New York Islanders,1,Detroit Red Wings,2,155,,,140,,,False,DraftKings,13,-135,3,REG,-275,220,-1.5,Final,5.0,115
+BUF,2021-12-15T01:00Z,401349579,WPG,2021,Buffalo Sabres,4,Winnipeg Jets,2,370,,,-155,,,False,DraftKings,13,-120,3,REG,-115,-105,-1.5,Final,5.5,100
+STL,2021-12-15T01:30Z,401349577,DAL,2021,St. Louis Blues,4,Dallas Stars,1,225,,,100,,,False,DraftKings,13,100,3,REG,-190,160,-1.5,Final,5.5,-120
+NYR,2021-12-15T02:00Z,401349580,COL,2021,New York Rangers,2,Colorado Avalanche,4,245,,,-110,,,False,DraftKings,13,100,3,REG,-145,125,-1.5,Final,6.5,-120
+TOR,2021-12-15T02:00Z,401349581,EDM,2021,Toronto Maple Leafs,5,Edmonton Oilers,1,120,,,160,,,False,DraftKings,13,100,3,REG,185,-225,1.5,Final,6.5,-120
+CBJ,2021-12-15T03:00Z,401349582,VAN,2021,Columbus Blue Jackets,3,Vancouver Canucks,4,215,,,110,,,False,DraftKings,13,-115,3,REG,-195,165,-1.5,Final,5.5,-105
+SEA,2021-12-15T03:30Z,401349583,SJ,2021,Seattle Kraken,3,San Jose Sharks,1,190,,,115,,,False,DraftKings,13,-110,3,REG,-210,175,-1.5,Final,5.5,-110
+WSH,2021-12-16T01:00Z,401349584,CHI,2021,Washington Capitals,4,Chicago Blackhawks,5,105,,,210,,,False,DraftKings,12,-115,4,OT,165,-195,1.5,Final/OT,5.5,-105
+NYR,2021-12-16T02:00Z,401349585,ARI,2021,New York Rangers,3,Arizona Coyotes,2,-130,,,300,,,False,DraftKings,10,-110,3,REG,130,-150,1.5,Final,5.5,-110
+SEA,2021-12-16T03:00Z,401349586,ANA,2021,Seattle Kraken,1,Anaheim Ducks,4,235,,,-105,,,False,DraftKings,12,100,3,REG,-170,150,-1.5,Final,6.0,-120
+PHI,2021-12-17T00:00Z,401349587,MTL,2021,Philadelphia Flyers,2,Montreal Canadiens,3,100,,,220,,,False,DraftKings,12,-130,5,SO,155,-180,1.5,Final/SO,5.5,110
+OTT,2021-12-17T00:00Z,401349588,TB,2021,Ottawa Senators,1,Tampa Bay Lightning,2,340,,,-155,,,False,DraftKings,13,100,3,REG,-115,-105,-1.5,Final,6.0,-120
+LA,2021-12-17T00:00Z,401349589,FLA,2021,Los Angeles Kings,4,Florida Panthers,1,225,,,100,,,False,DraftKings,13,-120,3,REG,-180,155,-1.5,Final,5.5,100
+VGK,2021-12-17T00:00Z,401349590,NJ,2021,Vegas Golden Knights,5,New Jersey Devils,3,-120,,,250,,,False,DraftKings,12,-125,3,REG,135,-155,1.5,Final,6.0,105
+DET,2021-12-17T00:00Z,401349592,CAR,2021,Detroit Red Wings,3,Carolina Hurricanes,5,230,,,-110,,,False,DraftKings,13,-105,3,REG,-160,140,-1.5,Final,5.5,-115
+BOS,2021-12-17T00:30Z,401349591,NYI,2021,Boston Bruins,1,New York Islanders,3,155,,,140,,,False,DraftKings,12,105,3,REG,-265,215,-1.5,Final,5.5,-125
+COL,2021-12-17T01:00Z,401349593,NSH,2021,Colorado Avalanche,2,Nashville Predators,5,-110,,,235,,,False,DraftKings,13,-110,3,REG,150,-170,1.5,Final,6.0,-110
+BUF,2021-12-17T01:00Z,401349594,MIN,2021,Buffalo Sabres,3,Minnesota Wild,2,425,,,-200,,,False,DraftKings,11,-115,5,SO,100,-120,-1.5,Final/SO,6.0,-105
+CBJ,2021-12-17T02:00Z,401349596,EDM,2021,Columbus Blue Jackets,2,Edmonton Oilers,5,280,,,-130,,,False,DraftKings,13,-110,3,REG,-140,120,-1.5,Final,6.5,-110
+VAN,2021-12-17T03:30Z,401349597,SJ,2021,Vancouver Canucks,5,San Jose Sharks,2,170,,,125,,,False,DraftKings,13,-110,3,REG,-225,185,-1.5,Final,5.5,-110
+VGK,2021-12-18T00:00Z,401349598,NYR,2021,Vegas Golden Knights,3,New York Rangers,2,120,,,180,,,False,DraftKings,12,-120,5,SO,175,-210,1.5,Final/SO,6.0,100
+BUF,2021-12-18T00:00Z,401349599,PIT,2021,Buffalo Sabres,2,Pittsburgh Penguins,3,450,,,-210,,,False,DraftKings,13,-120,4,OT,115,-135,-1.5,Final/OT,5.5,100
+DAL,2021-12-18T01:00Z,401349601,STL,2021,Dallas Stars,1,St. Louis Blues,4,165,,,130,,,False,DraftKings,13,-115,3,REG,-255,205,-1.5,Final,5.5,-105
+WSH,2021-12-18T01:00Z,401349602,WPG,2021,Washington Capitals,5,Winnipeg Jets,2,145,,,140,,,False,DraftKings,13,100,3,REG,-225,185,-1.5,Final,6.0,-120
+NSH,2021-12-18T01:30Z,401349600,CHI,2021,Nashville Predators,3,Chicago Blackhawks,2,190,,,115,,,False,DraftKings,13,110,4,OT,-210,175,-1.5,Final/OT,5.5,-130
+ARI,2021-12-18T03:00Z,401349603,ANA,2021,Arizona Coyotes,6,Anaheim Ducks,5,390,,,-175,,,False,DraftKings,13,110,4,OT,100,-120,-1.5,Final/OT,5.5,-130
+OTT,2021-12-19T00:00Z,401349606,PHI,2021,Ottawa Senators,3,Philadelphia Flyers,4,175,,,115,,,False,DraftKings,13,100,4,OT,-200,170,-1.5,Final/OT,6.5,-120
+LA,2021-12-19T00:00Z,401349607,CAR,2021,Los Angeles Kings,1,Carolina Hurricanes,5,210,,,100,,,False,DraftKings,13,-105,3,REG,-170,150,-1.5,Final,5.5,-115
+NJ,2021-12-19T01:00Z,401349605,DET,2021,New Jersey Devils,2,Detroit Red Wings,5,190,,,110,,,False,DraftKings,13,-120,3,REG,-200,170,-1.5,Final,6.0,100
+CHI,2021-12-19T01:00Z,401349608,DAL,2021,Chicago Blackhawks,3,Dallas Stars,4,230,,,-105,,,False,DraftKings,13,-115,4,OT,-150,130,-1.5,Final/OT,5.5,-105
+EDM,2021-12-19T03:00Z,401349613,SEA,2021,Edmonton Oilers,5,Seattle Kraken,3,135,,,155,,,False,DraftKings,12,-120,3,REG,185,-225,1.5,Final,6.0,100
+VGK,2021-12-19T19:00Z,401349616,NYI,2021,Vegas Golden Knights,4,New York Islanders,3,105,,,210,,,False,DraftKings,13,105,5,SO,170,-200,1.5,Final/SO,5.5,-125
+STL,2021-12-19T20:00Z,401349619,WPG,2021,St. Louis Blues,2,Winnipeg Jets,4,215,,,100,,,False,DraftKings,13,105,3,REG,-190,160,-1.5,Final,6.0,-125
+PIT,2021-12-20T00:00Z,401349615,NJ,2021,Pittsburgh Penguins,3,New Jersey Devils,2,-125,,,270,,,False,DraftKings,13,-110,3,REG,135,-155,1.5,Final,6.0,-110
+LA,2021-12-20T00:00Z,401349617,WSH,2021,Los Angeles Kings,3,Washington Capitals,2,275,,,-125,,,False,DraftKings,13,-110,3,REG,-150,130,-1.5,Final,5.5,-110
+MIN,2021-12-21T01:30Z,401349625,DAL,2021,Minnesota Wild,4,Dallas Stars,7,150,,,140,,,False,DraftKings,13,-115,3,REG,-255,205,-1.5,Final,5.5,-105
+TB,2021-12-22T03:00Z,401349635,VGK,2021,Tampa Bay Lightning,4,Vegas Golden Knights,3,165,,,120,,,False,DraftKings,12,-125,3,REG,-225,185,-1.5,Final,5.5,105
+MTL,2021-12-29T00:00Z,401349671,TB,2021,Montreal Canadiens,4,Tampa Bay Lightning,5,400,,,-175,,,False,DraftKings,13,-120,4,OT,100,-120,-1.5,Final/OT,6.0,100
+VGK,2021-12-29T03:30Z,401349673,LA,2021,Vegas Golden Knights,6,Los Angeles Kings,3,115,,,185,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,5.5,100
+ARI,2021-12-29T03:30Z,401349674,SJ,2021,Arizona Coyotes,7,San Jose Sharks,8,285,,,-135,,,False,DraftKings,13,100,5,SO,-135,115,-1.5,Final/SO,5.5,-120
+NJ,2021-12-30T00:00Z,401349675,BUF,2021,New Jersey Devils,4,Buffalo Sabres,3,120,,,180,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,6.0,100
+NYR,2021-12-30T00:00Z,401349678,FLA,2021,New York Rangers,3,Florida Panthers,4,255,,,-120,,,False,DraftKings,13,-120,3,REG,-155,135,-1.5,Final,6.0,100
+NSH,2021-12-30T00:00Z,401349680,WSH,2021,Nashville Predators,3,Washington Capitals,5,220,,,-105,,,False,DraftKings,12,-105,3,REG,-170,150,-1.5,Final,6.0,-115
+EDM,2021-12-30T01:30Z,401349681,STL,2021,Edmonton Oilers,2,St. Louis Blues,4,180,,,115,,,False,DraftKings,13,-125,3,REG,-225,185,-1.5,Final,6.5,105
+PHI,2021-12-30T03:00Z,401349685,SEA,2021,Philadelphia Flyers,3,Seattle Kraken,2,185,,,110,,,False,DraftKings,13,-110,4,OT,-200,170,-1.5,Final/OT,6.0,-110
+VAN,2021-12-30T03:30Z,401349684,ANA,2021,Vancouver Canucks,2,Anaheim Ducks,1,155,,,135,,,False,DraftKings,13,-120,4,OT,-250,200,-1.5,Final/OT,5.5,100
+TB,2021-12-31T00:00Z,401349686,FLA,2021,Tampa Bay Lightning,3,Florida Panthers,9,180,,,110,,,False,DraftKings,13,-125,3,REG,-180,155,-1.5,Final,6.5,105
+NSH,2021-12-31T00:00Z,401349688,CBJ,2021,Nashville Predators,3,Columbus Blue Jackets,4,130,,,160,,,False,DraftKings,13,-110,5,SO,205,-255,1.5,Final/SO,5.5,-110
+MTL,2021-12-31T00:00Z,401349696,CAR,2021,Montreal Canadiens,0,Carolina Hurricanes,4,550,,,-250,,,False,DraftKings,12,100,3,REG,150,-170,-1.5,Final,6.0,-120
+BUF,2021-12-31T00:30Z,401349687,NYI,2021,Buffalo Sabres,1,New York Islanders,4,285,,,-130,,,False,DraftKings,13,-110,3,REG,-140,120,-1.5,Final,5.5,-110
+CGY,2021-12-31T03:00Z,401349691,SEA,2021,Calgary Flames,6,Seattle Kraken,4,-110,,,230,,,False,DraftKings,13,-110,3,REG,140,-160,1.5,Final,5.5,-110
+VAN,2021-12-31T03:30Z,401349689,LA,2021,Vancouver Canucks,1,Los Angeles Kings,2,180,,,115,,,False,DraftKings,13,-110,5,SO,-210,175,-1.5,Final/SO,5.5,-110
+PHI,2021-12-31T03:30Z,401349690,SJ,2021,Philadelphia Flyers,2,San Jose Sharks,3,205,,,100,,,False,DraftKings,13,105,4,OT,-180,155,-1.5,Final/OT,6.0,-125
+EDM,2021-12-31T18:00Z,401349695,NJ,2021,Edmonton Oilers,5,New Jersey Devils,6,105,,,200,,,False,DraftKings,12,-115,4,OT,160,-190,1.5,Final/OT,6.5,-105
+ANA,2021-12-31T20:00Z,401349699,VGK,2021,Anaheim Ducks,1,Vegas Golden Knights,3,245,,,-120,,,False,DraftKings,13,100,3,REG,-140,120,-1.5,Final,6.0,-120
+NYR,2022-01-01T00:00Z,401349694,TB,2021,New York Rangers,4,Tampa Bay Lightning,3,170,,,125,,,False,DraftKings,12,-110,5,SO,-225,185,-1.5,Final/SO,6.0,-110
+WSH,2022-01-01T00:30Z,401349693,DET,2021,Washington Capitals,3,Detroit Red Wings,1,-110,,,225,,,False,DraftKings,12,-105,3,REG,150,-170,1.5,Final,6.0,-115
+BUF,2022-01-01T18:00Z,401349700,BOS,2021,Buffalo Sabres,3,Boston Bruins,4,400,,,-190,,,False,DraftKings,13,-115,4,OT,110,-130,-1.5,Final/OT,5.5,-105
+MTL,2022-01-01T18:00Z,401349702,FLA,2021,Montreal Canadiens,2,Florida Panthers,5,650,,,-285,,,False,DraftKings,13,105,3,REG,185,-225,-1.5,Final,6.5,-125
+CAR,2022-01-01T18:00Z,401349704,CBJ,2021,Carolina Hurricanes,7,Columbus Blue Jackets,4,-115,,,235,,,False,DraftKings,12,-115,3,REG,130,-150,1.5,Final,6.0,-105
+EDM,2022-01-01T19:00Z,401349703,NYI,2021,Edmonton Oilers,2,New York Islanders,3,150,,,135,,,False,DraftKings,12,-110,4,OT,-255,205,-1.5,Final/OT,6.0,-110
+CHI,2022-01-01T19:00Z,401349705,NSH,2021,Chicago Blackhawks,1,Nashville Predators,6,280,,,-130,,,False,DraftKings,13,-115,3,REG,-150,130,-1.5,Final,5.5,-105
+OTT,2022-01-02T00:00Z,401349701,TOR,2021,Ottawa Senators,0,Toronto Maple Leafs,6,390,,,-190,,,False,DraftKings,13,-125,3,REG,130,-150,-1.5,Final,6.0,105
+STL,2022-01-02T00:00Z,401349706,MIN,2021,St. Louis Blues,6,Minnesota Wild,4,150,,,135,,,True,DraftKings,12,-105,3,REG,-240,195,-1.5,Final,6.0,-115
+VAN,2022-01-02T03:00Z,401349708,SEA,2021,Vancouver Canucks,5,Seattle Kraken,2,140,,,145,,,False,DraftKings,13,-110,3,REG,-265,215,-1.5,Final,5.5,-110
+PHI,2022-01-02T03:30Z,401349707,LA,2021,Philadelphia Flyers,3,Los Angeles Kings,6,205,,,100,,,False,DraftKings,13,-115,3,REG,-180,155,-1.5,Final,5.5,-105
+TB,2022-01-02T17:30Z,401349710,NYR,2021,Tampa Bay Lightning,0,New York Rangers,4,140,,,160,,,False,DraftKings,13,105,3,REG,195,-240,1.5,Final,5.5,-125
+BOS,2022-01-02T18:00Z,401349709,DET,2021,Boston Bruins,5,Detroit Red Wings,1,115,,,185,,,False,DraftKings,13,-140,3,REG,175,-210,1.5,Final,5.0,120
+SJ,2022-01-02T18:00Z,401349711,PIT,2021,San Jose Sharks,5,Pittsburgh Penguins,8,220,,,100,,,False,DraftKings,13,-120,3,REG,-155,135,-1.5,Final,5.5,100
+NJ,2022-01-02T20:00Z,401349712,WSH,2021,New Jersey Devils,4,Washington Capitals,3,330,,,-145,,,False,DraftKings,13,-115,4,OT,-125,105,-1.5,Final/OT,6.0,-105
+ANA,2022-01-02T20:00Z,401349714,COL,2021,Anaheim Ducks,2,Colorado Avalanche,4,340,,,-165,,,False,DraftKings,12,105,3,REG,100,-120,-1.5,Final,6.0,-125
+WPG,2022-01-02T21:00Z,401349716,VGK,2021,Winnipeg Jets,5,Vegas Golden Knights,4,195,,,115,,,False,DraftKings,13,-110,4,OT,-195,165,-1.5,Final/OT,6.0,-110
+CGY,2022-01-03T00:00Z,401349713,CHI,2021,Calgary Flames,5,Chicago Blackhawks,1,-125,,,270,,,False,DraftKings,13,-115,3,REG,125,-145,1.5,Final,5.5,-105
+EDM,2022-01-04T00:00Z,401349719,NYR,2021,Edmonton Oilers,1,New York Rangers,4,125,,,165,,,False,DraftKings,13,100,3,REG,190,-235,1.5,Final,6.5,-120
+NJ,2022-01-05T00:00Z,401349720,BOS,2021,New Jersey Devils,3,Boston Bruins,5,380,,,-165,,,False,DraftKings,13,-115,3,REG,-105,-115,-1.5,Final,5.5,-105
+CGY,2022-01-05T00:00Z,401349723,FLA,2021,Calgary Flames,2,Florida Panthers,6,185,,,115,,,False,DraftKings,13,-120,3,REG,-190,160,-1.5,Final,6.0,100
+TB,2022-01-05T00:00Z,401349724,CBJ,2021,Tampa Bay Lightning,7,Columbus Blue Jackets,2,-145,,,320,,,False,DraftKings,12,-115,3,REG,110,-130,1.5,Final,6.0,-105
+SJ,2022-01-05T00:30Z,401349722,DET,2021,San Jose Sharks,2,Detroit Red Wings,6,185,,,120,,,False,DraftKings,13,-115,3,REG,-220,180,-1.5,Final,5.5,-105
+COL,2022-01-05T01:30Z,401349725,CHI,2021,Colorado Avalanche,4,Chicago Blackhawks,3,-150,,,330,,,False,DraftKings,13,105,4,OT,105,-125,1.5,Final/OT,6.0,-125
+WPG,2022-01-05T02:00Z,401349726,ARI,2021,Winnipeg Jets,3,Arizona Coyotes,1,-140,,,300,,,False,DraftKings,13,-120,3,REG,120,-140,1.5,Final,5.5,100
+NSH,2022-01-05T03:00Z,401349727,VGK,2021,Nashville Predators,3,Vegas Golden Knights,2,170,,,125,,,False,DraftKings,13,-115,3,REG,-225,185,-1.5,Final,6.0,-105
+PHI,2022-01-05T03:00Z,401349728,ANA,2021,Philadelphia Flyers,1,Anaheim Ducks,4,240,,,-105,,,False,DraftKings,13,-105,3,REG,-180,155,-1.5,Final,5.5,-115
+EDM,2022-01-06T00:00Z,401349730,TOR,2021,Edmonton Oilers,2,Toronto Maple Leafs,4,360,,,-175,,,False,DraftKings,12,-125,3,REG,105,-125,-1.5,Final,6.0,105
+STL,2022-01-06T00:30Z,401349731,PIT,2021,St. Louis Blues,3,Pittsburgh Penguins,5,190,,,110,,,False,DraftKings,13,-120,3,REG,-200,170,-1.5,Final,6.0,100
+MIN,2022-01-07T00:00Z,401349733,BOS,2021,Minnesota Wild,3,Boston Bruins,2,210,,,100,,,False,DraftKings,12,-115,3,REG,-170,150,-1.5,Final,6.0,-105
+SJ,2022-01-07T00:00Z,401349734,BUF,2021,San Jose Sharks,3,Buffalo Sabres,2,130,,,150,,,False,DraftKings,12,-105,3,REG,195,-240,1.5,Final,6.0,-115
+CGY,2022-01-07T00:00Z,401349736,TB,2021,Calgary Flames,1,Tampa Bay Lightning,4,230,,,-105,,,False,DraftKings,12,-110,3,REG,-140,120,-1.5,Final,6.0,-110
+CBJ,2022-01-07T00:00Z,401349737,NJ,2021,Columbus Blue Jackets,1,New Jersey Devils,3,205,,,105,,,False,DraftKings,12,-115,3,REG,-180,155,-1.5,Final,6.5,-105
+PIT,2022-01-07T00:00Z,401349738,PHI,2021,Pittsburgh Penguins,6,Philadelphia Flyers,2,-160,,,400,,,False,DraftKings,11,-105,3,REG,110,-130,1.5,Final,6.0,-115
+FLA,2022-01-07T01:30Z,401349739,DAL,2021,Florida Panthers,5,Dallas Stars,6,130,,,165,,,False,DraftKings,11,-105,5,SO,185,-225,1.5,Final/SO,6.5,-115
+WPG,2022-01-07T02:00Z,401349740,COL,2021,Winnipeg Jets,1,Colorado Avalanche,7,255,,,-125,,,False,DraftKings,12,-110,3,REG,-125,105,-1.5,Final,6.5,-110
+CHI,2022-01-07T02:00Z,401349741,ARI,2021,Chicago Blackhawks,4,Arizona Coyotes,6,105,,,205,,,False,DraftKings,12,100,3,REG,160,-190,1.5,Final,5.5,-120
+NYR,2022-01-07T03:00Z,401349742,VGK,2021,New York Rangers,1,Vegas Golden Knights,5,230,,,-115,,,False,DraftKings,11,-115,3,REG,-155,135,-1.5,Final,6.0,-105
+NSH,2022-01-07T03:30Z,401349744,LA,2021,Nashville Predators,4,Los Angeles Kings,2,120,,,175,,,False,DraftKings,12,-105,3,REG,190,-235,1.5,Final,5.5,-115
+CGY,2022-01-08T00:00Z,401349746,CAR,2021,Calgary Flames,3,Carolina Hurricanes,6,240,,,-115,,,False,DraftKings,11,105,3,REG,-155,135,-1.5,Final,6.0,-125
+WSH,2022-01-08T01:00Z,401349747,STL,2021,Washington Capitals,1,St. Louis Blues,5,140,,,145,,,False,DraftKings,13,-110,3,REG,-240,195,-1.5,Final,6.5,-110
+PIT,2022-01-08T19:00Z,401349753,DAL,2021,Pittsburgh Penguins,2,Dallas Stars,3,130,,,160,,,False,DraftKings,13,-110,3,REG,190,-235,1.5,Final,5.5,-110
+BOS,2022-01-09T00:00Z,401349749,TB,2021,Boston Bruins,5,Tampa Bay Lightning,2,280,,,-120,,,False,DraftKings,13,-115,3,REG,-150,130,-1.5,Final,5.5,-105
+SJ,2022-01-09T00:00Z,401349750,PHI,2021,San Jose Sharks,3,Philadelphia Flyers,2,130,,,170,,,False,DraftKings,13,100,4,OT,195,-240,1.5,Final/OT,6.0,-120
+FLA,2022-01-09T00:00Z,401349751,CAR,2021,Florida Panthers,4,Carolina Hurricanes,3,155,,,130,,,False,DraftKings,13,-120,4,OT,-275,220,-1.5,Final/OT,6.5,100
+NJ,2022-01-09T00:00Z,401349752,CBJ,2021,New Jersey Devils,3,Columbus Blue Jackets,4,175,,,120,,,False,DraftKings,13,-105,3,REG,-225,185,-1.5,Final,6.5,-115
+TOR,2022-01-09T00:00Z,401349756,COL,2021,Toronto Maple Leafs,4,Colorado Avalanche,5,215,,,-105,,,False,DraftKings,13,-120,4,OT,-165,145,-1.5,Final/OT,6.5,100
+WSH,2022-01-09T01:00Z,401349754,MIN,2021,Washington Capitals,2,Minnesota Wild,3,120,,,165,,,False,DraftKings,13,-105,5,SO,190,-235,1.5,Final/SO,6.5,-115
+NSH,2022-01-09T01:00Z,401349758,ARI,2021,Nashville Predators,4,Arizona Coyotes,2,-150,,,310,,,False,DraftKings,13,-115,3,REG,120,-140,1.5,Final,5.5,-105
+CHI,2022-01-09T03:00Z,401349760,VGK,2021,Chicago Blackhawks,2,Vegas Golden Knights,1,350,,,-160,,,False,DraftKings,13,-110,3,REG,-120,100,-1.5,Final,6.0,-110
+NYR,2022-01-09T03:00Z,401349761,ANA,2021,New York Rangers,4,Anaheim Ducks,1,140,,,150,,,False,DraftKings,13,-115,3,REG,220,-275,1.5,Final,5.5,-105
+DET,2022-01-09T03:30Z,401349762,LA,2021,Detroit Red Wings,0,Los Angeles Kings,4,180,,,115,,,False,DraftKings,13,105,3,REG,-200,170,-1.5,Final,5.5,-125
+DAL,2022-01-09T19:00Z,401349763,STL,2021,Dallas Stars,1,St. Louis Blues,2,225,,,-105,,,False,DraftKings,13,-110,3,REG,-180,155,-1.5,Final,6.0,-110
+DET,2022-01-10T01:00Z,401402477,ANA,2021,Detroit Red Wings,3,Anaheim Ducks,4,185,,,115,,,False,DraftKings,13,-115,5,SO,-210,175,-1.5,Final/SO,5.5,-105
+BOS,2022-01-11T00:00Z,401349766,WSH,2021,Boston Bruins,7,Washington Capitals,3,155,,,135,,,False,DraftKings,12,100,3,REG,-250,200,-1.5,Final,6.0,-120
+SEA,2022-01-11T02:00Z,401349768,COL,2021,Seattle Kraken,3,Colorado Avalanche,4,475,,,-240,,,False,DraftKings,13,-120,3,REG,130,-150,-1.5,Final,6.5,100
+NYR,2022-01-11T03:30Z,401349770,LA,2021,New York Rangers,1,Los Angeles Kings,3,155,,,135,,,False,DraftKings,12,-125,3,REG,-255,205,-1.5,Final,5.5,105
+TB,2022-01-12T00:00Z,401349771,BUF,2021,Tampa Bay Lightning,6,Buffalo Sabres,1,-170,,,360,,,False,DraftKings,12,-105,3,REG,-120,100,1.5,Final,6.0,-115
+VAN,2022-01-12T00:00Z,401349772,FLA,2021,Vancouver Canucks,2,Florida Panthers,5,280,,,-140,,,False,DraftKings,13,-110,3,REG,-115,-105,-1.5,Final,6.5,-110
+CHI,2022-01-12T00:00Z,401349774,CBJ,2021,Chicago Blackhawks,4,Columbus Blue Jackets,2,140,,,145,,,False,DraftKings,13,-110,3,REG,215,-265,1.5,Final,6.0,-110
+COL,2022-01-12T01:00Z,401349775,NSH,2021,Colorado Avalanche,4,Nashville Predators,5,110,,,200,,,False,DraftKings,13,100,4,OT,165,-195,1.5,Final/OT,6.5,-120
+TOR,2022-01-12T03:00Z,401349777,VGK,2021,Toronto Maple Leafs,4,Vegas Golden Knights,3,125,,,170,,,False,DraftKings,13,-115,5,SO,195,-240,1.5,Final/SO,6.0,-105
+PIT,2022-01-12T03:00Z,401349778,ANA,2021,Pittsburgh Penguins,4,Anaheim Ducks,1,-115,,,250,,,False,DraftKings,12,-120,3,REG,145,-165,1.5,Final,5.5,100
+DET,2022-01-12T03:30Z,401349779,SJ,2021,Detroit Red Wings,2,San Jose Sharks,3,180,,,115,,,False,DraftKings,13,-105,4,OT,-210,175,-1.5,Final/OT,5.5,-115
+MTL,2022-01-13T00:00Z,401349780,BOS,2021,Montreal Canadiens,1,Boston Bruins,5,425,,,-185,,,False,DraftKings,13,-115,3,REG,130,-150,-1.5,Final,6.0,-105
+SEA,2022-01-13T01:30Z,401349781,DAL,2021,Seattle Kraken,2,Dallas Stars,5,275,,,-125,,,False,DraftKings,13,-105,3,REG,-140,120,-1.5,Final,6.0,-115
+TOR,2022-01-13T03:00Z,401349783,ARI,2021,Toronto Maple Leafs,1,Arizona Coyotes,2,-195,,,450,,,False,DraftKings,12,-120,3,REG,-125,105,1.5,Final,6.0,100
+PHI,2022-01-14T00:00Z,401349784,BOS,2021,Philadelphia Flyers,2,Boston Bruins,3,300,,,-150,,,False,DraftKings,12,-105,3,REG,-115,-105,-1.5,Final,6.0,-115
+VAN,2022-01-14T00:00Z,401349786,TB,2021,Vancouver Canucks,2,Tampa Bay Lightning,4,330,,,-160,,,False,DraftKings,12,-105,3,REG,-125,105,-1.5,Final,5.5,-115
+CBJ,2022-01-14T00:00Z,401349788,CAR,2021,Columbus Blue Jackets,6,Carolina Hurricanes,0,360,,,-170,,,False,DraftKings,12,-120,3,REG,100,-120,-1.5,Final,6.0,100
+WPG,2022-01-14T00:30Z,401349785,DET,2021,Winnipeg Jets,3,Detroit Red Wings,0,120,,,180,,,False,DraftKings,12,-130,3,REG,185,-225,1.5,Final,5.5,110
+NJ,2022-01-14T00:30Z,401349787,NYI,2021,New Jersey Devils,2,New York Islanders,3,285,,,-135,,,False,DraftKings,12,-105,3,REG,-145,125,-1.5,Final,6.0,-115
+SEA,2022-01-14T01:00Z,401349790,STL,2021,Seattle Kraken,1,St. Louis Blues,2,275,,,-135,,,False,DraftKings,12,-105,3,REG,-140,120,-1.5,Final,6.0,-115
+BUF,2022-01-14T01:00Z,401349791,NSH,2021,Buffalo Sabres,4,Nashville Predators,1,450,,,-220,,,False,DraftKings,12,-110,3,REG,125,-145,-1.5,Final,6.0,-110
+MTL,2022-01-14T01:30Z,401349789,CHI,2021,Montreal Canadiens,2,Chicago Blackhawks,3,350,,,-155,,,False,DraftKings,12,-110,4,OT,-125,105,-1.5,Final/OT,5.5,-110
+OTT,2022-01-14T02:00Z,401349792,CGY,2021,Ottawa Senators,4,Calgary Flames,1,360,,,-175,,,False,DraftKings,12,-115,3,REG,110,-130,-1.5,Final,6.0,-105
+PIT,2022-01-14T03:30Z,401349793,LA,2021,Pittsburgh Penguins,2,Los Angeles Kings,6,105,,,200,,,False,DraftKings,12,-115,3,REG,170,-200,1.5,Final,5.5,-105
+NYR,2022-01-14T03:30Z,401349794,SJ,2021,New York Rangers,3,San Jose Sharks,0,120,,,175,,,False,DraftKings,12,-115,3,REG,185,-225,1.5,Final,5.5,-105
+DAL,2022-01-15T00:00Z,401349795,FLA,2021,Dallas Stars,1,Florida Panthers,7,265,,,-125,,,False,DraftKings,12,-105,3,REG,-130,110,-1.5,Final,6.5,-115
+ANA,2022-01-15T01:00Z,401349796,MIN,2021,Anaheim Ducks,3,Minnesota Wild,7,225,,,100,,,False,DraftKings,11,-120,3,REG,-160,140,-1.5,Final,5.5,100
+ARI,2022-01-15T02:00Z,401349797,COL,2021,Arizona Coyotes,3,Colorado Avalanche,4,650,,,-330,,,False,DraftKings,11,-120,5,SO,195,-240,-1.5,Final/SO,6.5,100
+NSH,2022-01-15T18:00Z,401349799,BOS,2021,Nashville Predators,3,Boston Bruins,4,200,,,110,,,False,DraftKings,12,-110,4,OT,-190,160,-1.5,Final/OT,5.5,-110
+VAN,2022-01-15T18:00Z,401349806,CAR,2021,Vancouver Canucks,1,Carolina Hurricanes,4,275,,,-130,,,False,DraftKings,12,-105,3,REG,-150,130,-1.5,Final,6.0,-115
+WSH,2022-01-15T19:00Z,401349804,NYI,2021,Washington Capitals,2,New York Islanders,0,120,,,180,,,False,DraftKings,11,-110,3,REG,185,-225,1.5,Final,5.5,-110
+CBJ,2022-01-15T23:00Z,401349803,FLA,2021,Columbus Blue Jackets,2,Florida Panthers,9,370,,,-170,,,False,DraftKings,11,110,3,REG,110,-130,-1.5,Final,7.0,-130
+BUF,2022-01-16T00:00Z,401349801,DET,2021,Buffalo Sabres,0,Detroit Red Wings,4,255,,,-115,,,False,DraftKings,11,-120,3,REG,-155,135,-1.5,Final,5.5,100
+DAL,2022-01-16T00:00Z,401349802,TB,2021,Dallas Stars,1,Tampa Bay Lightning,3,360,,,-170,,,False,DraftKings,10,-120,3,REG,-110,-110,-1.5,Final,5.5,100
+NYR,2022-01-16T00:00Z,401349805,PHI,2021,New York Rangers,3,Philadelphia Flyers,2,110,,,200,,,False,DraftKings,11,-115,3,REG,160,-190,1.5,Final,5.5,-105
+TOR,2022-01-16T00:00Z,401349808,STL,2021,Toronto Maple Leafs,6,St. Louis Blues,5,-105,,,235,,,False,DraftKings,11,-120,3,REG,145,-165,1.5,Final,5.5,100
+ANA,2022-01-16T01:30Z,401349807,CHI,2021,Anaheim Ducks,0,Chicago Blackhawks,3,200,,,110,,,False,DraftKings,11,-115,3,REG,-180,155,-1.5,Final,5.5,-105
+COL,2022-01-16T02:00Z,401349811,ARI,2021,Colorado Avalanche,5,Arizona Coyotes,0,-240,,,500,,,False,DraftKings,10,-115,3,REG,-155,135,1.5,Final,6.5,-105
+LA,2022-01-16T03:00Z,401349813,SEA,2021,Los Angeles Kings,3,Seattle Kraken,1,120,,,180,,,False,DraftKings,11,-110,3,REG,190,-235,1.5,Final,5.5,-110
+OTT,2022-01-16T03:00Z,401403550,EDM,2021,Ottawa Senators,6,Edmonton Oilers,4,295,,,-150,,,False,DraftKings,10,-125,3,REG,-125,105,-1.5,Final,6.5,105
+PIT,2022-01-16T03:30Z,401349812,SJ,2021,Pittsburgh Penguins,2,San Jose Sharks,1,-110,,,215,,,False,DraftKings,12,-115,4,OT,155,-180,1.5,Final/OT,6.0,-105
+VAN,2022-01-16T19:00Z,401349814,WSH,2021,Vancouver Canucks,4,Washington Capitals,2,250,,,-115,,,False,DraftKings,11,-120,3,REG,-160,140,-1.5,Final,5.5,100
+DET,2022-01-17T18:00Z,401349816,BUF,2021,Detroit Red Wings,3,Buffalo Sabres,2,120,,,170,,,False,DraftKings,13,-115,4,OT,165,-195,1.5,Final/OT,5.5,-105
+MIN,2022-01-17T20:00Z,401349820,COL,2021,Minnesota Wild,3,Colorado Avalanche,4,330,,,-155,,,False,DraftKings,13,-130,5,SO,-115,-105,-1.5,Final/SO,6.5,110
+MTL,2022-01-17T21:00Z,401349821,ARI,2021,Montreal Canadiens,2,Arizona Coyotes,5,165,,,125,,,False,DraftKings,13,-105,3,REG,-235,190,-1.5,Final,5.5,-115
+LA,2022-01-17T21:00Z,401349823,SJ,2021,Los Angeles Kings,2,San Jose Sharks,6,155,,,150,,,False,DraftKings,13,120,3,REG,-310,245,-1.5,Final,5.5,-140
+CHI,2022-01-17T22:00Z,401349824,SEA,2021,Chicago Blackhawks,2,Seattle Kraken,3,145,,,145,,,False,DraftKings,12,-105,5,SO,225,-280,1.5,Final/SO,5.5,-115
+PHI,2022-01-18T00:30Z,401349818,NYI,2021,Philadelphia Flyers,1,New York Islanders,4,255,,,-120,,,False,DraftKings,13,105,3,REG,-150,130,-1.5,Final,5.5,-125
+NSH,2022-01-18T01:00Z,401349819,STL,2021,Nashville Predators,3,St. Louis Blues,5,170,,,120,,,False,DraftKings,13,-110,3,REG,-210,175,-1.5,Final,6.0,-110
+PIT,2022-01-18T03:00Z,401349822,VGK,2021,Pittsburgh Penguins,5,Vegas Golden Knights,3,145,,,145,,,False,DraftKings,13,-110,3,REG,-255,205,-1.5,Final,6.0,-110
+CAR,2022-01-19T00:00Z,401349825,BOS,2021,Carolina Hurricanes,7,Boston Bruins,1,175,,,115,,,False,DraftKings,13,-115,3,REG,-220,180,-1.5,Final,5.5,-105
+BUF,2022-01-19T00:00Z,401349826,OTT,2021,Buffalo Sabres,3,Ottawa Senators,1,295,,,-125,,,False,DraftKings,13,-110,3,REG,-130,110,-1.5,Final,6.0,-110
+WPG,2022-01-19T00:00Z,401349829,WSH,2021,Winnipeg Jets,3,Washington Capitals,4,175,,,125,,,False,DraftKings,13,-105,4,OT,-210,175,-1.5,Final/OT,6.0,-115
+NYI,2022-01-19T00:00Z,401402064,PHI,2021,New York Islanders,4,Philadelphia Flyers,3,130,,,165,,,False,DraftKings,13,-130,5,SO,185,-225,1.5,Final/SO,5.0,110
+VAN,2022-01-19T01:00Z,401349830,NSH,2021,Vancouver Canucks,3,Nashville Predators,1,175,,,120,,,False,DraftKings,11,100,3,REG,-210,175,-1.5,Final,6.0,-120
+MTL,2022-01-19T01:30Z,401349831,DAL,2021,Montreal Canadiens,5,Dallas Stars,3,450,,,-185,,,False,DraftKings,13,100,3,REG,115,-135,-1.5,Final,5.5,-120
+FLA,2022-01-19T02:00Z,401349832,CGY,2021,Florida Panthers,1,Calgary Flames,5,120,,,180,,,False,DraftKings,13,-105,3,REG,170,-200,1.5,Final,6.5,-115
+TB,2022-01-19T03:30Z,401349834,LA,2021,Tampa Bay Lightning,6,Los Angeles Kings,4,-125,,,260,,,False,DraftKings,12,-125,3,REG,115,-135,1.5,Final,5.5,105
+ARI,2022-01-20T00:00Z,401349835,NJ,2021,Arizona Coyotes,4,New Jersey Devils,1,280,,,-130,,,False,DraftKings,13,-105,3,REG,-135,115,-1.5,Final,6.0,-115
+TOR,2022-01-20T00:30Z,401349836,NYR,2021,Toronto Maple Leafs,3,New York Rangers,6,105,,,215,,,False,DraftKings,13,-115,3,REG,170,-200,1.5,Final,5.5,-105
+COL,2022-01-20T03:00Z,401349837,ANA,2021,Colorado Avalanche,2,Anaheim Ducks,0,-155,,,310,,,False,DraftKings,13,-115,3,REG,-115,-105,1.5,Final,6.5,-105
+WSH,2022-01-21T00:00Z,401349838,BOS,2021,Washington Capitals,3,Boston Bruins,4,235,,,-110,,,False,DraftKings,13,-110,3,REG,-155,135,-1.5,Final,6.0,-110
+DAL,2022-01-21T00:00Z,401349839,BUF,2021,Dallas Stars,5,Buffalo Sabres,4,-125,,,280,,,False,DraftKings,13,-115,3,REG,130,-150,1.5,Final,5.5,-105
+CBJ,2022-01-21T00:00Z,401349840,PHI,2021,Columbus Blue Jackets,2,Philadelphia Flyers,1,165,,,125,,,False,DraftKings,12,-110,3,REG,-225,185,-1.5,Final,6.0,-110
+OTT,2022-01-21T00:00Z,401349841,PIT,2021,Ottawa Senators,4,Pittsburgh Penguins,6,400,,,-195,,,False,DraftKings,13,-125,3,REG,110,-130,-1.5,Final,6.0,105
+WPG,2022-01-21T01:00Z,401349842,NSH,2021,Winnipeg Jets,2,Nashville Predators,5,200,,,105,,,False,DraftKings,12,100,3,REG,-195,165,-1.5,Final,6.0,-120
+FLA,2022-01-21T02:00Z,401349843,EDM,2021,Florida Panthers,6,Edmonton Oilers,0,-110,,,225,,,False,DraftKings,13,100,3,REG,140,-160,1.5,Final,7.0,-120
+COL,2022-01-21T02:30Z,401349845,LA,2021,Colorado Avalanche,4,Los Angeles Kings,1,-115,,,240,,,False,DraftKings,13,-105,3,REG,140,-160,1.5,Final,6.5,-115
+MTL,2022-01-21T03:00Z,401349844,VGK,2021,Montreal Canadiens,3,Vegas Golden Knights,4,450,,,-220,,,False,DraftKings,13,-105,4,OT,120,-140,-1.5,Final/OT,6.0,-115
+SJ,2022-01-21T03:00Z,401349846,SEA,2021,San Jose Sharks,2,Seattle Kraken,3,165,,,130,,,False,DraftKings,13,-115,3,REG,-265,215,-1.5,Final,5.5,-105
+NYR,2022-01-22T00:00Z,401349849,CAR,2021,New York Rangers,3,Carolina Hurricanes,6,265,,,-125,,,False,DraftKings,12,-105,3,REG,-140,120,-1.5,Final,6.0,-115
+PIT,2022-01-22T00:00Z,401349850,CBJ,2021,Pittsburgh Penguins,5,Columbus Blue Jackets,2,-140,,,290,,,False,DraftKings,12,-120,3,REG,110,-130,1.5,Final,6.5,100
+DAL,2022-01-22T00:30Z,401349847,DET,2021,Dallas Stars,5,Detroit Red Wings,4,135,,,150,,,False,DraftKings,12,-105,4,OT,205,-255,1.5,Final/OT,5.5,-115
+ARI,2022-01-22T00:30Z,401349848,NYI,2021,Arizona Coyotes,0,New York Islanders,4,340,,,-160,,,False,DraftKings,13,-135,3,REG,-120,100,-1.5,Final,5.0,115
+MIN,2022-01-22T01:30Z,401349851,CHI,2021,Minnesota Wild,5,Chicago Blackhawks,1,125,,,175,,,False,DraftKings,13,100,3,REG,175,-210,1.5,Final,6.0,-120
+FLA,2022-01-22T03:00Z,401349852,VAN,2021,Florida Panthers,2,Vancouver Canucks,1,-115,,,240,,,False,DraftKings,13,-125,5,SO,125,-145,1.5,Final/SO,6.5,105
+TB,2022-01-22T03:00Z,401349853,ANA,2021,Tampa Bay Lightning,1,Anaheim Ducks,5,-155,,,320,,,False,DraftKings,13,-120,3,REG,100,-120,1.5,Final,5.5,100
+STL,2022-01-22T03:00Z,401349854,SEA,2021,St. Louis Blues,5,Seattle Kraken,0,-120,,,260,,,False,DraftKings,11,-110,3,REG,145,-165,1.5,Final,6.0,-110
+PHI,2022-01-22T18:00Z,401349856,BUF,2021,Philadelphia Flyers,3,Buffalo Sabres,6,115,,,185,,,False,DraftKings,11,-135,3,REG,175,-210,1.5,Final,5.5,115
+WPG,2022-01-22T20:00Z,401349855,BOS,2021,Winnipeg Jets,2,Boston Bruins,3,240,,,-115,,,False,DraftKings,13,-105,3,REG,-155,135,-1.5,Final,6.0,-115
+CAR,2022-01-23T00:00Z,401349858,NJ,2021,Carolina Hurricanes,4,New Jersey Devils,7,-110,,,230,,,False,DraftKings,13,-105,3,REG,140,-160,1.5,Final,6.5,-115
+ARI,2022-01-23T00:00Z,401349859,NYR,2021,Arizona Coyotes,3,New York Rangers,7,500,,,-210,,,False,DraftKings,13,105,3,REG,105,-125,-1.5,Final,5.5,-125
+OTT,2022-01-23T00:00Z,401349860,WSH,2021,Ottawa Senators,2,Washington Capitals,3,320,,,-150,,,False,DraftKings,13,-105,4,OT,-125,105,-1.5,Final/OT,6.5,-115
+MTL,2022-01-23T00:00Z,401349863,COL,2021,Montreal Canadiens,2,Colorado Avalanche,3,800,,,-370,,,False,DraftKings,13,195,4,OT,185,-225,-1.5,Final/OT,7.5,-270
+TOR,2022-01-23T00:00Z,401402065,NYI,2021,Toronto Maple Leafs,3,New York Islanders,1,-110,,,250,,,False,DraftKings,12,100,3,REG,155,-180,1.5,Final,5.5,-120
+DET,2022-01-23T01:30Z,401349861,NSH,2021,Detroit Red Wings,1,Nashville Predators,4,380,,,-170,,,False,DraftKings,13,-115,3,REG,-125,105,-1.5,Final,5.5,-105
+CHI,2022-01-23T02:00Z,401349862,MIN,2021,Chicago Blackhawks,3,Minnesota Wild,4,310,,,-145,,,False,DraftKings,13,-115,4,OT,-130,110,-1.5,Final/OT,6.0,-105
+CGY,2022-01-23T03:00Z,401349864,EDM,2021,Calgary Flames,3,Edmonton Oilers,5,125,,,170,,,False,DraftKings,13,-125,3,REG,195,-240,1.5,Final,6.0,105
+TB,2022-01-23T03:30Z,401349865,SJ,2021,Tampa Bay Lightning,7,San Jose Sharks,1,-105,,,220,,,False,DraftKings,13,-115,3,REG,155,-180,1.5,Final,6.0,-105
+WPG,2022-01-23T18:00Z,401349867,PIT,2021,Winnipeg Jets,2,Pittsburgh Penguins,3,250,,,-125,,,False,DraftKings,12,-125,5,SO,-135,115,-1.5,Final/SO,6.0,105
+OTT,2022-01-23T23:00Z,401349868,CBJ,2021,Ottawa Senators,2,Columbus Blue Jackets,1,205,,,100,,,False,DraftKings,13,-120,3,REG,-180,155,-1.5,Final,6.0,100
+LA,2022-01-24T00:00Z,401349866,NJ,2021,Los Angeles Kings,3,New Jersey Devils,2,105,,,200,,,False,DraftKings,13,225,3,REG,180,-220,1.5,Final,7.0,-320
+FLA,2022-01-24T02:00Z,401349870,SEA,2021,Florida Panthers,3,Seattle Kraken,5,-160,,,310,,,False,DraftKings,12,-120,3,REG,-110,-110,1.5,Final,6.0,100
+STL,2022-01-24T03:00Z,401349869,VAN,2021,St. Louis Blues,3,Vancouver Canucks,1,-110,,,225,,,False,DraftKings,12,-110,3,REG,160,-190,1.5,Final,6.0,-110
+ANA,2022-01-25T00:00Z,401349871,BOS,2021,Anaheim Ducks,5,Boston Bruins,3,330,,,-160,,,False,DraftKings,12,-115,3,REG,-120,100,-1.5,Final,5.5,-105
+LA,2022-01-25T00:00Z,401349872,NYR,2021,Los Angeles Kings,2,New York Rangers,3,225,,,-105,,,False,DraftKings,11,-110,5,SO,-180,155,-1.5,Final/SO,5.5,-110
+DAL,2022-01-25T00:00Z,401349873,PHI,2021,Dallas Stars,3,Philadelphia Flyers,1,-115,,,240,,,False,DraftKings,12,-110,3,REG,145,-165,1.5,Final,5.5,-110
+VGK,2022-01-25T00:00Z,401349874,WSH,2021,Vegas Golden Knights,1,Washington Capitals,0,195,,,105,,,False,DraftKings,12,-115,3,REG,-195,165,-1.5,Final,6.0,-105
+MTL,2022-01-25T01:00Z,401349875,MIN,2021,Montreal Canadiens,2,Minnesota Wild,8,425,,,-220,,,False,DraftKings,12,-135,3,REG,120,-140,-1.5,Final,6.0,115
+CHI,2022-01-25T02:00Z,401349876,COL,2021,Chicago Blackhawks,0,Colorado Avalanche,2,425,,,-210,,,False,DraftKings,12,-110,3,REG,110,-130,-1.5,Final,6.5,-110
+STL,2022-01-25T02:00Z,401349877,CGY,2021,St. Louis Blues,1,Calgary Flames,7,210,,,-105,,,False,DraftKings,11,100,3,REG,-180,155,-1.5,Final,6.0,-120
+BUF,2022-01-26T00:00Z,401349878,OTT,2021,Buffalo Sabres,0,Ottawa Senators,5,235,,,-120,,,False,DraftKings,12,100,3,REG,-155,135,-1.5,Final,6.5,-120
+DAL,2022-01-26T00:00Z,401349879,NJ,2021,Dallas Stars,5,New Jersey Devils,1,105,,,195,,,False,DraftKings,11,-105,3,REG,170,-200,1.5,Final,6.0,-115
+ARI,2022-01-26T00:00Z,401349881,PIT,2021,Arizona Coyotes,3,Pittsburgh Penguins,6,500,,,-270,,,False,DraftKings,12,-110,3,REG,155,-180,-1.5,Final,6.0,-110
+VGK,2022-01-26T00:00Z,401349882,CAR,2021,Vegas Golden Knights,3,Carolina Hurricanes,4,295,,,-140,,,False,DraftKings,11,-125,4,OT,-150,130,-1.5,Final/OT,6.0,105
+PHI,2022-01-26T00:30Z,401349880,NYI,2021,Philadelphia Flyers,3,New York Islanders,4,340,,,-160,,,False,DraftKings,12,105,3,REG,-125,105,-1.5,Final,5.5,-125
+FLA,2022-01-26T01:00Z,401349883,WPG,2021,Florida Panthers,5,Winnipeg Jets,3,-115,,,215,,,False,DraftKings,12,-110,3,REG,135,-155,1.5,Final,6.5,-110
+EDM,2022-01-26T03:00Z,401349884,VAN,2021,Edmonton Oilers,3,Vancouver Canucks,2,-115,,,215,,,False,DraftKings,12,-115,4,OT,160,-190,1.5,Final/OT,6.5,-105
+NSH,2022-01-26T03:00Z,401349885,SEA,2021,Nashville Predators,4,Seattle Kraken,2,-125,,,260,,,False,DraftKings,12,-120,3,REG,140,-160,1.5,Final,5.5,100
+ANA,2022-01-27T00:00Z,401349886,TOR,2021,Anaheim Ducks,3,Toronto Maple Leafs,4,340,,,-170,,,False,DraftKings,13,-130,5,SO,-115,-105,-1.5,Final/SO,5.5,110
+SJ,2022-01-27T00:00Z,401349888,WSH,2021,San Jose Sharks,4,Washington Capitals,1,295,,,-140,,,False,DraftKings,13,-120,3,REG,-140,120,-1.5,Final,5.5,100
+CGY,2022-01-27T00:00Z,401349889,CBJ,2021,Calgary Flames,6,Columbus Blue Jackets,0,-130,,,265,,,False,DraftKings,13,100,3,REG,125,-145,1.5,Final,6.0,-120
+CHI,2022-01-27T00:30Z,401349887,DET,2021,Chicago Blackhawks,8,Detroit Red Wings,5,150,,,140,,,False,DraftKings,13,100,3,REG,-250,200,-1.5,Final,5.5,-120
+BOS,2022-01-27T03:00Z,401349890,COL,2021,Boston Bruins,3,Colorado Avalanche,4,255,,,-125,,,False,DraftKings,12,-130,4,OT,-155,135,-1.5,Final/OT,6.0,110
+NYR,2022-01-28T00:00Z,401349631,CBJ,2021,New York Rangers,3,Columbus Blue Jackets,5,-135,,,275,,,False,DraftKings,12,-110,3,REG,130,-150,1.5,Final,6.5,-110
+ANA,2022-01-28T00:00Z,401349891,MTL,2021,Anaheim Ducks,5,Montreal Canadiens,4,115,,,185,,,False,DraftKings,13,-115,3,REG,170,-200,1.5,Final,5.5,-105
+CAR,2022-01-28T00:00Z,401349892,OTT,2021,Carolina Hurricanes,3,Ottawa Senators,2,-145,,,295,,,False,DraftKings,13,100,5,SO,105,-125,1.5,Final/SO,6.5,-120
+NJ,2022-01-28T00:00Z,401349893,TB,2021,New Jersey Devils,2,Tampa Bay Lightning,3,425,,,-215,,,False,DraftKings,13,100,3,REG,115,-135,-1.5,Final,6.5,-120
+VGK,2022-01-28T00:00Z,401349894,FLA,2021,Vegas Golden Knights,1,Florida Panthers,4,190,,,100,,,False,DraftKings,12,-140,3,REG,-170,150,-1.5,Final,6.5,120
+LA,2022-01-28T00:00Z,401349895,NYI,2021,Los Angeles Kings,3,New York Islanders,2,185,,,110,,,False,DraftKings,13,120,3,REG,-210,175,-1.5,Final,5.5,-140
+SEA,2022-01-28T00:00Z,401349896,PIT,2021,Seattle Kraken,2,Pittsburgh Penguins,1,400,,,-205,,,False,DraftKings,13,-120,4,OT,120,-140,-1.5,Final/OT,6.0,100
+CGY,2022-01-28T01:00Z,401349897,STL,2021,Calgary Flames,1,St. Louis Blues,5,195,,,105,,,False,DraftKings,13,-115,3,REG,-200,170,-1.5,Final,6.0,-105
+VAN,2022-01-28T01:00Z,401349898,WPG,2021,Vancouver Canucks,5,Winnipeg Jets,1,215,,,-105,,,False,DraftKings,13,-115,3,REG,-170,150,-1.5,Final,5.5,-105
+NSH,2022-01-28T02:00Z,401349899,EDM,2021,Nashville Predators,2,Edmonton Oilers,3,145,,,145,,,False,DraftKings,13,-120,5,SO,-250,200,-1.5,Final/SO,6.0,100
+DET,2022-01-29T00:00Z,401349901,PIT,2021,Detroit Red Wings,3,Pittsburgh Penguins,2,340,,,-170,,,False,DraftKings,11,-130,5,SO,100,-120,-1.5,Final/SO,6.0,110
+MIN,2022-01-29T01:00Z,401349900,NYR,2021,Minnesota Wild,3,New York Rangers,2,105,,,195,,,False,DraftKings,13,-105,3,REG,170,-200,1.5,Final,6.0,-115
+COL,2022-01-29T01:30Z,401349902,CHI,2021,Colorado Avalanche,6,Chicago Blackhawks,4,-130,,,260,,,False,DraftKings,11,100,3,REG,130,-150,1.5,Final,6.5,-120
+WSH,2022-01-29T02:00Z,401349903,DAL,2021,Washington Capitals,5,Dallas Stars,0,170,,,120,,,False,DraftKings,13,-120,3,REG,-255,205,-1.5,Final,5.5,100
+BOS,2022-01-29T02:00Z,401349904,ARI,2021,Boston Bruins,2,Arizona Coyotes,1,-185,,,380,,,False,DraftKings,12,105,3,REG,-115,-105,1.5,Final,6.0,-125
+ANA,2022-01-29T17:30Z,401349906,OTT,2021,Anaheim Ducks,2,Ottawa Senators,1,115,,,180,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,5.5,100
+LA,2022-01-29T18:00Z,401349911,PHI,2021,Los Angeles Kings,3,Philadelphia Flyers,4,-110,,,220,,,False,DraftKings,13,-105,4,OT,155,-180,1.5,Final/OT,5.5,-115
+WPG,2022-01-29T20:00Z,401349913,STL,2021,Winnipeg Jets,4,St. Louis Blues,1,235,,,-120,,,False,DraftKings,12,-120,3,REG,-160,140,-1.5,Final,6.0,100
+SJ,2022-01-29T23:00Z,401349909,FLA,2021,San Jose Sharks,4,Florida Panthers,5,425,,,-215,,,False,DraftKings,13,-105,4,OT,110,-130,-1.5,Final/OT,6.5,-115
+EDM,2022-01-30T00:00Z,401349905,MTL,2021,Edmonton Oilers,7,Montreal Canadiens,2,-145,,,295,,,False,DraftKings,13,-105,3,REG,105,-125,1.5,Final,6.5,-115
+TOR,2022-01-30T00:00Z,401349907,DET,2021,Toronto Maple Leafs,7,Detroit Red Wings,4,-170,,,320,,,False,DraftKings,13,-120,3,REG,-110,-110,1.5,Final,6.0,100
+VGK,2022-01-30T00:00Z,401349908,TB,2021,Vegas Golden Knights,3,Tampa Bay Lightning,2,200,,,100,,,False,DraftKings,13,105,5,SO,-180,155,-1.5,Final/SO,6.5,-125
+NJ,2022-01-30T00:00Z,401349912,CAR,2021,New Jersey Devils,1,Carolina Hurricanes,2,350,,,-180,,,False,DraftKings,13,100,3,REG,-105,-115,-1.5,Final,6.5,-120
+BUF,2022-01-30T02:00Z,401349915,ARI,2021,Buffalo Sabres,3,Arizona Coyotes,1,185,,,110,,,False,DraftKings,13,-115,3,REG,-235,190,-1.5,Final,5.5,-105
+VAN,2022-01-30T03:00Z,401349914,CGY,2021,Vancouver Canucks,0,Calgary Flames,1,260,,,-130,,,False,DraftKings,13,-115,4,OT,-155,135,-1.5,Final/OT,5.5,-105
+SEA,2022-01-30T18:00Z,401349918,NYR,2021,Seattle Kraken,2,New York Rangers,3,235,,,-115,,,False,DraftKings,13,-120,3,REG,-160,140,-1.5,Final,5.5,100
+LA,2022-01-30T18:00Z,401349919,PIT,2021,Los Angeles Kings,4,Pittsburgh Penguins,3,300,,,-145,,,False,DraftKings,12,100,3,REG,-130,110,-1.5,Final,6.0,-120
+SJ,2022-01-30T22:00Z,401349920,CAR,2021,San Jose Sharks,1,Carolina Hurricanes,2,370,,,-195,,,False,DraftKings,13,-110,3,REG,100,-120,-1.5,Final,6.0,-110
+CBJ,2022-01-31T00:00Z,401349916,MTL,2021,Columbus Blue Jackets,6,Montreal Canadiens,3,100,,,200,,,False,DraftKings,13,100,3,REG,175,-210,1.5,Final,6.5,-120
+BOS,2022-01-31T00:00Z,401349922,DAL,2021,Boston Bruins,1,Dallas Stars,6,130,,,155,,,False,DraftKings,13,-120,3,REG,195,-240,1.5,Final,5.5,100
+MIN,2022-01-31T00:30Z,401349917,NYI,2021,Minnesota Wild,4,New York Islanders,3,130,,,160,,,False,DraftKings,13,100,3,REG,195,-240,1.5,Final,5.5,-120
+BUF,2022-01-31T01:00Z,401349923,COL,2021,Buffalo Sabres,1,Colorado Avalanche,4,600,,,-330,,,False,DraftKings,13,-105,3,REG,190,-235,-1.5,Final,6.5,-115
+FLA,2022-02-01T00:00Z,401349926,CBJ,2021,Florida Panthers,8,Columbus Blue Jackets,4,-205,,,400,,,False,DraftKings,13,-105,3,REG,-130,110,1.5,Final,7.0,-115
+EDM,2022-02-01T00:30Z,401349924,OTT,2021,Edmonton Oilers,2,Ottawa Senators,3,-130,,,265,,,False,DraftKings,13,270,4,OT,120,-140,1.5,Final/OT,8.0,-400
+ANA,2022-02-01T00:30Z,401349925,DET,2021,Anaheim Ducks,1,Detroit Red Wings,2,135,,,150,,,False,DraftKings,12,-115,4,OT,-280,225,-1.5,Final/OT,5.5,-105
+VAN,2022-02-01T00:30Z,401349927,CHI,2021,Vancouver Canucks,3,Chicago Blackhawks,1,170,,,120,,,False,DraftKings,13,-115,3,REG,-250,200,-1.5,Final,5.5,-105
+NJ,2022-02-01T00:30Z,401406908,TOR,2021,New Jersey Devils,4,Toronto Maple Leafs,6,380,,,-195,,,False,DraftKings,13,100,3,REG,110,-130,-1.5,Final,6.5,-120
+SEA,2022-02-02T00:00Z,401349928,BOS,2021,Seattle Kraken,2,Boston Bruins,3,340,,,-165,,,False,DraftKings,13,100,3,REG,-115,-105,-1.5,Final,6.0,-120
+SJ,2022-02-02T00:00Z,401349930,TB,2021,San Jose Sharks,2,Tampa Bay Lightning,3,400,,,-195,,,False,DraftKings,13,-110,4,OT,110,-130,-1.5,Final/OT,5.5,-110
+TOR,2022-02-02T00:00Z,401349931,NJ,2021,Toronto Maple Leafs,7,New Jersey Devils,1,-150,,,310,,,False,DraftKings,13,-110,3,REG,100,-120,1.5,Final,6.5,-110
+FLA,2022-02-02T00:00Z,401349933,NYR,2021,Florida Panthers,2,New York Rangers,5,-105,,,195,,,False,DraftKings,12,-105,3,REG,155,-180,1.5,Final,6.5,-115
+WPG,2022-02-02T00:00Z,401349934,PHI,2021,Winnipeg Jets,1,Philadelphia Flyers,3,-105,,,210,,,False,DraftKings,13,-125,3,REG,155,-180,1.5,Final,5.5,105
+WSH,2022-02-02T00:00Z,401349935,PIT,2021,Washington Capitals,4,Pittsburgh Penguins,3,195,,,100,,,False,DraftKings,13,-105,4,OT,-180,155,-1.5,Final/OT,6.0,-115
+OTT,2022-02-02T00:30Z,401349932,NYI,2021,Ottawa Senators,1,New York Islanders,4,300,,,-150,,,False,DraftKings,12,-105,3,REG,-115,-105,-1.5,Final,5.5,-115
+VAN,2022-02-02T01:00Z,401349936,NSH,2021,Vancouver Canucks,2,Nashville Predators,4,240,,,-115,,,False,DraftKings,13,115,3,REG,-165,145,-1.5,Final,5.5,-135
+CGY,2022-02-02T01:30Z,401349937,DAL,2021,Calgary Flames,4,Dallas Stars,3,120,,,175,,,False,DraftKings,13,-120,3,REG,180,-220,1.5,Final,5.5,100
+ARI,2022-02-02T02:00Z,401349938,COL,2021,Arizona Coyotes,3,Colorado Avalanche,2,600,,,-340,,,False,DraftKings,12,100,5,SO,170,-200,-1.5,Final/SO,6.5,-120
+BUF,2022-02-02T03:00Z,401349939,VGK,2021,Buffalo Sabres,2,Vegas Golden Knights,5,550,,,-285,,,False,DraftKings,12,-120,3,REG,155,-180,-1.5,Final,6.0,100
+SEA,2022-02-03T00:00Z,401349910,NYI,2021,Seattle Kraken,3,New York Islanders,0,285,,,-130,,,False,DraftKings,12,130,3,REG,-140,120,-1.5,Final,5.5,-150
+EDM,2022-02-03T00:00Z,401349941,WSH,2021,Edmonton Oilers,5,Washington Capitals,3,120,,,160,,,False,DraftKings,11,-120,3,REG,195,-240,1.5,Final,6.0,100
+LA,2022-02-03T00:30Z,401349940,DET,2021,Los Angeles Kings,5,Detroit Red Wings,3,105,,,195,,,False,DraftKings,12,110,3,REG,180,-220,1.5,Final,5.5,-130
+MIN,2022-02-03T02:30Z,401349942,CHI,2021,Minnesota Wild,5,Chicago Blackhawks,0,-120,,,235,,,False,DraftKings,13,-120,3,REG,145,-165,1.5,Final,6.0,100
+CGY,2022-02-03T02:30Z,401349943,ARI,2021,Calgary Flames,4,Arizona Coyotes,2,-170,,,350,,,False,DraftKings,13,-120,3,REG,-115,-105,1.5,Final,5.5,100
+MET,2022-02-05T20:15Z,401411930,PAC,2021,Metro,6,Pacific,4,,,,,,,True,,,,1,REG,,,,Final,,
+ATL,2022-02-05T21:15Z,401411931,CEN,2021,Atlantic,5,Central,8,,,,,,,True,,,,1,REG,,,,Final,,
+CEN,2022-02-05T22:30Z,401411932,MET,2021,Central,3,Metro,5,,,,,,,True,,,,1,REG,,,,Final,,
+CAR,2022-02-08T00:00Z,401406909,TOR,2021,Carolina Hurricanes,3,Toronto Maple Leafs,4,170,,,120,,,False,DraftKings,13,-110,4,OT,-210,175,-1.5,Final/OT,6.5,-110
+NJ,2022-02-08T00:00Z,401409322,OTT,2021,New Jersey Devils,1,Ottawa Senators,4,165,,,120,,,False,DraftKings,13,-110,3,REG,-220,180,-1.5,Final,6.5,-110
+CAR,2022-02-09T00:00Z,401406910,OTT,2021,Carolina Hurricanes,3,Ottawa Senators,4,-150,,,295,,,False,DraftKings,12,-115,3,REG,105,-125,1.5,Final,6.0,-105
+PIT,2022-02-09T00:00Z,401406911,BOS,2021,Pittsburgh Penguins,4,Boston Bruins,2,185,,,115,,,False,DraftKings,13,-120,3,REG,-210,175,-1.5,Final,5.5,100
+NJ,2022-02-09T00:00Z,401406912,MTL,2021,New Jersey Devils,7,Montreal Canadiens,1,135,,,155,,,False,DraftKings,13,-125,3,REG,210,-260,1.5,Final,6.0,105
+CBJ,2022-02-09T00:00Z,401409326,WSH,2021,Columbus Blue Jackets,5,Washington Capitals,4,295,,,-150,,,False,DraftKings,13,100,3,REG,-120,100,-1.5,Final,6.5,-120
+MIN,2022-02-09T01:00Z,401406913,WPG,2021,Minnesota Wild,0,Winnipeg Jets,2,100,,,205,,,False,DraftKings,13,-130,3,REG,165,-195,1.5,Final,6.0,110
+VGK,2022-02-09T02:00Z,401406914,EDM,2021,Vegas Golden Knights,4,Edmonton Oilers,0,145,,,140,,,False,DraftKings,13,100,3,REG,-250,200,-1.5,Final,6.5,-120
+ARI,2022-02-09T03:00Z,401406915,VAN,2021,Arizona Coyotes,1,Vancouver Canucks,5,320,,,-160,,,False,DraftKings,13,115,3,REG,-135,115,-1.5,Final,5.5,-135
+DET,2022-02-10T00:00Z,401406916,PHI,2021,Detroit Red Wings,6,Philadelphia Flyers,3,160,,,130,,,False,DraftKings,13,-105,3,REG,-250,200,-1.5,Final,6.0,-115
+NSH,2022-02-10T01:00Z,401406917,DAL,2021,Nashville Predators,3,Dallas Stars,4,150,,,135,,,False,DraftKings,13,-115,3,REG,245,-310,1.5,Final,5.5,-105
+CHI,2022-02-10T01:00Z,401406918,EDM,2021,Chicago Blackhawks,4,Edmonton Oilers,1,260,,,-130,,,False,DraftKings,13,100,3,REG,-160,140,-1.5,Final,6.5,-120
+VGK,2022-02-10T02:30Z,401406919,CGY,2021,Vegas Golden Knights,0,Calgary Flames,6,175,,,115,,,False,DraftKings,13,-110,3,REG,-210,175,-1.5,Final,6.0,-110
+ARI,2022-02-10T03:00Z,401406920,SEA,2021,Arizona Coyotes,5,Seattle Kraken,2,300,,,-150,,,False,DraftKings,13,-120,3,REG,-130,110,-1.5,Final,5.5,100
+NYI,2022-02-10T03:30Z,401406921,VAN,2021,New York Islanders,6,Vancouver Canucks,3,120,,,185,,,False,DraftKings,12,125,3,REG,200,-250,1.5,Final,5.5,-145
+CBJ,2022-02-11T00:00Z,401406922,BUF,2021,Columbus Blue Jackets,4,Buffalo Sabres,3,120,,,165,,,False,DraftKings,12,-120,4,OT,195,-240,1.5,Final/OT,6.0,100
+CAR,2022-02-11T00:00Z,401406923,BOS,2021,Carolina Hurricanes,6,Boston Bruins,0,120,,,160,,,False,DraftKings,11,-110,3,REG,175,-210,1.5,Final,5.5,-110
+PIT,2022-02-11T00:00Z,401406924,OTT,2021,Pittsburgh Penguins,2,Ottawa Senators,0,-130,,,255,,,False,DraftKings,13,320,3,REG,120,-140,1.5,Final,8.0,-500
+WSH,2022-02-11T00:00Z,401406925,MTL,2021,Washington Capitals,5,Montreal Canadiens,2,-165,,,330,,,False,DraftKings,12,-110,3,REG,100,-120,1.5,Final,6.0,-110
+NJ,2022-02-11T01:00Z,401406926,STL,2021,New Jersey Devils,7,St. Louis Blues,4,320,,,-155,,,False,DraftKings,13,-120,3,REG,-125,105,-1.5,Final,6.0,100
+TOR,2022-02-11T02:00Z,401406927,CGY,2021,Toronto Maple Leafs,2,Calgary Flames,5,110,,,190,,,False,DraftKings,12,100,3,REG,170,-200,1.5,Final,6.5,-120
+TB,2022-02-11T02:00Z,401406928,COL,2021,Tampa Bay Lightning,2,Colorado Avalanche,3,145,,,140,,,False,DraftKings,13,-115,3,REG,-240,195,-1.5,Final,6.0,-105
+WPG,2022-02-12T01:30Z,401406929,DAL,2021,Winnipeg Jets,3,Dallas Stars,4,200,,,100,,,False,DraftKings,11,100,4,OT,-190,160,-1.5,Final/OT,6.0,-120
+NYI,2022-02-12T02:00Z,401406930,EDM,2021,New York Islanders,1,Edmonton Oilers,3,200,,,105,,,False,DraftKings,12,-125,3,REG,-195,165,-1.5,Final,5.5,105
+TB,2022-02-12T02:30Z,401406931,ARI,2021,Tampa Bay Lightning,4,Arizona Coyotes,3,-195,,,390,,,False,DraftKings,12,-110,3,REG,-115,-105,1.5,Final,6.0,-110
+SEA,2022-02-12T03:00Z,401407005,ANA,2021,Seattle Kraken,4,Anaheim Ducks,3,220,,,-105,,,False,DraftKings,12,100,3,REG,-195,165,-1.5,Final,5.5,-120
+PHI,2022-02-12T17:00Z,401407006,DET,2021,Philadelphia Flyers,2,Detroit Red Wings,4,185,,,110,,,False,DraftKings,13,-120,3,REG,-195,165,-1.5,Final,5.5,100
+BOS,2022-02-12T17:30Z,401406932,OTT,2021,Boston Bruins,2,Ottawa Senators,0,105,,,190,,,False,DraftKings,13,-115,3,REG,170,-200,1.5,Final,5.5,-105
+CBJ,2022-02-12T17:30Z,401406933,MTL,2021,Columbus Blue Jackets,2,Montreal Canadiens,1,110,,,175,,,False,DraftKings,12,-110,3,REG,170,-200,1.5,Final,6.5,-110
+TOR,2022-02-13T00:00Z,401406934,VAN,2021,Toronto Maple Leafs,2,Vancouver Canucks,3,-125,,,250,,,False,DraftKings,13,-115,3,REG,125,-145,1.5,Final,6.0,-105
+WPG,2022-02-13T00:00Z,401406935,NSH,2021,Winnipeg Jets,5,Nashville Predators,2,255,,,-125,,,False,DraftKings,13,-105,3,REG,-150,130,-1.5,Final,6.0,-115
+CAR,2022-02-13T01:00Z,401406936,MIN,2021,Carolina Hurricanes,2,Minnesota Wild,3,140,,,145,,,False,DraftKings,12,100,3,REG,205,-255,1.5,Final,6.5,-120
+CHI,2022-02-13T01:00Z,401407007,STL,2021,Chicago Blackhawks,1,St. Louis Blues,5,295,,,-145,,,False,DraftKings,12,105,3,REG,-145,125,-1.5,Final,6.0,-125
+NYI,2022-02-13T03:00Z,401406937,CGY,2021,New York Islanders,2,Calgary Flames,5,275,,,-130,,,False,DraftKings,13,105,3,REG,-155,135,-1.5,Final,5.5,-125
+BUF,2022-02-13T17:30Z,401406938,MTL,2021,Buffalo Sabres,5,Montreal Canadiens,3,125,,,165,,,False,DraftKings,13,-105,3,REG,205,-255,1.5,Final,6.0,-115
+OTT,2022-02-13T17:30Z,401406939,WSH,2021,Ottawa Senators,4,Washington Capitals,1,360,,,-165,,,False,DraftKings,12,100,3,REG,-125,105,-1.5,Final,6.0,-120
+PIT,2022-02-13T18:30Z,401407008,NJ,2021,Pittsburgh Penguins,4,New Jersey Devils,2,-155,,,320,,,False,DraftKings,13,100,3,REG,105,-125,1.5,Final,6.5,-120
+COL,2022-02-13T19:00Z,401406940,DAL,2021,Colorado Avalanche,4,Dallas Stars,0,-105,,,220,,,False,DraftKings,13,-130,3,REG,155,-180,1.5,Final,6.0,110
+DET,2022-02-15T01:00Z,401406941,MIN,2021,Detroit Red Wings,4,Minnesota Wild,7,295,,,-145,,,False,DraftKings,12,105,3,REG,-125,105,-1.5,Final,6.5,-125
+CHI,2022-02-15T02:00Z,401406942,WPG,2021,Chicago Blackhawks,3,Winnipeg Jets,1,215,,,-105,,,False,DraftKings,13,-120,3,REG,-165,145,-1.5,Final,5.5,100
+TOR,2022-02-15T02:00Z,401406943,SEA,2021,Toronto Maple Leafs,6,Seattle Kraken,2,-165,,,340,,,False,DraftKings,13,-115,3,REG,-105,-115,1.5,Final,6.0,-105
+EDM,2022-02-15T03:30Z,401406944,SJ,2021,Edmonton Oilers,3,San Jose Sharks,0,100,,,205,,,False,DraftKings,13,-120,3,REG,155,-180,1.5,Final,6.0,100
+STL,2022-02-16T00:00Z,401406945,OTT,2021,St. Louis Blues,5,Ottawa Senators,2,-155,,,320,,,False,DraftKings,13,-115,3,REG,115,-135,1.5,Final,6.0,-105
+TB,2022-02-16T00:00Z,401406946,NJ,2021,Tampa Bay Lightning,6,New Jersey Devils,3,-185,,,360,,,False,DraftKings,13,100,3,REG,-120,100,1.5,Final,6.5,-120
+PHI,2022-02-16T00:00Z,401406947,PIT,2021,Philadelphia Flyers,4,Pittsburgh Penguins,5,400,,,-200,,,False,DraftKings,13,-130,4,OT,105,-125,-1.5,Final/OT,6.0,110
+NYI,2022-02-16T00:00Z,401406948,BUF,2021,New York Islanders,3,Buffalo Sabres,6,-130,,,270,,,False,DraftKings,13,-110,3,REG,140,-160,1.5,Final,5.5,-110
+BOS,2022-02-16T00:00Z,401407030,NYR,2021,Boston Bruins,1,New York Rangers,2,180,,,110,,,False,DraftKings,13,-105,5,SO,-190,160,-1.5,Final/SO,5.5,-115
+WSH,2022-02-16T01:00Z,401407009,NSH,2021,Washington Capitals,4,Nashville Predators,1,180,,,110,,,False,DraftKings,13,-105,3,REG,-210,175,-1.5,Final,6.0,-115
+CBJ,2022-02-16T02:00Z,401406949,CGY,2021,Columbus Blue Jackets,2,Calgary Flames,6,370,,,-190,,,False,DraftKings,13,-130,3,REG,100,-120,-1.5,Final,6.0,110
+DAL,2022-02-16T02:00Z,401406950,COL,2021,Dallas Stars,4,Colorado Avalanche,1,330,,,-165,,,False,DraftKings,12,-125,3,REG,-110,-110,-1.5,Final,6.0,105
+EDM,2022-02-16T03:30Z,401406951,LA,2021,Edmonton Oilers,5,Los Angeles Kings,2,155,,,130,,,False,DraftKings,13,-105,3,REG,-240,195,-1.5,Final,6.5,-115
+MIN,2022-02-17T00:00Z,401406952,WPG,2021,Minnesota Wild,3,Winnipeg Jets,6,110,,,185,,,False,DraftKings,13,-115,3,REG,175,-210,1.5,Final,6.0,-105
+FLA,2022-02-17T00:30Z,401406953,CAR,2021,Florida Panthers,3,Carolina Hurricanes,2,145,,,140,,,False,DraftKings,13,-115,4,OT,-240,195,-1.5,Final/OT,6.5,-105
+ANA,2022-02-17T02:30Z,401406954,CGY,2021,Anaheim Ducks,2,Calgary Flames,6,300,,,-145,,,False,DraftKings,13,-120,3,REG,-135,115,-1.5,Final,5.5,100
+COL,2022-02-17T03:00Z,401406955,VGK,2021,Colorado Avalanche,2,Vegas Golden Knights,0,120,,,165,,,False,DraftKings,13,-120,3,REG,170,-200,1.5,Final,6.5,100
+DET,2022-02-18T00:00Z,401406956,NYR,2021,Detroit Red Wings,3,New York Rangers,2,255,,,-125,,,False,DraftKings,11,105,5,SO,-135,115,-1.5,Final/SO,6.0,-125
+WSH,2022-02-18T00:00Z,401406957,PHI,2021,Washington Capitals,5,Philadelphia Flyers,3,-115,,,235,,,False,DraftKings,13,-110,3,REG,150,-170,1.5,Final,6.0,-110
+PIT,2022-02-18T00:00Z,401406958,TOR,2021,Pittsburgh Penguins,1,Toronto Maple Leafs,4,185,,,105,,,False,DraftKings,13,-105,3,REG,-190,160,-1.5,Final,6.5,-115
+STL,2022-02-18T00:00Z,401407031,MTL,2021,St. Louis Blues,2,Montreal Canadiens,3,-190,,,380,,,False,DraftKings,12,240,4,OT,-120,100,1.5,Final/OT,7.5,-340
+OTT,2022-02-18T00:00Z,401407032,BUF,2021,Ottawa Senators,3,Buffalo Sabres,1,170,,,125,,,False,DraftKings,12,-105,3,REG,-225,185,-1.5,Final,6.0,-115
+BOS,2022-02-18T00:30Z,401407034,NYI,2021,Boston Bruins,1,New York Islanders,4,150,,,135,,,False,DraftKings,12,115,3,REG,-275,220,-1.5,Final,5.5,-135
+SEA,2022-02-18T01:00Z,401406959,WPG,2021,Seattle Kraken,3,Winnipeg Jets,5,180,,,105,,,False,DraftKings,13,-120,3,REG,-180,155,-1.5,Final,6.0,100
+CBJ,2022-02-18T01:30Z,401406960,CHI,2021,Columbus Blue Jackets,7,Chicago Blackhawks,4,165,,,120,,,False,DraftKings,13,-120,3,REG,-195,165,-1.5,Final,6.0,100
+ANA,2022-02-18T02:00Z,401406961,EDM,2021,Anaheim Ducks,3,Edmonton Oilers,7,260,,,-135,,,False,DraftKings,13,-105,3,REG,-130,110,-1.5,Final,6.5,-115
+VAN,2022-02-18T03:30Z,401406962,SJ,2021,Vancouver Canucks,5,San Jose Sharks,4,145,,,150,,,False,DraftKings,13,-105,4,OT,205,-255,1.5,Final/OT,5.5,-115
+NSH,2022-02-19T00:00Z,401406963,CAR,2021,Nashville Predators,3,Carolina Hurricanes,5,245,,,-115,,,False,DraftKings,12,-105,3,REG,-165,145,-1.5,Final,6.0,-115
+FLA,2022-02-19T01:00Z,401406964,MIN,2021,Florida Panthers,6,Minnesota Wild,2,115,,,170,,,False,DraftKings,12,110,3,REG,170,-200,1.5,Final,7.0,-130
+DAL,2022-02-19T01:30Z,401406965,CHI,2021,Dallas Stars,1,Chicago Blackhawks,0,100,,,200,,,False,DraftKings,12,-115,5,SO,165,-195,1.5,Final/SO,5.5,-105
+LA,2022-02-19T03:00Z,401406966,VGK,2021,Los Angeles Kings,4,Vegas Golden Knights,3,225,,,-115,,,False,DraftKings,13,-120,4,OT,-170,150,-1.5,Final/OT,6.0,100
+COL,2022-02-19T18:00Z,401406967,BUF,2021,Colorado Avalanche,5,Buffalo Sabres,3,-240,,,475,,,False,DraftKings,13,240,3,REG,-150,130,1.5,Final,7.5,-350
+EDM,2022-02-19T21:00Z,401406968,WPG,2021,Edmonton Oilers,4,Winnipeg Jets,2,130,,,165,,,False,DraftKings,12,100,3,REG,195,-240,1.5,Final,6.5,-120
+BOS,2022-02-20T00:00Z,401406969,OTT,2021,Boston Bruins,3,Ottawa Senators,2,-120,,,250,,,False,DraftKings,13,105,4,OT,145,-165,1.5,Final/OT,5.5,-125
+STL,2022-02-20T00:00Z,401406970,TOR,2021,St. Louis Blues,6,Toronto Maple Leafs,3,260,,,-135,,,False,DraftKings,13,-105,3,REG,-135,115,-1.5,Final,6.5,-115
+LA,2022-02-20T02:00Z,401406971,ARI,2021,Los Angeles Kings,5,Arizona Coyotes,3,-110,,,220,,,False,DraftKings,13,-120,3,REG,150,-170,1.5,Final,5.5,100
+SEA,2022-02-20T03:00Z,401406972,CGY,2021,Seattle Kraken,1,Calgary Flames,2,380,,,-190,,,False,DraftKings,13,-115,3,REG,100,-120,-1.5,Final,6.0,-105
+ANA,2022-02-20T03:00Z,401406973,VAN,2021,Anaheim Ducks,7,Vancouver Canucks,4,210,,,100,,,False,DraftKings,13,-115,3,REG,-195,165,-1.5,Final,5.5,-105
+CAR,2022-02-20T18:00Z,401407037,PIT,2021,Carolina Hurricanes,4,Pittsburgh Penguins,3,175,,,110,,,False,DraftKings,12,-120,3,REG,-210,175,-1.5,Final,6.0,100
+MTL,2022-02-20T19:00Z,401406974,NYI,2021,Montreal Canadiens,3,New York Islanders,2,380,,,-185,,,False,DraftKings,12,105,5,SO,-110,-110,-1.5,Final/SO,5.5,-125
+FLA,2022-02-20T20:00Z,401406975,CHI,2021,Florida Panthers,5,Chicago Blackhawks,2,-160,,,320,,,False,DraftKings,12,210,3,REG,100,-120,1.5,Final,7.5,-295
+NYR,2022-02-20T22:00Z,401406976,OTT,2021,New York Rangers,2,Ottawa Senators,1,-165,,,340,,,False,DraftKings,12,-125,3,REG,110,-130,1.5,Final,5.5,105
+BUF,2022-02-20T23:00Z,401406977,CBJ,2021,Buffalo Sabres,3,Columbus Blue Jackets,7,200,,,100,,,False,DraftKings,12,-130,3,REG,-170,150,-1.5,Final,6.5,110
+DAL,2022-02-21T00:00Z,401406978,ARI,2021,Dallas Stars,1,Arizona Coyotes,3,-150,,,290,,,False,DraftKings,12,-105,3,REG,110,-130,1.5,Final,5.5,-115
+MIN,2022-02-21T01:00Z,401406979,EDM,2021,Minnesota Wild,7,Edmonton Oilers,3,145,,,130,,,False,DraftKings,12,-120,3,REG,-240,195,-1.5,Final,6.5,100
+VGK,2022-02-21T01:00Z,401407036,SJ,2021,Vegas Golden Knights,4,San Jose Sharks,1,-115,,,220,,,False,DraftKings,11,-110,3,REG,145,-165,1.5,Final,6.0,-110
+COL,2022-02-21T18:00Z,401406980,BOS,2021,Colorado Avalanche,1,Boston Bruins,5,-115,,,225,,,False,DraftKings,12,-105,3,REG,140,-160,1.5,Final,6.0,-115
+CAR,2022-02-21T20:00Z,401406981,PHI,2021,Carolina Hurricanes,4,Philadelphia Flyers,3,-135,,,265,,,False,DraftKings,11,-105,4,OT,105,-125,1.5,Final/OT,6.5,-115
+WPG,2022-02-21T21:00Z,401406982,CGY,2021,Winnipeg Jets,1,Calgary Flames,3,285,,,-155,,,False,DraftKings,12,-125,3,REG,-125,105,-1.5,Final,6.0,105
+TOR,2022-02-22T00:00Z,401406983,MTL,2021,Toronto Maple Leafs,2,Montreal Canadiens,5,-240,,,475,,,False,DraftKings,11,110,3,REG,-150,130,1.5,Final,6.5,-130
+SEA,2022-02-22T03:00Z,401406984,VAN,2021,Seattle Kraken,2,Vancouver Canucks,5,225,,,-115,,,False,DraftKings,12,-105,3,REG,-170,150,-1.5,Final,5.5,-115
+NSH,2022-02-23T00:00Z,401406985,FLA,2021,Nashville Predators,6,Florida Panthers,4,285,,,-165,,,False,DraftKings,12,105,3,REG,-115,-105,-1.5,Final,7.0,-125
+TOR,2022-02-23T00:00Z,401406986,CBJ,2021,Toronto Maple Leafs,3,Columbus Blue Jackets,4,-155,,,300,,,False,DraftKings,11,110,4,OT,100,-120,1.5,Final/OT,7.0,-130
+MIN,2022-02-23T00:00Z,401406987,OTT,2021,Minnesota Wild,3,Ottawa Senators,4,-145,,,280,,,False,DraftKings,12,-120,3,REG,115,-135,1.5,Final,6.0,100
+STL,2022-02-23T00:00Z,401407035,PHI,2021,St. Louis Blues,4,Philadelphia Flyers,1,-140,,,280,,,False,DraftKings,12,100,3,REG,120,-140,1.5,Final,6.5,-120
+SJ,2022-02-23T03:00Z,401406988,ANA,2021,San Jose Sharks,3,Anaheim Ducks,4,200,,,100,,,False,DraftKings,12,-125,5,SO,-195,165,-1.5,Final/SO,5.5,105
+NYI,2022-02-23T03:00Z,401406989,SEA,2021,New York Islanders,5,Seattle Kraken,2,105,,,210,,,False,DraftKings,12,-130,3,REG,170,-200,1.5,Final,5.0,110
+EDM,2022-02-24T00:30Z,401349945,TB,2021,Edmonton Oilers,3,Tampa Bay Lightning,5,250,,,-135,,,False,DraftKings,12,-115,3,REG,-145,125,-1.5,Final,6.5,-105
+WPG,2022-02-24T00:30Z,401349946,DAL,2021,Winnipeg Jets,2,Dallas Stars,3,190,,,105,,,False,DraftKings,12,100,4,OT,-190,160,-1.5,Final/OT,6.0,-120
+COL,2022-02-24T00:30Z,401406990,DET,2021,Colorado Avalanche,5,Detroit Red Wings,2,-155,,,290,,,False,DraftKings,12,-125,3,REG,-105,-115,1.5,Final,6.0,105
+BUF,2022-02-24T00:30Z,401407038,MTL,2021,Buffalo Sabres,0,Montreal Canadiens,4,155,,,125,,,False,DraftKings,12,-120,3,REG,-265,215,-1.5,Final,6.0,100
+LA,2022-02-24T03:00Z,401349947,ARI,2021,Los Angeles Kings,3,Arizona Coyotes,2,-130,,,260,,,False,DraftKings,12,-130,3,REG,115,-135,1.5,Final,5.5,110
+MIN,2022-02-25T00:00Z,401349948,TOR,2021,Minnesota Wild,1,Toronto Maple Leafs,3,185,,,105,,,False,DraftKings,12,-130,3,REG,-180,155,-1.5,Final,6.5,110
+CBJ,2022-02-25T00:00Z,401349949,FLA,2021,Columbus Blue Jackets,6,Florida Panthers,3,475,,,-230,,,False,DraftKings,11,-130,3,REG,170,-200,-1.5,Final,7.0,110
+WSH,2022-02-25T00:00Z,401349951,NYR,2021,Washington Capitals,1,New York Rangers,4,165,,,115,,,False,DraftKings,12,105,3,REG,-225,185,-1.5,Final,6.0,-125
+NJ,2022-02-25T00:00Z,401406991,PIT,2021,New Jersey Devils,6,Pittsburgh Penguins,1,360,,,-195,,,False,DraftKings,12,280,3,REG,105,-125,-1.5,Final,8.0,-425
+DAL,2022-02-25T01:30Z,401349952,NSH,2021,Dallas Stars,1,Nashville Predators,2,185,,,105,,,False,DraftKings,12,-110,5,SO,-195,165,-1.5,Final/SO,5.5,-110
+CGY,2022-02-25T03:00Z,401349953,VAN,2021,Calgary Flames,1,Vancouver Canucks,7,-110,,,205,,,False,DraftKings,11,-120,3,REG,170,-200,1.5,Final,5.5,100
+BOS,2022-02-25T03:00Z,401349955,SEA,2021,Boston Bruins,3,Seattle Kraken,2,-145,,,270,,,False,DraftKings,12,-115,4,OT,120,-140,1.5,Final/OT,5.5,-105
+NYI,2022-02-25T03:30Z,401349954,SJ,2021,New York Islanders,3,San Jose Sharks,4,130,,,155,,,False,DraftKings,12,105,5,SO,200,-250,1.5,Final/SO,5.5,-125
+CBJ,2022-02-26T00:00Z,401349956,CAR,2021,Columbus Blue Jackets,0,Carolina Hurricanes,4,380,,,-215,,,False,DraftKings,11,110,3,REG,120,-140,-1.5,Final,7.0,-130
+BUF,2022-02-26T01:00Z,401349958,STL,2021,Buffalo Sabres,3,St. Louis Blues,5,425,,,-205,,,False,DraftKings,11,-120,3,REG,115,-135,-1.5,Final,6.0,100
+NJ,2022-02-26T01:30Z,401349957,CHI,2021,New Jersey Devils,5,Chicago Blackhawks,8,150,,,125,,,False,DraftKings,11,-130,3,REG,-235,190,-1.5,Final,6.0,110
+WPG,2022-02-26T02:00Z,401349959,COL,2021,Winnipeg Jets,3,Colorado Avalanche,6,360,,,-190,,,False,DraftKings,11,-110,3,REG,100,-120,-1.5,Final,6.5,-110
+VGK,2022-02-26T02:30Z,401349960,ARI,2021,Vegas Golden Knights,1,Arizona Coyotes,3,-160,,,330,,,False,DraftKings,12,-125,3,REG,105,-125,1.5,Final,5.5,105
+LA,2022-02-26T03:00Z,401349961,ANA,2021,Los Angeles Kings,4,Anaheim Ducks,1,130,,,150,,,False,DraftKings,12,-125,3,REG,-265,215,-1.5,Final,5.5,105
+EDM,2022-02-26T17:30Z,401349964,FLA,2021,Edmonton Oilers,4,Florida Panthers,3,245,,,-130,,,False,DraftKings,11,-110,3,REG,-125,105,-1.5,Final,7.0,-110
+WSH,2022-02-26T17:30Z,401349965,PHI,2021,Washington Capitals,1,Philadelphia Flyers,2,-115,,,215,,,False,DraftKings,12,-115,3,REG,150,-170,1.5,Final,6.0,-105
+NYR,2022-02-26T20:00Z,401349966,PIT,2021,New York Rangers,0,Pittsburgh Penguins,1,190,,,100,,,False,DraftKings,11,-120,3,REG,-165,145,-1.5,Final,5.5,100
+MTL,2022-02-27T00:00Z,401349963,OTT,2021,Montreal Canadiens,2,Ottawa Senators,1,200,,,-110,,,False,DraftKings,12,100,3,REG,-170,150,-1.5,Final,6.0,-120
+TB,2022-02-27T00:30Z,401349967,NSH,2021,Tampa Bay Lightning,3,Nashville Predators,2,-110,,,220,,,False,DraftKings,11,-120,3,REG,150,-170,1.5,Final,6.0,100
+TOR,2022-02-27T00:30Z,401409350,DET,2021,Toronto Maple Leafs,10,Detroit Red Wings,7,-140,,,270,,,False,DraftKings,11,230,3,REG,125,-145,1.5,Final,7.5,-330
+MIN,2022-02-27T03:00Z,401349968,CGY,2021,Minnesota Wild,3,Calgary Flames,7,170,,,105,,,False,DraftKings,11,-120,3,REG,-190,160,-1.5,Final,6.0,100
+COL,2022-02-27T03:00Z,401349969,VGK,2021,Colorado Avalanche,3,Vegas Golden Knights,2,105,,,180,,,False,DraftKings,12,-120,3,REG,160,-190,1.5,Final,6.0,100
+BOS,2022-02-27T03:00Z,401349971,SJ,2021,Boston Bruins,3,San Jose Sharks,1,-125,,,250,,,False,DraftKings,12,110,3,REG,135,-155,1.5,Final,5.5,-130
+NYI,2022-02-27T03:30Z,401349970,LA,2021,New York Islanders,2,Los Angeles Kings,5,155,,,130,,,False,DraftKings,12,105,3,REG,-210,175,-1.5,Final,5.5,-125
+EDM,2022-02-27T18:00Z,401349973,CAR,2021,Edmonton Oilers,1,Carolina Hurricanes,2,240,,,-125,,,False,DraftKings,11,-120,3,REG,-140,120,-1.5,Final,6.5,100
+BUF,2022-02-27T19:00Z,401349976,DAL,2021,Buffalo Sabres,2,Dallas Stars,4,340,,,-175,,,False,DraftKings,11,100,3,REG,-105,-115,-1.5,Final,6.0,-120
+STL,2022-02-27T20:00Z,401349975,CHI,2021,St. Louis Blues,4,Chicago Blackhawks,0,-110,,,215,,,False,DraftKings,12,-125,3,REG,160,-190,1.5,Final,5.5,105
+WPG,2022-02-27T21:00Z,401349977,ARI,2021,Winnipeg Jets,5,Arizona Coyotes,3,-115,,,225,,,False,DraftKings,13,100,3,REG,160,-190,1.5,Final,6.0,-120
+PIT,2022-02-27T23:00Z,401349974,CBJ,2021,Pittsburgh Penguins,3,Columbus Blue Jackets,2,-130,,,235,,,False,DraftKings,13,-120,3,REG,140,-160,1.5,Final,6.5,100
+VAN,2022-02-28T00:30Z,401349972,NYR,2021,Vancouver Canucks,5,New York Rangers,2,160,,,125,,,False,DraftKings,12,-105,3,REG,-235,190,-1.5,Final,6.0,-115
+NYI,2022-02-28T01:30Z,401349978,ANA,2021,New York Islanders,4,Anaheim Ducks,0,160,,,130,,,False,DraftKings,12,100,3,REG,-260,210,-1.5,Final,5.5,-120
+SEA,2022-02-28T03:00Z,401349979,SJ,2021,Seattle Kraken,1,San Jose Sharks,3,165,,,120,,,False,DraftKings,12,100,3,REG,-250,200,-1.5,Final,5.5,-120
+VAN,2022-03-01T00:30Z,401349980,NJ,2021,Vancouver Canucks,2,New Jersey Devils,7,165,,,125,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,6.5,100
+TOR,2022-03-01T00:30Z,401349982,WSH,2021,Toronto Maple Leafs,5,Washington Capitals,3,120,,,170,,,False,DraftKings,13,-105,3,REG,180,-220,1.5,Final,6.5,-115
+BOS,2022-03-01T03:30Z,401349983,LA,2021,Boston Bruins,7,Los Angeles Kings,0,130,,,155,,,False,DraftKings,13,-110,3,REG,195,-240,1.5,Final,5.5,-110
+OTT,2022-03-02T00:00Z,401349985,TB,2021,Ottawa Senators,2,Tampa Bay Lightning,5,475,,,-220,,,False,DraftKings,13,-110,3,REG,140,-160,-1.5,Final,6.0,-110
+EDM,2022-03-02T00:00Z,401349986,PHI,2021,Edmonton Oilers,3,Philadelphia Flyers,0,-110,,,215,,,False,DraftKings,13,295,3,REG,150,-170,1.5,Final,8.0,-450
+NJ,2022-03-02T00:00Z,401349987,CBJ,2021,New Jersey Devils,3,Columbus Blue Jackets,4,165,,,120,,,False,DraftKings,13,110,3,REG,-225,185,-1.5,Final,7.0,-130
+CAR,2022-03-02T00:30Z,401349984,DET,2021,Carolina Hurricanes,3,Detroit Red Wings,4,-135,,,260,,,False,DraftKings,13,-110,4,OT,125,-145,1.5,Final/OT,6.5,-110
+CGY,2022-03-02T01:00Z,401349988,MIN,2021,Calgary Flames,5,Minnesota Wild,1,130,,,160,,,False,DraftKings,13,-110,3,REG,215,-265,1.5,Final,6.5,-110
+MTL,2022-03-02T01:00Z,401349989,WPG,2021,Montreal Canadiens,4,Winnipeg Jets,8,275,,,-140,,,False,DraftKings,13,-110,3,REG,-135,115,-1.5,Final,6.0,-110
+NYI,2022-03-02T02:00Z,401349990,COL,2021,New York Islanders,3,Colorado Avalanche,5,350,,,-170,,,False,DraftKings,13,-130,3,REG,-110,-110,-1.5,Final,5.5,110
+SJ,2022-03-02T03:00Z,401349991,VGK,2021,San Jose Sharks,1,Vegas Golden Knights,3,295,,,-150,,,False,DraftKings,13,-120,3,REG,-115,-105,-1.5,Final,5.5,100
+BOS,2022-03-02T03:00Z,401349992,ANA,2021,Boston Bruins,3,Anaheim Ducks,4,-115,,,220,,,False,DraftKings,13,-120,3,REG,145,-165,1.5,Final,5.5,100
+BUF,2022-03-03T00:30Z,401349993,TOR,2021,Buffalo Sabres,5,Toronto Maple Leafs,1,475,,,-255,,,False,DraftKings,13,-125,3,REG,155,-180,-1.5,Final,6.5,105
+STL,2022-03-03T00:30Z,401349994,NYR,2021,St. Louis Blues,3,New York Rangers,5,145,,,145,,,False,DraftKings,12,100,3,REG,215,-265,1.5,Final,5.5,-120
+LA,2022-03-03T01:30Z,401349995,DAL,2021,Los Angeles Kings,3,Dallas Stars,4,190,,,110,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,5.5,100
+NSH,2022-03-03T03:00Z,401349996,SEA,2021,Nashville Predators,3,Seattle Kraken,4,-125,,,265,,,False,DraftKings,13,-105,3,REG,135,-155,1.5,Final,5.5,-115
+PIT,2022-03-04T00:00Z,401349997,TB,2021,Pittsburgh Penguins,5,Tampa Bay Lightning,1,220,,,-110,,,False,DraftKings,13,-110,3,REG,-165,145,-1.5,Final,6.0,-110
+OTT,2022-03-04T00:00Z,401349998,FLA,2021,Ottawa Senators,0,Florida Panthers,3,450,,,-260,,,False,DraftKings,12,110,3,REG,130,-150,-1.5,Final,7.0,-130
+MIN,2022-03-04T00:00Z,401350000,PHI,2021,Minnesota Wild,5,Philadelphia Flyers,4,-125,,,250,,,False,DraftKings,12,100,3,REG,135,-155,1.5,Final,6.5,-120
+CAR,2022-03-04T00:00Z,401350001,WSH,2021,Carolina Hurricanes,0,Washington Capitals,4,120,,,170,,,False,DraftKings,13,100,3,REG,180,-220,1.5,Final,6.0,-120
+VAN,2022-03-04T00:30Z,401349999,NYI,2021,Vancouver Canucks,4,New York Islanders,3,175,,,120,,,False,DraftKings,13,100,3,REG,-280,225,-1.5,Final,5.5,-120
+EDM,2022-03-04T01:30Z,401350002,CHI,2021,Edmonton Oilers,3,Chicago Blackhawks,4,100,,,205,,,False,DraftKings,13,240,4,OT,170,-200,1.5,Final/OT,7.5,-340
+MTL,2022-03-04T02:00Z,401350003,CGY,2021,Montreal Canadiens,5,Calgary Flames,4,425,,,-210,,,False,DraftKings,13,-125,4,OT,130,-150,-1.5,Final/OT,6.0,105
+COL,2022-03-04T02:00Z,401350004,ARI,2021,Colorado Avalanche,1,Arizona Coyotes,2,-230,,,475,,,False,DraftKings,13,-110,3,REG,-140,120,1.5,Final,6.5,-110
+BOS,2022-03-04T02:00Z,401350005,VGK,2021,Boston Bruins,5,Vegas Golden Knights,2,145,,,145,,,False,DraftKings,13,-105,3,REG,-300,235,-1.5,Final,5.5,-115
+MIN,2022-03-05T00:00Z,401350006,BUF,2021,Minnesota Wild,4,Buffalo Sabres,5,-125,,,255,,,False,DraftKings,13,-105,3,REG,125,-145,1.5,Final,6.5,-115
+DET,2022-03-05T00:00Z,401350007,TB,2021,Detroit Red Wings,1,Tampa Bay Lightning,3,330,,,-170,,,False,DraftKings,13,-125,3,REG,-110,-110,-1.5,Final,6.5,105
+NJ,2022-03-05T00:00Z,401350008,NYR,2021,New Jersey Devils,1,New York Rangers,3,220,,,-110,,,False,DraftKings,13,-120,3,REG,-160,140,-1.5,Final,6.0,100
+PIT,2022-03-05T00:00Z,401350009,CAR,2021,Pittsburgh Penguins,2,Carolina Hurricanes,3,185,,,105,,,False,DraftKings,12,-115,4,OT,-195,165,-1.5,Final/OT,6.5,-105
+LA,2022-03-05T00:00Z,401350010,CBJ,2021,Los Angeles Kings,4,Columbus Blue Jackets,3,110,,,170,,,False,DraftKings,13,-135,4,OT,175,-210,1.5,Final/OT,6.5,115
+DAL,2022-03-05T01:00Z,401350011,WPG,2021,Dallas Stars,4,Winnipeg Jets,3,145,,,145,,,False,DraftKings,13,-110,4,OT,-265,215,-1.5,Final/OT,6.0,-110
+VGK,2022-03-05T03:00Z,401350012,ANA,2021,Vegas Golden Knights,5,Anaheim Ducks,4,130,,,160,,,False,DraftKings,12,100,3,REG,190,-235,1.5,Final,6.0,-120
+STL,2022-03-05T17:30Z,401350015,NYI,2021,St. Louis Blues,1,New York Islanders,2,115,,,180,,,False,DraftKings,13,100,3,REG,175,-210,1.5,Final,5.5,-120
+CHI,2022-03-05T20:00Z,401350016,PHI,2021,Chicago Blackhawks,3,Philadelphia Flyers,4,155,,,135,,,False,DraftKings,13,-135,3,REG,-240,195,-1.5,Final,6.0,115
+OTT,2022-03-05T21:00Z,401350021,ARI,2021,Ottawa Senators,5,Arizona Coyotes,8,125,,,160,,,False,DraftKings,12,105,3,REG,205,-255,1.5,Final,6.0,-125
+DET,2022-03-05T23:00Z,401350014,FLA,2021,Detroit Red Wings,2,Florida Panthers,6,450,,,-230,,,False,DraftKings,12,100,3,REG,145,-165,-1.5,Final,7.0,-120
+VAN,2022-03-06T00:00Z,401350013,TOR,2021,Vancouver Canucks,6,Toronto Maple Leafs,4,285,,,-145,,,False,DraftKings,13,100,3,REG,-135,115,-1.5,Final,6.5,-120
+SEA,2022-03-06T00:00Z,401350017,WSH,2021,Seattle Kraken,2,Washington Capitals,5,285,,,-140,,,False,DraftKings,13,-120,3,REG,-125,105,-1.5,Final,5.5,100
+BOS,2022-03-06T00:00Z,401350018,CBJ,2021,Boston Bruins,5,Columbus Blue Jackets,4,-145,,,295,,,False,DraftKings,12,-105,5,SO,115,-135,1.5,Final/SO,6.0,-115
+MTL,2022-03-06T00:00Z,401350020,EDM,2021,Montreal Canadiens,5,Edmonton Oilers,2,295,,,-155,,,False,DraftKings,13,210,3,REG,-125,105,-1.5,Final,7.5,-295
+NSH,2022-03-06T01:00Z,401350022,SJ,2021,Nashville Predators,8,San Jose Sharks,0,-105,,,220,,,False,DraftKings,13,-115,3,REG,140,-160,1.5,Final,5.5,-105
+CGY,2022-03-06T03:00Z,401350019,COL,2021,Calgary Flames,4,Colorado Avalanche,3,195,,,100,,,False,DraftKings,13,-115,4,OT,-160,140,-1.5,Final/OT,6.5,-105
+LA,2022-03-06T18:00Z,401350023,BUF,2021,Los Angeles Kings,3,Buffalo Sabres,0,-110,,,220,,,False,DraftKings,13,-120,3,REG,135,-155,1.5,Final,6.0,100
+STL,2022-03-06T18:00Z,401350024,NJ,2021,St. Louis Blues,2,New Jersey Devils,3,115,,,160,,,False,DraftKings,12,-115,4,OT,170,-200,1.5,Final/OT,6.5,-105
+DAL,2022-03-06T21:00Z,401350027,MIN,2021,Dallas Stars,6,Minnesota Wild,3,190,,,105,,,False,DraftKings,13,-105,3,REG,-190,160,-1.5,Final,6.5,-115
+SEA,2022-03-07T00:00Z,401350025,CAR,2021,Seattle Kraken,2,Carolina Hurricanes,3,400,,,-205,,,False,DraftKings,12,-115,3,REG,110,-130,-1.5,Final,6.0,-105
+TB,2022-03-07T00:00Z,401350026,CHI,2021,Tampa Bay Lightning,6,Chicago Blackhawks,3,-160,,,310,,,False,DraftKings,12,-115,3,REG,100,-120,1.5,Final,6.0,-105
+NYR,2022-03-07T00:00Z,401350028,WPG,2021,New York Rangers,4,Winnipeg Jets,1,145,,,140,,,False,DraftKings,13,100,3,REG,-260,210,-1.5,Final,6.0,-120
+OTT,2022-03-07T01:00Z,401350029,VGK,2021,Ottawa Senators,1,Vegas Golden Knights,2,380,,,-190,,,False,DraftKings,12,-105,3,REG,-110,-110,-1.5,Final,6.0,-115
+SJ,2022-03-07T01:00Z,401350030,ANA,2021,San Jose Sharks,2,Anaheim Ducks,3,250,,,-115,,,False,DraftKings,12,100,4,OT,-160,140,-1.5,Final/OT,6.0,-120
+LA,2022-03-08T00:00Z,401350031,BOS,2021,Los Angeles Kings,3,Boston Bruins,2,260,,,-125,,,False,DraftKings,12,-125,4,OT,-155,135,-1.5,Final/OT,5.5,105
+FLA,2022-03-08T00:00Z,401350032,BUF,2021,Florida Panthers,6,Buffalo Sabres,1,-200,,,400,,,False,DraftKings,12,100,3,REG,-140,120,1.5,Final,7.0,-120
+TOR,2022-03-08T00:00Z,401350034,CBJ,2021,Toronto Maple Leafs,5,Columbus Blue Jackets,4,-140,,,260,,,False,DraftKings,13,105,3,REG,115,-135,1.5,Final,7.0,-125
+COL,2022-03-08T00:30Z,401350033,NYI,2021,Colorado Avalanche,5,New York Islanders,4,-130,,,265,,,False,DraftKings,13,100,3,REG,125,-145,1.5,Final,6.0,-120
+EDM,2022-03-08T02:30Z,401406992,CGY,2021,Edmonton Oilers,1,Calgary Flames,3,260,,,-135,,,False,DraftKings,13,100,3,REG,-140,120,-1.5,Final,6.5,-120
+COL,2022-03-09T00:00Z,401350037,NJ,2021,Colorado Avalanche,3,New Jersey Devils,5,-135,,,255,,,False,DraftKings,12,-115,3,REG,110,-130,1.5,Final,6.5,-105
+VGK,2022-03-09T00:00Z,401350038,PHI,2021,Vegas Golden Knights,1,Philadelphia Flyers,2,-110,,,225,,,False,DraftKings,13,-115,3,REG,155,-180,1.5,Final,6.0,-105
+FLA,2022-03-09T00:00Z,401350039,PIT,2021,Florida Panthers,4,Pittsburgh Penguins,3,125,,,150,,,False,DraftKings,13,-125,3,REG,190,-235,1.5,Final,6.5,105
+SEA,2022-03-09T00:30Z,401350035,TOR,2021,Seattle Kraken,4,Toronto Maple Leafs,6,330,,,-165,,,False,DraftKings,11,-105,3,REG,-110,-110,-1.5,Final,6.5,-115
+ARI,2022-03-09T00:30Z,401350036,DET,2021,Arizona Coyotes,9,Detroit Red Wings,2,230,,,-115,,,False,DraftKings,13,-125,3,REG,-160,140,-1.5,Final,6.0,105
+OTT,2022-03-09T01:00Z,401350041,STL,2021,Ottawa Senators,4,St. Louis Blues,1,340,,,-170,,,False,DraftKings,12,-110,3,REG,-115,-105,-1.5,Final,6.0,-110
+DAL,2022-03-09T01:00Z,401350042,NSH,2021,Dallas Stars,1,Nashville Predators,2,160,,,125,,,False,DraftKings,13,-120,3,REG,-235,190,-1.5,Final,5.5,100
+NYR,2022-03-09T01:00Z,401350043,MIN,2021,New York Rangers,2,Minnesota Wild,5,220,,,-110,,,False,DraftKings,13,-110,3,REG,-160,140,-1.5,Final,6.5,-110
+TB,2022-03-09T01:00Z,401350044,WPG,2021,Tampa Bay Lightning,4,Winnipeg Jets,7,-110,,,220,,,False,DraftKings,13,-115,3,REG,150,-170,1.5,Final,6.0,-105
+ANA,2022-03-09T01:30Z,401350040,CHI,2021,Anaheim Ducks,3,Chicago Blackhawks,8,160,,,130,,,False,DraftKings,13,100,3,REG,-240,195,-1.5,Final,6.0,-120
+WSH,2022-03-09T02:00Z,401350045,CGY,2021,Washington Capitals,5,Calgary Flames,4,175,,,115,,,False,DraftKings,12,240,3,REG,-225,185,-1.5,Final,7.5,-350
+WSH,2022-03-10T01:00Z,401350046,EDM,2021,Washington Capitals,3,Edmonton Oilers,4,175,,,120,,,False,DraftKings,13,100,4,OT,-220,180,-1.5,Final/OT,6.5,-120
+MTL,2022-03-10T03:30Z,401350047,VAN,2021,Montreal Canadiens,3,Vancouver Canucks,5,280,,,-135,,,False,DraftKings,13,-120,3,REG,-125,105,-1.5,Final,6.0,100
+CHI,2022-03-11T00:00Z,401350048,BOS,2021,Chicago Blackhawks,3,Boston Bruins,4,350,,,-160,,,False,DraftKings,13,-115,3,REG,-110,-110,-1.5,Final,6.0,-105
+VGK,2022-03-11T00:00Z,401350049,BUF,2021,Vegas Golden Knights,1,Buffalo Sabres,3,-130,,,260,,,False,DraftKings,13,-120,3,REG,120,-140,1.5,Final,6.0,100
+ARI,2022-03-11T00:00Z,401350050,TOR,2021,Arizona Coyotes,5,Toronto Maple Leafs,4,500,,,-260,,,False,DraftKings,13,155,4,OT,125,-145,-1.5,Final/OT,7.5,-210
+SEA,2022-03-11T00:00Z,401350051,OTT,2021,Seattle Kraken,3,Ottawa Senators,4,185,,,110,,,False,DraftKings,13,-120,4,OT,-225,185,-1.5,Final/OT,5.5,100
+MIN,2022-03-11T00:00Z,401350052,DET,2021,Minnesota Wild,6,Detroit Red Wings,5,-120,,,240,,,False,DraftKings,13,-125,5,SO,145,-165,1.5,Final/SO,6.5,105
+PHI,2022-03-11T00:00Z,401350053,FLA,2021,Philadelphia Flyers,3,Florida Panthers,6,450,,,-245,,,False,DraftKings,13,-125,3,REG,130,-150,-1.5,Final,6.5,105
+WPG,2022-03-11T00:00Z,401350054,NJ,2021,Winnipeg Jets,2,New Jersey Devils,1,165,,,120,,,False,DraftKings,13,120,3,REG,-235,190,-1.5,Final,7.0,-140
+COL,2022-03-11T00:00Z,401350056,CAR,2021,Colorado Avalanche,0,Carolina Hurricanes,2,135,,,150,,,False,DraftKings,13,-105,3,REG,200,-250,1.5,Final,6.5,-115
+CBJ,2022-03-11T00:30Z,401406993,NYI,2021,Columbus Blue Jackets,0,New York Islanders,6,240,,,-115,,,False,DraftKings,13,-105,3,REG,-160,140,-1.5,Final,6.0,-115
+NYR,2022-03-11T01:00Z,401350057,STL,2021,New York Rangers,2,St. Louis Blues,6,150,,,135,,,False,DraftKings,13,-105,3,REG,-240,195,-1.5,Final,5.5,-115
+ANA,2022-03-11T01:00Z,401350058,NSH,2021,Anaheim Ducks,1,Nashville Predators,4,220,,,-110,,,False,DraftKings,13,-125,3,REG,-145,125,-1.5,Final,5.5,105
+TB,2022-03-11T02:00Z,401350059,CGY,2021,Tampa Bay Lightning,1,Calgary Flames,4,145,,,140,,,False,DraftKings,13,-110,3,REG,210,-260,1.5,Final,6.0,-110
+SJ,2022-03-11T03:30Z,401350060,LA,2021,San Jose Sharks,4,Los Angeles Kings,3,245,,,-120,,,False,DraftKings,13,-120,4,OT,-145,125,-1.5,Final/OT,5.5,100
+VGK,2022-03-12T00:00Z,401350062,PIT,2021,Vegas Golden Knights,2,Pittsburgh Penguins,5,225,,,-115,,,False,DraftKings,13,-115,3,REG,-155,135,-1.5,Final,6.0,-105
+MIN,2022-03-12T00:00Z,401350063,CBJ,2021,Minnesota Wild,2,Columbus Blue Jackets,3,-130,,,235,,,False,DraftKings,12,100,5,SO,125,-145,1.5,Final/SO,7.0,-120
+WPG,2022-03-12T00:30Z,401350061,NYI,2021,Winnipeg Jets,2,New York Islanders,5,165,,,120,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,5.5,100
+WSH,2022-03-12T03:00Z,401350064,VAN,2021,Washington Capitals,4,Vancouver Canucks,3,145,,,135,,,False,DraftKings,12,-115,4,OT,-250,200,-1.5,Final/OT,6.0,-105
+STL,2022-03-12T17:30Z,401350070,NSH,2021,St. Louis Blues,7,Nashville Predators,4,165,,,125,,,False,DraftKings,13,-125,3,REG,-210,175,-1.5,Final,5.5,105
+PHI,2022-03-12T20:00Z,401350069,CAR,2021,Philadelphia Flyers,1,Carolina Hurricanes,3,400,,,-210,,,False,DraftKings,12,-125,3,REG,105,-125,-1.5,Final,6.0,105
+ARI,2022-03-13T00:00Z,401350065,BOS,2021,Arizona Coyotes,2,Boston Bruins,3,425,,,-220,,,False,DraftKings,13,-110,3,REG,115,-135,-1.5,Final,6.0,-110
+SEA,2022-03-13T00:00Z,401350066,MTL,2021,Seattle Kraken,4,Montreal Canadiens,3,150,,,130,,,False,DraftKings,13,-120,5,SO,-240,195,-1.5,Final/SO,6.0,100
+CHI,2022-03-13T00:00Z,401350067,OTT,2021,Chicago Blackhawks,6,Ottawa Senators,3,145,,,140,,,False,DraftKings,11,-120,3,REG,220,-275,1.5,Final,5.5,100
+ANA,2022-03-13T00:00Z,401350068,NJ,2021,Anaheim Ducks,1,New Jersey Devils,2,200,,,100,,,False,DraftKings,13,-125,5,SO,-180,155,-1.5,Final/SO,6.0,105
+DET,2022-03-13T00:00Z,401350072,CGY,2021,Detroit Red Wings,0,Calgary Flames,3,400,,,-220,,,False,DraftKings,13,210,3,REG,120,-140,-1.5,Final,7.5,-295
+NYR,2022-03-13T01:00Z,401350071,DAL,2021,New York Rangers,7,Dallas Stars,4,170,,,120,,,False,DraftKings,13,-105,3,REG,-250,200,-1.5,Final,5.5,-115
+LA,2022-03-13T02:30Z,401350074,SJ,2021,Los Angeles Kings,0,San Jose Sharks,5,115,,,175,,,False,DraftKings,13,-115,3,REG,180,-220,1.5,Final,5.5,-105
+TB,2022-03-13T03:00Z,401350073,EDM,2021,Tampa Bay Lightning,1,Edmonton Oilers,4,110,,,175,,,False,DraftKings,13,-135,3,REG,185,-225,1.5,Final,6.5,115
+CAR,2022-03-13T17:00Z,401350078,PIT,2021,Carolina Hurricanes,2,Pittsburgh Penguins,4,160,,,125,,,False,DraftKings,13,245,3,REG,-200,170,-1.5,Final,7.5,-350
+TOR,2022-03-13T20:00Z,401350075,BUF,2021,Toronto Maple Leafs,2,Buffalo Sabres,5,-195,,,370,,,False,DraftKings,13,-110,3,REG,-105,-115,1.5,Final,6.5,-110
+MTL,2022-03-13T23:00Z,401350077,PHI,2021,Montreal Canadiens,4,Philadelphia Flyers,3,185,,,110,,,False,DraftKings,13,-105,4,OT,-180,155,-1.5,Final/OT,6.0,-115
+VGK,2022-03-13T23:00Z,401350079,CBJ,2021,Vegas Golden Knights,4,Columbus Blue Jackets,6,-110,,,215,,,False,DraftKings,13,-105,3,REG,155,-180,1.5,Final,6.5,-115
+WPG,2022-03-13T23:00Z,401350080,STL,2021,Winnipeg Jets,4,St. Louis Blues,3,195,,,105,,,False,DraftKings,13,-115,4,OT,-220,180,-1.5,Final/OT,6.0,-105
+NSH,2022-03-13T23:00Z,401350081,MIN,2021,Nashville Predators,6,Minnesota Wild,2,200,,,100,,,False,DraftKings,13,-115,3,REG,-155,135,-1.5,Final,6.5,-105
+ANA,2022-03-13T23:30Z,401350076,NYI,2021,Anaheim Ducks,3,New York Islanders,4,230,,,-110,,,False,DraftKings,13,100,3,REG,-170,150,-1.5,Final,5.5,-120
+CGY,2022-03-14T00:00Z,401350082,COL,2021,Calgary Flames,0,Colorado Avalanche,3,205,,,100,,,False,DraftKings,13,100,3,REG,-170,150,-1.5,Final,6.5,-120
+TB,2022-03-14T02:00Z,401350083,VAN,2021,Tampa Bay Lightning,2,Vancouver Canucks,1,110,,,185,,,False,DraftKings,13,-120,3,REG,160,-190,1.5,Final,6.0,100
+FLA,2022-03-14T02:00Z,401350084,LA,2021,Florida Panthers,2,Los Angeles Kings,3,-145,,,280,,,False,DraftKings,13,190,5,SO,105,-125,1.5,Final/SO,7.5,-265
+ARI,2022-03-14T23:30Z,401350085,OTT,2021,Arizona Coyotes,5,Ottawa Senators,3,195,,,105,,,False,DraftKings,13,-120,3,REG,-200,170,-1.5,Final,6.0,100
+DAL,2022-03-15T23:00Z,401350086,TOR,2021,Dallas Stars,0,Toronto Maple Leafs,4,175,,,115,,,False,DraftKings,13,-110,3,REG,-190,160,-1.5,Final,6.5,-110
+ARI,2022-03-15T23:00Z,401350087,MTL,2021,Arizona Coyotes,6,Montreal Canadiens,3,215,,,-105,,,False,DraftKings,12,-110,3,REG,-180,155,-1.5,Final,6.0,-110
+ANA,2022-03-15T23:00Z,401350088,NYR,2021,Anaheim Ducks,3,New York Rangers,4,215,,,-110,,,False,DraftKings,13,-110,4,OT,-155,135,-1.5,Final/OT,6.0,-110
+NYI,2022-03-15T23:00Z,401350089,WSH,2021,New York Islanders,3,Washington Capitals,4,195,,,105,,,False,DraftKings,13,-115,5,SO,-190,160,-1.5,Final/SO,5.5,-105
+PIT,2022-03-16T00:00Z,401350091,NSH,2021,Pittsburgh Penguins,1,Nashville Predators,4,135,,,150,,,False,DraftKings,13,-115,3,REG,215,-265,1.5,Final,6.0,-105
+VGK,2022-03-16T00:00Z,401350092,WPG,2021,Vegas Golden Knights,3,Winnipeg Jets,7,145,,,140,,,False,DraftKings,13,-110,3,REG,-220,180,-1.5,Final,6.0,-110
+BOS,2022-03-16T00:30Z,401350090,CHI,2021,Boston Bruins,2,Chicago Blackhawks,1,-110,,,225,,,False,DraftKings,12,-120,4,OT,150,-170,1.5,Final/OT,5.5,100
+DET,2022-03-16T01:00Z,401350093,EDM,2021,Detroit Red Wings,5,Edmonton Oilers,7,330,,,-175,,,False,DraftKings,13,-105,3,REG,-115,-105,-1.5,Final,6.5,-115
+NJ,2022-03-16T02:00Z,401350094,VAN,2021,New Jersey Devils,3,Vancouver Canucks,6,200,,,100,,,False,DraftKings,13,-115,3,REG,-200,170,-1.5,Final,6.0,-105
+COL,2022-03-16T02:30Z,401350095,LA,2021,Colorado Avalanche,3,Los Angeles Kings,0,-130,,,260,,,False,DraftKings,13,-105,3,REG,120,-140,1.5,Final,6.0,-115
+FLA,2022-03-16T02:30Z,401350096,SJ,2021,Florida Panthers,3,San Jose Sharks,2,-150,,,300,,,False,DraftKings,13,275,4,OT,-105,-115,1.5,Final/OT,8.0,-400
+CBJ,2022-03-16T23:30Z,401350097,OTT,2021,Columbus Blue Jackets,4,Ottawa Senators,1,155,,,130,,,False,DraftKings,13,-105,3,REG,-220,180,-1.5,Final,6.5,-115
+BOS,2022-03-16T23:30Z,401350098,MIN,2021,Boston Bruins,2,Minnesota Wild,4,165,,,125,,,False,DraftKings,13,-120,3,REG,-240,195,-1.5,Final,6.0,100
+NJ,2022-03-17T02:00Z,401350099,CGY,2021,New Jersey Devils,3,Calgary Flames,6,390,,,-195,,,False,DraftKings,13,-125,3,REG,110,-130,-1.5,Final,6.0,105
+TB,2022-03-17T02:00Z,401350100,SEA,2021,Tampa Bay Lightning,4,Seattle Kraken,1,-180,,,400,,,False,DraftKings,13,-115,3,REG,-105,-115,1.5,Final,6.0,-105
+NYI,2022-03-17T23:00Z,401349462,NYR,2021,New York Islanders,2,New York Rangers,1,180,,,110,,,False,DraftKings,13,100,3,REG,-210,175,-1.5,Final,5.5,-120
+CAR,2022-03-17T23:00Z,401350101,TOR,2021,Carolina Hurricanes,2,Toronto Maple Leafs,3,120,,,155,,,False,DraftKings,13,-120,3,REG,215,-265,1.5,Final,6.0,100
+DAL,2022-03-17T23:00Z,401350102,MTL,2021,Dallas Stars,4,Montreal Canadiens,3,-115,,,215,,,False,DraftKings,13,-110,4,OT,140,-160,1.5,Final/OT,6.0,-110
+NSH,2022-03-17T23:00Z,401350104,PHI,2021,Nashville Predators,4,Philadelphia Flyers,5,-110,,,210,,,False,DraftKings,13,-115,3,REG,145,-165,1.5,Final,6.0,-105
+WSH,2022-03-17T23:00Z,401350105,CBJ,2021,Washington Capitals,7,Columbus Blue Jackets,2,-130,,,240,,,False,DraftKings,12,-120,3,REG,120,-140,1.5,Final,6.5,100
+PIT,2022-03-18T00:00Z,401350106,STL,2021,Pittsburgh Penguins,3,St. Louis Blues,2,140,,,135,,,False,DraftKings,13,235,5,SO,200,-250,1.5,Final/SO,7.5,-340
+BUF,2022-03-18T01:00Z,401350107,EDM,2021,Buffalo Sabres,1,Edmonton Oilers,6,290,,,-155,,,False,DraftKings,13,170,3,REG,-110,-110,-1.5,Final,7.5,-235
+DET,2022-03-18T02:00Z,401350108,VAN,2021,Detroit Red Wings,1,Vancouver Canucks,0,290,,,-145,,,False,DraftKings,12,100,3,REG,-145,125,-1.5,Final,6.5,-120
+SJ,2022-03-18T02:00Z,401350110,LA,2021,San Jose Sharks,0,Los Angeles Kings,3,225,,,-105,,,False,DraftKings,13,-105,3,REG,-190,160,-1.5,Final,5.5,-115
+FLA,2022-03-18T02:30Z,401350109,VGK,2021,Florida Panthers,3,Vegas Golden Knights,5,-105,,,200,,,False,DraftKings,12,-125,3,REG,145,-165,1.5,Final,6.5,105
+PHI,2022-03-18T23:00Z,401350111,OTT,2021,Philadelphia Flyers,1,Ottawa Senators,3,195,,,105,,,False,DraftKings,13,380,3,REG,-200,170,-1.5,Final,8.5,-600
+WSH,2022-03-18T23:00Z,401350112,CAR,2021,Washington Capitals,4,Carolina Hurricanes,3,225,,,-110,,,False,DraftKings,13,-115,5,SO,-165,145,-1.5,Final/SO,6.0,-105
+BOS,2022-03-19T00:00Z,401350113,WPG,2021,Boston Bruins,4,Winnipeg Jets,2,140,,,145,,,False,DraftKings,13,-105,3,REG,205,-255,1.5,Final,6.0,-115
+BUF,2022-03-19T01:00Z,401350114,CGY,2021,Buffalo Sabres,1,Calgary Flames,0,500,,,-265,,,False,DraftKings,13,-105,4,OT,145,-165,-1.5,Final/OT,6.5,-115
+FLA,2022-03-19T02:00Z,401350115,ANA,2021,Florida Panthers,3,Anaheim Ducks,0,-135,,,265,,,False,DraftKings,13,-105,3,REG,110,-130,1.5,Final,6.5,-115
+COL,2022-03-19T02:30Z,401350116,SJ,2021,Colorado Avalanche,5,San Jose Sharks,3,-180,,,360,,,False,DraftKings,13,220,3,REG,-110,-110,1.5,Final,7.5,-310
+DAL,2022-03-19T18:00Z,401350119,NYI,2021,Dallas Stars,2,New York Islanders,4,155,,,135,,,False,DraftKings,12,100,3,REG,-250,200,-1.5,Final,5.5,-120
+CHI,2022-03-19T18:00Z,401350122,MIN,2021,Chicago Blackhawks,1,Minnesota Wild,3,340,,,-175,,,False,DraftKings,12,-125,3,REG,-105,-115,-1.5,Final,6.5,105
+NJ,2022-03-19T19:00Z,401350123,EDM,2021,New Jersey Devils,3,Edmonton Oilers,6,290,,,-150,,,False,DraftKings,12,110,3,REG,-120,100,-1.5,Final,7.0,-130
+LA,2022-03-19T20:00Z,401350126,VGK,2021,Los Angeles Kings,1,Vegas Golden Knights,5,175,,,115,,,False,DraftKings,12,100,3,REG,-220,180,-1.5,Final,6.0,-120
+STL,2022-03-19T21:00Z,401350120,CBJ,2021,St. Louis Blues,4,Columbus Blue Jackets,5,-110,,,220,,,False,DraftKings,13,-110,3,REG,155,-180,1.5,Final,6.5,-110
+PIT,2022-03-19T21:00Z,401350125,ARI,2021,Pittsburgh Penguins,4,Arizona Coyotes,1,-165,,,340,,,False,DraftKings,12,235,3,REG,100,-120,1.5,Final,7.5,-340
+OTT,2022-03-19T23:00Z,401350117,MTL,2021,Ottawa Senators,1,Montreal Canadiens,5,180,,,110,,,False,DraftKings,13,-105,3,REG,-190,160,-1.5,Final,6.0,-115
+TOR,2022-03-19T23:00Z,401350121,NSH,2021,Toronto Maple Leafs,3,Nashville Predators,6,130,,,160,,,False,DraftKings,12,240,3,REG,195,-240,1.5,Final,7.5,-340
+NYR,2022-03-20T00:00Z,401350118,TB,2021,New York Rangers,2,Tampa Bay Lightning,1,250,,,-125,,,False,DraftKings,12,-120,3,REG,-145,125,-1.5,Final,5.5,100
+CGY,2022-03-20T02:00Z,401350124,VAN,2021,Calgary Flames,5,Vancouver Canucks,2,115,,,180,,,False,DraftKings,13,-120,3,REG,190,-235,1.5,Final,6.0,100
+DET,2022-03-20T02:00Z,401350127,SEA,2021,Detroit Red Wings,2,Seattle Kraken,4,145,,,135,,,False,DraftKings,13,-105,3,REG,-260,210,-1.5,Final,6.0,-115
+NYI,2022-03-20T18:00Z,401350128,PHI,2021,New York Islanders,1,Philadelphia Flyers,2,105,,,195,,,False,DraftKings,13,-110,3,REG,165,-195,1.5,Final,5.5,-110
+DAL,2022-03-20T21:00Z,401350129,WSH,2021,Dallas Stars,3,Washington Capitals,2,220,,,-110,,,False,DraftKings,13,-105,3,REG,-170,150,-1.5,Final,6.0,-115
+NYR,2022-03-20T22:00Z,401350130,CAR,2021,New York Rangers,2,Carolina Hurricanes,0,290,,,-150,,,False,DraftKings,13,-110,3,REG,-125,105,-1.5,Final,6.0,-110
+WPG,2022-03-20T23:00Z,401350131,CHI,2021,Winnipeg Jets,6,Chicago Blackhawks,4,110,,,185,,,False,DraftKings,13,-110,3,REG,175,-210,1.5,Final,6.0,-110
+ARI,2022-03-20T23:00Z,401350133,SJ,2021,Arizona Coyotes,2,San Jose Sharks,4,270,,,-130,,,False,DraftKings,13,-110,3,REG,-155,135,-1.5,Final,6.0,-110
+BUF,2022-03-21T02:00Z,401350132,VAN,2021,Buffalo Sabres,3,Vancouver Canucks,2,245,,,-120,,,False,DraftKings,13,-125,4,OT,-130,110,-1.5,Final/OT,6.0,105
+BOS,2022-03-21T23:00Z,401350134,MTL,2021,Boston Bruins,3,Montreal Canadiens,2,-140,,,275,,,False,DraftKings,13,105,4,OT,110,-130,1.5,Final/OT,6.0,-125
+VGK,2022-03-22T00:00Z,401350135,MIN,2021,Vegas Golden Knights,0,Minnesota Wild,3,225,,,-115,,,False,DraftKings,13,-110,3,REG,-155,135,-1.5,Final,6.5,-110
+EDM,2022-03-22T01:30Z,401350136,COL,2021,Edmonton Oilers,2,Colorado Avalanche,3,235,,,-125,,,False,DraftKings,13,-125,4,OT,-155,135,-1.5,Final/OT,6.5,105
+NSH,2022-03-22T02:00Z,401350137,ANA,2021,Nashville Predators,6,Anaheim Ducks,3,-110,,,220,,,False,DraftKings,13,100,3,REG,140,-160,1.5,Final,6.0,-120
+NYR,2022-03-22T23:00Z,401350139,NJ,2021,New York Rangers,4,New Jersey Devils,7,105,,,185,,,False,DraftKings,13,-110,3,REG,170,-200,1.5,Final,6.0,-110
+CBJ,2022-03-22T23:00Z,401350141,PIT,2021,Columbus Blue Jackets,1,Pittsburgh Penguins,5,400,,,-220,,,False,DraftKings,13,-120,3,REG,120,-140,-1.5,Final,6.5,100
+STL,2022-03-22T23:00Z,401350142,WSH,2021,St. Louis Blues,5,Washington Capitals,2,185,,,110,,,False,DraftKings,13,-110,3,REG,-190,160,-1.5,Final,6.0,-110
+TB,2022-03-22T23:00Z,401350143,CAR,2021,Tampa Bay Lightning,2,Carolina Hurricanes,3,155,,,135,,,False,DraftKings,13,-120,3,REG,-240,195,-1.5,Final,5.5,100
+PHI,2022-03-22T23:30Z,401350138,DET,2021,Philadelphia Flyers,3,Detroit Red Wings,6,190,,,105,,,False,DraftKings,13,-110,3,REG,-200,170,-1.5,Final,6.0,-110
+OTT,2022-03-22T23:30Z,401407039,NYI,2021,Ottawa Senators,0,New York Islanders,3,275,,,-135,,,False,DraftKings,13,-115,3,REG,-140,120,-1.5,Final,5.5,-105
+VGK,2022-03-23T00:00Z,401350145,WPG,2021,Vegas Golden Knights,0,Winnipeg Jets,4,210,,,100,,,False,DraftKings,13,-115,3,REG,-170,150,-1.5,Final,6.0,-105
+EDM,2022-03-23T00:30Z,401350144,DAL,2021,Edmonton Oilers,3,Dallas Stars,5,165,,,125,,,False,DraftKings,12,100,3,REG,-240,195,-1.5,Final,6.5,-120
+SJ,2022-03-23T01:00Z,401350146,CGY,2021,San Jose Sharks,4,Calgary Flames,3,350,,,-180,,,False,DraftKings,13,-120,3,REG,110,-130,-1.5,Final,5.5,100
+SEA,2022-03-23T02:00Z,401407010,ARI,2021,Seattle Kraken,4,Arizona Coyotes,2,145,,,140,,,False,DraftKings,13,-110,3,REG,-275,220,-1.5,Final,6.0,-110
+NSH,2022-03-23T02:30Z,401350147,LA,2021,Nashville Predators,1,Los Angeles Kings,6,160,,,125,,,False,DraftKings,12,-125,3,REG,-225,185,-1.5,Final,5.5,105
+NJ,2022-03-23T23:00Z,401350149,TOR,2021,New Jersey Devils,2,Toronto Maple Leafs,3,380,,,-195,,,False,DraftKings,12,105,3,REG,105,-125,-1.5,Final,7.0,-125
+PIT,2022-03-23T23:30Z,401350148,BUF,2021,Pittsburgh Penguins,3,Buffalo Sabres,4,-135,,,275,,,False,DraftKings,13,105,5,SO,120,-140,1.5,Final/SO,6.5,-125
+VAN,2022-03-24T01:30Z,401350150,COL,2021,Vancouver Canucks,3,Colorado Avalanche,1,300,,,-155,,,False,DraftKings,13,-105,3,REG,-110,-110,-1.5,Final,6.5,-115
+CHI,2022-03-24T02:00Z,401350152,ANA,2021,Chicago Blackhawks,4,Anaheim Ducks,2,165,,,125,,,False,DraftKings,13,-110,3,REG,-235,190,-1.5,Final,6.0,-110
+TB,2022-03-24T23:00Z,401350153,BOS,2021,Tampa Bay Lightning,2,Boston Bruins,3,160,,,135,,,False,DraftKings,13,-110,3,REG,-275,220,-1.5,Final,5.5,-110
+FLA,2022-03-24T23:00Z,401350154,MTL,2021,Florida Panthers,4,Montreal Canadiens,3,-175,,,350,,,False,DraftKings,13,190,3,REG,-110,-110,1.5,Final,7.5,-265
+DAL,2022-03-24T23:00Z,401350156,CAR,2021,Dallas Stars,4,Carolina Hurricanes,3,285,,,-135,,,False,DraftKings,13,-115,5,SO,-135,115,-1.5,Final/SO,5.5,-105
+DET,2022-03-24T23:30Z,401406994,NYI,2021,Detroit Red Wings,2,New York Islanders,5,285,,,-140,,,False,DraftKings,13,105,3,REG,-140,120,-1.5,Final,6.0,-125
+PHI,2022-03-25T00:00Z,401350157,STL,2021,Philadelphia Flyers,5,St. Louis Blues,2,340,,,-165,,,False,DraftKings,13,-115,3,REG,-120,100,-1.5,Final,6.0,-105
+VAN,2022-03-25T00:00Z,401350158,MIN,2021,Vancouver Canucks,2,Minnesota Wild,3,280,,,-140,,,False,DraftKings,13,-125,4,OT,-140,120,-1.5,Final/OT,6.0,105
+OTT,2022-03-25T00:00Z,401406995,WPG,2021,Ottawa Senators,5,Winnipeg Jets,2,295,,,-150,,,False,DraftKings,13,-105,3,REG,-140,120,-1.5,Final,6.0,-115
+SJ,2022-03-25T01:00Z,401350159,EDM,2021,San Jose Sharks,2,Edmonton Oilers,5,300,,,-150,,,False,DraftKings,13,300,3,REG,-120,100,-1.5,Final,8.0,-450
+NSH,2022-03-25T02:00Z,401350160,VGK,2021,Nashville Predators,1,Vegas Golden Knights,6,135,,,155,,,False,DraftKings,13,-115,3,REG,-290,230,-1.5,Final,6.0,-105
+CHI,2022-03-25T02:00Z,401350161,LA,2021,Chicago Blackhawks,4,Los Angeles Kings,3,290,,,-140,,,False,DraftKings,13,-115,5,SO,-140,120,-1.5,Final/SO,6.0,-105
+WSH,2022-03-25T23:00Z,401350162,BUF,2021,Washington Capitals,4,Buffalo Sabres,3,-130,,,255,,,False,DraftKings,13,100,5,SO,140,-160,1.5,Final/SO,6.5,-120
+PIT,2022-03-25T23:00Z,401350163,NYR,2021,Pittsburgh Penguins,1,New York Rangers,5,130,,,160,,,False,DraftKings,12,-105,3,REG,210,-260,1.5,Final,5.5,-115
+CBJ,2022-03-26T00:00Z,401350164,WPG,2021,Columbus Blue Jackets,3,Winnipeg Jets,4,230,,,-115,,,False,DraftKings,12,-130,4,OT,-180,155,-1.5,Final/OT,6.5,110
+PHI,2022-03-26T01:00Z,401350165,COL,2021,Philadelphia Flyers,3,Colorado Avalanche,6,475,,,-245,,,False,DraftKings,12,105,3,REG,120,-140,-1.5,Final,6.5,-125
+ARI,2022-03-26T01:00Z,401350166,CGY,2021,Arizona Coyotes,2,Calgary Flames,4,475,,,-245,,,False,DraftKings,12,-115,3,REG,125,-145,-1.5,Final,6.0,-105
+NYI,2022-03-26T16:30Z,401350168,BOS,2021,New York Islanders,3,Boston Bruins,6,245,,,-120,,,False,DraftKings,13,-115,3,REG,-165,145,-1.5,Final,5.5,-105
+TB,2022-03-26T16:30Z,401350171,DET,2021,Tampa Bay Lightning,2,Detroit Red Wings,1,-165,,,300,,,False,DraftKings,13,-115,4,OT,120,-140,1.5,Final/OT,6.5,-105
+CHI,2022-03-26T19:00Z,401350177,VGK,2021,Chicago Blackhawks,4,Vegas Golden Knights,5,245,,,-120,,,False,DraftKings,13,-135,4,OT,-135,115,-1.5,Final/OT,6.0,115
+TOR,2022-03-26T23:00Z,401350169,MTL,2021,Toronto Maple Leafs,2,Montreal Canadiens,4,-165,,,320,,,False,DraftKings,13,100,3,REG,100,-120,1.5,Final,6.5,-120
+FLA,2022-03-26T23:00Z,401350170,OTT,2021,Florida Panthers,4,Ottawa Senators,3,-180,,,370,,,False,DraftKings,13,-110,5,SO,100,-120,1.5,Final/SO,6.5,-110
+NJ,2022-03-26T23:00Z,401350172,WSH,2021,New Jersey Devils,3,Washington Capitals,4,230,,,-120,,,False,DraftKings,13,-115,3,REG,-165,145,-1.5,Final,6.5,-105
+VAN,2022-03-26T23:00Z,401350174,DAL,2021,Vancouver Canucks,4,Dallas Stars,1,190,,,105,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,5.5,100
+CAR,2022-03-27T00:00Z,401350173,STL,2021,Carolina Hurricanes,7,St. Louis Blues,2,120,,,170,,,False,DraftKings,13,-125,3,REG,190,-235,1.5,Final,6.0,105
+CBJ,2022-03-27T00:00Z,401350175,MIN,2021,Columbus Blue Jackets,2,Minnesota Wild,3,340,,,-175,,,False,DraftKings,13,-125,4,OT,100,-120,-1.5,Final/OT,6.5,105
+EDM,2022-03-27T02:00Z,401350176,CGY,2021,Edmonton Oilers,5,Calgary Flames,9,190,,,100,,,False,DraftKings,13,-105,3,REG,-190,160,-1.5,Final,6.5,-115
+SEA,2022-03-27T02:30Z,401350178,LA,2021,Seattle Kraken,2,Los Angeles Kings,4,255,,,-135,,,False,DraftKings,13,100,3,REG,-145,125,-1.5,Final,6.0,-120
+ANA,2022-03-27T02:30Z,401350179,SJ,2021,Anaheim Ducks,1,San Jose Sharks,4,180,,,110,,,False,DraftKings,13,100,3,REG,-220,180,-1.5,Final,6.0,-120
+TB,2022-03-27T18:00Z,401350182,NYI,2021,Tampa Bay Lightning,4,New York Islanders,1,115,,,185,,,False,DraftKings,13,-110,3,REG,175,-210,1.5,Final,5.5,-110
+BUF,2022-03-27T21:00Z,401350183,NYR,2021,Buffalo Sabres,4,New York Rangers,5,340,,,-165,,,False,DraftKings,12,-105,4,OT,-130,110,-1.5,Final/OT,6.0,-115
+DET,2022-03-27T21:00Z,401350184,PIT,2021,Detroit Red Wings,2,Pittsburgh Penguins,11,425,,,-220,,,False,DraftKings,13,100,3,REG,105,-125,-1.5,Final,6.5,-120
+PHI,2022-03-27T22:00Z,401350185,NSH,2021,Philadelphia Flyers,4,Nashville Predators,5,330,,,-170,,,False,DraftKings,13,-110,3,REG,-110,-110,-1.5,Final,6.0,-110
+COL,2022-03-27T22:00Z,401350186,MIN,2021,Colorado Avalanche,2,Minnesota Wild,3,120,,,165,,,False,DraftKings,13,290,4,OT,170,-200,1.5,Final/OT,8.0,-450
+FLA,2022-03-27T23:00Z,401350180,TOR,2021,Florida Panthers,2,Toronto Maple Leafs,5,155,,,125,,,False,DraftKings,13,-105,3,REG,-225,185,-1.5,Final,7.0,-115
+MTL,2022-03-27T23:00Z,401350181,NJ,2021,Montreal Canadiens,2,New Jersey Devils,3,240,,,-120,,,False,DraftKings,13,255,5,SO,-155,135,-1.5,Final/SO,8.0,-370
+ARI,2022-03-27T23:00Z,401350187,WPG,2021,Arizona Coyotes,1,Winnipeg Jets,2,350,,,-185,,,False,DraftKings,13,105,4,OT,-110,-110,-1.5,Final/OT,6.5,-125
+CAR,2022-03-28T23:00Z,401350188,WSH,2021,Carolina Hurricanes,6,Washington Capitals,1,115,,,170,,,False,DraftKings,13,-110,3,REG,180,-220,1.5,Final,6.0,-110
+VAN,2022-03-28T23:30Z,401350190,STL,2021,Vancouver Canucks,1,St. Louis Blues,4,205,,,100,,,False,DraftKings,13,-120,3,REG,-180,155,-1.5,Final,6.0,100
+BUF,2022-03-29T00:30Z,401350189,CHI,2021,Buffalo Sabres,6,Chicago Blackhawks,5,210,,,100,,,False,DraftKings,13,-115,3,REG,-170,150,-1.5,Final,6.0,-105
+ARI,2022-03-29T01:30Z,401350191,EDM,2021,Arizona Coyotes,1,Edmonton Oilers,6,500,,,-240,,,False,DraftKings,13,-115,3,REG,140,-160,-1.5,Final,6.5,-105
+SEA,2022-03-29T02:30Z,401350192,LA,2021,Seattle Kraken,6,Los Angeles Kings,1,250,,,-130,,,False,DraftKings,13,100,3,REG,-145,125,-1.5,Final,6.0,-120
+TOR,2022-03-29T23:00Z,401350193,BOS,2021,Toronto Maple Leafs,6,Boston Bruins,4,195,,,105,,,False,DraftKings,13,-110,3,REG,-190,160,-1.5,Final,6.5,-110
+CAR,2022-03-29T23:00Z,401350194,TB,2021,Carolina Hurricanes,3,Tampa Bay Lightning,4,180,,,115,,,False,DraftKings,13,100,4,OT,-200,170,-1.5,Final/OT,6.0,-120
+MTL,2022-03-29T23:00Z,401350195,FLA,2021,Montreal Canadiens,4,Florida Panthers,7,450,,,-260,,,False,DraftKings,12,170,3,REG,130,-150,-1.5,Final,7.5,-230
+NYR,2022-03-29T23:00Z,401350196,PIT,2021,New York Rangers,3,Pittsburgh Penguins,2,205,,,100,,,False,DraftKings,13,-115,3,REG,-180,155,-1.5,Final,5.5,-105
+NYI,2022-03-29T23:00Z,401350197,CBJ,2021,New York Islanders,4,Columbus Blue Jackets,3,110,,,185,,,False,DraftKings,13,-115,3,REG,175,-210,1.5,Final,6.0,-105
+OTT,2022-03-30T00:00Z,401350198,NSH,2021,Ottawa Senators,1,Nashville Predators,4,265,,,-135,,,False,DraftKings,13,-110,3,REG,-140,120,-1.5,Final,6.0,-110
+PHI,2022-03-30T00:00Z,401350199,MIN,2021,Philadelphia Flyers,1,Minnesota Wild,4,400,,,-200,,,False,DraftKings,13,-105,3,REG,110,-130,-1.5,Final,6.5,-115
+COL,2022-03-30T01:00Z,401350200,CGY,2021,Colorado Avalanche,2,Calgary Flames,1,185,,,110,,,False,DraftKings,13,100,3,REG,-195,165,-1.5,Final,6.0,-120
+DAL,2022-03-30T02:00Z,401350201,ANA,2021,Dallas Stars,3,Anaheim Ducks,2,-110,,,230,,,False,DraftKings,13,-120,3,REG,150,-170,1.5,Final,5.5,100
+WPG,2022-03-30T23:00Z,401350202,BUF,2021,Winnipeg Jets,3,Buffalo Sabres,2,100,,,200,,,False,DraftKings,13,-125,5,SO,165,-195,1.5,Final/SO,6.0,105
+NYR,2022-03-30T23:30Z,401350203,DET,2021,New York Rangers,5,Detroit Red Wings,4,105,,,190,,,False,DraftKings,13,100,4,OT,175,-210,1.5,Final/OT,6.5,-120
+LA,2022-03-31T01:30Z,401350204,EDM,2021,Los Angeles Kings,3,Edmonton Oilers,4,240,,,-125,,,False,DraftKings,13,210,5,SO,-145,125,-1.5,Final/SO,7.5,-295
+STL,2022-03-31T02:00Z,401350205,VAN,2021,St. Louis Blues,4,Vancouver Canucks,3,150,,,135,,,False,DraftKings,13,100,3,REG,-275,220,-1.5,Final,6.0,-120
+SJ,2022-03-31T02:00Z,401350206,ARI,2021,San Jose Sharks,2,Arizona Coyotes,5,100,,,210,,,False,DraftKings,13,-105,3,REG,165,-195,1.5,Final,6.0,-115
+VGK,2022-03-31T02:00Z,401350207,SEA,2021,Vegas Golden Knights,3,Seattle Kraken,0,-105,,,210,,,False,DraftKings,13,-125,3,REG,160,-190,1.5,Final,6.0,105
+NJ,2022-03-31T23:00Z,401350208,BOS,2021,New Jersey Devils,1,Boston Bruins,8,285,,,-145,,,False,DraftKings,13,-110,3,REG,-130,110,-1.5,Final,6.5,-110
+WPG,2022-03-31T23:00Z,401350209,TOR,2021,Winnipeg Jets,3,Toronto Maple Leafs,7,295,,,-155,,,False,DraftKings,12,-130,3,REG,-110,-110,-1.5,Final,6.5,110
+CHI,2022-03-31T23:00Z,401350210,FLA,2021,Chicago Blackhawks,0,Florida Panthers,4,400,,,-220,,,False,DraftKings,13,-105,3,REG,125,-145,-1.5,Final,7.0,-115
+CBJ,2022-03-31T23:00Z,401350211,NYI,2021,Columbus Blue Jackets,2,New York Islanders,5,255,,,-130,,,False,DraftKings,13,-125,3,REG,-145,125,-1.5,Final,6.0,105
+MTL,2022-03-31T23:00Z,401350212,CAR,2021,Montreal Canadiens,0,Carolina Hurricanes,4,500,,,-265,,,False,DraftKings,13,-115,3,REG,135,-155,-1.5,Final,6.0,-105
+PIT,2022-04-01T00:00Z,401350213,MIN,2021,Pittsburgh Penguins,4,Minnesota Wild,3,155,,,130,,,False,DraftKings,13,-120,4,OT,-210,175,-1.5,Final/OT,6.5,100
+SJ,2022-04-01T01:00Z,401350214,COL,2021,San Jose Sharks,2,Colorado Avalanche,4,425,,,-215,,,False,DraftKings,13,100,3,REG,105,-125,-1.5,Final,6.5,-120
+LA,2022-04-01T01:00Z,401350215,CGY,2021,Los Angeles Kings,3,Calgary Flames,2,390,,,-190,,,False,DraftKings,13,-115,5,SO,-105,-115,-1.5,Final/SO,6.0,-105
+DAL,2022-04-01T02:00Z,401350216,ANA,2021,Dallas Stars,3,Anaheim Ducks,2,-110,,,230,,,False,DraftKings,13,-115,4,OT,150,-170,1.5,Final/OT,5.5,-105
+NSH,2022-04-01T23:00Z,401350217,BUF,2021,Nashville Predators,3,Buffalo Sabres,4,-115,,,235,,,False,DraftKings,13,-115,3,REG,135,-155,1.5,Final,6.0,-105
+CHI,2022-04-01T23:00Z,401350219,TB,2021,Chicago Blackhawks,2,Tampa Bay Lightning,5,400,,,-205,,,False,DraftKings,12,-105,3,REG,125,-145,-1.5,Final,6.5,-115
+NYI,2022-04-01T23:00Z,401350220,NYR,2021,New York Islanders,3,New York Rangers,0,230,,,-110,,,False,DraftKings,13,110,3,REG,-180,155,-1.5,Final,5.5,-130
+OTT,2022-04-01T23:30Z,401350218,DET,2021,Ottawa Senators,5,Detroit Red Wings,2,150,,,130,,,False,DraftKings,12,-110,3,REG,-220,180,-1.5,Final,6.5,-110
+STL,2022-04-02T01:00Z,401350221,EDM,2021,St. Louis Blues,5,Edmonton Oilers,6,180,,,110,,,False,DraftKings,13,-105,4,OT,-190,160,-1.5,Final/OT,7.0,-115
+VGK,2022-04-02T02:00Z,401350223,SEA,2021,Vegas Golden Knights,5,Seattle Kraken,2,-110,,,215,,,False,DraftKings,13,-105,3,REG,155,-180,1.5,Final,6.0,-115
+ANA,2022-04-02T02:30Z,401350222,ARI,2021,Anaheim Ducks,5,Arizona Coyotes,0,130,,,155,,,False,DraftKings,13,-105,3,REG,195,-240,1.5,Final,6.0,-115
+FLA,2022-04-02T16:30Z,401350226,NJ,2021,Florida Panthers,7,New Jersey Devils,6,-130,,,240,,,False,DraftKings,13,-110,4,OT,115,-135,1.5,Final/OT,7.0,-110
+PIT,2022-04-02T19:00Z,401350231,COL,2021,Pittsburgh Penguins,2,Colorado Avalanche,3,195,,,100,,,False,DraftKings,13,100,3,REG,-190,160,-1.5,Final,6.5,-120
+CBJ,2022-04-02T23:00Z,401350224,BOS,2021,Columbus Blue Jackets,2,Boston Bruins,5,380,,,-200,,,False,DraftKings,13,-110,3,REG,130,-150,-1.5,Final,6.5,-110
+MTL,2022-04-02T23:00Z,401350225,TB,2021,Montreal Canadiens,5,Tampa Bay Lightning,4,390,,,-200,,,False,DraftKings,13,105,5,SO,-105,-115,-1.5,Final/SO,6.5,-125
+TOR,2022-04-02T23:00Z,401350227,PHI,2021,Toronto Maple Leafs,6,Philadelphia Flyers,3,-170,,,320,,,False,DraftKings,13,-125,3,REG,-115,-105,1.5,Final,6.5,105
+MIN,2022-04-02T23:00Z,401350228,CAR,2021,Minnesota Wild,3,Carolina Hurricanes,1,225,,,-110,,,False,DraftKings,13,-110,3,REG,-170,150,-1.5,Final,6.0,-110
+LA,2022-04-02T23:00Z,401350230,WPG,2021,Los Angeles Kings,3,Winnipeg Jets,2,160,,,125,,,False,DraftKings,13,-115,3,REG,-225,185,-1.5,Final,6.0,-105
+STL,2022-04-03T02:00Z,401350232,CGY,2021,St. Louis Blues,6,Calgary Flames,4,295,,,-145,,,False,DraftKings,13,100,3,REG,-115,-105,-1.5,Final,6.5,-120
+DAL,2022-04-03T02:30Z,401350233,SJ,2021,Dallas Stars,5,San Jose Sharks,4,105,,,195,,,False,DraftKings,13,-110,3,REG,155,-180,1.5,Final,6.0,-110
+FLA,2022-04-03T17:00Z,401350234,BUF,2021,Florida Panthers,5,Buffalo Sabres,3,-140,,,270,,,False,DraftKings,13,110,3,REG,120,-140,1.5,Final,7.0,-130
+DET,2022-04-03T17:00Z,401350235,OTT,2021,Detroit Red Wings,2,Ottawa Senators,5,210,,,-110,,,False,DraftKings,13,-115,3,REG,-180,155,-1.5,Final,6.5,-105
+NYI,2022-04-03T20:00Z,401350236,NJ,2021,New York Islanders,4,New Jersey Devils,3,115,,,180,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,6.0,100
+PHI,2022-04-03T23:00Z,401350237,NYR,2021,Philadelphia Flyers,4,New York Rangers,3,475,,,-225,,,False,DraftKings,13,105,5,SO,110,-130,-1.5,Final/SO,6.0,-125
+MIN,2022-04-03T23:00Z,401350238,WSH,2021,Minnesota Wild,5,Washington Capitals,1,190,,,105,,,False,DraftKings,12,100,3,REG,-220,180,-1.5,Final,6.5,-120
+ARI,2022-04-03T23:00Z,401350239,CHI,2021,Arizona Coyotes,3,Chicago Blackhawks,2,275,,,-135,,,False,DraftKings,13,100,4,OT,-140,120,-1.5,Final/OT,6.5,-120
+VGK,2022-04-03T23:00Z,401350240,VAN,2021,Vegas Golden Knights,3,Vancouver Canucks,2,135,,,150,,,False,DraftKings,13,-120,4,OT,210,-260,1.5,Final/OT,5.5,100
+EDM,2022-04-04T00:00Z,401350241,ANA,2021,Edmonton Oilers,6,Anaheim Ducks,1,-140,,,275,,,False,DraftKings,13,-115,3,REG,120,-140,1.5,Final,6.5,-105
+DAL,2022-04-04T01:00Z,401350242,SEA,2021,Dallas Stars,1,Seattle Kraken,4,100,,,205,,,False,DraftKings,12,-120,3,REG,165,-195,1.5,Final,5.5,100
+BOS,2022-04-04T23:00Z,401350244,CBJ,2021,Boston Bruins,3,Columbus Blue Jackets,2,-140,,,275,,,False,DraftKings,13,-120,4,OT,105,-125,1.5,Final/OT,6.5,100
+TOR,2022-04-04T23:30Z,401350243,TB,2021,Toronto Maple Leafs,6,Tampa Bay Lightning,2,175,,,110,,,False,DraftKings,13,280,3,REG,-200,170,-1.5,Final,8.0,-425
+ARI,2022-04-05T00:00Z,401350245,STL,2021,Arizona Coyotes,1,St. Louis Blues,5,500,,,-270,,,False,DraftKings,13,100,3,REG,150,-170,-1.5,Final,6.5,-120
+CGY,2022-04-05T02:30Z,401350246,LA,2021,Calgary Flames,3,Los Angeles Kings,2,-115,,,235,,,False,DraftKings,13,-105,3,REG,140,-160,1.5,Final,6.0,-115
+CAR,2022-04-05T23:00Z,401350247,BUF,2021,Carolina Hurricanes,2,Buffalo Sabres,4,-170,,,350,,,False,DraftKings,13,-120,3,REG,-105,-115,1.5,Final,6.0,100
+OTT,2022-04-05T23:00Z,401350248,MTL,2021,Ottawa Senators,6,Montreal Canadiens,3,125,,,165,,,False,DraftKings,13,-120,3,REG,195,-240,1.5,Final,6.0,100
+TOR,2022-04-05T23:00Z,401350250,FLA,2021,Toronto Maple Leafs,6,Florida Panthers,7,215,,,-115,,,False,DraftKings,13,-130,4,OT,-155,135,-1.5,Final/OT,7.0,110
+NYR,2022-04-05T23:00Z,401350251,NJ,2021,New York Rangers,3,New Jersey Devils,1,105,,,185,,,False,DraftKings,13,-120,3,REG,175,-210,1.5,Final,6.5,100
+CBJ,2022-04-05T23:00Z,401350252,PHI,2021,Columbus Blue Jackets,4,Philadelphia Flyers,2,180,,,110,,,False,DraftKings,13,-130,3,REG,-210,175,-1.5,Final,6.5,110
+COL,2022-04-05T23:00Z,401350253,PIT,2021,Colorado Avalanche,6,Pittsburgh Penguins,4,160,,,125,,,False,DraftKings,13,-105,3,REG,-255,205,-1.5,Final,6.0,-115
+BOS,2022-04-05T23:30Z,401350249,DET,2021,Boston Bruins,3,Detroit Red Wings,5,-130,,,265,,,False,DraftKings,13,-115,3,REG,130,-150,1.5,Final,6.0,-105
+MIN,2022-04-06T00:00Z,401350254,NSH,2021,Minnesota Wild,2,Nashville Predators,6,135,,,150,,,False,DraftKings,13,-115,3,REG,225,-280,1.5,Final,6.0,-105
+NYI,2022-04-06T00:30Z,401350255,DAL,2021,New York Islanders,2,Dallas Stars,3,190,,,115,,,False,DraftKings,13,105,3,REG,-235,190,-1.5,Final,5.5,-125
+EDM,2022-04-06T02:30Z,401350256,SJ,2021,Edmonton Oilers,2,San Jose Sharks,1,-120,,,235,,,False,DraftKings,13,-105,4,OT,130,-150,1.5,Final/OT,6.5,-115
+TB,2022-04-06T23:30Z,401350257,WSH,2021,Tampa Bay Lightning,3,Washington Capitals,4,100,,,195,,,False,DraftKings,13,-105,3,REG,170,-200,1.5,Final,6.5,-115
+DET,2022-04-06T23:30Z,401350259,WPG,2021,Detroit Red Wings,3,Winnipeg Jets,1,380,,,-195,,,False,DraftKings,13,100,3,REG,-110,-110,-1.5,Final,6.5,-120
+SEA,2022-04-07T00:00Z,401350258,STL,2021,Seattle Kraken,1,St. Louis Blues,4,300,,,-150,,,False,DraftKings,13,-110,3,REG,-140,120,-1.5,Final,6.0,-110
+VAN,2022-04-07T02:00Z,401350260,VGK,2021,Vancouver Canucks,5,Vegas Golden Knights,1,240,,,-120,,,False,DraftKings,13,100,3,REG,-165,145,-1.5,Final,6.0,-120
+CGY,2022-04-07T02:00Z,401350261,ANA,2021,Calgary Flames,4,Anaheim Ducks,2,-170,,,340,,,False,DraftKings,13,-115,3,REG,100,-120,1.5,Final,6.0,-105
+PIT,2022-04-07T23:00Z,401350263,NYR,2021,Pittsburgh Penguins,0,New York Rangers,3,160,,,130,,,False,DraftKings,12,-125,3,REG,-235,190,-1.5,Final,5.5,105
+PHI,2022-04-07T23:00Z,401350265,CBJ,2021,Philadelphia Flyers,4,Columbus Blue Jackets,1,175,,,115,,,False,DraftKings,13,100,3,REG,-200,170,-1.5,Final,6.5,-120
+NSH,2022-04-07T23:00Z,401406996,OTT,2021,Nashville Predators,3,Ottawa Senators,2,-115,,,220,,,False,DraftKings,13,105,3,REG,145,-165,1.5,Final,6.5,-125
+MTL,2022-04-07T23:00Z,401406997,NJ,2021,Montreal Canadiens,7,New Jersey Devils,4,205,,,-105,,,False,DraftKings,13,-120,3,REG,-170,150,-1.5,Final,6.5,100
+BUF,2022-04-07T23:30Z,401350264,CAR,2021,Buffalo Sabres,3,Carolina Hurricanes,5,425,,,-220,,,False,DraftKings,13,-105,3,REG,120,-140,-1.5,Final,6.5,-115
+SEA,2022-04-08T00:30Z,401350266,CHI,2021,Seattle Kraken,2,Chicago Blackhawks,0,195,,,100,,,False,DraftKings,13,100,3,REG,-195,165,-1.5,Final,6.5,-120
+TOR,2022-04-08T00:30Z,401350267,DAL,2021,Toronto Maple Leafs,4,Dallas Stars,3,110,,,180,,,False,DraftKings,13,-115,4,OT,155,-180,1.5,Final/OT,6.5,-105
+VAN,2022-04-08T02:00Z,401350268,ARI,2021,Vancouver Canucks,5,Arizona Coyotes,1,-120,,,235,,,False,DraftKings,13,-105,3,REG,140,-160,1.5,Final,6.0,-115
+EDM,2022-04-08T02:30Z,401350269,LA,2021,Edmonton Oilers,3,Los Angeles Kings,2,120,,,165,,,False,DraftKings,13,-115,3,REG,180,-220,1.5,Final,6.5,-105
+CGY,2022-04-08T02:30Z,401350270,SJ,2021,Calgary Flames,4,San Jose Sharks,2,-125,,,250,,,False,DraftKings,13,-120,3,REG,140,-160,1.5,Final,6.0,100
+BOS,2022-04-08T23:00Z,401350271,TB,2021,Boston Bruins,2,Tampa Bay Lightning,1,210,,,100,,,False,DraftKings,13,-120,4,OT,-170,150,-1.5,Final/OT,5.5,100
+BUF,2022-04-08T23:00Z,401350272,FLA,2021,Buffalo Sabres,3,Florida Panthers,4,500,,,-270,,,False,DraftKings,13,-130,3,REG,155,-180,-1.5,Final,7.0,110
+NYI,2022-04-08T23:00Z,401350273,CAR,2021,New York Islanders,2,Carolina Hurricanes,1,230,,,-115,,,False,DraftKings,13,-110,3,REG,-160,140,-1.5,Final,5.5,-110
+MIN,2022-04-09T00:00Z,401350274,STL,2021,Minnesota Wild,3,St. Louis Blues,4,155,,,135,,,False,DraftKings,13,100,4,OT,205,-255,1.5,Final/OT,6.5,-120
+COL,2022-04-09T00:00Z,401350275,WPG,2021,Colorado Avalanche,5,Winnipeg Jets,4,-120,,,235,,,False,DraftKings,13,225,4,OT,135,-155,1.5,Final/OT,7.5,-320
+NJ,2022-04-09T18:00Z,401350283,DAL,2021,New Jersey Devils,3,Dallas Stars,1,280,,,-150,,,False,DraftKings,13,-110,3,REG,-115,-105,-1.5,Final,6.5,-110
+WSH,2022-04-09T19:00Z,401350280,PIT,2021,Washington Capitals,6,Pittsburgh Penguins,3,185,,,105,,,False,DraftKings,13,-115,3,REG,-180,155,-1.5,Final,6.5,-105
+FLA,2022-04-09T22:00Z,401350282,NSH,2021,Florida Panthers,4,Nashville Predators,1,110,,,165,,,False,DraftKings,13,-120,3,REG,175,-210,1.5,Final,7.0,100
+MTL,2022-04-09T23:00Z,401350276,TOR,2021,Montreal Canadiens,2,Toronto Maple Leafs,3,450,,,-250,,,False,DraftKings,13,100,3,REG,130,-150,-1.5,Final,7.0,-120
+CBJ,2022-04-09T23:00Z,401350277,DET,2021,Columbus Blue Jackets,5,Detroit Red Wings,4,160,,,125,,,False,DraftKings,13,-135,4,OT,-240,195,-1.5,Final/OT,6.5,115
+OTT,2022-04-09T23:00Z,401350278,NYR,2021,Ottawa Senators,1,New York Rangers,5,330,,,-160,,,False,DraftKings,13,105,3,REG,-115,-105,-1.5,Final,6.0,-125
+CGY,2022-04-09T23:00Z,401350288,SEA,2021,Calgary Flames,4,Seattle Kraken,1,-155,,,310,,,False,DraftKings,13,-120,3,REG,110,-130,1.5,Final,5.5,100
+ANA,2022-04-09T23:30Z,401350279,PHI,2021,Anaheim Ducks,5,Philadelphia Flyers,3,140,,,145,,,False,DraftKings,13,-120,3,REG,-250,200,-1.5,Final,6.0,100
+NYI,2022-04-10T00:00Z,401350281,STL,2021,New York Islanders,1,St. Louis Blues,6,180,,,115,,,False,DraftKings,13,-120,3,REG,-225,185,-1.5,Final,5.5,100
+COL,2022-04-10T02:00Z,401350285,EDM,2021,Colorado Avalanche,2,Edmonton Oilers,1,120,,,160,,,False,DraftKings,13,-120,5,SO,205,-255,1.5,Final/SO,6.5,100
+SJ,2022-04-10T02:00Z,401350286,VAN,2021,San Jose Sharks,2,Vancouver Canucks,4,215,,,-105,,,False,DraftKings,13,-120,3,REG,-190,160,-1.5,Final,5.5,100
+ARI,2022-04-10T02:00Z,401350287,VGK,2021,Arizona Coyotes,1,Vegas Golden Knights,6,475,,,-260,,,False,DraftKings,12,350,3,REG,125,-145,-1.5,Final,8.0,-550
+BOS,2022-04-10T17:30Z,401350292,WSH,2021,Boston Bruins,2,Washington Capitals,4,130,,,150,,,False,DraftKings,13,-110,3,REG,195,-240,1.5,Final,6.0,-110
+NSH,2022-04-10T20:00Z,401350291,PIT,2021,Nashville Predators,2,Pittsburgh Penguins,3,225,,,-120,,,False,DraftKings,13,270,4,OT,-155,135,-1.5,Final/OT,8.0,-400
+BUF,2022-04-10T21:00Z,401350290,TB,2021,Buffalo Sabres,0,Tampa Bay Lightning,5,400,,,-225,,,False,DraftKings,13,-115,3,REG,115,-135,-1.5,Final,6.5,-105
+LA,2022-04-10T21:00Z,401358473,MIN,2021,Los Angeles Kings,3,Minnesota Wild,6,225,,,-115,,,False,DraftKings,13,100,3,REG,-155,135,-1.5,Final,6.0,-120
+ANA,2022-04-10T22:00Z,401350293,CAR,2021,Anaheim Ducks,2,Carolina Hurricanes,5,500,,,-255,,,False,DraftKings,12,-125,3,REG,125,-145,-1.5,Final,5.5,105
+DAL,2022-04-10T23:00Z,401350294,CHI,2021,Dallas Stars,6,Chicago Blackhawks,4,100,,,200,,,False,DraftKings,13,105,3,REG,155,-180,1.5,Final,6.0,-125
+WPG,2022-04-10T23:30Z,401350289,OTT,2021,Winnipeg Jets,4,Ottawa Senators,3,-115,,,220,,,False,DraftKings,13,-120,3,REG,145,-165,1.5,Final,6.0,100
+WPG,2022-04-11T23:00Z,401350296,MTL,2021,Winnipeg Jets,4,Montreal Canadiens,2,125,,,155,,,False,DraftKings,12,-115,3,REG,185,-225,1.5,Final,6.5,-105
+STL,2022-04-12T23:00Z,401350298,BOS,2021,St. Louis Blues,4,Boston Bruins,2,170,,,115,,,False,DraftKings,13,-105,3,REG,-210,175,-1.5,Final,6.0,-115
+BUF,2022-04-12T23:00Z,401350299,TOR,2021,Buffalo Sabres,5,Toronto Maple Leafs,2,500,,,-265,,,False,DraftKings,12,-110,3,REG,135,-155,-1.5,Final,7.0,-110
+ANA,2022-04-12T23:00Z,401350301,FLA,2021,Anaheim Ducks,2,Florida Panthers,3,500,,,-265,,,False,DraftKings,13,-130,4,OT,150,-170,-1.5,Final/OT,6.5,110
+CAR,2022-04-12T23:00Z,401350302,NYR,2021,Carolina Hurricanes,4,New York Rangers,2,125,,,170,,,False,DraftKings,13,-110,3,REG,195,-240,1.5,Final,5.5,-110
+PHI,2022-04-12T23:00Z,401350304,WSH,2021,Philadelphia Flyers,2,Washington Capitals,9,300,,,-155,,,False,DraftKings,13,-105,3,REG,-115,-105,-1.5,Final,6.5,-115
+OTT,2022-04-12T23:30Z,401350300,DET,2021,Ottawa Senators,4,Detroit Red Wings,1,155,,,130,,,False,DraftKings,13,-105,3,REG,-235,190,-1.5,Final,6.5,-115
+PIT,2022-04-12T23:30Z,401418730,NYI,2021,Pittsburgh Penguins,4,New York Islanders,5,135,,,155,,,False,DraftKings,13,-120,5,SO,210,-260,1.5,Final/SO,5.5,100
+EDM,2022-04-13T00:00Z,401350297,MIN,2021,Edmonton Oilers,1,Minnesota Wild,5,180,,,110,,,False,DraftKings,13,175,3,REG,-210,175,-1.5,Final,7.5,-235
+SJ,2022-04-13T00:00Z,401350322,NSH,2021,San Jose Sharks,0,Nashville Predators,1,250,,,-120,,,False,DraftKings,13,100,4,OT,-140,120,-1.5,Final/OT,6.0,-120
+LA,2022-04-13T00:30Z,401350321,CHI,2021,Los Angeles Kings,5,Chicago Blackhawks,2,110,,,190,,,False,DraftKings,13,-120,3,REG,160,-190,1.5,Final,6.0,100
+SEA,2022-04-13T01:00Z,401350308,CGY,2021,Seattle Kraken,3,Calgary Flames,5,450,,,-240,,,False,DraftKings,13,-110,3,REG,120,-140,-1.5,Final,6.0,-110
+TB,2022-04-13T01:30Z,401350307,DAL,2021,Tampa Bay Lightning,0,Dallas Stars,1,100,,,200,,,False,DraftKings,13,-110,3,REG,165,-195,1.5,Final,6.0,-110
+VGK,2022-04-13T02:00Z,401350309,VAN,2021,Vegas Golden Knights,4,Vancouver Canucks,5,120,,,170,,,False,DraftKings,13,-105,4,OT,175,-210,1.5,Final/OT,6.0,-115
+NJ,2022-04-13T02:00Z,401350310,ARI,2021,New Jersey Devils,6,Arizona Coyotes,2,105,,,195,,,False,DraftKings,13,-115,3,REG,155,-180,1.5,Final,6.5,-105
+NYR,2022-04-13T23:00Z,401350311,PHI,2021,New York Rangers,4,Philadelphia Flyers,0,-135,,,270,,,False,DraftKings,13,-115,3,REG,105,-125,1.5,Final,6.0,-105
+MTL,2022-04-13T23:00Z,401350312,CBJ,2021,Montreal Canadiens,1,Columbus Blue Jackets,5,210,,,-110,,,False,DraftKings,13,-105,3,REG,-180,155,-1.5,Final,6.5,-115
+LA,2022-04-14T01:30Z,401350314,COL,2021,Los Angeles Kings,3,Colorado Avalanche,9,360,,,-170,,,False,DraftKings,13,-105,3,REG,-115,-105,-1.5,Final,6.0,-115
+OTT,2022-04-14T23:00Z,401350315,BOS,2021,Ottawa Senators,3,Boston Bruins,2,340,,,-175,,,False,DraftKings,13,-110,3,REG,-115,-105,-1.5,Final,6.0,-110
+STL,2022-04-14T23:00Z,401350316,BUF,2021,St. Louis Blues,6,Buffalo Sabres,2,-115,,,225,,,False,DraftKings,13,-110,3,REG,145,-165,1.5,Final,6.5,-110
+WSH,2022-04-14T23:00Z,401350317,TOR,2021,Washington Capitals,3,Toronto Maple Leafs,7,215,,,-110,,,False,DraftKings,13,-135,3,REG,-165,145,-1.5,Final,6.5,115
+ANA,2022-04-14T23:00Z,401350318,TB,2021,Anaheim Ducks,3,Tampa Bay Lightning,4,400,,,-205,,,False,DraftKings,13,100,4,OT,115,-135,-1.5,Final/OT,6.0,-120
+NYI,2022-04-14T23:00Z,401350319,PIT,2021,New York Islanders,3,Pittsburgh Penguins,6,230,,,-110,,,False,DraftKings,13,-120,3,REG,-190,160,-1.5,Final,5.5,100
+DET,2022-04-14T23:00Z,401350320,CAR,2021,Detroit Red Wings,3,Carolina Hurricanes,0,425,,,-225,,,False,DraftKings,13,-105,3,REG,125,-145,-1.5,Final,6.5,-115
+EDM,2022-04-15T00:00Z,401350306,NSH,2021,Edmonton Oilers,4,Nashville Predators,0,170,,,120,,,False,DraftKings,13,235,3,REG,-235,190,-1.5,Final,7.5,-340
+MIN,2022-04-15T00:00Z,401350323,DAL,2021,Minnesota Wild,3,Dallas Stars,2,115,,,175,,,False,DraftKings,13,100,4,OT,190,-235,1.5,Final/OT,6.0,-120
+SJ,2022-04-15T00:30Z,401350305,CHI,2021,San Jose Sharks,4,Chicago Blackhawks,5,135,,,155,,,False,DraftKings,12,100,5,SO,185,-225,1.5,Final/SO,6.0,-120
+NJ,2022-04-15T01:00Z,401350324,COL,2021,New Jersey Devils,1,Colorado Avalanche,3,320,,,-175,,,False,DraftKings,12,-125,3,REG,-110,-110,-1.5,Final,6.5,105
+VGK,2022-04-15T01:00Z,401350325,CGY,2021,Vegas Golden Knights,6,Calgary Flames,1,205,,,100,,,False,DraftKings,13,-120,3,REG,-170,150,-1.5,Final,6.0,100
+ARI,2022-04-15T02:00Z,401350326,VAN,2021,Arizona Coyotes,1,Vancouver Canucks,7,380,,,-200,,,False,DraftKings,13,310,3,REG,115,-135,-1.5,Final,8.0,-475
+NYI,2022-04-15T23:00Z,401350327,MTL,2021,New York Islanders,3,Montreal Canadiens,0,105,,,200,,,False,DraftKings,13,100,3,REG,155,-180,1.5,Final,6.0,-120
+WPG,2022-04-15T23:00Z,401350328,FLA,2021,Winnipeg Jets,1,Florida Panthers,6,310,,,-165,,,False,DraftKings,13,110,3,REG,-105,-115,-1.5,Final,7.0,-130
+PIT,2022-04-16T16:30Z,401350330,BOS,2021,Pittsburgh Penguins,1,Boston Bruins,2,180,,,115,,,False,DraftKings,13,-110,3,REG,-220,180,-1.5,Final,6.0,-110
+DET,2022-04-16T16:30Z,401350335,NYR,2021,Detroit Red Wings,0,New York Rangers,4,475,,,-240,,,False,DraftKings,13,-120,3,REG,120,-140,-1.5,Final,6.0,100
+CHI,2022-04-16T16:30Z,401350337,NSH,2021,Chicago Blackhawks,3,Nashville Predators,4,400,,,-180,,,False,DraftKings,13,-105,3,REG,105,-125,-1.5,Final,6.0,-115
+MIN,2022-04-16T19:00Z,401350336,STL,2021,Minnesota Wild,5,St. Louis Blues,6,145,,,135,,,False,DraftKings,13,-120,4,OT,-240,195,-1.5,Final/OT,6.0,100
+VGK,2022-04-16T20:00Z,401350329,EDM,2021,Vegas Golden Knights,0,Edmonton Oilers,4,150,,,130,,,False,DraftKings,13,-135,3,REG,-210,175,-1.5,Final,6.5,115
+PHI,2022-04-16T23:00Z,401350331,BUF,2021,Philadelphia Flyers,3,Buffalo Sabres,4,185,,,110,,,False,DraftKings,13,-120,3,REG,-190,160,-1.5,Final,6.0,100
+WSH,2022-04-16T23:00Z,401350332,MTL,2021,Washington Capitals,8,Montreal Canadiens,4,-175,,,340,,,False,DraftKings,13,-105,3,REG,-105,-115,1.5,Final,6.5,-115
+TOR,2022-04-16T23:00Z,401350333,OTT,2021,Toronto Maple Leafs,5,Ottawa Senators,4,-155,,,300,,,False,DraftKings,13,-120,4,OT,100,-120,1.5,Final/OT,6.5,100
+WPG,2022-04-16T23:00Z,401350334,TB,2021,Winnipeg Jets,4,Tampa Bay Lightning,7,310,,,-150,,,False,DraftKings,12,-120,3,REG,-125,105,-1.5,Final,6.0,100
+SJ,2022-04-17T00:00Z,401350338,DAL,2021,San Jose Sharks,1,Dallas Stars,2,310,,,-150,,,False,DraftKings,13,100,3,REG,-130,110,-1.5,Final,6.0,-120
+CAR,2022-04-17T01:00Z,401350339,COL,2021,Carolina Hurricanes,4,Colorado Avalanche,7,180,,,115,,,False,DraftKings,13,-105,3,REG,-210,175,-1.5,Final,6.0,-115
+ARI,2022-04-17T02:00Z,401350340,CGY,2021,Arizona Coyotes,1,Calgary Flames,9,550,,,-265,,,False,DraftKings,13,-125,3,REG,170,-200,-1.5,Final,6.0,105
+NJ,2022-04-17T02:00Z,401350343,SEA,2021,New Jersey Devils,3,Seattle Kraken,4,150,,,135,,,False,DraftKings,13,100,5,SO,-240,195,-1.5,Final/SO,6.5,-120
+CBJ,2022-04-17T02:30Z,401350342,LA,2021,Columbus Blue Jackets,1,Los Angeles Kings,2,235,,,-120,,,False,DraftKings,13,-115,3,REG,-145,125,-1.5,Final,6.5,-105
+FLA,2022-04-17T17:00Z,401350344,DET,2021,Florida Panthers,6,Detroit Red Wings,1,-220,,,425,,,False,DraftKings,13,-120,3,REG,-145,125,1.5,Final,7.0,100
+BUF,2022-04-17T21:00Z,401350346,PHI,2021,Buffalo Sabres,5,Philadelphia Flyers,3,135,,,150,,,False,DraftKings,13,100,3,REG,-255,205,-1.5,Final,6.5,-120
+STL,2022-04-17T22:00Z,401350347,NSH,2021,St. Louis Blues,8,Nashville Predators,3,135,,,145,,,False,DraftKings,13,-115,3,REG,205,-255,1.5,Final,6.5,-105
+SJ,2022-04-17T22:00Z,401350348,MIN,2021,San Jose Sharks,4,Minnesota Wild,5,350,,,-170,,,False,DraftKings,13,-110,4,OT,105,-125,-1.5,Final/OT,6.0,-110
+NYI,2022-04-17T23:30Z,401350345,TOR,2021,New York Islanders,2,Toronto Maple Leafs,4,250,,,-125,,,False,DraftKings,12,-120,3,REG,-160,140,-1.5,Final,6.0,100
+CBJ,2022-04-18T00:30Z,401350349,ANA,2021,Columbus Blue Jackets,4,Anaheim Ducks,6,185,,,110,,,False,DraftKings,12,-120,3,REG,-170,150,-1.5,Final,6.0,100
+CGY,2022-04-19T00:00Z,401406998,CHI,2021,Calgary Flames,5,Chicago Blackhawks,2,-180,,,370,,,False,DraftKings,12,-115,3,REG,-125,105,1.5,Final,6.5,-105
+WSH,2022-04-19T01:00Z,401350350,COL,2021,Washington Capitals,3,Colorado Avalanche,2,240,,,-125,,,False,DraftKings,13,-130,3,REG,-150,130,-1.5,Final,6.5,110
+CAR,2022-04-19T02:00Z,401350352,ARI,2021,Carolina Hurricanes,5,Arizona Coyotes,3,-220,,,425,,,False,DraftKings,13,310,3,REG,-160,140,1.5,Final,8.0,-475
+NJ,2022-04-19T02:00Z,401350353,VGK,2021,New Jersey Devils,3,Vegas Golden Knights,2,380,,,-200,,,False,DraftKings,12,115,3,REG,110,-130,-1.5,Final,7.0,-135
+OTT,2022-04-19T02:00Z,401406999,SEA,2021,Ottawa Senators,2,Seattle Kraken,4,160,,,125,,,False,DraftKings,13,100,3,REG,-250,200,-1.5,Final,6.0,-120
+DAL,2022-04-19T02:30Z,401350351,VAN,2021,Dallas Stars,2,Vancouver Canucks,6,135,,,155,,,False,DraftKings,13,-110,3,REG,-275,220,-1.5,Final,5.5,-110
+PHI,2022-04-19T23:00Z,401350354,TOR,2021,Philadelphia Flyers,2,Toronto Maple Leafs,5,475,,,-255,,,False,DraftKings,13,105,3,REG,150,-170,-1.5,Final,7.0,-125
+MIN,2022-04-19T23:00Z,401350355,MTL,2021,Minnesota Wild,2,Montreal Canadiens,0,-160,,,310,,,False,DraftKings,13,285,3,REG,-110,-110,1.5,Final,8.5,-425
+DET,2022-04-19T23:00Z,401350356,TB,2021,Detroit Red Wings,4,Tampa Bay Lightning,3,550,,,-260,,,False,DraftKings,13,-110,3,REG,160,-190,-1.5,Final,6.5,-110
+WPG,2022-04-19T23:00Z,401350358,NYR,2021,Winnipeg Jets,0,New York Rangers,3,260,,,-130,,,False,DraftKings,13,-120,3,REG,-130,110,-1.5,Final,6.0,100
+FLA,2022-04-19T23:30Z,401350357,NYI,2021,Florida Panthers,3,New York Islanders,2,-125,,,245,,,False,DraftKings,13,-125,4,OT,125,-145,1.5,Final/OT,6.5,105
+BOS,2022-04-20T00:00Z,401350359,STL,2021,Boston Bruins,3,St. Louis Blues,2,175,,,115,,,False,DraftKings,13,-130,4,OT,-210,175,-1.5,Final/OT,6.0,110
+CGY,2022-04-20T00:00Z,401407000,NSH,2021,Calgary Flames,2,Nashville Predators,3,125,,,160,,,False,DraftKings,13,100,5,SO,185,-225,1.5,Final/SO,6.5,-120
+LA,2022-04-20T02:00Z,401350360,ANA,2021,Los Angeles Kings,2,Anaheim Ducks,1,-110,,,225,,,False,DraftKings,13,-115,3,REG,150,-170,1.5,Final,6.0,-105
+OTT,2022-04-20T02:00Z,401407001,VAN,2021,Ottawa Senators,4,Vancouver Canucks,3,295,,,-150,,,False,DraftKings,13,-110,5,SO,-140,120,-1.5,Final/SO,6.5,-110
+CBJ,2022-04-20T02:30Z,401350361,SJ,2021,Columbus Blue Jackets,2,San Jose Sharks,3,165,,,125,,,False,DraftKings,13,-120,3,REG,-210,175,-1.5,Final,6.0,100
+DAL,2022-04-21T00:30Z,401350363,EDM,2021,Dallas Stars,2,Edmonton Oilers,5,240,,,-110,,,False,DraftKings,13,105,3,REG,-165,145,-1.5,Final,6.5,-125
+CHI,2022-04-21T02:00Z,401350364,ARI,2021,Chicago Blackhawks,4,Arizona Coyotes,3,100,,,200,,,False,DraftKings,13,100,4,OT,155,-180,1.5,Final/OT,6.5,-120
+WSH,2022-04-21T02:00Z,401350365,VGK,2021,Washington Capitals,3,Vegas Golden Knights,4,180,,,115,,,False,DraftKings,13,-110,4,OT,-195,165,-1.5,Final/OT,6.5,-110
+COL,2022-04-21T02:00Z,401350366,SEA,2021,Colorado Avalanche,2,Seattle Kraken,3,-190,,,390,,,False,DraftKings,13,-125,3,REG,-125,105,1.5,Final,6.5,105
+PHI,2022-04-21T23:00Z,401350367,MTL,2021,Philadelphia Flyers,6,Montreal Canadiens,3,175,,,115,,,False,DraftKings,13,-120,3,REG,-200,170,-1.5,Final,6.0,100
+DET,2022-04-21T23:00Z,401350369,FLA,2021,Detroit Red Wings,2,Florida Panthers,5,650,,,-350,,,False,DraftKings,13,-105,3,REG,185,-225,-1.5,Final,7.0,-115
+BUF,2022-04-21T23:00Z,401350370,NJ,2021,Buffalo Sabres,5,New Jersey Devils,2,175,,,110,,,False,DraftKings,13,-130,3,REG,-200,170,-1.5,Final,6.5,110
+BOS,2022-04-21T23:00Z,401350372,PIT,2021,Boston Bruins,0,Pittsburgh Penguins,4,165,,,125,,,False,DraftKings,13,-120,3,REG,-250,200,-1.5,Final,5.5,100
+WPG,2022-04-21T23:00Z,401350373,CAR,2021,Winnipeg Jets,2,Carolina Hurricanes,4,340,,,-165,,,False,DraftKings,13,-125,3,REG,-105,-115,-1.5,Final,6.0,105
+NYR,2022-04-21T23:30Z,401350371,NYI,2021,New York Rangers,6,New York Islanders,3,120,,,180,,,False,DraftKings,13,-120,3,REG,185,-225,1.5,Final,5.5,100
+TOR,2022-04-22T00:00Z,401350368,TB,2021,Toronto Maple Leafs,1,Tampa Bay Lightning,8,170,,,115,,,False,DraftKings,13,-130,3,REG,-210,175,-1.5,Final,6.5,110
+VAN,2022-04-22T00:00Z,401350374,MIN,2021,Vancouver Canucks,3,Minnesota Wild,6,235,,,-115,,,False,DraftKings,13,-115,3,REG,-165,145,-1.5,Final,6.0,-105
+DAL,2022-04-22T01:00Z,401350375,CGY,2021,Dallas Stars,2,Calgary Flames,4,280,,,-135,,,False,DraftKings,12,-120,3,REG,-135,115,-1.5,Final,5.5,100
+CHI,2022-04-22T02:30Z,401350376,LA,2021,Chicago Blackhawks,1,Los Angeles Kings,4,300,,,-155,,,False,DraftKings,12,-120,3,REG,-110,-110,-1.5,Final,6.0,100
+STL,2022-04-22T02:30Z,401350377,SJ,2021,St. Louis Blues,3,San Jose Sharks,1,-125,,,255,,,False,DraftKings,12,100,3,REG,135,-155,1.5,Final,6.5,-120
+OTT,2022-04-22T23:00Z,401350378,CBJ,2021,Ottawa Senators,2,Columbus Blue Jackets,1,150,,,135,,,False,DraftKings,13,-110,5,SO,-250,200,-1.5,Final/SO,6.5,-110
+SEA,2022-04-23T00:00Z,401350379,MIN,2021,Seattle Kraken,3,Minnesota Wild,6,350,,,-170,,,False,DraftKings,13,-120,3,REG,-105,-115,-1.5,Final,6.0,100
+COL,2022-04-23T01:00Z,401350380,EDM,2021,Colorado Avalanche,3,Edmonton Oilers,6,130,,,155,,,False,DraftKings,13,-120,3,REG,215,-265,1.5,Final,6.0,100
+WSH,2022-04-23T02:30Z,401350381,ARI,2021,Washington Capitals,2,Arizona Coyotes,0,-220,,,450,,,False,DraftKings,12,-110,3,REG,-150,130,1.5,Final,6.5,-110
+NYI,2022-04-23T16:30Z,401350383,BUF,2021,New York Islanders,3,Buffalo Sabres,5,115,,,175,,,False,DraftKings,13,100,3,REG,180,-220,1.5,Final,6.0,-120
+PIT,2022-04-23T16:30Z,401350385,DET,2021,Pittsburgh Penguins,7,Detroit Red Wings,2,-170,,,340,,,False,DraftKings,13,205,3,REG,-110,-110,1.5,Final,7.5,-285
+CAR,2022-04-23T16:30Z,401350388,NJ,2021,Carolina Hurricanes,3,New Jersey Devils,2,-135,,,270,,,False,DraftKings,13,-110,4,OT,105,-125,1.5,Final/OT,6.5,-110
+NYR,2022-04-23T19:00Z,401350382,BOS,2021,New York Rangers,1,Boston Bruins,3,165,,,125,,,False,DraftKings,13,-110,3,REG,-200,170,-1.5,Final,5.5,-110
+MTL,2022-04-23T23:00Z,401350384,OTT,2021,Montreal Canadiens,4,Ottawa Senators,6,215,,,-105,,,False,DraftKings,13,-105,3,REG,-190,160,-1.5,Final,6.5,-115
+NSH,2022-04-23T23:00Z,401350386,TB,2021,Nashville Predators,2,Tampa Bay Lightning,6,225,,,-110,,,False,DraftKings,13,-115,3,REG,-195,165,-1.5,Final,6.5,-105
+TOR,2022-04-23T23:00Z,401350387,FLA,2021,Toronto Maple Leafs,2,Florida Panthers,3,180,,,105,,,False,DraftKings,13,115,4,OT,-195,165,-1.5,Final/OT,7.5,-135
+SEA,2022-04-24T00:00Z,401350389,DAL,2021,Seattle Kraken,2,Dallas Stars,3,350,,,-165,,,False,DraftKings,13,-105,3,REG,-110,-110,-1.5,Final,6.0,-115
+CHI,2022-04-24T00:00Z,401350393,SJ,2021,Chicago Blackhawks,1,San Jose Sharks,4,190,,,105,,,False,DraftKings,12,100,3,REG,-180,155,-1.5,Final,6.5,-120
+VAN,2022-04-24T02:00Z,401350390,CGY,2021,Vancouver Canucks,3,Calgary Flames,6,280,,,-145,,,False,DraftKings,13,-110,3,REG,-140,120,-1.5,Final,6.5,-110
+STL,2022-04-24T02:00Z,401350391,ARI,2021,St. Louis Blues,5,Arizona Coyotes,4,-225,,,450,,,False,DraftKings,12,-115,4,OT,-170,150,1.5,Final/OT,6.5,-105
+ANA,2022-04-24T02:30Z,401350392,LA,2021,Anaheim Ducks,2,Los Angeles Kings,4,310,,,-155,,,False,DraftKings,13,-105,3,REG,-115,-105,-1.5,Final,6.0,-115
+DET,2022-04-24T17:00Z,401350395,NJ,2021,Detroit Red Wings,3,New Jersey Devils,0,215,,,-110,,,False,DraftKings,12,-125,3,REG,-165,145,-1.5,Final,6.5,105
+CAR,2022-04-24T17:00Z,401350396,NYI,2021,Carolina Hurricanes,5,New York Islanders,2,-120,,,250,,,False,DraftKings,13,100,3,REG,140,-160,1.5,Final,6.0,-120
+EDM,2022-04-24T17:00Z,401350400,CBJ,2021,Edmonton Oilers,2,Columbus Blue Jackets,5,-155,,,300,,,False,DraftKings,13,-130,3,REG,100,-120,1.5,Final,6.5,110
+PIT,2022-04-24T20:00Z,401350398,PHI,2021,Pittsburgh Penguins,1,Philadelphia Flyers,4,-150,,,290,,,False,DraftKings,13,-135,3,REG,-105,-115,1.5,Final,6.5,115
+TB,2022-04-24T23:00Z,401350394,FLA,2021,Tampa Bay Lightning,8,Florida Panthers,4,155,,,125,,,False,DraftKings,12,-130,3,REG,-225,185,-1.5,Final,6.5,110
+TOR,2022-04-24T23:00Z,401350399,WSH,2021,Toronto Maple Leafs,4,Washington Capitals,3,145,,,135,,,False,DraftKings,13,-110,5,SO,-250,200,-1.5,Final/SO,7.0,-110
+COL,2022-04-24T23:00Z,401350402,WPG,2021,Colorado Avalanche,1,Winnipeg Jets,4,-120,,,240,,,False,DraftKings,13,-105,3,REG,140,-160,1.5,Final,6.5,-115
+BOS,2022-04-24T23:00Z,401407002,MTL,2021,Boston Bruins,5,Montreal Canadiens,3,-195,,,400,,,False,DraftKings,13,100,3,REG,-115,-105,1.5,Final,6.0,-120
+MIN,2022-04-25T00:00Z,401350401,NSH,2021,Minnesota Wild,5,Nashville Predators,4,125,,,160,,,False,DraftKings,13,-110,4,OT,195,-240,1.5,Final/OT,6.5,-110
+STL,2022-04-25T00:30Z,401350404,ANA,2021,St. Louis Blues,6,Anaheim Ducks,3,-130,,,255,,,False,DraftKings,13,-120,3,REG,115,-135,1.5,Final,6.5,100
+SJ,2022-04-25T02:00Z,401350403,VGK,2021,San Jose Sharks,5,Vegas Golden Knights,4,400,,,-210,,,False,DraftKings,13,100,5,SO,115,-135,-1.5,Final/SO,6.5,-120
+PHI,2022-04-26T00:00Z,401350405,CHI,2021,Philadelphia Flyers,1,Chicago Blackhawks,3,175,,,110,,,False,DraftKings,13,-115,3,REG,-190,160,-1.5,Final,6.5,-105

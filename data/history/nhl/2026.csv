@@ -1,0 +1,17 @@
+away,date_utc,espn_id,home,season,away_name,away_score,home_name,home_score,ml_away,ml_away_close,ml_away_open,ml_home,ml_home_close,ml_home_open,neutral,odds_provider,odds_providers_n,over_price,periods,result_type,sp_price_away,sp_price_home,spread_home,status_detail,total,under_price
+FLA,2026-09-29T21:00Z,401891773,CAR,2026,Florida Panthers,1,Carolina Hurricanes,0,110,110,110,-130,-130,-130,False,DraftKings,1,105,4,OT,-230,190,-1.5,Final/OT,6.5,-125
+MTL,2026-09-29T23:00Z,401891827,TOR,2026,Montreal Canadiens,3,Toronto Maple Leafs,2,-105,-105,-105,-115,-115,-115,False,DraftKings,1,-108,3,REG,-258,210,-1.5,Final,6.5,-112
+NYR,2026-09-30T00:00Z,401891774,BOS,2026,New York Rangers,0,Boston Bruins,3,-110,-110,120,-110,-110,-142,False,DraftKings,1,-130,3,REG,-265,215,-1.5,Final,5.5,110
+VAN,2026-09-30T02:00Z,401891804,EDM,2026,Vancouver Canucks,6,Edmonton Oilers,5,245,245,215,-305,-305,-265,False,DraftKings,1,-115,4,OT,102,-122,-1.5,Final/OT,6.5,-105
+CHI,2026-09-30T02:45Z,401891775,VGK,2026,Chicago Blackhawks,2,Vegas Golden Knights,5,220,220,205,-270,-270,-250,False,DraftKings,1,110,3,REG,-125,105,-1.5,Final,6.5,-130
+PIT,2026-09-30T23:30Z,401891821,PHI,2026,Pittsburgh Penguins,7,Philadelphia Flyers,0,124,124,120,-148,-148,-142,False,DraftKings,1,110,3,REG,-218,180,-1.5,Final,6.5,-130
+NYI,2026-09-30T23:30Z,401892431,TOR,2026,New York Islanders,1,Toronto Maple Leafs,2,120,120,-110,-142,-142,-110,False,DraftKings,1,-135,3,REG,-225,185,-1.5,Final,5.5,114
+LA,2026-10-01T02:00Z,401891780,COL,2026,Los Angeles Kings,4,Colorado Avalanche,8,170,170,154,-205,-205,-185,False,DraftKings,1,102,3,REG,-155,130,-1.5,Final,6.5,-122
+BUF,2026-10-01T23:00Z,401891781,CBJ,2026,Buffalo Sabres,3,Columbus Blue Jackets,6,-118,-118,-105,-102,-102,-115,False,DraftKings,1,114,3,REG,220,-270,1.5,Final,6.5,-135
+PHI,2026-10-01T23:00Z,401891817,NJ,2026,Philadelphia Flyers,2,New Jersey Devils,3,150,150,130,-180,-180,-155,False,DraftKings,1,-120,4,OT,-175,145,-1.5,Final/OT,5.5,100
+TB,2026-10-01T23:00Z,401891819,NYR,2026,Tampa Bay Lightning,1,New York Rangers,5,-148,-148,-142,124,124,120,False,DraftKings,1,-120,3,REG,170,-205,1.5,Final,5.5,100
+MIN,2026-10-02T00:00Z,401891816,NSH,2026,Minnesota Wild,3,Nashville Predators,1,-148,-148,-148,124,124,124,False,DraftKings,1,105,3,REG,170,-205,1.5,Final,6.5,-125
+SEA,2026-10-02T01:00Z,401891777,CGY,2026,Seattle Kraken,6,Calgary Flames,1,-108,-108,-105,-112,-112,-115,False,DraftKings,1,-125,3,REG,-278,225,-1.5,Final,5.5,105
+CHI,2026-10-02T01:30Z,401891828,UTA,2026,Chicago Blackhawks,0,Utah Mammoth,6,190,190,164,-230,-230,-198,False,DraftKings,1,-105,3,REG,-130,110,-1.5,Final,6.5,-115
+FLA,2026-10-02T02:00Z,401891823,SJ,2026,Florida Panthers,3,San Jose Sharks,4,-148,-148,-142,124,124,120,False,DraftKings,1,-105,4,OT,164,-198,1.5,Final/OT,6.5,-115
+EDM,2026-10-02T02:00Z,401891829,VAN,2026,Edmonton Oilers,9,Vancouver Canucks,7,-218,-218,-198,180,180,164,False,DraftKings,1,-125,3,REG,105,-125,1.5,Final,6.5,105
