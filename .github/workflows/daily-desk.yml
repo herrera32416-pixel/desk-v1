@@ -1,8 +1,12 @@
 name: daily-desk
 
-# Once a day, on GitHub's servers (independent of the Grok Bot box):
-# 1 Odds API call (NFL h2h+spreads+totals, regions=us => 3 credits) -> data/today.json.
-# Main-sourced card for today is never overwritten (merge appends missing NFL games only).
+# Once a day, on GitHub's servers (independent of the Grok Bot box). PAPER ONLY — no real bets.
+# 1) Grade open PAPER picks from ESPN's free public scoreboard (0 Odds API credits).
+# 2) 2 Odds API calls (NFL + NCAAF, h2h+spreads+totals, regions=us => 3 credits each = 6/day)
+#    -> data/today.json board + PAPER side per game (u3 market-heavy blend, ESPN FPI, free),
+#    today's PAPER picks stamped to data/paper_ledger.json, page data in data/paper.json.
+# Main-sourced card for today is never overwritten (merge appends missing NFL/CFB games only).
+# 9:15am CT is before the earliest CFB/NFL kicks (11am CT Sat CFB, 12pm CT Sun NFL, 8:30am CT London).
 on:
   schedule:
     # 9:15am CT. Cron is UTC and has no DST:
@@ -14,7 +18,7 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: "Call the API even if today's auto board already exists (uses 3 credits)"
+        description: "Call the API even if today's auto board already exists (uses 6 credits)"
         type: boolean
         default: false
 
@@ -37,7 +41,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build auto board (1 API call max, no retries)
+      - name: Grade open PAPER picks (ESPN finals, free)
+        run: python scripts/paper_model.py grade
+
+      - name: Build auto board + PAPER picks (1 Odds API call per sport, no retries)
         env:
           THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
         run: |
@@ -49,6 +56,7 @@ jobs:
 
       - name: Commit + push data/ only if changed
         id: push
+        if: ${{ !cancelled() }}
         run: |
           if git diff --quiet -- data/ && [ -z "$(git ls-files --others --exclude-standard -- data/)" ]; then
             echo "No data change."
@@ -58,14 +66,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git commit -m "auto board $(TZ=America/Chicago date +%F) CT"
+          git commit -m "auto board + paper $(TZ=America/Chicago date +%F) CT"
           # box publisher may have pushed meanwhile; rebase data-only commit, never force
           git pull --rebase origin main
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Request Pages build (legacy branch source)
-        if: steps.push.outputs.changed == 'true'
+        if: ${{ !cancelled() && steps.push.outputs.changed == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
