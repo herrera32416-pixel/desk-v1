@@ -100,6 +100,7 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 <nav class="tabs" id="tabs">
   <button class="on" data-p="card">Card</button>
   <button data-p="paper">Paper</button>
+  <button data-p="nhl">NHL</button>
   <button data-p="ledger">Ledger</button>
   <button data-p="props">Props</button>
   <button data-p="rules">Rules</button>
@@ -147,6 +148,16 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <div id="paperBits"></div>
 </section>
 
+<section class="panel" id="p-nhl">
+  <div class="hero"><h2 class="serif">NHL.</h2><p>PAPER ONLY. ML · puck line · O/U. Market no-vig %, Poisson fair %, model % (blank: no free NHL model).</p></div>
+  <div class="summary"><div class="row">
+    <div><div class="k">NHL games</div><div class="v serif" style="font-size:22px" id="nhlCount">—</div></div>
+    <div><div class="k">NHL paper record</div><div class="v serif" style="font-size:22px" id="nhlRecord">—</div></div>
+  </div>
+  <div class="foot" id="nhlFoot"></div></div>
+  <div id="nhlBits"></div>
+</section>
+
 <section class="panel" id="p-ledger">
   <div class="hero"><h2 class="serif">Ledger.</h2><p id="friWritten">Main written CLEARs · graded + open.</p></div>
   <div class="summary"><div class="row">
@@ -189,6 +200,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <span id="status">Loading…</span>
   <button id="refresh" type="button">Refresh</button>
 </div>
-<script src="./js/app.js?v=1002nhl"></script>
+<script src="./js/app.js?v=1002nhltab"></script>
 </body>
 </html>

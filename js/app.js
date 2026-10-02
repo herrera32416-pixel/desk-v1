@@ -482,6 +482,29 @@ function renderNflProps(data){
     else props.forEach((p,i)=>bits.append(nflPropCard(p, p.rank||i+1)));
   });
 }
+function renderNhl(){
+  const bits=document.getElementById('nhlBits'); if(!bits||!deskData) return;
+  bits.innerHTML='';
+  const rows=[...deskData.clears, ...deskData.fills, ...deskData.holds].filter(p=>(p.kind||'')!=='prop' && p.sport==='NHL').sort(byKickTime);
+  document.getElementById('nhlCount').textContent=String(rows.length);
+  const picks=((paperData&&paperData.ledger&&paperData.ledger.picks)||[]).filter(p=>p.sport==='NHL');
+  const bs=paperData&&paperData.ledger&&paperData.ledger.summary&&paperData.ledger.summary.by_sport&&paperData.ledger.summary.by_sport.NHL;
+  let rec, units, open;
+  if(bs){ rec=bs.record; units=bs.units; open=bs.open; }
+  else {
+    const g=picks.filter(p=>p.status!=='open'), r=x=>g.filter(p=>(p.result||'').toUpperCase()===x).length;
+    rec=`${r('W')}-${r('L')}-${r('P')}`; units=g.reduce((s,p)=>s+(Number(p.pnl_units)||0),0); open=picks.length-g.length;
+  }
+  document.getElementById('nhlRecord').textContent=`${rec} · ${money(units||0)}`;
+  const foot=document.getElementById('nhlFoot');
+  foot.textContent=`${open||0} open NHL paper pick${open===1?'':'s'} · 1u = $20 · no real bets. MODEL blank until a free NHL model exists, so nothing stamps. Fair % = Poisson from market ML + total (REG/OT/SO priced separately; −1.5 loses past regulation; SO = +1 goal for totals). Goalies from goalie log (Confirmed/Likely; — if not logged).`;
+  if(picks.length){
+    bits.append(el('p','section-label',`NHL paper picks · ${picks.length}`));
+    picks.forEach(p=>bits.append(paperPickCard(p)));
+  }
+  if(!rows.length){ bits.append(el('p','why','No NHL games on today’s board.')); return; }
+  renderTimeGroups(bits, rows, p=>playCard(p), 'nhlslot-');
+}
 function showPanel(id){
   document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+id));
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===id));
@@ -547,7 +570,7 @@ function byKickTime(a,b){
 }
 // Rows are already sorted; drop a small time-slot header before each new slot,
 // plus a jump bar of the slots at the top when there is more than one.
-function renderTimeGroups(slate, rows, makeCard){
+function renderTimeGroups(slate, rows, makeCard, pfx='slot-'){
   const groups=[];
   rows.forEach(p=>{
     const k=kickInfo(p);
@@ -567,14 +590,14 @@ function renderTimeGroups(slate, rows, makeCard){
     });
     bar.addEventListener('click',e=>{
       const b=e.target.closest('button'); if(!b) return;
-      const t=document.getElementById('slot-'+b.dataset.slot);
+      const t=document.getElementById(pfx+b.dataset.slot);
       if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
     });
     slate.append(bar);
   }
   groups.forEach((g,i)=>{
     const h=el('p','section-label time-slot',`${g.long} · ${g.rows.length}`);
-    h.id='slot-'+i;
+    h.id=pfx+i;
     slate.append(h);
     g.rows.forEach(p=>slate.append(makeCard(p)));
   });
@@ -712,6 +735,7 @@ async function main(){
   }
   renderNflProps(data);
   renderPaper();
+  renderNhl();
   document.getElementById('status').textContent='Live · pull to refresh';
 }
 document.getElementById('tabs').addEventListener('click',e=>{
