@@ -449,7 +449,8 @@ def main(argv: list[str] | None = None) -> int:
             if ev.get("sport_key") not in (None, sport_key) or not ev.get("commence_time"):
                 continue
             _, _, kct = kick_fields(ev["commence_time"])
-            if start <= kct < end:
+            # started games are skipped: The Odds API returns LIVE prices for them, never pregame
+            if max(start, now_ct) < kct < end:
                 rows.append(build_row(ev, slate_iso, sport))
                 by_toa[ev.get("id") or ""] = ev
         rows.sort(key=lambda r: (r["kick_utc"], r["event_id"]))
