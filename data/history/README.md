@@ -47,3 +47,21 @@ MLB off-season (w = 0 when it returns). Sigma = fitted residual SD: NFL 12.70, C
 
 NHL Poisson fair check (1,500 games with ML, total and ±1.5 prices): puck-line Brier 0.2350 (Poisson fair
 from market ML+total) vs 0.2328 (market no-vig) — the conversion is a consistent pricer, not an edge.
+
+## NHL ratings model (added Oct 2 2026) — PAPER ONLY
+
+`scripts/nhl_ratings.py` (stdlib, deterministic, runs in GitHub Actions) → `scripts/nhl_model.py` (Poisson REG/OT/SO).
+
+- Team attack/defense regulation-goal rates (final minus the OT/SO winner's +1; EN goals included), weighted Poisson MLE with
+  time decay (half-life 120 days) and an L2 shrinkage prior (20 weighted games) toward league average; includes this season's games.
+- Home ice, back-to-back (from the schedule), and the starting goalie's decayed, shrunk save % above league
+  (goals saved / game, prior 1,500 shots) from the free NHL stats API `api.nhle.com/stats/rest/en/goalie/summary` (no key).
+  Committed goalie game logs: `nhl/goalies_<seasonId>.csv` (2020-21 → 2026-27); the current season is re-fetched each run.
+  Live starter = goalie log (Confirmed/Likely) when present, otherwise the team's recent-starter mix.
+- This season's finals after the history build are appended to `nhl/live_finals.csv` by the daily run (ESPN scoreboard, one call per missing day).
+- Tuning (half-life × shrinkage × goalie on/off) used 2021-22 (Nov 15+) and 2022-23 ML log loss only; test = 2023-24 → 2026-27 so far,
+  each game predicted from a fit on games strictly before its date. Market = ESPN close no-vig (single provider).
+- Blend: logit(p) = logit(q_market) + w·(logit(model) − logit(q_market)), w per market with a game-day cluster bootstrap CI; live w = 0
+  unless the 90% CI excludes 0. Results: `nhl_model_fit.json` (`scripts/history/fit_nhl_model.py`).
+- Gaps: totals missing for most of 2023-24 (ESPN), so O/U tests are smaller; the model knows nothing about roster changes,
+  injuries, or skater lineups beyond what results show; goalie-log names are matched to NHL playerIds by name + team.

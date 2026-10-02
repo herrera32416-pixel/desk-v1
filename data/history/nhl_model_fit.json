@@ -1,0 +1,419 @@
+{
+ "generated": "2026-10-02",
+ "params": {
+  "half_life_days": 120,
+  "pen": 20,
+  "goalie": true
+ },
+ "tune_grid": [
+  {
+   "ml_logloss": 0.65582,
+   "half_life": 120,
+   "pen": 20,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.65602,
+   "half_life": 120,
+   "pen": 5,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.65603,
+   "half_life": 120,
+   "pen": 5,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.65605,
+   "half_life": 120,
+   "pen": 20,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.65624,
+   "half_life": 240,
+   "pen": 20,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.6565,
+   "half_life": 240,
+   "pen": 20,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.6566,
+   "half_life": 240,
+   "pen": 5,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.65664,
+   "half_life": 240,
+   "pen": 5,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.65772,
+   "half_life": 60,
+   "pen": 20,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.65776,
+   "half_life": 240,
+   "pen": 60,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.65799,
+   "half_life": 60,
+   "pen": 20,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.65817,
+   "half_life": 60,
+   "pen": 5,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.65819,
+   "half_life": 60,
+   "pen": 5,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.65828,
+   "half_life": 120,
+   "pen": 60,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.6585,
+   "half_life": 240,
+   "pen": 60,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.6591,
+   "half_life": 120,
+   "pen": 60,
+   "goalie": false
+  },
+  {
+   "ml_logloss": 0.66122,
+   "half_life": 60,
+   "pen": 60,
+   "goalie": true
+  },
+  {
+   "ml_logloss": 0.6623,
+   "half_life": 60,
+   "pen": 60,
+   "goalie": false
+  }
+ ],
+ "test": {
+  "ml": {
+   "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "model": {
+    "n": 3952,
+    "logloss": 0.6713,
+    "brier": 0.23936
+   },
+   "market": {
+    "n": 3952,
+    "logloss": 0.6651,
+    "brier": 0.23647
+   },
+   "w": -0.015,
+   "w_ci90": [
+    -0.268,
+    0.228
+   ],
+   "w_ci95": [
+    -0.308,
+    0.269
+   ],
+   "w_walkforward_by_season": {
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0,
+    "2026": 0.0
+   },
+   "units_walkforward_w": {
+    "bets": 0,
+    "w": 0,
+    "l": 0,
+    "units": 0.0
+   },
+   "units_raw_model_w1": {
+    "bets": 1838,
+    "w": 779,
+    "l": 1059,
+    "units": 51.02,
+    "units_ci90": [
+     -43.7,
+     140.8
+    ]
+   },
+   "by_season": {
+    "2023": {
+     "model": {
+      "n": 1312,
+      "logloss": 0.66272,
+      "brier": 0.23521
+     },
+     "market": {
+      "n": 1312,
+      "logloss": 0.65534,
+      "brier": 0.23189
+     }
+    },
+    "2024": {
+     "model": {
+      "n": 1312,
+      "logloss": 0.66484,
+      "brier": 0.23622
+     },
+     "market": {
+      "n": 1312,
+      "logloss": 0.65831,
+      "brier": 0.23313
+     }
+    },
+    "2025": {
+     "model": {
+      "n": 1312,
+      "logloss": 0.68628,
+      "brier": 0.24663
+     },
+     "market": {
+      "n": 1312,
+      "logloss": 0.68161,
+      "brier": 0.24437
+     }
+    },
+    "2026": {
+     "model": {
+      "n": 16,
+      "logloss": 0.67618,
+      "brier": 0.24138
+     },
+     "market": {
+      "n": 16,
+      "logloss": 0.66752,
+      "brier": 0.23716
+     }
+    }
+   }
+  },
+  "pl": {
+   "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "model": {
+    "n": 3926,
+    "logloss": 0.65546,
+    "brier": 0.23137
+   },
+   "market": {
+    "n": 3926,
+    "logloss": 0.65033,
+    "brier": 0.22901
+   },
+   "w": -0.096,
+   "w_ci90": [
+    -0.358,
+    0.17
+   ],
+   "w_ci95": [
+    -0.409,
+    0.239
+   ],
+   "w_walkforward_by_season": {
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0,
+    "2026": 0.0
+   },
+   "units_walkforward_w": {
+    "bets": 0,
+    "w": 0,
+    "l": 0,
+    "units": 0.0
+   },
+   "units_raw_model_w1": {
+    "bets": 1622,
+    "w": 796,
+    "l": 826,
+    "units": -98.6,
+    "units_ci90": [
+     -165.3,
+     -32.2
+    ]
+   },
+   "by_season": {
+    "2023": {
+     "model": {
+      "n": 1307,
+      "logloss": 0.6667,
+      "brier": 0.23685
+     },
+     "market": {
+      "n": 1307,
+      "logloss": 0.66046,
+      "brier": 0.23388
+     }
+    },
+    "2024": {
+     "model": {
+      "n": 1294,
+      "logloss": 0.67326,
+      "brier": 0.23984
+     },
+     "market": {
+      "n": 1294,
+      "logloss": 0.66782,
+      "brier": 0.23745
+     }
+    },
+    "2025": {
+     "model": {
+      "n": 1309,
+      "logloss": 0.62726,
+      "brier": 0.2178
+     },
+     "market": {
+      "n": 1309,
+      "logloss": 0.62334,
+      "brier": 0.21601
+     }
+    },
+    "2026": {
+     "model": {
+      "n": 16,
+      "logloss": 0.60467,
+      "brier": 0.20843
+     },
+     "market": {
+      "n": 16,
+      "logloss": 0.61513,
+      "brier": 0.21258
+     }
+    }
+   }
+  },
+  "tot": {
+   "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "model": {
+    "n": 2737,
+    "logloss": 0.69758,
+    "brier": 0.25219
+   },
+   "market": {
+    "n": 2737,
+    "logloss": 0.69161,
+    "brier": 0.24923
+   },
+   "w": -0.119,
+   "w_ci90": [
+    -0.434,
+    0.203
+   ],
+   "w_ci95": [
+    -0.518,
+    0.253
+   ],
+   "w_walkforward_by_season": {
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0,
+    "2026": 0.0
+   },
+   "units_walkforward_w": {
+    "bets": 0,
+    "w": 0,
+    "l": 0,
+    "units": 0.0
+   },
+   "units_raw_model_w1": {
+    "bets": 1254,
+    "w": 611,
+    "l": 643,
+    "units": -79.45,
+    "units_ci90": [
+     -140.0,
+     -21.1
+    ]
+   },
+   "by_season": {
+    "2023": {
+     "model": {
+      "n": 101,
+      "logloss": 0.69509,
+      "brier": 0.25099
+     },
+     "market": {
+      "n": 101,
+      "logloss": 0.69732,
+      "brier": 0.25208
+     }
+    },
+    "2024": {
+     "model": {
+      "n": 1312,
+      "logloss": 0.69533,
+      "brier": 0.25107
+     },
+     "market": {
+      "n": 1312,
+      "logloss": 0.6914,
+      "brier": 0.24912
+     }
+    },
+    "2025": {
+     "model": {
+      "n": 1308,
+      "logloss": 0.69993,
+      "brier": 0.25334
+     },
+     "market": {
+      "n": 1308,
+      "logloss": 0.69116,
+      "brier": 0.24901
+     }
+    },
+    "2026": {
+     "model": {
+      "n": 16,
+      "logloss": 0.70644,
+      "brier": 0.25647
+     },
+     "market": {
+      "n": 16,
+      "logloss": 0.70936,
+      "brier": 0.25807
+     }
+    }
+   }
+  }
+ },
+ "starters_matched_games": 6533,
+ "games": 6533
+}

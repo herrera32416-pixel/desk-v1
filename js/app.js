@@ -313,6 +313,13 @@ function playCard(p, {star}={}){
       const gd=el('p','paper-line muted');
       gd.append(el('b',null,'Goalies '), document.createTextNode(`${gl('away',p.away)} · ${gl('home',p.home)}`));
       a.append(gd);
+      const nm=p.paper.nhl_model;
+      if(nm){
+        const w=p.paper.w||{};
+        const nd=el('p','paper-line muted');
+        nd.append(el('b',null,'NHL model '), document.createTextNode(`reg goals ${p.away.split(' ').slice(-1)[0]} ${nm.reg_goals_away} – ${p.home.split(' ').slice(-1)[0]} ${nm.reg_goals_home} · reg tie ${nm.reg_tie_pct}% · B2B ${nm.b2b_away?'away ':''}${nm.b2b_home?'home':''}${!nm.b2b_away&&!nm.b2b_home?'none':''} · goalie GSAx/gm ${fmtNum(nm.gsax_pg_away,{signed:true})} / ${fmtNum(nm.gsax_pg_home,{signed:true})} · blend w ML ${w.ml??0} · PL ${w.pl??0} · O/U ${w.tot??0} (0 = CI includes 0 → MODEL shown, not used; edge = raw model vs price, info)`));
+        a.append(nd);
+      }
     }
     // PAPER auto rows: three markets with Market % and Model % (Main rows keep the classic layout below)
     a.append(mk);
@@ -497,7 +504,7 @@ function renderNhl(){
   }
   document.getElementById('nhlRecord').textContent=`${rec} · ${money(units||0)}`;
   const foot=document.getElementById('nhlFoot');
-  foot.textContent=`${open||0} open NHL paper pick${open===1?'':'s'} · 1u = $20 · no real bets. MODEL blank until a free NHL model exists, so nothing stamps. Fair % = Poisson from market ML + total (REG/OT/SO priced separately; −1.5 loses past regulation; SO = +1 goal for totals). Goalies from goalie log (Confirmed/Likely; — if not logged).`;
+  foot.textContent=`${open||0} open NHL paper pick${open===1?'':'s'} · 1u = $20 · no real bets. MODEL = our NHL ratings model (raw). Blend w fitted walk-forward on 2023–26; w=0 where the CI includes 0, so the market is used and nothing stamps. Fair % = Poisson from market ML + total (REG/OT/SO priced separately; −1.5 loses past regulation; SO = +1 goal for totals). Goalies from goalie log (Confirmed/Likely; — if not logged).`;
   if(picks.length){
     bits.append(el('p','section-label',`NHL paper picks · ${picks.length}`));
     picks.forEach(p=>bits.append(paperPickCard(p)));

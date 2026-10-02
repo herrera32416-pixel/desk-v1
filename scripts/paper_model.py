@@ -471,17 +471,21 @@ def load_goalies(repo_root: Path) -> dict:
     return out
 
 
-def nhl_block(row: dict, ev: dict, goalies: dict) -> dict:
-    """ML / puck line / O-U market % for display; MODEL blank; Poisson fair from market ML + total."""
+def nhl_block(row: dict, ev: dict, goalies: dict, lm=None) -> dict:
+    """ML / puck line / O-U: market no-vig %, Poisson fair (from market), raw MODEL % (our NHL ratings model).
+    Stamps use the blend logit(p) = logit(q) + w*(logit(model) - logit(q)) with the walk-forward-fitted w
+    (0 unless its 90% CI excludes 0) and the usual edge >= 3pp / gap <= 8pp rules."""
     quotes = book_quotes(ev, row)
-    blk = {"label": "PAPER", "model": "none (ESPN has no NHL predictor) — MODEL blank",
+    wts = (lm.weights if lm else {}) or {}
+    blk = {"label": "PAPER", "model": "NHL ratings model (team att/def goal rates, decay+shrinkage, home ice, "
+                                      "back-to-back, starting goalie) -> Poisson REG/OT/SO",
            "status": "BLANK", "pick": None, "best": None, "picks": [], "by_market": {},
-           "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)"}
+           "w": {k: wts.get(k, 0.0) for k in ("ml", "pl", "tot")},
+           "note": "MODEL blank: NHL model unavailable this run" if not lm else ""}
     mk = three_markets("NHL", row, quotes, None)
-    if "total" in mk:
-        mk["total"]["note"] = "MODEL blank: no free NHL model (ESPN has no NHL predictor)"
-    for k in ("ml", "spread", "total"):
-        blk["by_market"][k] = {"status": "BLANK", "note": "MODEL blank (no ESPN NHL predictor)"}
+    d = row["kick_utc"] and kick_ct(row["kick_utc"]).date().isoformat()
+    ha, aa = NHL_ABBR.get(row["home"]), NHL_ABBR.get(row["away"])
+    blk["goalies"] = {"home": goalies.get((d, ha)), "away": goalies.get((d, aa))}
     try:
         nv_h = mk["ml"]["sides"][1]["novig_pct"] / 100
         T = mk["total"]["line"]
@@ -500,10 +504,74 @@ def nhl_block(row: dict, ev: dict, goalies: dict) -> dict:
                                  "solved to the market no-vig ML and total"}
     except (KeyError, TypeError, ValueError, ZeroDivisionError, IndexError):
         blk["fair"] = None
+    if lm and ha and aa:
+        try:
+            L = mk["spread"]["line_home"] if "spread" in mk else None
+            T = mk["total"]["line"] if "total" in mk else None
+            pr = lm.predict(ha, aa, kick_ct(row["kick_utc"]).date(), blk["goalies"]["home"], blk["goalies"]["away"],
+                            home_line=L, total=T)
+            blk["nhl_model"] = {
+                "reg_goals_home": round(pr["reg_goals_home"], 2), "reg_goals_away": round(pr["reg_goals_away"], 2),
+                "reg_tie_pct": r1(100 * pr["reg_tie"]), "b2b_home": pr["b2b_home"], "b2b_away": pr["b2b_away"],
+                "goalie_home": pr["goalie_src_home"], "goalie_away": pr["goalie_src_away"],
+                "gsax_pg_home": round(pr["gq_home"], 2), "gsax_pg_away": round(pr["gq_away"], 2)}
+            first = {"ml": 1 - pr["ml_home"], "spread": None if pr.get("pl_home") is None else 1 - pr["pl_home"],
+                     "total": pr.get("over")}
+            wkey = {"ml": "ml", "spread": "pl", "total": "tot"}
+            statuses = []
+            for k, m in mk.items():
+                p0 = first.get(k)
+                if p0 is None:
+                    continue
+                sides = m["sides"]
+                pa, pb = sides[0]["price_american"], sides[1]["price_american"]
+                q0 = novig(pa, pb)
+                w = wts.get(wkey[k], 0.0)
+                new_sides = []
+                for sd, pm, q in ((sides[0], p0, q0), (sides[1], 1 - p0, 1 - q0)):
+                    nd = side_dict(sd["side"], sd["label"], sd["line"], sd["price_american"], sd["book"], q, pm)
+                    nd["novig_pct"] = sd["novig_pct"]
+                    if "fair_pct" in sd:
+                        nd["fair_pct"] = sd["fair_pct"]
+                    lq = math.log(q / (1 - q))
+                    pbld = 1 / (1 + math.exp(-(lq + w * (math.log(pm / (1 - pm)) - lq))))
+                    nd["blend_pct"] = r1(100 * pbld)
+                    nd["_bedge"] = 100 * (pbld - implied(sd["price_american"]))
+                    new_sides.append(nd)
+                m["sides"] = new_sides
+                m["note"] = (f"MODEL = raw NHL model (shown even at w=0). Stamps use blend w={w:g}"
+                             + (" — 90% CI includes 0, so market only; never stamps" if w == 0 else ""))
+                m["stampable"] = m.get("stampable", True) and w != 0
+                if w == 0:
+                    blk["by_market"][k] = {"status": "PASS", "note": f"w=0 (walk-forward CI includes 0): model shown, not used"}
+                    statuses.append("PASS")
+                    continue
+                for nd in new_sides:
+                    nd["strong"] = False
+                best = max(new_sides, key=lambda x: x["_bedge"])
+                best["strong"] = True
+                gap = 100 * ((best["model_pct"] or 0) - (best["novig_pct"] or 0)) / 1.0
+                b2 = {**best, "market": k, "team": home_or_away(row, best["side"]) if k != "total" else best["label"],
+                      "selection": best["label"], "edge_pp": r1(best["_bedge"]), "model_pct": best["blend_pct"]}
+                if not m.get("stampable", True):
+                    st, note = "PASS", m.get("note") or "not stampable"
+                elif abs(gap) > GAP_MAX:
+                    st, note = "HOLD", f"gap {gap:+.1f}pp vs no-vig > {GAP_MAX:g}pp"
+                elif best["_bedge"] >= EDGE_MIN:
+                    st, note = "PAPER", f"PAPER 1u (${UNIT_USD}) — no real bet"
+                    blk["picks"].append(b2)
+                else:
+                    st, note = "PASS", f"edge {best['_bedge']:+.1f}pp < {EDGE_MIN:g}pp"
+                blk["by_market"][k] = {"status": st, "note": note, "best": b2}
+                statuses.append(st)
+            if statuses:
+                blk["status"] = "PAPER" if "PAPER" in statuses else ("HOLD" if "HOLD" in statuses else "PASS")
+                blk["pick"] = blk["picks"][0] if blk["picks"] else None
+                blk["note"] = ("raw NHL model shown; w=0 on every market (walk-forward CI includes 0) — market only, no stamps"
+                               if all(wts.get(x, 0.0) == 0 for x in ("ml", "pl", "tot")) else "")
+        except (KeyError, TypeError, ValueError, ZeroDivisionError, IndexError) as e:
+            blk["note"] = f"MODEL blank: NHL model error ({type(e).__name__})"
     blk["markets"] = mk
-    d = row["kick_utc"] and kick_ct(row["kick_utc"]).date().isoformat()
-    ha, aa = NHL_ABBR.get(row["home"]), NHL_ABBR.get(row["away"])
-    blk["goalies"] = {"home": goalies.get((d, ha)), "away": goalies.get((d, aa))}
     return blk
 
 
@@ -531,9 +599,23 @@ def attach_paper(sport: str, rows: list[dict], events_by_toa: dict[str, dict], n
     stats["espn_matched"] = len(matched)
     if sport == "NHL":
         goalies = load_goalies(Path(__file__).resolve().parents[1])
+        lm = None
+        try:
+            import nhl_ratings
+            lm = nhl_ratings.LiveModel(now_ct.date())
+            stats["nhl_model"] = {"last_final": lm.last_final, "season_games": lm.this_season_games,
+                                  "w": {k: lm.weights.get(k) for k in ("ml", "pl", "tot")}, "notes": lm.notes,
+                                  "home": round(lm.P["home"], 3), "b2b_off": round(lm.P["b2b_off"], 3),
+                                  "b2b_def": round(lm.P["b2b_def"], 3), "goalie_coef": round(lm.P["g"], 3)}
+            log(f"NHL model: {stats['nhl_model']}")
+        except Exception as e:  # noqa: BLE001 — never block the board; MODEL stays blank
+            log(f"NHL model unavailable: {e}")
         for r in rows:
-            r["paper"] = nhl_block(r, events_by_toa.get(r.get("toa_event_id") or "", {}), goalies)
-            stats["blank"] += 1
+            r["paper"] = nhl_block(r, events_by_toa.get(r.get("toa_event_id") or "", {}), goalies, lm)
+            st = r["paper"]["status"].lower()
+            stats[st] = stats.get(st, 0) + 1
+            stats["paper_picks"] += len(r["paper"].get("picks") or [])
+        stats["with_model"] = sum(1 for r in rows if r["paper"].get("nhl_model"))
         stats["goalies_shown"] = sum(1 for r in rows for v in (r["paper"].get("goalies") or {}).values() if v)
         stats["with_fair"] = sum(1 for r in rows if r["paper"].get("fair"))
         return stats

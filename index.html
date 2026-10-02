@@ -149,7 +149,7 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 </section>
 
 <section class="panel" id="p-nhl">
-  <div class="hero"><h2 class="serif">NHL.</h2><p>PAPER ONLY. ML · puck line · O/U. Market no-vig %, Poisson fair %, model % (blank: no free NHL model).</p></div>
+  <div class="hero"><h2 class="serif">NHL.</h2><p>PAPER ONLY. ML · puck line · O/U. Market no-vig %, Poisson fair %, MODEL % = our NHL ratings model (raw; blend w=0 while its CI includes 0).</p></div>
   <div class="summary"><div class="row">
     <div><div class="k">NHL games</div><div class="v serif" style="font-size:22px" id="nhlCount">—</div></div>
     <div><div class="k">NHL paper record</div><div class="v serif" style="font-size:22px" id="nhlRecord">—</div></div>
@@ -200,6 +200,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <span id="status">Loading…</span>
   <button id="refresh" type="button">Refresh</button>
 </div>
-<script src="./js/app.js?v=1002nhltab"></script>
+<script src="./js/app.js?v=1002nhlmodel"></script>
 </body>
 </html>
