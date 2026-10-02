@@ -79,6 +79,13 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 .paper-line b{color:var(--cream);letter-spacing:.1em;font-size:10px;text-transform:uppercase}
 .paper-line.muted{color:var(--muted)}
 .pill.paper{color:#111;background:#b9b49a;padding:3px 8px;border-radius:6px}
+.mkts{margin:0 0 8px;border:1px solid var(--line);border-radius:10px;padding:6px 8px;background:rgba(255,255,255,.02);font-size:12px}
+.mk-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2px 6px;padding:3px 0;align-items:baseline}
+.mk-row .mk-sel{grid-column:1/-1;font-weight:600}
+.mk-head span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mk-title{font-size:10px;color:var(--muted);margin-top:6px;border-top:1px solid var(--line);padding-top:5px}
+.mk-title b{color:var(--cream);letter-spacing:.12em;text-transform:uppercase}
+.mk-row.strong{color:#111;background:var(--cream);border-radius:6px;padding:3px 4px}
 .section-label.time-slot{color:var(--cream);margin:14px 0 8px;scroll-margin-top:12px}
 
 </style>
@@ -181,6 +188,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <span id="status">Loading…</span>
   <button id="refresh" type="button">Refresh</button>
 </div>
-<script src="./js/app.js?v=1002paper"></script>
+<script src="./js/app.js?v=1002mkts"></script>
 </body>
 </html>

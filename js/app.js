@@ -181,10 +181,38 @@ function paperLine(b){
   else {
     const px=[fmtPrice(bs.price_american), bs.book].filter(Boolean).join(' ');
     const core=`${bs.selection} ${px} · model ${fmtPct(bs.model_pct)} · no-vig ${fmtPct(bs.novig_pct)} · edge ${fmtNum(bs.edge_pp,{signed:true})}pp`;
-    txt = b.status==='PAPER' ? `${core} · 1u ($20) paper` : `${b.status}: ${core} (${b.note||''})`;
+    const extra=(b.picks||[]).filter(x=>x.selection!==bs.selection).map(x=>`${x.selection} ${fmtPrice(x.price_american)} ${x.book} edge ${fmtNum(x.edge_pp,{signed:true})}pp`);
+    txt = b.status==='PAPER' ? `${core} · 1u ($20) paper${extra.length?' · also '+extra.join(' · '):''}` : `${b.status}: ${core} (${b.note||''})`;
   }
   d.append(el('b',null,(b.status==='PAPER'?'Paper pick ':'Paper ')), document.createTextNode(txt));
   return d;
+}
+// ML / Spread / O-U, both sides: price · book · Market no-vig % · Model % · edge. ★ = stronger side (model edge).
+const BOOK_SHORT={DraftKings:'DK',Bovada:'Bovada',Betr:'Betr'};
+function marketsBlock(b){
+  const M=b&&b.markets; if(!M) return null;
+  const wrap=el('div','mkts');
+  const names=[['ml','ML'],['spread','Spread'],['total','O/U']];
+  const head=el('div','mk-row mk-head');
+  ['Price · book','Mkt no-vig','Model','Edge'].forEach(t=>head.append(el('span',null,t)));
+  wrap.append(head);
+  names.forEach(([k,label])=>{
+    const m=M[k];
+    const t=el('div','mk-title');
+    t.append(el('b',null,label), document.createTextNode(m?` · no-vig: ${m.novig_source}${m.note?` · ${m.note}`:''}`:' · blank (no price returned)'));
+    wrap.append(t);
+    if(!m) return;
+    (m.sides||[]).forEach(sd=>{
+      const r=el('div','mk-row'+(sd.strong?' strong':''));
+      r.append(el('span','mk-sel',(sd.strong?'★ ':'')+sd.label),
+               el('span',null,[fmtPrice(sd.price_american), BOOK_SHORT[sd.book]||sd.book||''].filter(Boolean).join(' ')||'—'),
+               el('span',null,fmtPct(sd.novig_pct)),
+               el('span',null,fmtPct(sd.model_pct)),
+               el('span',null,sd.edge_pp!=null?`${fmtNum(sd.edge_pp,{signed:true})}pp`:'—'));
+      wrap.append(r);
+    });
+  });
+  return wrap;
 }
 function money(u){
   const n=Number(u); if(!Number.isFinite(n)) return '—';
@@ -272,8 +300,17 @@ function playCard(p, {star}={}){
   hd.append(pill, el('span','when',[p.sport||'', kickInfo(p).short, `${p.units||0}u`].filter(Boolean).join(' · ')));
   a.append(hd);
   a.append(el('h3','serif',p.matchup||`${p.away||''} at ${p.home||''}`));
-  const noSide = p.board_only ? 'Board — no Main side' : (p.tag==='HOLD'||p.tag==='BOARD' ? 'Hold — no number' : '');
+  const noSide = (p.paper && p.paper.markets) ? `Paper · ${p.paper.status}${p.paper.status==='PAPER'?' (no real bet)':''}` : p.board_only ? 'Board — no Main side' : (p.tag==='HOLD'||p.tag==='BOARD' ? 'Hold — no number' : '');
   a.append(el('div','side',p.selection|| noSide));
+  const mk = p.paper && p.paper.markets ? marketsBlock(p.paper) : null;
+  if(mk){
+    // PAPER auto rows: three markets with Market % and Model % (Main rows keep the classic layout below)
+    a.append(mk);
+    const pl=paperLine(p.paper); if(pl) a.append(pl);
+    const fp=p.paper;
+    if(fp.fpi_home_margin!=null) a.append(el('p','why',`Home margin · FPI ${fmtNum(fp.fpi_home_margin,{signed:true})} · market ${fmtNum(fp.mkt_home_margin,{signed:true})} · blend ${fmtNum(fp.blend_home_margin,{signed:true})} (w ${fp.w_fpi}, σ ${fp.sigma})`));
+    return a;
+  }
   const m=el('div','metrics');
   const model = p.model_win_pct!=null ? `${p.model_win_pct}%` : '—';
   const market = p.market_win_pct!=null ? `${p.market_win_pct}%` : '—';
