@@ -478,6 +478,8 @@ def nhl_block(row: dict, ev: dict, goalies: dict) -> dict:
            "status": "BLANK", "pick": None, "best": None, "picks": [], "by_market": {},
            "note": "MODEL blank: no free independent NHL model; fair = Poisson from market ML + total (not a pick)"}
     mk = three_markets("NHL", row, quotes, None)
+    if "total" in mk:
+        mk["total"]["note"] = "MODEL blank: no free NHL model (ESPN has no NHL predictor)"
     for k in ("ml", "spread", "total"):
         blk["by_market"][k] = {"status": "BLANK", "note": "MODEL blank (no ESPN NHL predictor)"}
     try:
