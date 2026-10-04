@@ -82,7 +82,7 @@
       "pnl_usd": null
     }
   ],
-  "updated_at_ct": "2026-10-04T10:06:27-05:00",
+  "updated_at_ct": "2026-10-04T13:09:18-05:00",
   "model": {
     "name": "market + w·(FPI − market), w refit vs closing line on history (NFL −0.31, CFB 0)",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
