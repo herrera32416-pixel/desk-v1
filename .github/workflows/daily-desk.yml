@@ -2,7 +2,7 @@ name: daily-desk
 
 # Once a day, on GitHub's servers (independent of the Grok Bot box). PAPER ONLY — no real bets.
 # 1) Grade open PAPER picks from ESPN's free public scoreboard (0 Odds API credits).
-# 2) 3 Odds API calls (NFL + NCAAF + NHL, h2h+spreads+totals, regions=us => 3 credits each = 9/day)
+# 2) 4 Odds API calls (NFL + NCAAF + NHL + MLB, h2h+spreads+totals, regions=us => 3 credits each = 12/day)
 #    -> data/today.json board + PAPER side per game (u3 market-heavy blend, ESPN FPI, free),
 #    today's PAPER picks stamped to data/paper_ledger.json, page data in data/paper.json.
 # Main-sourced card for today is never overwritten (merge appends missing NFL/CFB games only).
@@ -23,7 +23,7 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: "Call the API even if today's auto board already exists (uses 9 credits)"
+        description: "Call the API even if today's auto board already exists (uses 12 credits)"
         type: boolean
         default: false
 

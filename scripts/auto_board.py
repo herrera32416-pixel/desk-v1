@@ -3,7 +3,8 @@
 
 One Odds API call per sport per day (regions=us, markets=h2h,spreads,totals,
 oddsFormat=american => 3 credits each): americanfootball_nfl + americanfootball_ncaaf
--> every NFL/CFB game kicking in the next 7 days (CT) as BOARD 0u rows with LINES +
++ icehockey_nhl + baseball_mlb => 4 sports x 3 = 12 credits/day
+-> every NFL/CFB game kicking in the next 7 days (CT; NHL/MLB today + tomorrow) as BOARD 0u rows with LINES +
 MARKET no-vig %, plus a PAPER side from the u3 market-heavy blend (scripts/paper_model.py,
 ESPN FPI, free). PAPER picks are stamped to data/paper_ledger.json (no real bets).
 
@@ -41,13 +42,14 @@ import paper_model  # noqa: E402
 CT = ZoneInfo("America/Chicago")
 UTC = timezone.utc
 SPORTS = {"NFL": "americanfootball_nfl", "CFB": "americanfootball_ncaaf",
-          "NHL": "icehockey_nhl"}  # one call each per day: 3 x 3 credits = 9/day
-WINDOW_BY_SPORT = {"NFL": 7, "CFB": 7, "NHL": 2}  # NHL: today + tomorrow (CT), ~15 games/day
+          "NHL": "icehockey_nhl", "MLB": "baseball_mlb"}  # one call each per day: 4 x 3 credits = 12/day
+# NHL: today + tomorrow (CT), ~15 games/day · MLB: today + tomorrow (CT), late season / postseason
+WINDOW_BY_SPORT = {"NFL": 7, "CFB": 7, "NHL": 2, "MLB": 2}
 API_URL = "https://api.the-odds-api.com/v4/sports/{sport}/odds"
 SCHEMA = "desk-pwa/v1"
 WINDOW_DAYS = 7
 MIN_REMAINING = 30  # never spend the last credits: skip further calls below this
-BANNER = ("PAPER ONLY — no real bets. NFL + CFB + NHL: ML / spread (puck line) / O-U with market and model %. "
+BANNER = ("PAPER ONLY — no real bets. NFL + CFB + NHL + MLB: ML / spread (puck line / run line) / O-U with market and model %. "
           "Lines from The Odds API. No Main card filed.")
 MARKET_SRC = "The Odds API · no-vig = median across books of two-way de-vig (consensus line)"
 
@@ -264,10 +266,10 @@ def default_rules() -> dict:
         "fill": "FILL = Main recommended side, not written",
         "hold": "HOLD/BOARD = full slate game with no Main side",
         "owner": "Bet Bot Main owns the card; Sports Betting shops + exports",
-        "auto": ("Auto board (GitHub Actions, once daily 9:15am CT): NFL + CFB lines + MARKET no-vig %. "
+        "auto": ("Auto board (GitHub Actions, once daily 9:15am CT): NFL + CFB + NHL + MLB lines + MARKET no-vig %. "
                  "No Main model, no notes, no CLEAR. Main's feed replaces it when published."),
         "paper": ("PAPER ONLY (no real bets): football = market + w·(ESPN FPI − market), w refit vs closing "
-                  "lines on history (NFL 0 since 2026-10-04 pending pregame-FPI refit, CFB 0); NHL = market only, w locked 0, MODEL % info only, Poisson fair shown. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
+                  "lines on history (NFL 0 since 2026-10-04 pending pregame-FPI refit, CFB 0); NHL = market only, w locked 0, MODEL % info only, Poisson fair shown; MLB = market only (fitted w was 0), MODEL blank, no stamps, no live CLEARs. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
                   "PAPER pick if edge ≥3pp vs stamped price; gap >8pp vs no-vig = HOLD. 1u = $20 flat. "
                   "Stamped once on kick day, graded W/L/P from ESPN finals at the stamped price."),
         "ledger": "Ledger = Main written CLEAR grades only (Grade via the box). Paper ledger is separate (Paper tab).",
@@ -372,6 +374,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--from-file", help="Offline: read a saved NFL Odds API JSON instead of calling the API (0 credits)")
     ap.add_argument("--from-file-cfb", help="Offline: read a saved NCAAF Odds API JSON (0 credits)")
     ap.add_argument("--from-file-nhl", help="Offline: read a saved NHL Odds API JSON (0 credits)")
+    ap.add_argument("--from-file-mlb", help="Offline: read a saved MLB Odds API JSON (0 credits)")
     ap.add_argument("--now", help="Override 'now' (ISO, for tests)")
     ap.add_argument("--force", action="store_true", help="Call the API even if today's auto board already exists")
     args = ap.parse_args(argv)
@@ -392,17 +395,18 @@ def main(argv: list[str] | None = None) -> int:
     main_today = bool(existing) and existing.get("slate_date_ct") == slate_iso and is_main_sourced(existing)
     if (existing and existing.get("slate_date_ct") == slate_iso
             and str(existing.get("source") or "") == "auto" and not args.force
-            and not (args.from_file or args.from_file_cfb or args.from_file_nhl)):
+            and not (args.from_file or args.from_file_cfb or args.from_file_nhl or args.from_file_mlb)):
         print(f"[auto_board] auto board for {slate_iso} already present — 0 API calls (use --force)")
         return 0
 
     usage: dict = {"calls": 0, "credits_this_run": 0}
     events_by_sport: dict[str, list[dict]] = {}
-    offline = {"NFL": args.from_file, "CFB": args.from_file_cfb, "NHL": args.from_file_nhl}
+    offline = {"NFL": args.from_file, "CFB": args.from_file_cfb, "NHL": args.from_file_nhl,
+               "MLB": args.from_file_mlb}
     key = os.environ.get("THE_ODDS_API_KEY", "").strip()
     for sport, sport_key in SPORTS.items():
         try:
-            if args.from_file or args.from_file_cfb or args.from_file_nhl:
+            if args.from_file or args.from_file_cfb or args.from_file_nhl or args.from_file_mlb:
                 if not offline[sport]:
                     events_by_sport[sport] = []
                     continue
@@ -436,7 +440,7 @@ def main(argv: list[str] | None = None) -> int:
         except Exception as e:  # network etc. — no retry
             print(f"[auto_board] {sport} API error (no retry): {type(e).__name__}: {e}", file=sys.stderr)
             events_by_sport[sport] = []
-    if not any(events_by_sport.values()) and usage["calls"] == 0 and not (args.from_file or args.from_file_cfb or args.from_file_nhl):
+    if not any(events_by_sport.values()) and usage["calls"] == 0 and not (args.from_file or args.from_file_cfb or args.from_file_nhl or args.from_file_mlb):
         return 3
 
     start = now_ct.replace(hour=0, minute=0, second=0, microsecond=0)

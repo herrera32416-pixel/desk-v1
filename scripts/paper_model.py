@@ -68,6 +68,9 @@ MODEL = {
     # NHL: ESPN has no NHL predictor ("Predictor is not supported for sport: hockey") -> no independent
     # model; MODEL blank, Poisson fair prices from the market ML + total shown for information only.
     "NHL": {"w": None, "sigma": None, "league": "nhl", "path": "hockey/nhl", "groups": "&limit=100"},
+    # MLB (added 2026-10-05, Luis): market only. Fitted w was 0 -> no model, MODEL blank, no stamps,
+    # no live CLEARs. ESPN scoreboard used only for event ids / grading; ESPN FPI is never called.
+    "MLB": {"w": None, "sigma": None, "league": "mlb", "path": "baseball/mlb", "groups": "&limit=100"},
 }
 MODEL_NAME = "market + w·(FPI − market); NFL w=0 since 2026-10-04 (FPI history may be post-game, refit pending), CFB 0"
 MODEL_SRC = ("betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; "
@@ -582,6 +585,16 @@ def nhl_block(row: dict, ev: dict, goalies: dict, lm=None) -> dict:
     return blk
 
 
+def mlb_block(row: dict, ev: dict) -> dict:
+    """ML / run line / O-U: market no-vig % only (fitted w = 0 -> no MODEL %, no edges, never stamped)."""
+    mk = three_markets("MLB", row, book_quotes(ev, row), None)
+    return {"label": "PAPER", "model": "none (market only, MODEL blank; fitted w = 0)",
+            "status": "PASS" if mk else "BLANK", "pick": None, "best": None, "picks": [],
+            "by_market": {k: {"status": "PASS", "note": "market only (w = 0) — no stamps", "best": None} for k in mk},
+            "w": 0.0, "markets": mk,
+            "note": "MLB market only: fitted w = 0 — MODEL blank, no paper stamps" if mk else "no market lines"}
+
+
 def attach_paper(sport: str, rows: list[dict], events_by_toa: dict[str, dict], now_ct: datetime,
                  window_days: int) -> dict:
     """Adds row['paper'] (+ espn ids) to each row. Returns stats."""
@@ -604,6 +617,12 @@ def attach_paper(sport: str, rows: list[dict], events_by_toa: dict[str, dict], n
             r["espn_swapped"] = sw
             matched.append((r, ev, sw))
     stats["espn_matched"] = len(matched)
+    if sport == "MLB":
+        for r in rows:
+            r["paper"] = mlb_block(r, events_by_toa.get(r.get("toa_event_id") or "", {}))
+            st = r["paper"]["status"].lower()
+            stats[st] = stats.get(st, 0) + 1
+        return stats
     if sport == "NHL":
         goalies = load_goalies(Path(__file__).resolve().parents[1])
         lm = None
@@ -771,7 +790,7 @@ def summarize(ledger: dict, now_ct: datetime) -> dict:
                 "open": sum(p.get("status") == "open" for p in ps)}
 
     s = block(picks)
-    s["by_sport"] = {sp: block([p for p in picks if p["sport"] == sp]) for sp in ("NFL", "CFB", "NHL")}
+    s["by_sport"] = {sp: block([p for p in picks if p["sport"] == sp]) for sp in ("NFL", "CFB", "NHL", "MLB")}
     s["unit_usd"] = UNIT_USD
     s["label"] = "PAPER — no real bets"
     ledger["schema"] = LEDGER_SCHEMA
