@@ -35,11 +35,13 @@
       "sigma": 12.7,
       "units": 1,
       "stake_usd": 20,
-      "status": "open",
-      "result": null,
-      "score": null,
-      "pnl_units": null,
-      "pnl_usd": null
+      "status": "graded",
+      "result": "L",
+      "score": "Dallas Cowboys 34 - Houston Texans 30",
+      "pnl_units": -1.0,
+      "pnl_usd": -20.0,
+      "graded_at_ct": "2026-10-05T10:18:53-05:00",
+      "score_source": "ESPN scoreboard event 401872967 (STATUS_FINAL)"
     },
     {
       "id": "nfl-401872975-ml",
@@ -75,21 +77,23 @@
       "sigma": 12.7,
       "units": 1,
       "stake_usd": 20,
-      "status": "open",
-      "result": null,
-      "score": null,
-      "pnl_units": null,
-      "pnl_usd": null
+      "status": "graded",
+      "result": "L",
+      "score": "Denver Broncos 14 - San Francisco 49ers 24",
+      "pnl_units": -1.0,
+      "pnl_usd": -20.0,
+      "graded_at_ct": "2026-10-05T10:18:53-05:00",
+      "score_source": "ESPN scoreboard event 401872975 (STATUS_FINAL)"
     }
   ],
-  "updated_at_ct": "2026-10-04T13:09:18-05:00",
+  "updated_at_ct": "2026-10-05T10:18:54-05:00",
   "model": {
-    "name": "market + w·(FPI − market), w refit vs closing line on history (NFL −0.31, CFB 0)",
+    "name": "market + w·(FPI − market); NFL w=0 since 2026-10-04 (FPI history may be post-game, refit pending), CFB 0",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
     "params": {
       "NFL": {
-        "w_fpi": -0.31,
-        "w_market": 1.31,
+        "w_fpi": 0.0,
+        "w_market": 1.0,
         "sigma": 12.7
       },
       "CFB": {
@@ -111,24 +115,24 @@
     }
   },
   "summary": {
-    "record": "0-0-0",
+    "record": "0-2-0",
     "w": 0,
-    "l": 0,
+    "l": 2,
     "p": 0,
-    "units": 0,
-    "usd": 0,
-    "graded": 0,
-    "open": 2,
+    "units": -2.0,
+    "usd": -40.0,
+    "graded": 2,
+    "open": 0,
     "by_sport": {
       "NFL": {
-        "record": "0-0-0",
+        "record": "0-2-0",
         "w": 0,
-        "l": 0,
+        "l": 2,
         "p": 0,
-        "units": 0,
-        "usd": 0,
-        "graded": 0,
-        "open": 2
+        "units": -2.0,
+        "usd": -40.0,
+        "graded": 2,
+        "open": 0
       },
       "CFB": {
         "record": "0-0-0",
