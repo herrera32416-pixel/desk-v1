@@ -86,7 +86,7 @@
       "score_source": "ESPN scoreboard event 401872975 (STATUS_FINAL)"
     }
   ],
-  "updated_at_ct": "2026-10-05T10:18:54-05:00",
+  "updated_at_ct": "2026-10-05T17:08:10-05:00",
   "model": {
     "name": "market + w·(FPI − market); NFL w=0 since 2026-10-04 (FPI history may be post-game, refit pending), CFB 0",
     "source": "betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; FINAL_REPORT 2026-10-02: every sport stays on paper",
@@ -102,6 +102,9 @@
         "sigma": 15.14
       },
       "NHL": {
+        "model": "none (market only, MODEL blank)"
+      },
+      "MLB": {
         "model": "none (market only, MODEL blank)"
       }
     },
@@ -145,6 +148,16 @@
         "open": 0
       },
       "NHL": {
+        "record": "0-0-0",
+        "w": 0,
+        "l": 0,
+        "p": 0,
+        "units": 0,
+        "usd": 0,
+        "graded": 0,
+        "open": 0
+      },
+      "MLB": {
         "record": "0-0-0",
         "w": 0,
         "l": 0,
