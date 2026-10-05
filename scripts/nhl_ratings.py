@@ -365,8 +365,17 @@ def season_id(d: date) -> str:
     return f"{y}{y + 1}"
 
 
+# 2026-10-04 (Luis-approved, weekend eval sec 3/7): NHL is PAPER/INFO ONLY. The blend weight is hard-locked
+# to 0 on every market (ML, puck line, total) regardless of what nhl_model_fit.json says, so the raw MODEL %
+# is displayed for information only and is never used for a pick or an edge. Walk-forward: ML log loss model
+# .6713 vs market .6651, w_ML -0.015 CI90 [-0.268, 0.228]; PL/totals at w=1 clearly negative.
+# Unlock only via an explicit, reviewed change (refit w > 0 with CI excluding 0 + positive units at real prices + BH).
+NHL_W_LOCKED_ZERO = True
+
+
 def fitted_weights() -> dict:
-    """Blend weight per market from the walk-forward fit: w if its 90% CI excludes 0, else 0."""
+    """Blend weight per market from the walk-forward fit: w if its 90% CI excludes 0, else 0.
+    While NHL_W_LOCKED_ZERO is True every weight is forced to 0 (fit kept in 'detail' for reference)."""
     out = {"ml": 0.0, "pl": 0.0, "tot": 0.0, "detail": {}}
     try:
         js = json.loads(FIT_JSON.read_text())
@@ -379,6 +388,10 @@ def fitted_weights() -> dict:
         out["detail"][k] = {"w_fit": t.get("w"), "w_ci90": t.get("w_ci90"), "model": t.get("model"),
                             "market": t.get("market")}
     out["params"] = js.get("params")
+    if NHL_W_LOCKED_ZERO:
+        for k in ("ml", "pl", "tot"):
+            out[k] = 0.0
+        out["locked_zero"] = "2026-10-04: NHL w locked to 0, model % info only"
     return out
 
 

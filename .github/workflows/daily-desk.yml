@@ -13,8 +13,13 @@ on:
     #   CDT (UTC-5, ~Mar 8 - Nov 1 2026): 14:15 UTC  <- active now
     #   CST (UTC-6, after Nov 1 2026):   15:15 UTC  -> change to "15 15 * * *" on Nov 1
     #                                                  (or leave it: runs 8:15am CST)
-    # GitHub may start scheduled runs several minutes late.
+    # GitHub may start scheduled runs several minutes late -- or drop them (Sun Oct 4 2026: 9:15 never fired,
+    # run by hand 10:06am CT). 2026-10-04: two backup triggers off the top of the hour, all behind the
+    # once-per-day guard (scripts/run_guard.py + data/run_stamp.json), so the board is built exactly once per CT day.
+    #   9:15am CDT primary, 9:23am CDT backup, 9:41am CDT backup  (after Nov 1: 15:15/15:23/15:41 UTC)
     - cron: "15 14 * * *"
+    - cron: "23 14 * * *"
+    - cron: "41 14 * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -41,10 +46,24 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Once-per-day guard: every trigger checks today's CT stamp first; a stamped day = no-op (0 credits).
+      # workflow_dispatch with force=true bypasses it.
+      - name: Once-per-day guard
+        id: guard
+        run: |
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            echo "force=true -> guard bypassed"; echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            python scripts/run_guard.py check
+          fi
+
       - name: Grade open PAPER picks (ESPN finals, free)
+        if: ${{ steps.guard.outputs.run == 'true' }}
         run: python scripts/paper_model.py grade
 
       - name: Build auto board + PAPER picks (1 Odds API call per sport, no retries)
+        id: board
+        if: ${{ steps.guard.outputs.run == 'true' }}
         env:
           THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
         run: |
@@ -54,9 +73,15 @@ jobs:
             python scripts/auto_board.py
           fi
 
+      # Written only when the board step succeeded; committed with data/ below. If the push fails the stamp
+      # never reaches main, so the next backup trigger retries.
+      - name: Stamp today's successful run
+        if: ${{ steps.guard.outputs.run == 'true' && steps.board.outcome == 'success' }}
+        run: python scripts/run_guard.py stamp
+
       - name: Commit + push data/ only if changed
         id: push
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && steps.guard.outputs.run == 'true' }}
         run: |
           if git diff --quiet -- data/ && [ -z "$(git ls-files --others --exclude-standard -- data/)" ]; then
             echo "No data change."

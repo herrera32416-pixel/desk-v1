@@ -10,7 +10,8 @@ Model (from betbot-revamp/research/upgrades-2026-10, u3_blend, FINAL_REPORT 2026
   P(home cover at line L) = 1 - Phi((-L - pred) / sigma)
   P(home win)             = Phi(Phi^-1(q_ML no-vig) + (pred - A) / sigma)   (anchored to the ML market)
   w / sigma: refit vs the closing line on data/history (scripts/history/fit_w.py, data/history/fit_w.json):
-    NFL w=-0.31 (90% CI excludes 0) sigma=12.70 · CFB w=0 (CI includes 0) sigma=15.14
+    NFL w=0 since 2026-10-04 (was -0.31; FPI history stamped after game day -> possible lookahead,
+    refit on verified pregame FPI pending) sigma=12.70 · CFB w=0 (CI includes 0) sigma=15.14
     (earlier u3 open-track weights 0.26/0.27 were vs openers; DESK prices later lines)
   Totals: no free projected total exists (ESPN predictor carries win % and point diff only),
   so O/U shows MARKET no-vig only and MODEL stays blank; totals are never stamped.
@@ -55,14 +56,20 @@ MODEL = {
     #   NFL w=-0.310, 90% CI [-0.523, -0.103] (904 games 2023-26) -> CI excludes 0 -> used (fades FPI's disagreement)
     #   CFB w=+0.034, 90% CI [-0.053, +0.118] (3,934 games 2022-26) -> CI includes 0 -> w = 0 (pure market)
     #   sigma = residual SD of margin vs the fitted pred: NFL 12.70, CFB 15.14
-    "NFL": {"w": -0.310, "sigma": 12.70, "league": "nfl", "path": "football/nfl", "groups": ""},
+    # 2026-10-04 (Luis-approved, weekend eval /workspace/eval/2026-10-04-weekend-eval.md sec 8 #1):
+    #   NFL w set -0.310 -> 0 (pure market; stop fading ESPN FPI). Reason: possible lookahead leakage --
+    #   fpi_last_modified in data/history/nfl/*.csv is AFTER game day (2023 rows stamped 2024-02-26,
+    #   2024 -> 2025-02-10, 2025 -> 2026-02-09, 2026 wk1-4 -> 2026-10-02), so the FPI margins the fit used
+    #   are likely not pregame. The sign also flipped (FPI side 8-2-2 ATS wk5). Keep w = 0 until refit on
+    #   verified pregame FPI snapshots. Fitted value kept for reference: w_fit=-0.310, CI90 [-0.523, -0.103].
+    "NFL": {"w": 0.0, "w_fit_prev": -0.310, "sigma": 12.70, "league": "nfl", "path": "football/nfl", "groups": ""},
     "CFB": {"w": 0.0, "sigma": 15.14, "league": "college-football", "path": "football/college-football",
             "groups": "&groups=80&limit=400"},
     # NHL: ESPN has no NHL predictor ("Predictor is not supported for sport: hockey") -> no independent
     # model; MODEL blank, Poisson fair prices from the market ML + total shown for information only.
     "NHL": {"w": None, "sigma": None, "league": "nhl", "path": "hockey/nhl", "groups": "&limit=100"},
 }
-MODEL_NAME = "market + w·(FPI − market), w refit vs closing line on history (NFL −0.31, CFB 0)"
+MODEL_NAME = "market + w·(FPI − market); NFL w=0 since 2026-10-04 (FPI history may be post-game, refit pending), CFB 0"
 MODEL_SRC = ("betbot-revamp/research/upgrades-2026-10 u3_blend open|blend:fpi mean weekly weight; "
              "FINAL_REPORT 2026-10-02: every sport stays on paper")
 EDGE_MIN = 3.0      # pp vs stamped price

@@ -267,7 +267,7 @@ def default_rules() -> dict:
         "auto": ("Auto board (GitHub Actions, once daily 9:15am CT): NFL + CFB lines + MARKET no-vig %. "
                  "No Main model, no notes, no CLEAR. Main's feed replaces it when published."),
         "paper": ("PAPER ONLY (no real bets): football = market + w·(ESPN FPI − market), w refit vs closing "
-                  "lines on history (NFL −0.31, CFB 0); NHL = market only (MODEL blank), Poisson fair shown. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
+                  "lines on history (NFL 0 since 2026-10-04 pending pregame-FPI refit, CFB 0); NHL = market only, w locked 0, MODEL % info only, Poisson fair shown. Price = DraftKings/Betr/Bovada as returned by The Odds API (never invented). "
                   "PAPER pick if edge ≥3pp vs stamped price; gap >8pp vs no-vig = HOLD. 1u = $20 flat. "
                   "Stamped once on kick day, graded W/L/P from ESPN finals at the stamped price."),
         "ledger": "Ledger = Main written CLEAR grades only (Grade via the box). Paper ledger is separate (Paper tab).",
