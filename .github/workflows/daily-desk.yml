@@ -20,6 +20,12 @@ on:
     - cron: "15 14 * * *"
     - cron: "23 14 * * *"
     - cron: "41 14 * * *"
+    # Afternoon catch. Oct 6 2026 the 9:15/9:23/9:41 slots did not fire; the board only existed because of a
+    # manual dispatch at 10:14am CT. These are no-ops (0 credits) if today's stamp is already on main.
+    #   12:15pm / 2:15pm / 3:15pm CDT  (after Nov 1: 18:15/20:15/21:15 UTC = 12:15/2:15/3:15pm CST)
+    - cron: "15 17 * * *"
+    - cron: "15 19 * * *"
+    - cron: "15 20 * * *"
   workflow_dispatch:
     inputs:
       force:
