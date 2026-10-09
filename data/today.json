@@ -7,7 +7,7 @@
   "banner": "",
   "card_file": "SAT_20260912_CLEAR_CARD.txt",
   "slate_date_ct": "2026-09-12",
-  "generated_at_ct": "2026-10-08T23:05:15.671875-05:00",
+  "generated_at_ct": "2026-10-08T23:05:20.700571-05:00",
   "delivery": "pwa+json \u00b7 pdf/png secondary \u00b7 never 8787",
   "rules": {
     "clear": "CLEAR = Main written bankroll (units/clears)",
