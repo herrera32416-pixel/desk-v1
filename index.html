@@ -75,17 +75,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 .jump{display:flex;gap:6px;overflow-x:auto;margin:0 0 12px;padding-bottom:2px}
 .jump button{flex:0 0 auto;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:transparent;color:var(--muted);font-size:11px;letter-spacing:.06em;white-space:nowrap}
 .jump button:active{background:var(--cream);color:#111}
-.paper-line{margin:0 0 8px;padding:7px 9px;border:1px dashed #5a5540;border-radius:10px;font-size:12px;color:var(--text)}
-.paper-line b{color:var(--cream);letter-spacing:.1em;font-size:10px;text-transform:uppercase}
-.paper-line.muted{color:var(--muted)}
-.pill.paper{color:#111;background:#b9b49a;padding:3px 8px;border-radius:6px}
-.mkts{margin:0 0 8px;border:1px solid var(--line);border-radius:10px;padding:6px 8px;background:rgba(255,255,255,.02);font-size:12px}
-.mk-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2px 6px;padding:3px 0;align-items:baseline}
-.mk-row .mk-sel{grid-column:1/-1;font-weight:600}
-.mk-head span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.mk-title{font-size:10px;color:var(--muted);margin-top:6px;border-top:1px solid var(--line);padding-top:5px}
-.mk-title b{color:var(--cream);letter-spacing:.12em;text-transform:uppercase}
-.mk-row.strong{color:#111;background:var(--cream);border-radius:6px;padding:3px 4px}
 .section-label.time-slot{color:var(--cream);margin:14px 0 8px;scroll-margin-top:12px}
 
 </style>
@@ -99,8 +88,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
 <p class="banner" id="deskBanner" hidden></p>
 <nav class="tabs" id="tabs">
   <button class="on" data-p="card">Card</button>
-  <button data-p="paper">Paper</button>
-  <button data-p="nhl">NHL</button>
   <button data-p="ledger">Ledger</button>
   <button data-p="props">Props</button>
   <button data-p="rules">Rules</button>
@@ -127,33 +114,12 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
     <button data-s="MLB">MLB</button>
     <button data-s="NFL">NFL</button>
     <button data-s="CFB">CFB</button>
-    <button data-s="NHL">NHL</button>
     <!-- SOC removed quiet-ops Sep 11 2026 -->
   </div>
   <p class="section-label" id="sportHint">Recommended · CLEAR only</p>
   <div id="slate"></div>
   <div id="clears" hidden></div>
   <div id="fills" hidden></div>
-</section>
-
-<section class="panel" id="p-paper">
-  <div class="hero"><h2 class="serif">Paper.</h2><p>PAPER ONLY — no real bets. NFL + CFB + NHL · 1u = $20.</p></div>
-  <div class="summary"><div class="row">
-    <div><div class="k">Paper units won</div><div class="v serif" style="font-size:22px" id="paperUnits">—</div></div>
-    <div><div class="k">Paper record</div><div class="v serif" style="font-size:22px" id="paperRecord">—</div></div>
-  </div>
-  <div class="foot" id="paperFoot"></div></div>
-  <div id="paperBits"></div>
-</section>
-
-<section class="panel" id="p-nhl">
-  <div class="hero"><h2 class="serif">NHL.</h2><p>PAPER ONLY. ML · puck line · O/U. Market no-vig %, Poisson fair %, MODEL % = our NHL ratings model (raw; blend w=0 while its CI includes 0).</p></div>
-  <div class="summary"><div class="row">
-    <div><div class="k">NHL games</div><div class="v serif" style="font-size:22px" id="nhlCount">—</div></div>
-    <div><div class="k">NHL paper record</div><div class="v serif" style="font-size:22px" id="nhlRecord">—</div></div>
-  </div>
-  <div class="foot" id="nhlFoot"></div></div>
-  <div id="nhlBits"></div>
 </section>
 
 <section class="panel" id="p-ledger">
@@ -190,6 +156,6 @@ background-size:28px 28px,28px 28px,auto;padding:18px 16px 72px;min-height:100vh
   <span id="status">Loading…</span>
   <button id="refresh" type="button">Refresh</button>
 </div>
-<script src="./js/app.js?v=1002nhlmodel"></script>
+<script src="./js/app.js?v=0927nfl"></script>
 </body>
 </html>
