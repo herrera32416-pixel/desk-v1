@@ -188,9 +188,38 @@ function paperLine(b){
 }
 // ML / Spread / O-U, both sides: price · book · Market no-vig % · Model % · edge. ★ = stronger side (model edge).
 const BOOK_SHORT={DraftKings:'DK',Bovada:'Bovada',Betr:'Betr'};
+// NHL (2026-10-09): headline = market no-vig % only. Model %, edge and ★ sit on a separate RESEARCH-ONLY line.
+function nhlMarketsBlock(b){
+  const M=b&&b.markets; if(!M) return null;
+  const wrap=el('div','mkts');
+  const head=el('div','mk-row mk-head');
+  ['','Price · book','Market %',''].forEach(t=>head.append(el('span',null,t)));
+  wrap.append(head);
+  [['ml','ML'],['spread','Puck line'],['total','O/U']].forEach(([k,label])=>{
+    const m=M[k];
+    const t=el('div','mk-title');
+    t.append(el('b',null,label), document.createTextNode(m?` · market no-vig: ${m.novig_source}`:' · blank (no price returned)'));
+    wrap.append(t);
+    if(!m) return;
+    (m.sides||[]).forEach(sd=>{
+      const r=el('div','mk-row');
+      r.append(el('span','mk-sel',sd.label),
+               el('span',null,[fmtPrice(sd.price_american), BOOK_SHORT[sd.book]||sd.book||''].filter(Boolean).join(' ')||'—'),
+               el('b',null,fmtPct(sd.novig_pct)), el('span',null,''));
+      wrap.append(r);
+    });
+    const rs=(m.sides||[]).filter(sd=>sd.model_pct!=null);
+    if(rs.length){
+      const line=rs.map(sd=>`${sd.strong?'★ ':''}${sd.label} model ${fmtPct(sd.model_pct)} · edge ${sd.edge_pp!=null?fmtNum(sd.edge_pp,{signed:true})+'pp':'—'}`).join(' | ');
+      wrap.append(el('div','mk-title muted',`Research only (not a pick): ${line}`));
+    }
+  });
+  return wrap;
+}
 function marketsBlock(b, sport){
   const M=b&&b.markets; if(!M) return null;
   const isNHL=sport==='NHL';
+  if(isNHL) return nhlMarketsBlock(b);
   const wrap=el('div','mkts');
   const names=[['ml','ML'],['spread',isNHL?'Puck line':'Spread'],['total','O/U']];
   const head=el('div','mk-row mk-head');
@@ -312,11 +341,13 @@ function playCard(p, {star}={}){
       const gd=el('p','paper-line muted');
       gd.append(el('b',null,'Goalies '), document.createTextNode(`${gl('away',p.away)} · ${gl('home',p.home)}`));
       a.append(gd);
+      if(p.paper.goalie_flag) a.append(el('p','paper-line muted',`⚠ ${p.paper.goalie_flag}`));
+      const ls=p.line_sources; if(ls) a.append(el('p','paper-line muted',`Line source · ML ${ls.ml||'—'} · PL ${ls.spread||'—'} · O/U ${ls.total||'—'}`));
       const nm=p.paper.nhl_model;
       if(nm){
         const w=p.paper.w||{};
         const nd=el('p','paper-line muted');
-        nd.append(el('b',null,'NHL model '), document.createTextNode(`reg goals ${p.away.split(' ').slice(-1)[0]} ${nm.reg_goals_away} – ${p.home.split(' ').slice(-1)[0]} ${nm.reg_goals_home} · reg tie ${nm.reg_tie_pct}% · B2B ${nm.b2b_away?'away ':''}${nm.b2b_home?'home':''}${!nm.b2b_away&&!nm.b2b_home?'none':''} · goalie GSAx/gm ${fmtNum(nm.gsax_pg_away,{signed:true})} / ${fmtNum(nm.gsax_pg_home,{signed:true})} · blend w ML ${w.ml??0} · PL ${w.pl??0} · O/U ${w.tot??0} (0 = CI includes 0 → MODEL shown, not used; edge = raw model vs price, info)`));
+        nd.append(el('b',null,'Research only · NHL xG model '), document.createTextNode(`reg goals ${p.away.split(' ').slice(-1)[0]} ${nm.reg_goals_away} – ${p.home.split(' ').slice(-1)[0]} ${nm.reg_goals_home} · reg tie ${nm.reg_tie_pct}% · B2B ${nm.b2b_away?'away ':''}${nm.b2b_home?'home':''}${!nm.b2b_away&&!nm.b2b_home?'none':''} · goalie GSAx/gm ${fmtNum(nm.gsax_pg_away,{signed:true})} / ${fmtNum(nm.gsax_pg_home,{signed:true})} · blend w ML ${w.ml??0} · PL ${w.pl??0} · O/U ${w.tot??0} (0 = CI includes 0 → MODEL shown, not used; edge = raw model vs price, info)`));
         a.append(nd);
       }
     }
@@ -503,7 +534,7 @@ function renderNhl(){
   }
   document.getElementById('nhlRecord').textContent=`${rec} · ${money(units||0)}`;
   const foot=document.getElementById('nhlFoot');
-  foot.textContent=`${open||0} open NHL paper pick${open===1?'':'s'} · 1u = $20 · no real bets. MODEL = our NHL ratings model (raw). Blend w fitted walk-forward on 2023–26; w=0 where the CI includes 0, so the market is used and nothing stamps. Fair % = Poisson from market ML + total (REG/OT/SO priced separately; −1.5 loses past regulation; SO = +1 goal for totals). Goalies from goalie log (Confirmed/Likely; — if not logged).`;
+  foot.textContent=`${open||0} open NHL paper pick${open===1?'':'s'} · 1u = $20 · no real bets. Headline = market no-vig %. Research line = NHL xG model (trained 2023+ only, 50/50 xG + goals, starting goalie, B2B); it lost to the market in walk-forward tests, so w=0 and nothing stamps. Fair % = Poisson from market ML + total (REG/OT/SO priced separately; −1.5 loses past regulation; SO = +1 goal for totals). Goalies: DailyFaceoff starting-goalie check (refreshed before puck drop); ⚠ flag until both starters are Confirmed.`;
   if(picks.length){
     bits.append(el('p','section-label',`NHL paper picks · ${picks.length}`));
     picks.forEach(p=>bits.append(paperPickCard(p)));

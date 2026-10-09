@@ -496,6 +496,12 @@ def nhl_block(row: dict, ev: dict, goalies: dict, lm=None) -> dict:
     d = row["kick_utc"] and kick_ct(row["kick_utc"]).date().isoformat()
     ha, aa = NHL_ABBR.get(row["home"]), NHL_ABBR.get(row["away"])
     blk["goalies"] = {"home": goalies.get((d, ha)), "away": goalies.get((d, aa))}
+    # starting-goalie check (DailyFaceoff via scripts/nhl_goalies.py): flag unless BOTH starters are Confirmed
+    unconf = [side for side in ("away", "home") if not blk["goalies"][side] or blk["goalies"][side].get("status") != "Confirmed"]
+    blk["goalie_flag"] = ("" if not unconf else
+                          "GOALIE UNCONFIRMED (" + ", ".join(unconf) + ") — model uses the recent-starter mix / likely starter; re-check before puck drop")
+    if lm is not None and getattr(lm, "model_name", ""):
+        blk["model"] = lm.model_name
     try:
         nv_h = mk["ml"]["sides"][1]["novig_pct"] / 100
         T = mk["total"]["line"]
@@ -627,12 +633,13 @@ def attach_paper(sport: str, rows: list[dict], events_by_toa: dict[str, dict], n
         goalies = load_goalies(Path(__file__).resolve().parents[1])
         lm = None
         try:
-            import nhl_ratings
-            lm = nhl_ratings.LiveModel(now_ct.date())
+            import nhl_xg  # 2026-10-09: xG model (2023+ only, 0.5 xG + 0.5 goals); research-only, w locked 0
+            lm = nhl_xg.XGLiveModel(now_ct.date())
             stats["nhl_model"] = {"last_final": lm.last_final, "season_games": lm.this_season_games,
                                   "w": {k: lm.weights.get(k) for k in ("ml", "pl", "tot")}, "notes": lm.notes,
                                   "home": round(lm.P["home"], 3), "b2b_off": round(lm.P["b2b_off"], 3),
-                                  "b2b_def": round(lm.P["b2b_def"], 3), "goalie_coef": round(lm.P["g"], 3)}
+                                  "b2b_def": round(lm.P["b2b_def"], 3), "goalie_coef": round(lm.P["g"], 3),
+                                  "model": getattr(lm, "model_name", "")}
             log(f"NHL model: {stats['nhl_model']}")
         except Exception as e:  # noqa: BLE001 — never block the board; MODEL stays blank
             log(f"NHL model unavailable: {e}")

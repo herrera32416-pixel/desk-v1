@@ -65,3 +65,16 @@ from market ML+total) vs 0.2328 (market no-vig) — the conversion is a consiste
   unless the 90% CI excludes 0. Results: `nhl_model_fit.json` (`scripts/history/fit_nhl_model.py`).
 - Gaps: totals missing for most of 2023-24 (ESPN), so O/U tests are smaller; the model knows nothing about roster changes,
   injuries, or skater lineups beyond what results show; goalie-log names are matched to NHL playerIds by name + team.
+
+## 2026-10-09: NHL moneyline re-pull (2021-22, 2022-23, 2023-24)
+The stored DraftKings ML pairs from ESPN core were corrupt (sides summed to ~0.83 implied). `scripts/history/repull_nhl_ml.py`
+re-pulled every game from ESPN core `/odds` and kept the first internally sane book (implied sum 1.00–1.10) in order
+ESPN BET > Caesars > MGM > Westgate. Result: 2021 1,269/1,272 fixed (Caesars/MGM), 2022 1,312/1,315 (ESPN BET/Caesars),
+2023 1,314/1,315 (ESPN BET); 7 games with no sane book are blank with `ml_status=excluded`. Old values kept in
+`ml_home_raw`/`ml_away_raw`; provider in `ml_provider`. Fixed medians: 1.036 / 1.041 / 1.040 implied (normal vig).
+Any earlier NHL ML result that used 2021-23 (e.g. the "+51u raw ML" in nhl_model_fit.json) is invalid.
+
+## 2026-10-09: NHL xG model (`scripts/nhl_xg.py`) + walk-forward backtest (`scripts/history/backtest_nhl_xg.py`)
+2023-24+ only; target 0.5 MoneyPuck xG + 0.5 regulation goals (`data/history/nhl/xg_games.csv`). Results in
+`nhl_xg_backtest.json`. It does not beat the market's log loss in any season/market, so NHL w stays locked at 0
+(research line only; headline = market no-vig %).

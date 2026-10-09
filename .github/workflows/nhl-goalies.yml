@@ -1,0 +1,50 @@
+name: nhl-goalies
+
+# Pre-puck starting-goalie re-check (DailyFaceoff, free) + NHL research line refresh. PAPER ONLY.
+# 0 Odds API credits: re-uses the morning board's saved lines (data/nhl_events_today.json); prices never change here.
+# CDT times (cron is UTC): 11:30am, 4:30pm, 5:45pm, 7:15pm CT. After Nov 1 (CST) these run one hour earlier.
+on:
+  schedule:
+    - cron: "30 16 * * *"
+    - cron: "30 21 * * *"
+    - cron: "45 22 * * *"
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: daily-desk
+  cancel-in-progress: false
+
+jobs:
+  goalies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Goalie check + NHL refresh
+        run: python scripts/nhl_refresh.py
+      - name: Commit + push data/ only if changed
+        id: push
+        run: |
+          if git diff --quiet -- data/ && [ -z "$(git ls-files --others --exclude-standard -- data/)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "nhl goalie refresh $(TZ=America/Chicago date '+%F %H:%M') CT"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Request Pages build
+        if: ${{ steps.push.outputs.changed == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "::warning::Pages build request failed"

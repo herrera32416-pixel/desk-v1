@@ -2,7 +2,10 @@ name: daily-desk
 
 # Once a day, on GitHub's servers (independent of the Grok Bot box). PAPER ONLY — no real bets.
 # 1) Grade open PAPER picks from ESPN's free public scoreboard (0 Odds API credits).
-# 2) 4 Odds API calls (NFL + NCAAF + NHL + MLB, h2h+spreads+totals, regions=us => 3 credits each = 12/day)
+# 2) FREE TIER since 2026-10-09 (500 credits/mo shared with Strawhat Desk): Odds API only for NFL/CFB/NHL and only
+#    when the free /events check shows a game within 30-36h (3 credits each, ~3-9/day, ~170/mo). MLB + any game or
+#    market the Odds API lacks come from ESPN public scoreboard odds, tagged per line (no double counting).
+#    Quota from x-requests-* headers is logged to data/odds_quota.jsonl.
 #    -> data/today.json board + PAPER side per game (u3 market-heavy blend, ESPN FPI, free),
 #    today's PAPER picks stamped to data/paper_ledger.json, page data in data/paper.json.
 # Main-sourced card for today is never overwritten (merge appends missing NFL/CFB games only).
@@ -29,7 +32,7 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: "Call the API even if today's auto board already exists (uses 12 credits)"
+        description: "Call the API even if today's auto board already exists (uses up to 9 credits)"
         type: boolean
         default: false
 
@@ -66,6 +69,11 @@ jobs:
       - name: Grade open PAPER picks (ESPN finals, free)
         if: ${{ steps.guard.outputs.run == 'true' }}
         run: python scripts/paper_model.py grade
+
+      - name: Starting-goalie check (DailyFaceoff, free)
+        if: ${{ steps.guard.outputs.run == 'true' }}
+        continue-on-error: true
+        run: python scripts/nhl_goalies.py
 
       - name: Build auto board + PAPER picks (1 Odds API call per sport, no retries)
         id: board

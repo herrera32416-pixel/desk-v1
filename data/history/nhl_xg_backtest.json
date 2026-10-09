@@ -1,0 +1,435 @@
+{
+ "built_ct": "2026-10-09",
+ "method": "Walk-forward backtest: NHL xG model (scripts/nhl_xg.py spec) vs the market. PAPER research, box only (numpy/scipy).\nEach game day D: fit on games strictly before D (2023-24+ only, 120d half-life, pen 20), predict D's games.\nMarket = ESPN single-book pregame line from data/history/nhl/<season>.csv (2023-24 ML re-pulled 2026-10-09), de-vigged.\nBets: flat 1u = $20 at the recorded price when model edge >= 3pp vs the price's implied % and |model - no-vig| <= 8pp.\nWrites data/history/nhl_xg_backtest.json.",
+ "variants": {
+  "xg50_goals50 (live spec)": {
+   "ml": {
+    "2023": {
+     "n": 1075,
+     "logloss_model": 0.6642,
+     "logloss_market": 0.6523,
+     "bets": 308,
+     "record": "104-204-0",
+     "units": -50.14,
+     "usd_at_1u_20": -1002.71
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6664,
+     "logloss_market": 0.6583,
+     "bets": 388,
+     "record": "147-241-0",
+     "units": -13.98,
+     "usd_at_1u_20": -279.66
+    },
+    "2025": {
+     "n": 1312,
+     "logloss_model": 0.6825,
+     "logloss_market": 0.6816,
+     "bets": 256,
+     "record": "114-142-0",
+     "units": 27.74,
+     "usd_at_1u_20": 554.87
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.6772,
+     "logloss_market": 0.6675,
+     "bets": 5,
+     "record": "2-3-0",
+     "units": 0.69,
+     "usd_at_1u_20": 13.8
+    },
+    "ALL_TEST": {
+     "n": 2640,
+     "logloss_model": 0.6745,
+     "logloss_market": 0.6699,
+     "bets": 649,
+     "record": "263-386-0",
+     "units": 14.45,
+     "usd_at_1u_20": 289.0
+    }
+   },
+   "pl": {
+    "2023": {
+     "n": 1070,
+     "logloss_model": 0.6655,
+     "logloss_market": 0.6563,
+     "bets": 188,
+     "record": "89-99-0",
+     "units": -13.08,
+     "usd_at_1u_20": -261.6
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6721,
+     "logloss_market": 0.6674,
+     "bets": 158,
+     "record": "78-80-0",
+     "units": -16.08,
+     "usd_at_1u_20": -321.66
+    },
+    "2025": {
+     "n": 1308,
+     "logloss_model": 0.624,
+     "logloss_market": 0.6233,
+     "bets": 144,
+     "record": "74-70-0",
+     "units": 10.79,
+     "usd_at_1u_20": 215.74
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.6099,
+     "logloss_market": 0.6151,
+     "bets": 3,
+     "record": "3-0-0",
+     "units": 1.85,
+     "usd_at_1u_20": 37.04
+    },
+    "ALL_TEST": {
+     "n": 2636,
+     "logloss_model": 0.6479,
+     "logloss_market": 0.6452,
+     "bets": 305,
+     "record": "155-150-0",
+     "units": -3.44,
+     "usd_at_1u_20": -68.88
+    }
+   },
+   "tot": {
+    "2023": {
+     "n": 99,
+     "logloss_model": 0.6832,
+     "logloss_market": 0.6958,
+     "bets": 14,
+     "record": "10-4-0",
+     "units": 5.41,
+     "usd_at_1u_20": 108.3
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6925,
+     "logloss_market": 0.6914,
+     "bets": 138,
+     "record": "69-69-0",
+     "units": -4.75,
+     "usd_at_1u_20": -95.09
+    },
+    "2025": {
+     "n": 1308,
+     "logloss_model": 0.695,
+     "logloss_market": 0.6912,
+     "bets": 172,
+     "record": "90-82-0",
+     "units": 3.47,
+     "usd_at_1u_20": 69.47
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.7296,
+     "logloss_market": 0.7094,
+     "bets": 2,
+     "record": "0-2-0",
+     "units": -2.0,
+     "usd_at_1u_20": -40.0
+    },
+    "ALL_TEST": {
+     "n": 2636,
+     "logloss_model": 0.694,
+     "logloss_market": 0.6914,
+     "bets": 312,
+     "record": "159-153-0",
+     "units": -3.28,
+     "usd_at_1u_20": -65.62
+    }
+   }
+  },
+  "goals_only_2023plus": {
+   "ml": {
+    "2023": {
+     "n": 1075,
+     "logloss_model": 0.6678,
+     "logloss_market": 0.6523,
+     "bets": 259,
+     "record": "101-158-0",
+     "units": -19.55,
+     "usd_at_1u_20": -390.96
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6652,
+     "logloss_market": 0.6583,
+     "bets": 339,
+     "record": "145-194-0",
+     "units": 1.42,
+     "usd_at_1u_20": 28.38
+    },
+    "2025": {
+     "n": 1312,
+     "logloss_model": 0.6863,
+     "logloss_market": 0.6816,
+     "bets": 281,
+     "record": "117-164-0",
+     "units": -20.57,
+     "usd_at_1u_20": -411.42
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.6762,
+     "logloss_market": 0.6675,
+     "bets": 4,
+     "record": "2-2-0",
+     "units": 0.15,
+     "usd_at_1u_20": 2.98
+    },
+    "ALL_TEST": {
+     "n": 2640,
+     "logloss_model": 0.6757,
+     "logloss_market": 0.6699,
+     "bets": 624,
+     "record": "264-360-0",
+     "units": -19.0,
+     "usd_at_1u_20": -380.05
+    }
+   },
+   "pl": {
+    "2023": {
+     "n": 1070,
+     "logloss_model": 0.6705,
+     "logloss_market": 0.6563,
+     "bets": 182,
+     "record": "75-107-0",
+     "units": -30.49,
+     "usd_at_1u_20": -609.73
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.673,
+     "logloss_market": 0.6674,
+     "bets": 219,
+     "record": "92-127-0",
+     "units": -30.79,
+     "usd_at_1u_20": -615.82
+    },
+    "2025": {
+     "n": 1308,
+     "logloss_model": 0.6273,
+     "logloss_market": 0.6233,
+     "bets": 224,
+     "record": "98-126-0",
+     "units": -10.99,
+     "usd_at_1u_20": -219.73
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.6047,
+     "logloss_market": 0.6151,
+     "bets": 3,
+     "record": "3-0-0",
+     "units": 3.11,
+     "usd_at_1u_20": 62.18
+    },
+    "ALL_TEST": {
+     "n": 2636,
+     "logloss_model": 0.6499,
+     "logloss_market": 0.6452,
+     "bets": 446,
+     "record": "193-253-0",
+     "units": -38.67,
+     "usd_at_1u_20": -773.37
+    }
+   },
+   "tot": {
+    "2023": {
+     "n": 99,
+     "logloss_model": 0.6901,
+     "logloss_market": 0.6958,
+     "bets": 14,
+     "record": "8-4-2",
+     "units": 2.88,
+     "usd_at_1u_20": 57.57
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6958,
+     "logloss_market": 0.6914,
+     "bets": 231,
+     "record": "109-122-0",
+     "units": -19.57,
+     "usd_at_1u_20": -391.35
+    },
+    "2025": {
+     "n": 1308,
+     "logloss_model": 0.6999,
+     "logloss_market": 0.6912,
+     "bets": 238,
+     "record": "110-128-0",
+     "units": -24.53,
+     "usd_at_1u_20": -490.53
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.7065,
+     "logloss_market": 0.7094,
+     "bets": 5,
+     "record": "4-1-0",
+     "units": 2.77,
+     "usd_at_1u_20": 55.39
+    },
+    "ALL_TEST": {
+     "n": 2636,
+     "logloss_model": 0.6979,
+     "logloss_market": 0.6914,
+     "bets": 474,
+     "record": "223-251-0",
+     "units": -41.32,
+     "usd_at_1u_20": -826.49
+    }
+   }
+  },
+  "xg_only_2023plus": {
+   "ml": {
+    "2023": {
+     "n": 1075,
+     "logloss_model": 0.6645,
+     "logloss_market": 0.6523,
+     "bets": 269,
+     "record": "98-171-0",
+     "units": -27.65,
+     "usd_at_1u_20": -552.99
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6714,
+     "logloss_market": 0.6583,
+     "bets": 375,
+     "record": "145-230-0",
+     "units": -6.51,
+     "usd_at_1u_20": -130.24
+    },
+    "2025": {
+     "n": 1312,
+     "logloss_model": 0.6817,
+     "logloss_market": 0.6816,
+     "bets": 304,
+     "record": "136-168-0",
+     "units": 22.89,
+     "usd_at_1u_20": 457.76
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.6807,
+     "logloss_market": 0.6675,
+     "bets": 7,
+     "record": "2-5-0",
+     "units": -2.81,
+     "usd_at_1u_20": -56.15
+    },
+    "ALL_TEST": {
+     "n": 2640,
+     "logloss_model": 0.6766,
+     "logloss_market": 0.6699,
+     "bets": 686,
+     "record": "283-403-0",
+     "units": 13.57,
+     "usd_at_1u_20": 271.37
+    }
+   },
+   "pl": {
+    "2023": {
+     "n": 1070,
+     "logloss_model": 0.6648,
+     "logloss_market": 0.6563,
+     "bets": 202,
+     "record": "103-99-0",
+     "units": -11.13,
+     "usd_at_1u_20": -222.69
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6753,
+     "logloss_market": 0.6674,
+     "bets": 199,
+     "record": "110-89-0",
+     "units": -2.56,
+     "usd_at_1u_20": -51.17
+    },
+    "2025": {
+     "n": 1308,
+     "logloss_model": 0.6238,
+     "logloss_market": 0.6233,
+     "bets": 157,
+     "record": "80-77-0",
+     "units": 5.51,
+     "usd_at_1u_20": 110.3
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.6175,
+     "logloss_market": 0.6151,
+     "bets": 3,
+     "record": "0-3-0",
+     "units": -3.0,
+     "usd_at_1u_20": -60.0
+    },
+    "ALL_TEST": {
+     "n": 2636,
+     "logloss_model": 0.6494,
+     "logloss_market": 0.6452,
+     "bets": 359,
+     "record": "190-169-0",
+     "units": -0.04,
+     "usd_at_1u_20": -0.87
+    }
+   },
+   "tot": {
+    "2023": {
+     "n": 99,
+     "logloss_model": 0.681,
+     "logloss_market": 0.6958,
+     "bets": 22,
+     "record": "13-8-1",
+     "units": 4.0,
+     "usd_at_1u_20": 79.9
+    },
+    "2024": {
+     "n": 1312,
+     "logloss_model": 0.6934,
+     "logloss_market": 0.6914,
+     "bets": 236,
+     "record": "120-116-0",
+     "units": -6.41,
+     "usd_at_1u_20": -128.11
+    },
+    "2025": {
+     "n": 1308,
+     "logloss_model": 0.6934,
+     "logloss_market": 0.6912,
+     "bets": 219,
+     "record": "122-97-0",
+     "units": 18.9,
+     "usd_at_1u_20": 378.01
+    },
+    "2026": {
+     "n": 16,
+     "logloss_model": 0.7565,
+     "logloss_market": 0.7094,
+     "bets": 2,
+     "record": "0-2-0",
+     "units": -2.0,
+     "usd_at_1u_20": -40.0
+    },
+    "ALL_TEST": {
+     "n": 2636,
+     "logloss_model": 0.6938,
+     "logloss_market": 0.6914,
+     "bets": 457,
+     "record": "242-215-0",
+     "units": 10.49,
+     "usd_at_1u_20": 209.9
+    }
+   }
+  }
+ }
+}

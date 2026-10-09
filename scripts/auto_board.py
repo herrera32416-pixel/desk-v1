@@ -38,19 +38,27 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import paper_model  # noqa: E402
+import espn_odds  # noqa: E402  (free fallback: fills only games/markets the Odds API lacks)
 
 CT = ZoneInfo("America/Chicago")
 UTC = timezone.utc
 SPORTS = {"NFL": "americanfootball_nfl", "CFB": "americanfootball_ncaaf",
-          "NHL": "icehockey_nhl", "MLB": "baseball_mlb"}  # one call each per day: 4 x 3 credits = 12/day
+          "NHL": "icehockey_nhl", "MLB": "baseball_mlb"}
+# FREE TIER (500 credits/mo, since 2026-10-09; paid plan payment failed 10/8): Odds API is called only for these
+# sports, and only when the FREE /events endpoint shows a game inside ODDS_CALL_HOURS. Everything else
+# (MLB, quiet NFL/CFB days, games/markets the Odds API missed) comes from ESPN's public scoreboard odds, tagged.
+PAID_SPORTS = [s.strip().upper() for s in os.environ.get("DESK_ODDS_SPORTS", "NFL,CFB,NHL").split(",") if s.strip()]
+ODDS_CALL_HOURS = {"NFL": 36, "CFB": 36, "NHL": 30, "MLB": 30}
+EVENTS_URL = "https://api.the-odds-api.com/v4/sports/{sport}/events"
+QUOTA_LOG = "odds_quota.jsonl"
 # NHL: today + tomorrow (CT), ~15 games/day · MLB: today + tomorrow (CT), late season / postseason
 WINDOW_BY_SPORT = {"NFL": 7, "CFB": 7, "NHL": 2, "MLB": 2}
 API_URL = "https://api.the-odds-api.com/v4/sports/{sport}/odds"
 SCHEMA = "desk-pwa/v1"
 WINDOW_DAYS = 7
-MIN_REMAINING = 30  # never spend the last credits: skip further calls below this
+MIN_REMAINING = int(os.environ.get("DESK_MIN_REMAINING", "60"))  # leave room for Strawhat Desk (same key)  # never spend the last credits: skip further calls below this
 BANNER = ("PAPER ONLY — no real bets. NFL + CFB + NHL + MLB: ML / spread (puck line / run line) / O-U with market and model %. "
-          "Lines from The Odds API. No Main card filed.")
+          "Lines: The Odds API (free tier) first, ESPN public odds fill gaps (tagged per line). No Main card filed.")
 MARKET_SRC = "The Odds API · no-vig = median across books of two-way de-vig (consensus line)"
 
 # Display ids only (naming, not data). Washington = wsh to match Main's board.
@@ -166,6 +174,34 @@ def fetch_odds(api_key: str, sport_key: str, timeout: int = 30) -> tuple[list[di
     return data, usage
 
 
+def has_game_soon(api_key: str, sport_key: str, hours: int) -> bool | None:
+    """FREE call (events endpoint costs 0 credits). None = unknown (then we do call odds)."""
+    qs = urllib.parse.urlencode({"apiKey": api_key, "dateFormat": "iso"})
+    try:
+        req = urllib.request.Request(f"{EVENTS_URL.format(sport=sport_key)}?{qs}", headers={"User-Agent": "desk-v1-auto-board"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            evs = json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        print(f"[auto_board] events check failed ({type(e).__name__}) — treating as unknown", file=sys.stderr)
+        return None
+    now = datetime.now(UTC)
+    for ev in evs or []:
+        try:
+            t = datetime.fromisoformat(ev["commence_time"].replace("Z", "+00:00"))
+        except Exception:
+            continue
+        if 0 < (t - now).total_seconds() <= hours * 3600:
+            return True
+    return False
+
+
+def log_quota(data_dir: Path, now_ct: datetime, sport: str, u: dict) -> None:
+    row = {"time_ct": now_ct.isoformat(timespec="seconds"), "repo": "desk-v1", "sport": sport,
+           "last": u.get("x-requests-last"), "used": u.get("x-requests-used"), "remaining": u.get("x-requests-remaining")}
+    with open(data_dir / QUOTA_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(row) + "\n")
+
+
 # ------------------------------------------------------------- build rows
 def build_row(ev: dict, slate_iso: str, sport: str = "NFL") -> dict:
     home, away = ev.get("home_team") or "", ev.get("away_team") or ""
@@ -192,7 +228,11 @@ def build_row(ev: dict, slate_iso: str, sport: str = "NFL") -> dict:
                 if op is not None and op == up:
                     totals.append((title, float(op), outs["Over"]["price"], outs["Under"]["price"]))
 
+    srcs = ev.get("line_sources") or {}
     row = {
+        "line_sources": {"ml": srcs.get("h2h", ""), "spread": srcs.get("spreads", ""), "total": srcs.get("totals", "")},
+        "line_source": ("espn" if srcs and set(srcs.values()) == {"espn"} else
+                        "odds_api+espn" if "espn" in srcs.values() else "odds_api" if srcs else ""),
         "tag": "BOARD", "status": "HOLD", "sport": sport, "sport_raw": sport.lower(),
         "away": away, "home": home, "matchup": f"{away} at {home}",
         "selection": "", "market": "", "line": None, "price_american": None, "book": "",
@@ -413,9 +453,17 @@ def main(argv: list[str] | None = None) -> int:
                 evs = raw if isinstance(raw, list) else (raw.get("data") or raw.get("events") or [])
                 print(f"[auto_board] {sport} offline file {offline[sport]}: {len(evs)} events (0 credits)")
             else:
-                if not key:
-                    print("[auto_board] THE_ODDS_API_KEY not set", file=sys.stderr)
-                    return 4
+                evs = []
+                if sport not in PAID_SPORTS or not key:
+                    if not key:
+                        print(f"[auto_board] THE_ODDS_API_KEY not set — {sport} from ESPN only", file=sys.stderr)
+                    events_by_sport[sport] = []
+                    continue
+                soon = has_game_soon(key, sport_key, ODDS_CALL_HOURS.get(sport, 30))
+                if soon is False:
+                    print(f"[auto_board] {sport}: no game within {ODDS_CALL_HOURS.get(sport)}h (free events check) — 0 credits, ESPN fills")
+                    events_by_sport[sport] = []
+                    continue
                 rem = usage.get("x-requests-remaining")
                 if rem is not None and float(rem) < MIN_REMAINING:
                     print(f"[auto_board] {sport}: SKIP call — only {rem} credits left (< {MIN_REMAINING})", file=sys.stderr)
@@ -426,6 +474,7 @@ def main(argv: list[str] | None = None) -> int:
                 usage["calls"] += 1
                 usage["credits_this_run"] += int(float(u.get("x-requests-last") or 0))
                 usage[f"{sport}_x-requests-last"] = u.get("x-requests-last")
+                log_quota(data_dir, now_ct, sport, u)
                 print(f"[auto_board] {sport}: 1 API call · x-requests-last={u.get('x-requests-last')} "
                       f"x-requests-used={u.get('x-requests-used')} "
                       f"x-requests-remaining={u.get('x-requests-remaining')}")
@@ -439,8 +488,28 @@ def main(argv: list[str] | None = None) -> int:
         except Exception as e:  # network etc. — no retry
             print(f"[auto_board] {sport} API error (no retry): {type(e).__name__}: {e}", file=sys.stderr)
             events_by_sport[sport] = []
+    # ESPN fallback (free): fill only games/markets missing from the Odds API; per-line source tags, no double count
+    usage["espn"] = {}
+    if not (args.from_file or args.from_file_cfb or args.from_file_nhl or args.from_file_mlb):
+        for sport in SPORTS:
+            try:
+                ex = espn_odds.fetch(sport, WINDOW_BY_SPORT.get(sport, WINDOW_DAYS))
+                events_by_sport[sport], st = espn_odds.merge(events_by_sport.get(sport) or [], ex)
+                for e in events_by_sport[sport]:
+                    e.setdefault("sport_key", SPORTS[sport])
+                usage["espn"][sport] = st
+                print(f"[auto_board] {sport} ESPN fallback: {st}")
+            except Exception as e:
+                print(f"[auto_board] {sport} ESPN fallback error: {type(e).__name__}: {e}", file=sys.stderr)
     if not any(events_by_sport.values()) and usage["calls"] == 0 and not (args.from_file or args.from_file_cfb or args.from_file_nhl or args.from_file_mlb):
         return 3
+
+    # raw NHL events (Odds API + ESPN fallback) for the pre-puck goalie refresh (scripts/nhl_refresh.py, 0 credits)
+    try:
+        (data_dir / "nhl_events_today.json").write_text(json.dumps(
+            {"slate_date_ct": slate_iso, "events": events_by_sport.get("NHL") or []}), encoding="utf-8")
+    except Exception as e:  # noqa: BLE001
+        print(f"[auto_board] could not save NHL events: {e}", file=sys.stderr)
 
     start = now_ct.replace(hour=0, minute=0, second=0, microsecond=0)
     rows_by_sport: dict[str, list[dict]] = {}
@@ -502,7 +571,8 @@ def main(argv: list[str] | None = None) -> int:
         "generated_at_ct": now_ct.isoformat(timespec="seconds"), "model": ledger.get("model"),
         "stats": paper_stats, "summary": psum, "board": board,
         "credits": {k: usage.get(k) for k in ("calls", "credits_this_run", "x-requests-remaining",
-                                              "x-requests-used", "NFL_x-requests-last", "CFB_x-requests-last")},
+                                              "x-requests-used", "NFL_x-requests-last", "CFB_x-requests-last",
+                                              "NHL_x-requests-last", "espn")},
     }
 
     if main_today:
