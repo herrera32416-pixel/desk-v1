@@ -325,7 +325,6 @@ def build_auto_doc(rows: list[dict], existing: dict | None, now_ct: datetime, us
         },
         "paper": paper_meta,
         "card": {"clears": [], "fills": [], "holds": rows, "props": card_props},
-        "parlays": [], "teasers": [],
         "shop": {"anchors_written": [], "written_shop_notes": {}},
         "ledger": ledger,
         "nfl_props": nfl_props,

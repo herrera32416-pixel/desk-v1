@@ -32,8 +32,7 @@ function normalize(data){
     sport: p.sport || 'NFL',
     units: p.units ?? 0,
   }));
-  const parlays = data.parlays || data.tickets?.parlays || [];
-  const teasers = data.teasers || data.tickets?.teasers || [];
+  // Teasers + parlays removed 2026-10-08 (Luis): never read or shown, even if a pack still carries them.
   const rulesObj = data.rules;
   let rules=[];
   if(Array.isArray(rulesObj)) rules=rulesObj;
@@ -49,7 +48,7 @@ function normalize(data){
       props_total: data.summary?.props_total ?? props.length,
       props_clear: data.summary?.props_clear ?? props.filter(p=>p.tag==='CLEAR').length,
     },
-    clears, fills, holds, props, parlays, teasers, rules,
+    clears, fills, holds, props, rules,
     ledger: data.ledger || null,
     nfl_props: data.nfl_props || { games: [] },
     nfl_props_meta: data.nfl_props_meta || null,
@@ -673,16 +672,6 @@ async function main(){
   const bn=document.getElementById('deskBanner');
   if(bn){ bn.textContent=data.banner||''; bn.hidden=!data.banner; bn.classList.toggle('practice', !!data.practice_run); }
   renderSlate();
-
-  const parlays=document.getElementById('parlays');
-  parlays.innerHTML='';
-  (data.parlays||[]).forEach(t=>parlays.append(ticketCard(t,'PARLAY')));
-  if(!(data.parlays||[]).length) parlays.append(el('p','why','No parlays in today’s pack.'));
-
-  const teasers=document.getElementById('teasers');
-  teasers.innerHTML='';
-  (data.teasers||[]).forEach(t=>teasers.append(ticketCard(t,'TEASER')));
-  if(!(data.teasers||[]).length) teasers.append(el('p','why','No teasers in today’s pack.'));
 
   const rules=document.getElementById('rules');
   rules.innerHTML='';

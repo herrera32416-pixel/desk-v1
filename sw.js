@@ -1,4 +1,4 @@
-const CACHE='desk-v1-nhlmodel-1002';
+const CACHE='desk-v1-noteasers-1008';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./js/app.js?v=1002nhlmodel','./icons/icon-192.png','./icons/icon-512.png','./data/today.json'];
 self.addEventListener('install', e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS.map(u=>new Request(u,{cache:'reload'})))).then(()=>self.skipWaiting()));
